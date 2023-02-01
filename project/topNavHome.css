@@ -1,25 +1,46 @@
-.topnav a {
-    float: left;
-    color: white;
-    text-align: center;
-    font-size: 17px;
-    font-weight: light;
-  }
 
-  .topnav a:hover {
-    background-color: #cdc7c7;
-    color: black;
-  }
-
-  .topnav {
-    background-color: #696969;
-    overflow: hidden;
-  }
-
-.optionHeader {
-    background-color: #696969;
-    color: white;
-    font-weight: bold;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #696969;
+  overflow: auto;
+  font-weight: bold;
+  color: white;
+  
 }
 
+li {
+  float: left;
+  padding: 14px 16px;
+}
 
+li a {
+  background-color: #cdc7c7;
+  color: black;
+  padding: 14px 16px;
+  float: left;
+  text-align: center;
+ 
+}
+
+body{
+  background-color:#cdc7c7;
+  overflow:auto;
+}
+
+h1{
+  text-align: center;
+  color: black;
+  font-size: 40;
+  font-weight: bold;
+}
+
+#HASH {
+  display: flex;
+  justify-content: space-between;
+}
+
+#HASH span{
+  padding: 15px 15px;
+}
