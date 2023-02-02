@@ -23,4 +23,33 @@
     font-weight: bold;
 }
 
+.btn-primary {
+  background-color: #7A7A7A;
+}
 
+
+body {
+  background-color: #DDDDDD;
+}
+
+label {
+color: black;
+}
+
+form {
+  margin-left: 15%;
+  margin-right:15%;
+  width: 70%;
+}
+
+header {
+  padding-bottom: 130px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 20%;
+  height:20%;
+  margin-bottom: 5%;
+}
