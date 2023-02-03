@@ -1,11 +1,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="topNavhome.css">
 
 <header>
-  <link rel="stylesheet" href="style.css">  
-    <div class="topnav">
-      <a href="landingPage.php">Home</a>
-      <a href="adminPage.php">Admin Page</a>
+    <div id="header">
+      <ul>
+        <li style = " font-size: 40px">Log In As: </li>
+        <li><a href="userLogin.php">Business</a></li>
+        <li><a href="userLogin.php">Site Admin</a></li>
+        <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
+      </ul>    
     </div>
   </header>
 
