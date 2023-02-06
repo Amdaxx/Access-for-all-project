@@ -22,10 +22,22 @@ header {
   padding-bottom: 130px;
 }
 
-img {
+.logo {
   display: block;
   margin: auto;
   width: 20%;
   height:20%;
   margin-bottom: 5%;
+}
+
+.uLogo {
+  display: block;
+  margin: auto;
+  width: 20%;
+  height:20%;
+  margin-bottom: 5%;
+}
+
+.test {
+  padding-bottom: 90px;
 }

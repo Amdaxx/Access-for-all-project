@@ -14,18 +14,18 @@
   </header>
 
 <body>
-    <img src="Everybody-Welcome-logo.png" alt="logo" class="center">
+    <img src="Everybody-Welcome-logo.png" alt="logo" class="logo">
 <form>
 <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="cName" placeholder="Company Name">
+      <input type="text" class="form-control" id="cName" placeholder="Company Name"> <br>
     </div>
   </div>
   <div class="form-group row">
     <label for="mail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-6">
-      <input type="email" class="form-control" id="mail" placeholder="Email">
+      <input type="email" class="form-control" id="mail" placeholder="Email"> <br>
     </div>
   </div>
   <div class="form-group row">
