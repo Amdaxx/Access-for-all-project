@@ -1,5 +1,5 @@
 <?php
-require_once("checkLogin.php");
+//require_once("checkLogin.php");
 $nameErr = $pwderr = $invalidMesg = "";
 if (isset($_POST['submit'])) {
     if ($_POST["userName"]=="") {
@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     }
     if($_POST['usrname'] != null && $_POST["password"] !=null)
     {
-        $array_user = verifyUser();
+        //$array_user = verifyUser();
         if ($array_user != null) {
             session_start();
             
