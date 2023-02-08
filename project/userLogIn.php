@@ -1,5 +1,4 @@
 <?php
-require_once("checkLogin.php");
 $nameErr = $pwderr = $invalidMesg = "";
 if (isset($_POST['submit'])) {
     if ($_POST["userName"]=="") {
