@@ -14,8 +14,13 @@
   </header>
 
 <body>
+<<<<<<< Updated upstream
     <img src="Everybody-Welcome-logo.png" alt="logo" class="logo">
 <form>
+=======
+    <img src="Everybody-Welcome-logo.png" alt="logo" class="center">
+<form id="createAccountform">
+>>>>>>> Stashed changes
 <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">
