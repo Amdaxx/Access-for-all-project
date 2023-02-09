@@ -12,15 +12,15 @@ label {
 color: black;
 }
 
-#createAccountform {
-  margin-left: 15%;
+#centerform {
+  margin-left: 10%;
   margin-right:10%;
-  width: 70%;
+  width: 80%;
   padding-left: 15%;
 }
 
 header {
-  padding-bottom: 130px;
+  padding-bottom: 110px;
 }
 
 .logo {
@@ -48,7 +48,6 @@ header {
 }
 
 .Brec {
-  position: absolute;
   width: 490px;
   height: 671px;
   left: 74px;

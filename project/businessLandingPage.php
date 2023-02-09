@@ -12,6 +12,6 @@
 </div>
 
     <div id="s-container">
-        <div class="Brec">test</div>
+        <div class="Brec"></div>
         <div class="Srec1"></div>
     </div>
