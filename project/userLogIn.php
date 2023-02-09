@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
       <ul>
         <li style = " font-size: 40px">Log In As: </li>
         <li><a href="userLogin.php">Business</a></li>
-        <li><a href="userLogin.php">Site Admin</a></li>
+        <li><a href="siteAdmin.php">Site Admin</a></li>
         <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
       </ul>    
     </div>
