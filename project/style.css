@@ -12,10 +12,11 @@ label {
 color: black;
 }
 
-form {
+#createAccountform {
   margin-left: 15%;
-  margin-right:15%;
+  margin-right:10%;
   width: 70%;
+  padding-left: 15%;
 }
 
 header {

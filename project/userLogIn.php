@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
 
 
 ?>
+<<<<<<< Updated upstream
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">  
@@ -81,6 +82,31 @@ if (isset($_POST['submit'])) {
         <div class="form-group row">
             <div class="col-sm-10">
             <button type="submit" class="btn btn-primary">Log in</button>
+=======
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">  
+<div class="container pb-5">
+    <main role="main" class="pb-3">
+        <h2>Login</h2><br>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                <div class="form-group col-md-6">
+                        <label class="control-label labelFont">User Name</label>
+                        <input class="form-control" type="text" name = "username">
+                        <span class="text-danger"><?php echo $nameErr; ?></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="control-label labelFont">Password</label>
+                        <input class="form-control" type="password" name = "password">
+                        <span class="text-danger"><?php echo $pwderr; ?></span>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <input class="btn btn-primary" type="submit" value="Login" name ="submit">
+                    </div>
+                </form>
+>>>>>>> Stashed changes
             </div>
         </div>
         </form>
