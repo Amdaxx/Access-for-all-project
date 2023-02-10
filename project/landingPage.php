@@ -9,6 +9,7 @@
     <div id="header">
       <ul>
         <li><a href="userLogin.php">Business</a></li>
+        <li><a href="siteAdmin.php">Site Admin</a></li>
         <img src="Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img>
         <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
       </ul>    

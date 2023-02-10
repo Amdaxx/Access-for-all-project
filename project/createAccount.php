@@ -15,7 +15,7 @@
 
 <body>
     <img src="Everybody-Welcome-logo.png" alt="logo" class="logo">
-<form>
+<form id = "centerform" >
 <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">

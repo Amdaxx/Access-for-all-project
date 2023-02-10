@@ -12,14 +12,15 @@ label {
 color: black;
 }
 
-form {
-  margin-left: 15%;
-  margin-right:15%;
-  width: 70%;
+#centerform {
+  margin-left: 10%;
+  margin-right:10%;
+  width: 80%;
+  padding-left: 15%;
 }
 
 header {
-  padding-bottom: 130px;
+  padding-bottom: 110px;
 }
 
 .logo {
@@ -40,4 +41,25 @@ header {
 
 .test {
   padding-bottom: 90px;
+}
+
+#s-container {
+  position: relative;
+}
+
+.Brec {
+  width: 490px;
+  height: 671px;
+  left: 74px;
+  top: 211px;
+  background-color: #6b6b6b;
+}
+
+.Srec1 {
+  position: absolute;
+  width: 433px; 
+  height: 177px; 
+  left: 23px; 
+  top: 56 px; 
+  background: #D9D9D9;
 }

@@ -1,4 +1,5 @@
 <?php
+//require_once("checkLogin.php");
 $nameErr = $pwderr = $invalidMesg = "";
 if (isset($_POST['submit'])) {
     if ($_POST["userName"]=="") {
@@ -9,7 +10,7 @@ if (isset($_POST['submit'])) {
     }
     if($_POST['usrname'] != null && $_POST["password"] !=null)
     {
-        $array_user = verifyUser();
+        //$array_user = verifyUser();
         if ($array_user != null) {
             session_start();
             
@@ -34,7 +35,6 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">  
 <link rel="stylesheet" href="topNavhome.css">
@@ -44,15 +44,14 @@ if (isset($_POST['submit'])) {
       <ul>
         <li style = " font-size: 40px">Log In As: </li>
         <li><a href="userLogin.php">Business</a></li>
-        <li><a href="userLogin.php">Site Admin</a></li>
+        <li><a href="siteAdmin.php">Site Admin</a></li>
         <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
       </ul>    
     </div>
-  <head><h2> Business Login</h2></head>
-
   <body>
+    <br><br><br>
     <img src="Everybody-Welcome-logo.png" alt="logo" class="logo">
-        <form>
+        <form id = "centerform">
         <div class="form-group row">
             <label for="mail" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-6">
