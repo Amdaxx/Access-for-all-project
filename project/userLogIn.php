@@ -27,24 +27,16 @@ if (isset($_POST['submit'])) {
 
 
 
-
-
-
-
-
-
-
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">  
 <link rel="stylesheet" href="topNavhome.css">
 
 
- <div id="header">
+    <div id="header">
       <ul>
-        <li style = " font-size: 40px">Log In As: </li>
-        <li><a href="userLogin.php">Business</a></li>
-        <li><a href="siteAdmin.php">Site Admin</a></li>
+        <li><a href="userLogin.php">Log In</a></li>
+        <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img src="Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
         <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
       </ul>    
     </div>

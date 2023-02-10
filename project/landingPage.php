@@ -8,9 +8,8 @@
   <body style = "background-color:cdc7c7">
     <div id="header">
       <ul>
-        <li><a href="userLogin.php">Business</a></li>
-        <li><a href="siteAdmin.php">Site Admin</a></li>
-        <img src="Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img>
+        <li><a href="userLogin.php">Log In</a></li>
+        <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img src="Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
         <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
       </ul>    
     </div>
@@ -39,21 +38,21 @@
       <div class="column">
         <div class="card">
           <h3>Search For Venue</h3>
-          <img src="worldIcon.png" alt="world icon" width="225" height="225"></img>
+          <button1 onclick="window.location.href='landingPage.php';" type= "button" ><img src="worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <h3>Our Services</h3>
-          <img src="peopleIcon.png" alt="people icon" width="225" height="225"></img>
+          <button1 onclick="window.location.href='landingPage.php';" type= "button" ><img src="peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
         </div>
       </div>
       
       <div class="column">
         <div class="card">
           <h3>Contact Us</h3>
-          <img src="contactUsIcon.png" alt="contact us icon" width="225" height="225"></img>
+          <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
         </div>
       </div>
     </div>

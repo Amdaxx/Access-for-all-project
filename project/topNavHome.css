@@ -93,3 +93,33 @@ aboutUs{
   text-align: center;
   margin: auto;
 }
+button2{
+  background-color: #696969;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button1{
+  background-color:#cdc7c7;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button1:hover{
+  background-color: #696969;
+  padding: 10px 10px;
+}
+
+.seventyfive {
+  margin: auto;
+  width: 75%;
+}
+
+.center{
+  margin: auto;
+  width: 50%;
+}

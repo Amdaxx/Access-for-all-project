@@ -1,17 +1,33 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="topNavHome.css">  
 <html>
   <head>
     <title>Contact Us</title>
   </head>
 
   <body>
-    <?php echo '<h2>Contact Us</h2>'; 
-    echo '<p>To: Access For All</p>'; ?>
-    <textarea name="comment" rows="10" cols="80"></textarea>
-    <?php echo '<p>From:';?>
-    <input type="text">
+    <div id="header">
+      <ul>
+        <li><a href="userLogin.php">Log In</a></li>
+        <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img src="Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
+        <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
+      </ul>    
+    </div>
 
-    <h4>(+44) 7492 043842 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AccessForAll@gmail.com</h4>
+    <div class="row">
+      <div class = "onecolumn">
+        <aboutUs>
+          <h2 >Contact Us</h2>
+        </aboutUs>
+      </div>
+    </div>
+
+    <div class="seventyfive">
+      <h3>To: Access For All</h3>
+      <textarea style = "overflow:scroll;" name="comment" rows="10" cols="150"></textarea>
+      <h3>From: <input type="text"></h3>
+      <h4>(+44) 7492 043842  AccessForAll@gmail.com</h4>
+    </div>
   </body>
 </html>
