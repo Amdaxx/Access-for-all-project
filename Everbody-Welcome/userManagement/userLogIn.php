@@ -1,27 +1,7 @@
 <?php
-//require_once("checkLogin.php");
-$nameErr = $pwderr = $invalidMesg = "";
+include_once("sql.php");
 if (isset($_POST['submit'])) {
-    if ($_POST["userName"]=="") {
-        $nameErr = "Username is required";
-    } 
-    if ($_POST["password"]==null) {
-        $pwderr = "Password is required";
-    }
-    if($_POST['usrname'] != null && $_POST["password"] !=null)
-    {
-        //$array_user = verifyUser();
-        if ($array_user != null) {
-            session_start();
-            
-            $_SESSION['userID'] = $array_user[0]['UserName'];
-            header(""); 
-            exit();
-        }
-        else{
-            $invalidMesg = "Invalid username and password!";
-        }
-    }
+    verifyLogin($_POST['email'], $_POST['pass']);
 }
 
 
@@ -43,17 +23,17 @@ if (isset($_POST['submit'])) {
   <body>
     <br><br><br>
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
-        <form id = "centerform">
+        <form id = "centerform" method="post">
         <div class="form-group row">
             <label for="mail" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-6">
-            <input type="email" class="form-control" id="mail" placeholder="Email"> <br>
+            <input type="email" class="form-control" id="mail" name="email" placeholder="Email"> <br>
             </div>
         </div>
         <div class="form-group row">
             <label for="pwd" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-6">
-            <input type="password" class="form-control" id="pwd" placeholder="Password"> <br>
+            <input type="password" class="form-control" id="pwd" name="pass" placeholder="Password"> <br>
             <input type="checkbox" onclick="myFunction()">Show Password
 
             <script>
@@ -70,7 +50,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="form-group row">
             <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Log in</button>
+            <button type="submit" name="submit" class="btn btn-primary">Log in</button>
             </div>
         </div>
         </form>
