@@ -4,9 +4,7 @@
   text-align:center;
 }
 
-img{
-  margin-top: 14px;
-}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -111,11 +109,11 @@ button1{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  padding: 10px 10px;
 }
 
 button1:hover{
   background-color: #696969;
-  padding: 10px 10px;
 }
 
 .seventyfive {

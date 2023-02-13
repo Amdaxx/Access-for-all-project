@@ -26,7 +26,7 @@
         <div class="card">
           <h3>Other Links</h3>
           <p><a href="https://www.disabilityrightsuk.org/">Disabled Charities</p></a>
-          <p><a href = "meetTheteam.php">Meet The Team</p></a>
+          <p><a href = "http://localhost/Access-for-all-project/Everbody-Welcome/public/meetTheTeam.php">Meet The Team</p></a>
           <p><a href="https://www.mcdonalds.com/gb/en-gb/menu.html">Company Policy</p></a>
           <p><a href="https://www.gov.uk/setting-up-charity/register-your-charity">Registerd Charity Info</p></a>
         </div>
