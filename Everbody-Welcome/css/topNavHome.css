@@ -72,7 +72,7 @@ body{
 }
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .column {
     width: 100%;
     display: block;
@@ -120,3 +120,4 @@ button1:hover{
   margin: auto;
   width: 50%;
 }
+

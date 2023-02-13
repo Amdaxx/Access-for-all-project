@@ -34,21 +34,21 @@
       <div class="column">
         <div class="card">
           <h3>Search For Venue</h3>
-          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <h3>Our Services</h3>
-          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
         </div>
       </div>
       
       <div class="column">
         <div class="card">
           <h3>Contact Us</h3>
-          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/contactUs.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
         </div>
       </div>
     </div>

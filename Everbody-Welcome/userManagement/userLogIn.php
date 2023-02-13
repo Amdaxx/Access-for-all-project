@@ -74,6 +74,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         </form>
-</body>
+        <?php include  'C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\public\footer.php' ?>
+    </body>
     </main>
 </div>
