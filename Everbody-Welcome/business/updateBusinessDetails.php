@@ -28,6 +28,25 @@
     </div>
   </div>
   <div class="form-group row">
+    <label for="addr" class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="addr" placeholder="Address"> <br>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="pstcde" placeholder="PostCode"> <br>
+    </div>
+  </div>
+  <div class="form-group row">
+  <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="num" placeholder="Contact Number"> <br>
+    </div>
+  </div>
+  <div class="form-group row">
     <label for="pwd" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-6">
       <input type="password" class="form-control" id="pwd" placeholder="Password"> <br>
@@ -53,5 +72,5 @@ function myFunction() {
 </form>
 </body>
 <?php
-include 'footer.php'
+include 'C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\public\footer.php'
 ?>

@@ -27,6 +27,27 @@
       <input type="email" class="form-control" id="mail" placeholder="Email"> <br>
     </div>
   </div>
+
+
+  <div class="form-group row">
+    <label for="addr" class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="addr" placeholder="Address"> <br>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="pstcde" placeholder="PostCode"> <br>
+    </div>
+  </div>
+  <div class="form-group row">
+  <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="num" placeholder="Contact Number"> <br>
+    </div>
+  </div>
   <div class="form-group row">
     <label for="pwd" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-6">
