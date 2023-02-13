@@ -53,5 +53,5 @@ function myFunction() {
 </form>
 </body>
 <?php
-include 'http://localhost/Access-for-all-project/Everbody-Welcome/public/footer.php'
+include 'C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\public\footer.php'
 ?>
