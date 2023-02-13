@@ -43,20 +43,39 @@ header {
   padding-bottom: 90px;
 }
 
-#s-container {
-  position: relative;
-}
-
-.Brec {
-  width: 490px;
-  height: 671px;
-  left: 74px;
-  top: 211px;
-  background-color: #6b6b6b;
-}
-
 .Srec1 {
   position: absolute;
+  margin-top: 5%;
+  margin-left: 3%;
+  width: 433px; 
+  height: 177px; 
+  left: 23px; 
+  top: 56 px; 
+  background: #D9D9D9;
+}
+
+#viewAudit {
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+#newAudit {
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.Srec2 {
+  position: absolute;
+  margin-top: 17%;
+  margin-left: 3%;
   width: 433px; 
   height: 177px; 
   left: 23px; 

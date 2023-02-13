@@ -57,7 +57,7 @@
 
             $verify = false;
             
-            $id = "51312";
+            $id = rand(1,9999999);
             $stat = "business";
             $pwd = password_hash($pwd, PASSWORD_DEFAULT);
 
