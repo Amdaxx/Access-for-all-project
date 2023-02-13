@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width,minimum-scale=1">
 		<title>Accommodation Survey Form</title>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-		<link rel="stylesheet" href="surveyStyle.css">
+		<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/surveyStyle.css">
 	</head>
 	<body>
 

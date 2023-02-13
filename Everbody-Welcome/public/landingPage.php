@@ -1,16 +1,16 @@
 <html>
   <head>
     <title> Everybody Welcome</title>
-    <link rel="stylesheet" href="topNavHome.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   </head>
 
   <body style = "background-color:cdc7c7">
     <div id="header">
       <ul>
-        <li><a href="userLogin.php">Log In</a></li>
-        <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img src="pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
-        <li style="float:right"><a class="active" href="createAccount.php">Create Account</a></li>
+        <li><a href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/userLogin.php">Log In</a></li>
+        <button2 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
+        <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/createAccount.php">Create Account</a></li>
       </ul>    
     </div>
    
@@ -38,21 +38,21 @@
       <div class="column">
         <div class="card">
           <h3>Search For Venue</h3>
-          <button1 onclick="window.location.href='landingPage.php';" type= "button" ><img src="pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <h3>Our Services</h3>
-          <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
         </div>
       </div>
       
       <div class="column">
         <div class="card">
           <h3>Contact Us</h3>
-          <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/contactUs.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
         </div>
       </div>
     </div>

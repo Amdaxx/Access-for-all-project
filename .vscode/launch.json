@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost/Access-for-all-project/project/public/landingPage.php",
+            "url": "http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php",
             "webRoot": "${workspaceFolder}"
         }
     ]
