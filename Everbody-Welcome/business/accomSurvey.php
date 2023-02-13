@@ -25,24 +25,6 @@
 
             <div class="step"></div>
             <div class="step"></div>
-            <div class="step"></div>
-
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
-
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
-
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
-
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
         </div>
 
         <div class="step-content current" data-step="1">
@@ -128,9 +110,9 @@
                 </p>
 
                 <div class="rating">
-                    <input type="radio" name="accomAnswerTwo" id="radio5" value="Yes">
+                    <input type="radio" name="accomAnswerThree" id="radio5" value="Yes">
                     <label for="radio5">YES</label>
-                    <input type="radio" name="accomAnswerTwo" id="radio6" value="No">
+                    <input type="radio" name="accomAnswerThree" id="radio6" value="No">
                     <label for="radio6" onclick="accom3rdAnswer()">NO</label>
                     <script>
                         function accom3rdAnswer() {
@@ -238,8 +220,126 @@
 
         </div>
 
-        <!-- page 23 -->
-        <div class="step-content" data-step="23">
+        <!-- page 6 -->
+        <div class="step-content" data-step="6">
+            <div class="fields">
+                <p name="q6" id="Q6">
+                
+                Is there space for a wheelchair to at least one side of the toilet to enable the person to transfer?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerSix" id="radio11" value="Yes">
+                    <label for="radio11">YES</label>
+                    <input type="radio" name="accomAnswerSix" id="radio12" value="No">
+                    <label for="radio12" onclick="accom6thAnswer()">NO</label>
+                    <script>
+                        function accom6thAnswer() {
+                        alert("pop up 6");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload6" id="accomFileToUpload6">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment6" id="accomComment6">
+                <label for="accomComment6"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="5">Prev</a>
+                <a href="#" class="btn" data-set-step="7">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 7 -->
+        <div class="step-content" data-step="7">
+            <div class="fields">
+                <p name="q7" id="Q7">
+                Are there handrails next to the toilet?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerSeven" id="radio13" value="Yes">
+                    <label for="radio13">YES</label>
+                    <input type="radio" name="accomAnswerSeven" id="radio14" value="No">
+                    <label for="radio14" onclick="accom7thAnswer()">NO</label>
+                    <script>
+                        function accom7thAnswer() {
+                        alert("pop up 7");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload7" id="accomFileToUpload7">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment7" id="accomComment7">
+                <label for="accomComment7"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="6">Prev</a>
+                <a href="#" class="btn" data-set-step="8">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 8 -->
+        <div class="step-content" data-step="8">
+            <div class="fields">
+                <p name="q8" id="Q8">
+                Is there an emergency call system in the toilet?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerEight" id="radio15" value="Yes">
+                    <label for="radio15">YES</label>
+                    <input type="radio" name="accomAnswerEight" id="radio16" value="No">
+                    <label for="radio16" onclick="accom8thAnswer()">NO</label>
+                    <script>
+                        function accom8thAnswer() {
+                        alert("pop up 8");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload8" id="accomFileToUpload8">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment8" id="accomComment8">
+                <label for="accomComment8"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="7">Prev</a>
+                <a href="#" class="btn" data-set-step="9">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 9 (should actually be page 23 with all accom questions included) -->
+        <div class="step-content" data-step="9">
 
             <div class="fields">
                 <p>
@@ -251,7 +351,7 @@
             <button class="btn">Generate PDF</button>
 
             <div class="buttons">
-            <a href="#" class="btn alt" data-set-step="22">Prev</a>
+            <a href="#" class="btn alt" data-set-step="8">Prev</a>
             </div>
         </div>
 
@@ -274,7 +374,9 @@
         };
     });
     <?php if (!empty($_POST)): ?>
-    setStep(23);
+
+        //steps = number of questions + 1 for the generate pdf page
+    setStep(9);
     <?php endif; ?>
     </script>
 

@@ -13,6 +13,30 @@ $commentOne = $_POST["accomComment1"];
 $a2 = $_POST["accomAnswerTwo"];
 $commentTwo = $_POST["accomComment2"];
 
+//Question 3
+$a3 = $_POST["accomAnswerThree"];
+$commentThree = $_POST["accomComment3"];
+
+//Question 4
+$a4 = $_POST["accomAnswerFour"];
+$commentFour = $_POST["accomComment4"];
+
+//Question 5
+$a5 = $_POST["accomAnswerFive"];
+$commentFive = $_POST["accomComment5"];
+
+//Question 6
+$a6 = $_POST["accomAnswerSix"];
+$commentSix = $_POST["accomComment6"];
+
+//Question 7
+$a7 = $_POST["accomAnswerSeven"];
+$commentSeven = $_POST["accomComment7"];
+
+//Question 8
+$a8 = $_POST["accomAnswerEight"];
+$commentEight = $_POST["accomComment8"];
+
 $html = '<h1>Accomodation Survey Results</h1>'; //title
 $html .= "<table border='1' style='border-collapse:collapse'>
             <tr>
@@ -28,11 +52,47 @@ $html .= "<table border='1' style='border-collapse:collapse'>
                 <td width='200'>$commentOne</td>
             </tr>
             <tr>
-                <td></td>
-                <td>$a2</td>
-                <td></td>
-                <td>$commentTwo</td>
-                </tr>
+            <td width='250'></td>
+            <td width='60'>$a2</td>
+            <td width='250'></td>
+            <td width='200'>$commentTwo</td>
+            </tr>
+            <tr>
+            <td width='250'></td>
+            <td width='60'>$a3</td>
+            <td width='250'></td>
+            <td width='200'>$commentThree</td>
+            </tr>
+            <tr>
+            <td width='250'></td>
+            <td width='60'>$a4</td>
+            <td width='250'></td>
+            <td width='200'>$commentFour</td>
+            </tr>
+            <tr>
+            <td width='250'></td>
+            <td width='60'>$a5</td>
+            <td width='250'></td>
+            <td width='200'>$commentFive</td>
+            </tr>
+            <tr>
+            <td width='250'></td>
+            <td width='60'>$a6</td>
+            <td width='250'></td>
+            <td width='200'>$commentSix</td>
+            </tr>
+            <tr>
+            <td width='250'></td>
+            <td width='60'>$a7</td>
+            <td width='250'></td>
+            <td width='200'>$commentSeven</td>
+            </tr>
+            <tr>
+            <td width='250'></td>
+            <td width='60'>$a8</td>
+            <td width='250'></td>
+            <td width='200'>$commentEight</td>
+            </tr>
         </table>
 "; //body
 
