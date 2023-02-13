@@ -24,6 +24,7 @@
             services to clients large and small across all sectors. People are at the heart of 
             everything we do because people make change happen. Working in partnership, we enable people to 
             create places, services and experiences which are accessible and inclusive for all.
+            
           </p>
         </aboutUs>
       </div>
@@ -34,7 +35,7 @@
       <div class="column">
         <div class="card">
           <h3>Search For Venue</h3>
-          <button1 onclick="window.location.href='landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
         </div>
       </div>
 
