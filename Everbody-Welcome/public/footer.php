@@ -26,7 +26,7 @@
         <div class="card">
           <h3>Other Links</h3>
           <p><a href="https://www.disabilityrightsuk.org/">Disabled Charities</p></a>
-          <p><a href="https://en.wikipedia.org/wiki/Sheffield_Hallam_(UK_Parliament_constituency)">Terms and Conditions</p></a>
+          <p><a href = "meetTheteam.php">Meet The Team</p></a>
           <p><a href="https://www.mcdonalds.com/gb/en-gb/menu.html">Company Policy</p></a>
           <p><a href="https://www.gov.uk/setting-up-charity/register-your-charity">Registerd Charity Info</p></a>
         </div>
@@ -34,7 +34,7 @@
 
       <div class="fourcolumn">
         <div class="card">
-          <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" width="225" height="130"></img></button2>
+          <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img  src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" width="225" height="130"></img></button2>
         </div>
       </div>
 
