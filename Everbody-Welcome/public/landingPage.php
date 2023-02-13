@@ -7,11 +7,7 @@
 
   <body style = "background-color:cdc7c7">
     <div id="header">
-      <ul>
-        <li><a href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/userLogin.php">Log In</a></li>
-        <button2 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
-        <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/createAccount.php">Create Account</a></li>
-      </ul>    
+      <?php include "publicHeader.php" ?>    
     </div>
    
     <div>
@@ -57,7 +53,7 @@
       </div>
     </div>
 
-
+    <?php include "footer.php" ?>
   </body>
 
 
