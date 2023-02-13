@@ -25,9 +25,18 @@
 
     <div class="seventyfive">
       <h3>To: Access For All</h3>
-      <textarea style = "overflow:scroll;" name="comment" rows="10" cols="150"></textarea>
-      <h3>From: <input type="text"></h3>
-      <h4>(+44) 7492 043842  AccessForAll@gmail.com</h4>
+      <h3><textarea placeholder="Enter Your Message Here" style = "overflow:scroll;max-width:95%;" name="comment" rows="10" cols="150"></textarea></h3>
+      <h3>From: <input type="text" placeholder="Enter Your Email Here"></h3>
+      <div class="row">
+        <div class = "twocolumn">
+          <h3 >(+44) 7459 204578</h3>
+        </div>
+
+        <div class = "twocolumn">
+          <h3>EverybodyWelcome@gmail.com</h3>
+        </div>
+      </div>
+     </div>
     </div>
   </body>
 </html>

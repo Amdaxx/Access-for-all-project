@@ -52,6 +52,11 @@ body{
   width: 33.3%;
   padding: 0 10px;
 }
+.twocolumn {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
 
 .onecolumn {
   float: center;
@@ -61,6 +66,7 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /* Remove extra left and right margins, due to padding */
 .row {
