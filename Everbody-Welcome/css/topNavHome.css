@@ -37,15 +37,6 @@ body{
 }
 
 
-#HASH {
-  display: flex;
-  justify-content: space-between;
-}
-
-#HASH span {
-  padding: 15px 15px;
-}
-
 /* Float four columns side by side */
 .column {
   float: left;
