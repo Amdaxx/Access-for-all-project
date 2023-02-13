@@ -49,6 +49,13 @@ body{
   padding: 0 10px;
 }
 
+@media screen and (max-width: 1100px) {
+  .twocolumn {
+    width: 100%;
+    display: block;
+  }
+}
+
 .onecolumn {
   float: center;
   width: 50%;
@@ -121,3 +128,13 @@ button1:hover{
   width: 50%;
 }
 
+.icons{
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+.box {
+  display: flex;
+  align-items:center;
+}

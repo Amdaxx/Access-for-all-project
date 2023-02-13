@@ -11,7 +11,7 @@
     </div>
    
     <div>
-      <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Everybody Welcome</b></p>
+      <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
     </div>
 
 
