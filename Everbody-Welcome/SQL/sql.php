@@ -5,17 +5,17 @@
         $servername = 'localhost';
         $username = 'root';
         $password = '';
-        $dbname = 'everybodydb';
+        $dbname = 'dbs';
 
         try {
             $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
          }
          catch (PDOException $e) {
             $mysql = mysqli_connect('localhost', 'root', '');
-            $sql = "CREATE DATABASE everybodydb";
+            $sql = "CREATE DATABASE dbs";
             if($mysql->query($sql))
             {
-                $conn = mysqli_connect('localhost', 'root', '', 'everybodydb');
+                $conn = mysqli_connect('localhost', 'root', '', 'dbs');
                 $sql1 = "CREATE TABLE logs(
                     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
                     email VARCHAR(30) NOT NULL,
@@ -37,15 +37,12 @@
                     postcode VARCHAR(10) NOT NULL,
                     type VARCHAR(15) NOT NULL
                 )";
-                $sql4 = "CREATE TABLE questions(
-                    question VARCHAR(50) NOT NULL,
-                    type VARCHAR(20) NOT NULL
-                )";
+              
 
                 mysqli_query($conn, $sql1);
                 mysqli_query($conn, $sql2);   
                 mysqli_query($conn, $sql3);   
-                mysqli_query($conn, $sql4);                
+                          
             }
          }
 
