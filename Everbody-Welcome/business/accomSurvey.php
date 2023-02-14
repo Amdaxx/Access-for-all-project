@@ -3,26 +3,27 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,minimum-scale=1">
-		<title>Accommodation Survey Form</title>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<title>Audit Report</title>
         <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/surveyStyle.css">
 	</head>
 	<body>
 
+        <div id="header">
+            <?php include "businessHeader.php" ?>    
+        </div>
+
 		<form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		
 		
-        <h1><i class="far fa-list-alt"></i>Accommodation Survey Form</h1>
+        <h1><i class="far fa-list-alt"></i>Audit Report</h1>
 
         <div class="steps">
             <div class="step current"></div>
             <div class="step"></div>
             <div class="step"></div>
-            <div class="step"></div>
-
-            <div class="step"></div>
+            <div class="step"></div> 
             <div class="step"></div>
             <div class="step"></div>
-
+            <div class="step"></div>
             <div class="step"></div>
             <div class="step"></div>
             <div class="step"></div>
@@ -836,6 +837,6 @@
     setStep(16);
     <?php endif; ?>
     </script>
-
+        <?php include "../public/footer.php" ?>
     </body>
 </html>
