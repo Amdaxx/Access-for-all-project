@@ -3,7 +3,6 @@
   background-color: #7A7A7A;
 }
 
-
 body {
   background-color: #DDDDDD;
 }
@@ -43,6 +42,20 @@ header {
   padding-bottom: 90px;
 }
 
+<<<<<<< HEAD
+=======
+.Srec1 {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 3%;
+  width: 423px; 
+  height: 167px; 
+  left: 13px; 
+  top: 46 px; 
+  background: #D9D9D9;
+}
+
+>>>>>>> 7f5ccb9c76a03b1486936d708a9059ec344200df
 #viewAudit {
   text-align: center;
   font-family: 'Inter';
@@ -61,3 +74,39 @@ header {
   line-height: 58px;
 }
 
+<<<<<<< HEAD
+=======
+.Srec2 {
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 3%;
+  width: 423px; 
+  height: 167px; 
+  left: 13px; 
+  top: 46 px; 
+  background: #D9D9D9;
+
+}
+
+
+.Srec3 {
+  position: absolute;
+  margin-top: 35.5%;
+  margin-left: 3%;
+  width: 423px; 
+  height: 167px; 
+  left: 13px; 
+  top: 46 px; 
+  background: #D9D9D9;
+}
+
+#EDI {
+  color: black;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+}
+>>>>>>> 7f5ccb9c76a03b1486936d708a9059ec344200df
