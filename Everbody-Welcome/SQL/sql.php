@@ -37,10 +37,15 @@
                     postcode VARCHAR(10) NOT NULL,
                     type VARCHAR(15) NOT NULL
                 )";
+                $sql4 = "CREATE TABLE questions(
+                    question VARCHAR(50) NOT NULL,
+                    type VARCHAR(20) NOT NULL
+                )";
 
                 mysqli_query($conn, $sql1);
                 mysqli_query($conn, $sql2);   
-                mysqli_query($conn, $sql3);                
+                mysqli_query($conn, $sql3);   
+                mysqli_query($conn, $sql4);                
             }
          }
 

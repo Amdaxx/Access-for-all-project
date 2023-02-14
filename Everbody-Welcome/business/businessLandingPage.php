@@ -1,6 +1,6 @@
 <?php
 include_once("../SQL/sql.php");
-$path = "login.php";
+$path = "../public/LandingPage.php";
 
 session_start(); 
 if (!isset($_SESSION['business'])){
