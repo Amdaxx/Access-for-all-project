@@ -2,15 +2,9 @@
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
 
-<header>
-    <div id="header">
-      <ul>
-        <li><a href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/userLogin.php">Log In</a></li>
-        <button2 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
-        <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/business/updateBusinessDetails.php">Update Business Details</a></li>
-      </ul>    
-    </div>
-  </header>
+<div id="header">
+  <?php include "businessHeader.php" ?>    
+</div>
 
 <body>
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
@@ -70,7 +64,6 @@ function myFunction() {
     </div>
   </div>
 </form>
+  <?php include "footer.php" ?>
 </body>
-<?php
-include 'C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\public\footer.php'
-?>
+<?php include "../public/footer.php"?>
