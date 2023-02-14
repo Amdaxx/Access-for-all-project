@@ -25,6 +25,25 @@
 
             <div class="step"></div>
             <div class="step"></div>
+            <div class="step"></div>
+
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+
+            <div class="step"></div>
         </div>
 
         <div class="step-content current" data-step="1">
@@ -338,8 +357,446 @@
 
         </div>
 
-        <!-- page 9 (should actually be page 23 with all accom questions included) -->
-        <div class="step-content" data-step="9">
+         <!-- page 9 -->
+         <div class="step-content" data-step="9">
+            <div class="fields">
+                <p name="q9" id="Q9">
+                Wheelchair accessible bedroom: Is there level access (without steps or thresholds) from the accessible entrance to the bedroom, including access by ramp or lift
+                AND the route from the accessible entrance to the bedroom is at least 75cm wide, at it’s narrowest point 
+                AND the door opening is at least 75cm wide
+                AND the bedroom has unobstructed floor space not less than 120cm by 90cm?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerNine" id="radio17" value="Yes">
+                    <label for="radio17">YES</label>
+                    <input type="radio" name="accomAnswerNine" id="radio18" value="No">
+                    <label for="radio18" onclick="accom9thAnswer()">NO</label>
+                    <script>
+                        function accom9thAnswer() {
+                        alert("pop up 9");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload9" id="accomFileToUpload9">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment9" id="accomComment9">
+                <label for="accomComment9"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="8">Prev</a>
+                <a href="#" class="btn" data-set-step="10">Next</a>
+            </div>
+
+        </div>
+
+         <!-- page 10 -->
+         <div class="step-content" data-step="10">
+            <div class="fields">
+                <p name="q10" id="Q10">
+                Wheelchair accessible bathroom: Is the door opening at least 75cm wide AND
+                is there unobstructed floor space not less than 120cm by 90cm?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTen" id="radio19" value="Yes">
+                    <label for="radio19">YES</label>
+                    <input type="radio" name="accomAnswerTen" id="radio20" value="No">
+                    <label for="radio20" onclick="accom10thAnswer()">NO</label>
+                    <script>
+                        function accom10thAnswer() {
+                        alert("pop up 10");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload10" id="accomFileToUpload10">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment10" id="accomComment10">
+                <label for="accomComment10"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="9">Prev</a>
+                <a href="#" class="btn" data-set-step="11">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 11 -->
+        <div class="step-content" data-step="11">
+            <div class="fields">
+                <p name="q11" id="Q11">
+                Wheelchair accessible bathroom: Is there space for a wheelchair to at least one side of the toilet to enable the person to transfer?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerEleven" id="radio21" value="Yes">
+                    <label for="radio21">YES</label>
+                    <input type="radio" name="accomAnswerEleven" id="radio22" value="No">
+                    <label for="radio22" onclick="accom11thAnswer()">NO</label>
+                    <script>
+                        function accom11thAnswer() {
+                        alert("pop up 11");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload11" id="accomFileToUpload11">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment11" id="accomComment11">
+                <label for="accomComment11"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="10">Prev</a>
+                <a href="#" class="btn" data-set-step="12">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 12 -->
+        <div class="step-content" data-step="12">
+            <div class="fields">
+                <p name="q12" id="Q12">
+                Wheelchair accessible bathroom: Are there handrails next to the toilet?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTwelve" id="radio23" value="Yes">
+                    <label for="radio23">YES</label>
+                    <input type="radio" name="accomAnswerTwelve" id="radio24" value="No">
+                    <label for="radio24" onclick="accom12thAnswer()">NO</label>
+                    <script>
+                        function accom12thAnswer() {
+                        alert("pop up 12");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload12" id="accomFileToUpload12">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment12" id="accomComment12">
+                <label for="accomComment12"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="11">Prev</a>
+                <a href="#" class="btn" data-set-step="13">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 13 -->
+        <div class="step-content" data-step="13">
+            <div class="fields">
+                <p name="q13" id="Q13">
+                Wheelchair accessible bathroom: Is there a level access wetroom shower (no raised shower tray or step-up)?  
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerThirteen" id="radio25" value="Yes">
+                    <label for="radio25">YES</label>
+                    <input type="radio" name="accomAnswerThirteen" id="radio26" value="No">
+                    <label for="radio26" onclick="accom13thAnswer()">NO</label>
+                    <script>
+                        function accom13thAnswer() {
+                        alert("pop up 13");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload13" id="accomFileToUpload13">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment13" id="accomComment13">
+                <label for="accomComment13"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="12">Prev</a>
+                <a href="#" class="btn" data-set-step="14">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 14 -->
+        <div class="step-content" data-step="14">
+            <div class="fields">
+                <p name="q14" id="Q14">
+                Wheelchair accessible bathroom: Is there an emergency call system in the bathroom?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerFourteen" id="radio27" value="Yes">
+                    <label for="radio27">YES</label>
+                    <input type="radio" name="accomAnswerFourteen" id="radio28" value="No">
+                    <label for="radio28" onclick="accom14thAnswer()">NO</label>
+                    <script>
+                        function accom14thAnswer() {
+                        alert("pop up 14");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload14" id="accomFileToUpload14">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment14" id="accomComment14">
+                <label for="accomComment14"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="13">Prev</a>
+                <a href="#" class="btn" data-set-step="15">Next</a>
+            </div>
+
+        </div>
+
+         <!-- page 15 -->
+         <div class="step-content" data-step="15">
+            <div class="fields">
+                <p name="q15" id="Q15">
+                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
+                AND is there clear signage positioned where any fixed loops are effective?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerFifteen" id="radio29" value="Yes">
+                    <label for="radio29">YES</label>
+                    <input type="radio" name="accomAnswerFifteen" id="radio30" value="No">
+                    <label for="radio30" onclick="accom15thAnswer()">NO</label>
+                    <script>
+                        function accom15thAnswer() {
+                        alert("pop up 15");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload15" id="accomFileToUpload15">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment15" id="accomComment15">
+                <label for="accomComment15"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="14">Prev</a>
+                <a href="#" class="btn" data-set-step="16">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 16 -->
+        <div class="step-content" data-step="16">
+            <div class="fields">
+                <p name="q16" id="Q16">
+                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
+                AND is there clear signage positioned where any fixed loops are effective?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerSixteen" id="radio31" value="Yes">
+                    <label for="radio31">YES</label>
+                    <input type="radio" name="accomAnswerSixteen" id="radio32" value="No">
+                    <label for="radio32" onclick="accom16thAnswer()">NO</label>
+                    <script>
+                        function accom16thAnswer() {
+                        alert("pop up 16");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload16" id="accomFileToUpload16">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment16" id="accomComment16">
+                <label for="accomComment16"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="15">Prev</a>
+                <a href="#" class="btn" data-set-step="17">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 17 -->
+        <div class="step-content" data-step="17">
+            <div class="fields">
+                <p name="q17" id="Q17">
+                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
+                AND is there clear signage positioned where any fixed loops are effective?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerSeventeen" id="radio33" value="Yes">
+                    <label for="radio33">YES</label>
+                    <input type="radio" name="accomAnswerSeventeen" id="radio34" value="No">
+                    <label for="radio34" onclick="accom17thAnswer()">NO</label>
+                    <script>
+                        function accom17thAnswer() {
+                        alert("pop up 17");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload17" id="accomFileToUpload17">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment17" id="accomComment17">
+                <label for="accomComment17"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="16">Prev</a>
+                <a href="#" class="btn" data-set-step="18">Next</a>
+            </div>
+
+        </div>
+
+         <!-- page 18 -->
+         <div class="step-content" data-step="18">
+            <div class="fields">
+                <p name="q18" id="Q18">
+                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
+                AND is there clear signage positioned where any fixed loops are effective?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerEighteen" id="radio35" value="Yes">
+                    <label for="radio35">YES</label>
+                    <input type="radio" name="accomAnswerEighteen" id="radio36" value="No">
+                    <label for="radio36" onclick="accom18thAnswer()">NO</label>
+                    <script>
+                        function accom18thAnswer() {
+                        alert("pop up 18");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload18" id="accomFileToUpload18">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment18" id="accomComment18">
+                <label for="accomComment18"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="17">Prev</a>
+                <a href="#" class="btn" data-set-step="19">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 19 -->
+        <div class="step-content" data-step="19">
+            <div class="fields">
+                <p name="q19" id="Q19">
+                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
+                AND is there clear signage positioned where any fixed loops are effective?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerNineteen" id="radio37" value="Yes">
+                    <label for="radio37">YES</label>
+                    <input type="radio" name="accomAnswerNineteen" id="radio38" value="No">
+                    <label for="radio38" onclick="accom19thAnswer()">NO</label>
+                    <script>
+                        function accom19thAnswer() {
+                        alert("pop up 19");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload19" id="accomFileToUpload19">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment19" id="accomComment19">
+                <label for="accomComment19"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="18">Prev</a>
+                <a href="#" class="btn" data-set-step="120">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 23 -->
+        <div class="step-content" data-step="23">
 
             <div class="fields">
                 <p>
@@ -351,7 +808,7 @@
             <button class="btn">Generate PDF</button>
 
             <div class="buttons">
-            <a href="#" class="btn alt" data-set-step="8">Prev</a>
+            <a href="#" class="btn alt" data-set-step="22">Prev</a>
             </div>
         </div>
 
@@ -376,7 +833,7 @@
     <?php if (!empty($_POST)): ?>
 
         //steps = number of questions + 1 for the generate pdf page
-    setStep(9);
+    setStep(16);
     <?php endif; ?>
     </script>
 
