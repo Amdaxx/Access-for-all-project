@@ -34,13 +34,10 @@
     <div class="row">
       <div class="column">
         <div class="card">
-<<<<<<< HEAD
           <h3>Search For Venue</h3>
           <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
-=======
           <h3><b>Search For Venue</b></h3>
           <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
->>>>>>> 7f5ccb9c76a03b1486936d708a9059ec344200df
         </div>
       </div>
 
