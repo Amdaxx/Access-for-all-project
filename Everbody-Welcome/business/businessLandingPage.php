@@ -1,5 +1,5 @@
 <?php
-require_once('../SQL/sql.php');
+include_once("../SQL/sql.php");
 $path = "login.php";
 
 session_start(); 
@@ -11,6 +11,7 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
+
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

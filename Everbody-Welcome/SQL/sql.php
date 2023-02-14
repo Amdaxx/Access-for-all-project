@@ -117,7 +117,7 @@
                 session_start();
                 $_SESSION['id'] = $user['logid'];
                 $_SESSION['business'] =  $user['stat'];
-                header('Location: http://localhost/Access-For-All-Project/Everbody-Welcome/business/businessLandingPage.php?id='.$user['logid']);
+                header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                 }
            }
             else
@@ -160,7 +160,7 @@
     {
         session_start();
         session_destroy();
-        header('Location: homePage.php');
+        header('Location: ../public/landingPage.php');
         exit;
     }
 
