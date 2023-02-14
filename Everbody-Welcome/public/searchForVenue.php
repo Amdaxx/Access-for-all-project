@@ -19,6 +19,12 @@
     <div>
       <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
     </div>
+    <div class="SearchBar">
+  
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search"style="width: 600px; margin-left:25% ">
+      <button type="submit">Submit</button>
+    
     <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h2 class="w3-bar-item">Filter Search</h2>
   <h4 class="w3-bar-item">Venue Type:</h4>
@@ -35,12 +41,10 @@
   <label for="vehicle1"> Events</label><br>
 </div>
 
+            <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
+            </div>
 <div style="margin-left:25%">
-<div class="SearchBar">
-  
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search"style="width: 600px">
-      <button type="submit">Submit</button>
+
 
 
   </body>
