@@ -28,9 +28,3 @@ button:hover {
     padding-bottom: 0px;
 }
 
-@media screen and (max-width: 1100px) {
-    .button-background {
-      width: 100%;
-      display: block;
-    }
-  }
