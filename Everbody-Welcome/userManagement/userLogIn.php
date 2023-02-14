@@ -1,5 +1,5 @@
 <?php
-include_once("sql.php");
+require_once('../SQL/sql.php');
 if (isset($_POST['submit'])) {
     verifyLogin($_POST['email'], $_POST['pass']);
 }

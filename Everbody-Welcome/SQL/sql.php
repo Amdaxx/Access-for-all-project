@@ -37,10 +37,15 @@
                     postcode VARCHAR(10) NOT NULL,
                     type VARCHAR(15) NOT NULL
                 )";
+                $sql4 = "CREATE TABLE questions(
+                    question VARCHAR(50) NOT NULL,
+                    type VARCHAR(20) NOT NULL
+                )";
 
                 mysqli_query($conn, $sql1);
                 mysqli_query($conn, $sql2);   
-                mysqli_query($conn, $sql3);                
+                mysqli_query($conn, $sql3);   
+                mysqli_query($conn, $sql4);                
             }
          }
 
@@ -85,7 +90,7 @@
               session_start();
               $_SESSION['id'] = $id;
               $_SESSION['business'] =  $stat;
-              header('Location: business.php?id='.$id);
+              header('Location: C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\business\businessLandingPage.php?id='.$id);
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -117,7 +122,7 @@
                 session_start();
                 $_SESSION['id'] = $user['logid'];
                 $_SESSION['business'] =  $user['stat'];
-                header('Location: createAccount.php?id='.$user['logid']);
+                header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                 }
            }
             else
@@ -128,11 +133,6 @@
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
-        }
-
-        function addVenue()
-        {
-            
         }
 
     }
@@ -165,7 +165,7 @@
     {
         session_start();
         session_destroy();
-        header('Location: homePage.php');
+        header('Location: ../public/landingPage.php');
         exit;
     }
 
