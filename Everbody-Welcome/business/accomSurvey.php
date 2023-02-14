@@ -641,8 +641,7 @@
         <div class="step-content" data-step="16">
             <div class="fields">
                 <p name="q16" id="Q16">
-                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
-                AND is there clear signage positioned where any fixed loops are effective?
+                Is there a mobile hoist available or a ceiling tracked hoist in at least one accessible bedroom?
                 </p>
 
                 <div class="rating">
@@ -681,8 +680,7 @@
         <div class="step-content" data-step="17">
             <div class="fields">
                 <p name="q17" id="Q17">
-                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
-                AND is there clear signage positioned where any fixed loops are effective?
+                If there is an emergency call system with vibrating pillow pad available to alert someone with hearing loss if the fire alarm is activated
                 </p>
 
                 <div class="rating">
@@ -721,8 +719,7 @@
          <div class="step-content" data-step="18">
             <div class="fields">
                 <p name="q18" id="Q18">
-                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
-                AND is there clear signage positioned where any fixed loops are effective?
+                Is there an emergency call system with flashing lights to alert someone with hearing loss if the fire alarm is activated?
                 </p>
 
                 <div class="rating">
@@ -761,8 +758,9 @@
         <div class="step-content" data-step="19">
             <div class="fields">
                 <p name="q19" id="Q19">
-                Is there a hearing loop/audio induction loop/infrared system available to amplify sound
-                AND is there clear signage positioned where any fixed loops are effective?
+                Is there is level access (without steps or thresholds) from the accessible entrance to the restaurant, including access by ramp or lift
+                AND is the route from the accessible entrance to the restaurant at least 75cm wide, at it’s narrowest point 
+                AND is the door opening at least 75cm wide?
                 </p>
 
                 <div class="rating">
@@ -792,7 +790,124 @@
 
             <div class="buttons">
                 <a href="#" class="btn alt" data-set-step="18">Prev</a>
-                <a href="#" class="btn" data-set-step="120">Next</a>
+                <a href="#" class="btn" data-set-step="20">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 20 -->
+        <div class="step-content" data-step="20">
+            <div class="fields">
+                <p name="q20" id="Q20">
+                Can you can cater for a range of dietary requirements such as vegan, gluten free, lactose free?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTwenty" id="radio39" value="Yes">
+                    <label for="radio39">YES</label>
+                    <input type="radio" name="accomAnswerTwenty" id="radio40" value="No">
+                    <label for="radio40" onclick="accom20thAnswer()">NO</label>
+                    <script>
+                        function accom20thAnswer() {
+                        alert("Pop up 20");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload20" id="accomFileToUpload20">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment20" id="accomComment20">
+                <label for="accomComment20"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="19">Prev</a>
+                <a href="#" class="btn" data-set-step="21">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 21 -->
+        <div class="step-content" data-step="21">
+            <div class="fields">
+                <p name="q21" id="Q21">
+                Are trained assistance dogs welcome?
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTwentyOne" id="radio41" value="Yes">
+                    <label for="radio41">YES</label>
+                    <input type="radio" name="accomAnswerTwentyOne" id="radio42" value="No">
+                    <label for="radio42" onclick="accom21stAnswer()">NO</label>
+                    <script>
+                        function accom21stAnswer() {
+                        alert("Default YES - It would be unlawful to refuse access to a disabled person accompanied by an assistance dog except in the most exceptional circumstances");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload21" id="accomFileToUpload21">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment21" id="accomComment21">
+                <label for="accomComment21"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="20">Prev</a>
+                <a href="#" class="btn" data-set-step="22">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 22 -->
+        <div class="step-content" data-step="22">
+            <div class="fields">
+                <p name="q22" id="Q22">
+                Do you have a published Accessibility Guide - a thorough yet concise description of the accessibility of your venue/experience? If so, please provide a link in the comments section.
+                </p>
+
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTwentyTwo" id="radio43" value="Yes">
+                    <label for="radio43">YES</label>
+                    <input type="radio" name="accomAnswerTwentyTwo" id="radio44" value="No">
+                    <label for="radio44" onclick="accom22ndAnswer()">NO</label>
+                    <script>
+                        function accom22ndAnswer() {
+                        alert("pop up 22");
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                Upload proof:
+                <input type="file" class="btn alt" name="accomFileToUpload22" id="accomFileToUpload22">
+            </div>
+
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment22" id="accomComment22">
+                <label for="accomComment22"></label>
+            </div>	
+
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="21">Prev</a>
+                <a href="#" class="btn" data-set-step="23">Next</a>
             </div>
 
         </div>
@@ -835,7 +950,7 @@
     <?php if (!empty($_POST)): ?>
 
         //steps = number of questions + 1 for the generate pdf page
-    setStep(16);
+    setStep(23);
     <?php endif; ?>
     </script>
     </body>
