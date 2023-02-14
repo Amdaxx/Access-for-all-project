@@ -1,5 +1,6 @@
 <html>
   <head>
+  
     <title> Everybody Welcome</title>
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
@@ -20,7 +21,7 @@
     </div>
     <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h2 class="w3-bar-item">Filter Search</h2>
-  <h4 class="w3-bar-item">Venue Type</h4>
+  <h4 class="w3-bar-item">Venue Type:</h4>
   <input type="checkbox" id="vType" name="VenueType" value="vType">
   <label for="vehicle1"> Accommodation</label><br>
 </div>
@@ -34,30 +35,12 @@
   <label for="vehicle1"> Events</label><br>
 </div>
 
-<div>
-  <br>
-<input type="text" placeholder="Search.." name="search" style="height: 0.9cm;">
-<button type="submit" name ="submit" class="btn btn-primary">Search</button>
-</div>
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
-    }
-  }
-}
-</script>
 <div style="margin-left:25%">
-
+<div class="SearchBar">
+  
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search"style="width: 600px">
+      <button type="submit">Submit</button>
 
 
   </body>
