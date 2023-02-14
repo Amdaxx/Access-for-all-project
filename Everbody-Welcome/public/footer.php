@@ -5,10 +5,10 @@
       <div class="fourcolumn">
         <div class="card" style = "text-decoration:none">
           <h3>Vist</h3>
-          <p><a href="landingPage.php">Home</p></a>
-          <p><a href="searchForVenue.php">Search For Venue</p></a>
-          <p><a href="ourServices.php">Our Services</p></a>
-          <p><a href="contactUs.php">Contact Us</p></a>
+          <p><a href="../public/landingPage.php">Home</p></a>
+          <p><a href="../public/searchForVenue.php">Search For Venue</p></a>
+          <p><a href="../public/ourServices.php">Our Services</p></a>
+          <p><a href="../public/contactUs.php">Contact Us</p></a>
         </div>
       </div>
 

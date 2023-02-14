@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
   <?php include "../public/publicHeader.php" ?>     
 </div>
 <body>
-    <form id = "centerform" method="post" >
+    <form style = "padding-top: 50px;" id = "centerform" method="post" >
     <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">
