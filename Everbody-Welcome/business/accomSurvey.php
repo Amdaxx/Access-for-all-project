@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width,minimum-scale=1">
 		<title>Audit Report</title>
         <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/surveyStyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	</head>
 	<body>
 
@@ -814,7 +815,7 @@
         </div>
 
     </form>
-
+    <?php include "../public/footer.php" ?>                   
         
     <script>
     const setStep = step => {
@@ -837,6 +838,5 @@
     setStep(16);
     <?php endif; ?>
     </script>
-        <?php include "../public/footer.php" ?>
     </body>
 </html>
