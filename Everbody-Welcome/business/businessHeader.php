@@ -1,5 +1,5 @@
 <?php
-
+/*
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
 
@@ -12,7 +12,7 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-
+*/
 
 ?>
 
