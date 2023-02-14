@@ -40,7 +40,7 @@ $commentEight = $_POST["accomComment8"];
 $html = '<h1>Accomodation Survey Results</h1>'; //title
 $html .= "<table border='1' style='border-collapse:collapse'>
             <tr>
-                <th>Question1</th>
+                <th>Questions</th>
                 <th>Yes/No</th>
                 <th>Proof</th>
                 <th>Comments</th>
