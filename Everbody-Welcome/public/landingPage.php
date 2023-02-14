@@ -34,7 +34,7 @@
       <div class="column">
         <div class="card">
           <h3>Search For Venue</h3>
-          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+          <button1 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
         </div>
       </div>
 
