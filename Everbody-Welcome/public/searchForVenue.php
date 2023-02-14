@@ -1,5 +1,6 @@
 <html>
   <head>
+  
     <title> Everybody Welcome</title>
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
@@ -13,6 +14,7 @@
         <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/createAccount.php">Create Account</a></li>
       </ul>    
     </div>
+
    
     <div>
       <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
@@ -34,9 +36,10 @@
 </div>
 
 <div style="margin-left:25%">
-<div class="search-container">
+<div class="SearchBar">
+  
     <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
+      <input type="text" placeholder="Search.." name="search"style="width: 600px">
       <button type="submit">Submit</button>
 
 

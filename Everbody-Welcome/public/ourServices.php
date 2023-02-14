@@ -40,6 +40,6 @@
         <p>
       </div>
     </div>
-    <?php include "publicHeader.php" ?>
+    <?php include "footer.php" ?>
   </body>
 </html>

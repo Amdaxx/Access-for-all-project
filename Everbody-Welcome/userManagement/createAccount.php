@@ -1,6 +1,14 @@
+<?php
+require_once('../SQL/sql.php');
+
+if (isset($_POST['submit'])){
+    createUser($_POST['email'], $_POST['password'],  $_POST['companyName'], $_POST['phone'], $_POST['postcode'], $_POST['address']);
+    }
+?>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
+<link rel="stylesheet" href="vvvvvvv">
 
 <header>
     <div id="header">
@@ -14,17 +22,17 @@
 
 <body>
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
-<form id = "centerform" >
+<form id = "centerform" method="post" >
 <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="cName" placeholder="Company Name"> <br>
+      <input type="text" class="form-control" id="cName" placeholder="Company Name" name="companyName"> <br>
     </div>
   </div>
   <div class="form-group row">
     <label for="mail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-6">
-      <input type="email" class="form-control" id="mail" placeholder="Email"> <br>
+      <input type="email" class="form-control" id="mail" placeholder="Email" name="email"> <br>
     </div>
   </div>
 
@@ -32,26 +40,26 @@
   <div class="form-group row">
     <label for="addr" class="col-sm-2 col-form-label">Address</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="addr" placeholder="Address"> <br>
+      <input type="text" class="form-control" id="addr" placeholder="Address" name="address"> <br>
     </div>
   </div>
 
   <div class="form-group row">
     <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="pstcde" placeholder="PostCode"> <br>
+      <input type="text" class="form-control" id="pstcde" placeholder="PostCode" name="postcode"> <br>
     </div>
   </div>
   <div class="form-group row">
   <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="num" placeholder="Contact Number"> <br>
+      <input type="text" class="form-control" id="num" placeholder="Contact Number" name="phone"> <br>
     </div>
   </div>
   <div class="form-group row">
     <label for="pwd" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-6">
-      <input type="password" class="form-control" id="pwd" placeholder="Password"> <br>
+      <input type="password" class="form-control" id="pwd" placeholder="Password" name="password"> <br>
       <input type="checkbox" onclick="myFunction()">Show Password
 
       <script>
@@ -68,7 +76,7 @@ function myFunction() {
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" name ="submit" class="btn btn-primary">Sign in</button>
     </div>
   </div>
 </form>

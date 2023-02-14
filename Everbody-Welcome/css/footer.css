@@ -1,0 +1,53 @@
+footer{
+    width: 100%;
+    text-align:center;
+    background-color: #696969;
+  }
+
+  .fourcolumn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    text-align: center;
+    border-right: 1px;
+    border-color: #cdc7c7;
+  }
+  
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {
+    margin: 0 -5px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 1050px) {
+    .fourcolumn {
+      width: 100%;
+      display: block;
+      margin-bottom: 5px;
+      border-bottom: 1px;
+      border-color: #cdc7c7;
+      border-width: 1px;
+    }
+  }
+
+
+  a {
+    color:#333;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #cdc7c7;
+    font-weight: bold;
+    background-color: transparent;
+  }
+  

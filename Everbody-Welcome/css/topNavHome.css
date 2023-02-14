@@ -4,9 +4,7 @@
   text-align:center;
 }
 
-img{
-  margin-top: 14px;
-}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -24,7 +22,7 @@ li {
 
 li a {
   background-color: #cdc7c7;
-  color: black;
+  color: #333;
   padding: 14px 16px;
   float: left;
   text-align: center;
@@ -37,15 +35,6 @@ body{
 }
 
 
-#HASH {
-  display: flex;
-  justify-content: space-between;
-}
-
-#HASH span {
-  padding: 15px 15px;
-}
-
 /* Float four columns side by side */
 .column {
   float: left;
@@ -56,6 +45,13 @@ body{
   float: left;
   width: 50%;
   padding: 0 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  .twocolumn {
+    width: 100%;
+    display: block;
+  }
 }
 
 .onecolumn {
@@ -81,7 +77,7 @@ body{
 }
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .column {
     width: 100%;
     display: block;
@@ -113,11 +109,11 @@ button1{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  padding: 10px 10px;
 }
 
 button1:hover{
   background-color: #696969;
-  padding: 10px 10px;
 }
 
 .seventyfive {
@@ -128,4 +124,15 @@ button1:hover{
 .center{
   margin: auto;
   width: 50%;
+}
+
+.icons{
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+.box {
+  display: flex;
+  align-items:center;
 }
