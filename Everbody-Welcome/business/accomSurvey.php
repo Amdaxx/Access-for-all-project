@@ -951,7 +951,6 @@
         };
     });
     <?php if (!empty($_POST)): ?>
-
         //steps = number of questions + 1 for the generate pdf page
     setStep(23);
     <?php endif; ?>
