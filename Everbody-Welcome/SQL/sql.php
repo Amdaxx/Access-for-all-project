@@ -87,7 +87,7 @@
               session_start();
               $_SESSION['id'] = $id;
               $_SESSION['business'] =  $stat;
-              header('Location: C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\business\businessLandingPage.php?id='.$id);
+              header('Location:  ../business/businessLandingPage.php?id='.$id);
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
