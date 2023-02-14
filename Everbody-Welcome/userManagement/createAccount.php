@@ -14,7 +14,6 @@ if (isset($_POST['submit'])){
   <?php include "../public/publicHeader.php" ?>     
 </div>
 <body>
-    <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
     <form id = "centerform" method="post" >
     <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
