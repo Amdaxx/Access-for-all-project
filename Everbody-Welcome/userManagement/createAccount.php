@@ -73,6 +73,4 @@ function myFunction() {
   </div>
 </form>
 </body>
-<?php
-include 'C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\public\footer.php'
-?>
+<?php include  '../public/footer.php' ?>
