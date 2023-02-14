@@ -8,7 +8,11 @@ button {
     border-width: 50px;
     border-color: #696969;
     font-size: 28px;
+    top: 20px;
+    left: 80px;
 }
+
+
   
 button:not(:last-child) {
     border-bottom: 0px; 
@@ -26,5 +30,31 @@ button:hover {
     margin-left: 50px;
     margin-top: 50px;
     padding-bottom: 0px;
+}
+
+.background-counter{
+
+    position: absolute;
+    width: 494px;
+    height: 203px;
+    left: 786px;
+    top: 222px;
+
+    background: #6B6B6B;
+}
+
+.internal-shape{
+    position: absolute;
+    width: 359px;
+    height: 63px;
+    left: 853px;
+    top: 320px;
+
+    background-color: white;
+}
+
+.counter-text{
+    text-align: center;
+    color: white;
 }
 

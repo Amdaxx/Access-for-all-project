@@ -11,8 +11,12 @@
     <btn-group>
       <button>New Audit</button>
       <button>Edit Audit</button>
-      <button>Edit Company Information</button>
+      <button><a href="updateBusinessDetails.php">Edit Company Information</a></button>
     </btn-group>
   </div>
+<div>
+  <div class = "background-counter"><h1 class = "counter-text">Days since last audit</h1></div>
+  <div class="internal-shape"></div>
+</div>
   <?php include "../public/footer.php" ?>
   </body>
