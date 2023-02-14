@@ -48,6 +48,7 @@
             <div class="step"></div>
         </div>
 
+        <!-- page 1 -->
         <div class="step-content current" data-step="1">
 	        <div class="fields">
 		        <p name="q1" id="Q1">
@@ -59,14 +60,16 @@
                     <label for="radio1">YES</label>
                     <input type="radio" name="accomAnswerOne" id="radio2" value="No">
                     <label for="radio2" onclick="accom1stAnswer()">NO</label>
+
                     <script>
                         function accom1stAnswer() {
                         alert("pop up 1");
                         }
+
                     </script>
                 </div>	
-
             </div>
+
 
             <div class="buttons">
                 Upload proof:
