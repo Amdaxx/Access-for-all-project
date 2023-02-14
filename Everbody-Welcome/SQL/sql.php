@@ -212,7 +212,7 @@
             $stmt->bindParam(':address', $address);
             $stmt->bindParam(':postcode', $postcode);
             $stmt->bindParam(':type', $type);
-            $id = 1521;
+            $id = rand(1,9999999);
             $stmt->execute();
             
             $myfile = fopen("testfile.txt", "w");
