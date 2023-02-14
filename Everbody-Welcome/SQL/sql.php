@@ -210,8 +210,31 @@
             $stmt->bindParam(':type', $type);
             $id = 1521;
             $stmt->execute();
-
+            
+            $myfile = fopen("testfile.txt", "w");
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }   
+    }
+
+    function addQuestion($question, $type)
+    {
+        try{
+            $conn = connectToDatabase();
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $stmt = $conn->prepare("INSERT INTO questions (question, type) 
+            VALUES (:question, :type)");
+            $stmt->bindParam(':question', $question);
+            $stmt->bindParam(':type', $type);
+            $stmt->execute();           
+            
+        } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        } 
+    }
+
+    function updateVenue()
+    {
+        
     }
