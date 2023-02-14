@@ -85,7 +85,7 @@
               session_start();
               $_SESSION['id'] = $id;
               $_SESSION['business'] =  $stat;
-              header('Location: business.php?id='.$id);
+              header('Location: C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\business\businessLandingPage.php?id='.$id);
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -117,7 +117,7 @@
                 session_start();
                 $_SESSION['id'] = $user['logid'];
                 $_SESSION['business'] =  $user['stat'];
-                header('Location: createAccount.php?id='.$user['logid']);
+                header('Location: http://localhost/Access-For-All-Project/Everbody-Welcome/business/businessLandingPage.php?id='.$user['logid']);
                 }
            }
             else
@@ -128,11 +128,6 @@
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
-        }
-
-        function addVenue()
-        {
-            
         }
 
     }

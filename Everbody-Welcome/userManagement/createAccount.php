@@ -1,5 +1,6 @@
 <?php
-include_once("sql.php");
+require_once('../SQL/sql.php');
+
 if (isset($_POST['submit'])){
     createUser($_POST['email'], $_POST['password'],  $_POST['companyName'], $_POST['phone'], $_POST['postcode'], $_POST['address']);
     }
@@ -7,7 +8,7 @@ if (isset($_POST['submit'])){
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
+<link rel="stylesheet" href="vvvvvvv">
 
 <header>
     <div id="header">
