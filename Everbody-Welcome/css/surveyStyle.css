@@ -3,11 +3,7 @@ html, body, div, input, span, a, select, textarea, option, h1, h2, h3, h4, main,
     box-sizing: border-box;
     font-family: Tahoma, Geneva, sans-serif;
 }
-html {
-    background: #f8f9f9 linear-gradient(0deg, #f8f9f9 0%, #f8f9f9 80%, #51b47c 80%, #51b47c 100%) no-repeat;
-    padding: 30px;
-    height: 100%;
-}
+
 input,textarea,select {
     outline: 0;
 }
@@ -93,7 +89,7 @@ h1 i {
     display: inline-block;
     padding: 10px 20px;
     border: 0;
-    background-color: #c9704c;
+    background-color: #696969;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -103,16 +99,16 @@ h1 i {
     font-size: 14px;
 }
 .survey-form .btn:hover {
-    background-color: #c26c4a;
+    background-color: #696969;
 }
 .survey-form .btn.alt {
     background-color: transparent;
-    border: 1px solid #c9704c;
-    color: #c9704c;
+    border: 1px solid #696969;
+    color: #696969;
 }
 .survey-form .btn.alt:hover {
-    border: 1px solid #c26c4a;
-    color: #c26c4a;  
+    border: 1px solid #696969;
+    color: #696969;  
 }
 .survey-form input[name="email"] {
     position: relative;
@@ -185,10 +181,10 @@ h1 i {
     z-index: 1;
 }
 .survey-form .steps .step.current {
-    background-color: #8cc6f2;
+    background-color: #696969;
 }
 .survey-form .steps .step.complete {
-    background-color: #6ECBA4;
+    background-color: #696969;
 }
 .survey-form .rating {
     display: flex;
@@ -236,7 +232,7 @@ h1 i {
     width: 31px;
     height: 31px;
     border-radius: 100%;
-    background: #c9704c;
+    background: #696969;
     z-index: -1;
 }
 .survey-form .rating input[type="radio"]:not(:checked) + label:after {
@@ -289,7 +285,7 @@ h1 i {
 .survey-form .group input[type="radio"]:checked,
 .survey-form .group input[type="checkbox"]:checked {
     border: 1px solid #d2d3d3;
-    background-color: #2996ed;
+    background-color: #696969;
 }
 .survey-form .group input[type="checkbox"] {
     border-radius: 0;
