@@ -13,6 +13,7 @@
         <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/createAccount.php">Create Account</a></li>
       </ul>    
     </div>
+
    
     <div>
       <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
@@ -31,6 +32,12 @@
 </div>
 <input type="checkbox" id="vType" name="VenueType" value="vType">
   <label for="vehicle1"> Events</label><br>
+</div>
+
+<div>
+  <br>
+<input type="text" placeholder="Search.." name="search" style="height: 0.9cm;">
+<button type="submit" name ="submit" class="btn btn-primary">Search</button>
 </div>
 <script>
 /* When the user clicks on the button, 
