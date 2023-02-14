@@ -82,3 +82,25 @@ header {
   top: 56 px; 
   background: #D9D9D9;
 }
+
+
+.Srec3 {
+  position: absolute;
+  margin-top: 29.5%;
+  margin-left: 3%;
+  width: 433px; 
+  height: 177px; 
+  left: 23px; 
+  top: 56 px; 
+  background: #D9D9D9;
+}
+
+#EDI {
+  color: black;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+}

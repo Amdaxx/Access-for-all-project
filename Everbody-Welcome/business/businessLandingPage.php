@@ -19,4 +19,8 @@
   <h1 id="newAudit"><a href="#">New Audits</a></h1>
 </div>
 
+      <div class="Srec3" ><br>
+        <h1 id="EDI"><a href="updateBusinessDetails.php">Edit Company information</a></h1>
+      </div>
+
       
