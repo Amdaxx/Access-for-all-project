@@ -64,6 +64,5 @@ function myFunction() {
     </div>
   </div>
 </form>
-  <?php include "footer.php" ?>
 </body>
 <?php include "../public/footer.php"?>
