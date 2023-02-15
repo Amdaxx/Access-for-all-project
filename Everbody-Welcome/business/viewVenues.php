@@ -6,6 +6,31 @@
     <?php include "businessHeader.php" ?>    
   </div>
 
+  <table class="center" border='1' style='border-collapse:collapse'>
+    <tr>
+      <th>Venue Type</th>
+      <th>Venue Address</th>
+      <th>Venue Postcode</th>
+      <th>Edit Venue Details</th>
+      <th>Re-take Audit</th>
+    </tr>
+    <tr>
+      <td width='250'>FILLER1</td>
+      <td width='60'>FILLER2</td>
+      <td  width='250'>FILLER3</td>
+      <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
+      <td width='250'><input type="button" value="Re-take Audit"></td>
+    </tr>
+    <tr>
+      <td width='250'>FILLER</td>
+      <td width='60'>FILLER</td>
+      <td  width='250'>FILLER</td>
+      <td width='200'>FILLER</td>
+      <td width='250'>FILLER</td>
+    </tr>
+
+  </table>
+
   <?php 
     
    $res = viewVenues($_SESSION['id']);
