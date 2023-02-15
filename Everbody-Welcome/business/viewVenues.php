@@ -22,7 +22,7 @@ tr:hover {background-color: coral;}
 
 <body style = "background-color:cdc7c7">
   <div id="header">
-    <?php include "businessHeader.php" ?>    
+    <?php include "businessHeader.php";?>    
   </div>
 
   <table class="center" border='1' style='border-collapse:collapse'>
@@ -35,31 +35,19 @@ tr:hover {background-color: coral;}
       <th>New Audit</th>
     </tr>
 
+
+    <?php 
+     $res = viewVenues($_SESSION['id']);
+     foreach ($res as $venue):
+    ?>
     <tr>
-      <td width='250'>FILLER1</td>
-      <td width='60'>FILLER2</td>
-      <td  width='250'>FILLER3</td>
+      <td width='250'><?php echo $venue['venueid']; ?></td>
+      <td width='60'><?php echo $venue['venuename']; ?></td>
+      <td  width='250'><?php echo $venue['address']; ?></td>
       <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
       <td width='250'><input type="button" value="Update Audit"></td>
       <td width='250'><input type="button" value="New Audit"></td>
     </tr>
-
-    <tr>
-      <td width='250'>FILLER</td>
-      <td width='60'>FILLER</td>
-      <td  width='250'>FILLER</td>
-      <td width='200'>FILLER</td>
-      <td width='250'>FILLER</td>
-      <td width='250'>FILLER</td>
-    </tr>
-
+      <?php endforeach;?>
   </table>
-
-  <?php 
-    
-   $res = viewVenues($_SESSION['id']);
-   foreach ($res as $venue) {
-    echo $venue['venuename'] . '<br />';
-    }
-    ?>
 </body>
