@@ -12,7 +12,7 @@
   
 
   <div class="btn-group">
-    <button>Accommodation Audit</button>
+    <button><a href="accomSurvey.php">Accommodation Audit</a></button>
     <button>Airbnb</button>
     <button>Experiences</button>
     <button>Tours</button>

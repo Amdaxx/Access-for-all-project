@@ -9,7 +9,7 @@
   </div>
   <div class="button-background">
     <btn-group>
-      <button>New Audit</button>
+      <button><a href="survey.php">New Audit</a></button>
       <button>Edit Audit</button>
       <button><a href="updateBusinessDetails.php">Edit Company Information</a></button>
     </btn-group>
