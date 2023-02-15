@@ -41,8 +41,8 @@
   <label for="vehicle1"> Events</label><br>
 </div>
 
-            <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
-            </div>
+ <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
+ </div>
 <div style="margin-left:25%">
 
 
