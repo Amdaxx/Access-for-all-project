@@ -8,13 +8,15 @@
   </head>
 
   <body>
-  <div id="header">
-    <?php include "businessHeader.php";
-    if (isset($_POST['submit'])){
-      createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
-      }
-    ?>    
-  </div>
+    <div id="header">
+      <?php include "businessHeader.php";
+      if (isset($_POST['submit'])){
+        createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
+        }
+      ?>    
+    </div>
+
+
     <div class="row">
       <div class = "onecolumn">
         <aboutUs>
@@ -57,11 +59,12 @@
           </div>
       </div>
       <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
-    </div>
-  </div>
+        <div class="col-sm-10">
+          <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+        </div>
+      </div>
     </form>
-    
+  
+    <?php include "../public/footer.php" ?>
   </body>
 </html>
