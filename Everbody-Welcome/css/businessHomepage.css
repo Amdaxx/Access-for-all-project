@@ -85,3 +85,8 @@ button:hover {
     float: left;
     padding: 15px;
   }
+
+  .background-counter:not(:last-child) {
+    border-bottom: 0px; 
+    margin-bottom: 0px;
+}
