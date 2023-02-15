@@ -278,5 +278,16 @@
         $stmt2->bindParam(':pwd', $pwd);
         $stmt2->execute();
 
-        echo "hehe updated";
+    
+    }
+
+    function displayBusinessDetails($id)
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM businessinfos WHERE logid=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
     }

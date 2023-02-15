@@ -5,7 +5,11 @@
 
 <body style = "background-color:cdc7c7">
   <div id="header">
-    <?php include "businessHeader.php" ?>    
+    <?php include "businessHeader.php";
+     $res = displayBusinessDetails($_SESSION['id']);
+     echo $res[0]['companyName'];
+     
+    ?>    
   </div>
   <div class="button-background">
     <btn-group>
