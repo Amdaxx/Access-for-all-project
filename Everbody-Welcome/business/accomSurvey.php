@@ -13,7 +13,7 @@
             <?php include "businessHeader.php" ?>    
         </div>
 
-		<form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		
+	    <form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		
 		
         <h1><i class="far fa-list-alt"></i>Audit Report</h1>
 
@@ -57,13 +57,16 @@
 
 		        <div class="rating">
                     <input type="radio" name="accomAnswerOne" id="radio1" value="Yes">
-                    <label for="radio1">YES</label>
+                    <label for="radio1" onclick="showNext1();">YES</label>
                     <input type="radio" name="accomAnswerOne" id="radio2" value="No">
-                    <label for="radio2" onclick="accom1stAnswer()">NO</label>
+                    <label for="radio2" onclick="accom1stAnswer(); showNext1();">NO</label>
 
                     <script>
                         function accom1stAnswer() {
                         alert("pop up 1");
+                        }
+                        function showNext1(){
+                            document.getElementById("next1").style.display = "block";
                         }
 
                     </script>
@@ -82,10 +85,11 @@
                 <label for="accomComment1"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next1">
                 <a href="#" class="btn" data-set-step="2">Next</a>
             </div>
         </div>
+        
 
         <!-- page 2 -->
         <div class="step-content" data-step="2">
@@ -96,12 +100,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerTwo" id="radio3" value="Yes">
-                    <label for="radio3">YES</label>
+                    <label for="radio3" onclick="showNext2();">YES</label>
                     <input type="radio" name="accomAnswerTwo" id="radio4" value="No">
-                    <label for="radio4" onclick="accom2ndAnswer()">NO</label>
+                    <label for="radio4" onclick="accom2ndAnswer(); showNext2();">NO</label>
                     <script>
                         function accom2ndAnswer() {
                         alert("pop up 2");
+                        }
+                        function showNext2(){
+                            document.getElementById("next2").style.display = "block";
                         }
                     </script>
                 </div>
@@ -119,7 +126,7 @@
                 <label for="accomComment2"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next2">
                 <a href="#" class="btn alt" data-set-step="1">Prev</a>
                 <a href="#" class="btn" data-set-step="3">Next</a>
             </div>
@@ -134,13 +141,16 @@
                 </p>
 
                 <div class="rating">
-                    <input type="radio" name="accomAnswerThree" id="radio5" value="Yes">
+                    <input type="radio" onclick="showNext3();" name="accomAnswerThree" id="radio5" value="Yes">
                     <label for="radio5">YES</label>
                     <input type="radio" name="accomAnswerThree" id="radio6" value="No">
-                    <label for="radio6" onclick="accom3rdAnswer()">NO</label>
+                    <label for="radio6" onclick="accom3rdAnswer(); showNext3();">NO</label>
                     <script>
                         function accom3rdAnswer() {
                         alert("pop up 3");
+                        }
+                        function showNext3(){
+                            document.getElementById("next3").style.display = "block";
                         }
                     </script>
                 </div>
@@ -158,7 +168,7 @@
                 <label for="accomComment3"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next3">
                 <a href="#" class="btn alt" data-set-step="2">Prev</a>
                 <a href="#" class="btn" data-set-step="4">Next</a>
             </div>
@@ -175,12 +185,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerFour" id="radio7" value="Yes">
-                    <label for="radio7">YES</label>
+                    <label for="radio7" onclick="showNext4();" >YES</label>
                     <input type="radio" name="accomAnswerFour" id="radio8" value="No">
-                    <label for="radio8" onclick="accom4thAnswer()">NO</label>
+                    <label for="radio8" onclick="accom4thAnswer(); showNext4();">NO</label>
                     <script>
                         function accom4thAnswer() {
                         alert("pop up 4");
+                        }
+                        function showNext4(){
+                            document.getElementById("next4").style.display="block";
                         }
                     </script>
                 </div>
@@ -198,7 +211,7 @@
                 <label for="accomComment4"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next4">
                 <a href="#" class="btn alt" data-set-step="3">Prev</a>
                 <a href="#" class="btn" data-set-step="5">Next</a>
             </div>
@@ -214,12 +227,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerFive" id="radio9" value="Yes">
-                    <label for="radio9">YES</label>
+                    <label for="radio9" onclick="showNext5();">YES</label>
                     <input type="radio" name="accomAnswerFive" id="radio10" value="No">
-                    <label for="radio10" onclick="accom5thAnswer()">NO</label>
+                    <label for="radio10" onclick="accom5thAnswer(); showNext5();">NO</label>
                     <script>
                         function accom5thAnswer() {
                         alert("pop up 5");
+                        }
+                        function showNext5(){
+                            document.getElementById("next5").style.display="Block";
                         }
                     </script>
                 </div>
@@ -237,7 +253,7 @@
                 <label for="accomComment5"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next5">
                 <a href="#" class="btn alt" data-set-step="4">Prev</a>
                 <a href="#" class="btn" data-set-step="6">Next</a>
             </div>
@@ -254,12 +270,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerSix" id="radio11" value="Yes">
-                    <label for="radio11">YES</label>
+                    <label for="radio11" onclick="showNext6();">YES</label>
                     <input type="radio" name="accomAnswerSix" id="radio12" value="No">
-                    <label for="radio12" onclick="accom6thAnswer()">NO</label>
+                    <label for="radio12" onclick="accom6thAnswer(); showNext6();">NO</label>
                     <script>
                         function accom6thAnswer() {
                         alert("pop up 6");
+                        }
+                        function showNext6(){
+                            document.getElementById("next6").style.display="Block";
                         }
                     </script>
                 </div>
@@ -277,7 +296,7 @@
                 <label for="accomComment6"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next6">
                 <a href="#" class="btn alt" data-set-step="5">Prev</a>
                 <a href="#" class="btn" data-set-step="7">Next</a>
             </div>
@@ -293,12 +312,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerSeven" id="radio13" value="Yes">
-                    <label for="radio13">YES</label>
+                    <label for="radio13" onclick="showNext7();">YES</label>
                     <input type="radio" name="accomAnswerSeven" id="radio14" value="No">
-                    <label for="radio14" onclick="accom7thAnswer()">NO</label>
+                    <label for="radio14" onclick="accom7thAnswer(); showNext7();">NO</label>
                     <script>
                         function accom7thAnswer() {
                         alert("pop up 7");
+                        }
+                        function showNext7(){
+                            document.getElementById("next7").style.display="Block";
                         }
                     </script>
                 </div>
@@ -316,7 +338,7 @@
                 <label for="accomComment7"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next7">
                 <a href="#" class="btn alt" data-set-step="6">Prev</a>
                 <a href="#" class="btn" data-set-step="8">Next</a>
             </div>
@@ -332,12 +354,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerEight" id="radio15" value="Yes">
-                    <label for="radio15">YES</label>
+                    <label for="radio15" onclick="showNext8();">YES</label>
                     <input type="radio" name="accomAnswerEight" id="radio16" value="No">
-                    <label for="radio16" onclick="accom8thAnswer()">NO</label>
+                    <label for="radio16" onclick="accom8thAnswer(); showNext8();">NO</label>
                     <script>
                         function accom8thAnswer() {
                         alert("pop up 8");
+                        }
+                        function showNext8(){
+                            document.getElementById("next8").style.display="Block";
                         }
                     </script>
                 </div>
@@ -355,7 +380,7 @@
                 <label for="accomComment8"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next8">
                 <a href="#" class="btn alt" data-set-step="7">Prev</a>
                 <a href="#" class="btn" data-set-step="9">Next</a>
             </div>
@@ -374,12 +399,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerNine" id="radio17" value="Yes">
-                    <label for="radio17">YES</label>
+                    <label for="radio17" onclick="showNext9();">YES</label>
                     <input type="radio" name="accomAnswerNine" id="radio18" value="No">
-                    <label for="radio18" onclick="accom9thAnswer()">NO</label>
+                    <label for="radio18" onclick="accom9thAnswer(); showNext9();">NO</label>
                     <script>
                         function accom9thAnswer() {
                         alert("pop up 9");
+                        }
+                        function showNext9(){
+                            document.getElementById("next9").style.display="Block";
                         }
                     </script>
                 </div>
@@ -397,7 +425,7 @@
                 <label for="accomComment9"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next9">
                 <a href="#" class="btn alt" data-set-step="8">Prev</a>
                 <a href="#" class="btn" data-set-step="10">Next</a>
             </div>
@@ -414,12 +442,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerTen" id="radio19" value="Yes">
-                    <label for="radio19">YES</label>
+                    <label for="radio19" onclick="showNext10();">YES</label>
                     <input type="radio" name="accomAnswerTen" id="radio20" value="No">
-                    <label for="radio20" onclick="accom10thAnswer()">NO</label>
+                    <label for="radio20" onclick="accom10thAnswer(); showNext10();">NO</label>
                     <script>
                         function accom10thAnswer() {
                         alert("pop up 10");
+                        }
+                        function showNext10(){
+                            document.getElementById("next10").style.display="Block";
                         }
                     </script>
                 </div>
@@ -437,7 +468,7 @@
                 <label for="accomComment10"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next10">
                 <a href="#" class="btn alt" data-set-step="9">Prev</a>
                 <a href="#" class="btn" data-set-step="11">Next</a>
             </div>
@@ -453,12 +484,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerEleven" id="radio21" value="Yes">
-                    <label for="radio21">YES</label>
+                    <label for="radio21" onclick="showNext11();">YES</label>
                     <input type="radio" name="accomAnswerEleven" id="radio22" value="No">
-                    <label for="radio22" onclick="accom11thAnswer()">NO</label>
+                    <label for="radio22" onclick="accom11thAnswer(); showNext11();">NO</label>
                     <script>
                         function accom11thAnswer() {
                         alert("pop up 11");
+                        }
+                        function showNext11(){
+                            document.getElementById("next11").style.display="Block";
                         }
                     </script>
                 </div>
@@ -476,7 +510,7 @@
                 <label for="accomComment11"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next11">
                 <a href="#" class="btn alt" data-set-step="10">Prev</a>
                 <a href="#" class="btn" data-set-step="12">Next</a>
             </div>
@@ -492,12 +526,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerTwelve" id="radio23" value="Yes">
-                    <label for="radio23">YES</label>
+                    <label for="radio23" onclick="showNext12();">YES</label>
                     <input type="radio" name="accomAnswerTwelve" id="radio24" value="No">
-                    <label for="radio24" onclick="accom12thAnswer()">NO</label>
+                    <label for="radio24" onclick="accom12thAnswer(); showNext12();">NO</label>
                     <script>
                         function accom12thAnswer() {
                         alert("pop up 12");
+                        }
+                        function showNext12(){
+                            document.getElementById("next12").style.display="Block";
                         }
                     </script>
                 </div>
@@ -515,7 +552,7 @@
                 <label for="accomComment12"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next12">
                 <a href="#" class="btn alt" data-set-step="11">Prev</a>
                 <a href="#" class="btn" data-set-step="13">Next</a>
             </div>
@@ -531,12 +568,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerThirteen" id="radio25" value="Yes">
-                    <label for="radio25">YES</label>
+                    <label for="radio25" onclick="showNext13();">YES</label>
                     <input type="radio" name="accomAnswerThirteen" id="radio26" value="No">
-                    <label for="radio26" onclick="accom13thAnswer()">NO</label>
+                    <label for="radio26" onclick="accom13thAnswer(); showNext13();">NO</label>
                     <script>
                         function accom13thAnswer() {
                         alert("pop up 13");
+                        }
+                        function showNext13(){
+                            document.getElementById("next13").style.display="Block";
                         }
                     </script>
                 </div>
@@ -554,7 +594,7 @@
                 <label for="accomComment13"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next13">
                 <a href="#" class="btn alt" data-set-step="12">Prev</a>
                 <a href="#" class="btn" data-set-step="14">Next</a>
             </div>
@@ -570,12 +610,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerFourteen" id="radio27" value="Yes">
-                    <label for="radio27">YES</label>
+                    <label for="radio27" onclick="showNext14();">YES</label>
                     <input type="radio" name="accomAnswerFourteen" id="radio28" value="No">
-                    <label for="radio28" onclick="accom14thAnswer()">NO</label>
+                    <label for="radio28" onclick="accom14thAnswer(); showNext14();">NO</label>
                     <script>
                         function accom14thAnswer() {
                         alert("pop up 14");
+                        }
+                        function showNext14(){
+                            document.getElementById("next14").style.display="Block";
                         }
                     </script>
                 </div>
@@ -593,7 +636,7 @@
                 <label for="accomComment14"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next14">
                 <a href="#" class="btn alt" data-set-step="13">Prev</a>
                 <a href="#" class="btn" data-set-step="15">Next</a>
             </div>
@@ -610,12 +653,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerFifteen" id="radio29" value="Yes">
-                    <label for="radio29">YES</label>
+                    <label for="radio29" onclick="showNext15();">YES</label>
                     <input type="radio" name="accomAnswerFifteen" id="radio30" value="No">
-                    <label for="radio30" onclick="accom15thAnswer()">NO</label>
+                    <label for="radio30" onclick="accom15thAnswer(); showNext15();">NO</label>
                     <script>
                         function accom15thAnswer() {
                         alert("pop up 15");
+                        }
+                        function showNext15(){
+                            document.getElementById("next15").style.display="Block";
                         }
                     </script>
                 </div>
@@ -633,7 +679,7 @@
                 <label for="accomComment15"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next15">
                 <a href="#" class="btn alt" data-set-step="14">Prev</a>
                 <a href="#" class="btn" data-set-step="16">Next</a>
             </div>
@@ -649,12 +695,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerSixteen" id="radio31" value="Yes">
-                    <label for="radio31">YES</label>
+                    <label for="radio31" onclick="showNext16();">YES</label>
                     <input type="radio" name="accomAnswerSixteen" id="radio32" value="No">
-                    <label for="radio32" onclick="accom16thAnswer()">NO</label>
+                    <label for="radio32" onclick="accom16thAnswer(); showNext16();">NO</label>
                     <script>
                         function accom16thAnswer() {
                         alert("pop up 16");
+                        }
+                        function showNext16(){
+                            document.getElementById("next16").style.display="Block";
                         }
                     </script>
                 </div>
@@ -672,7 +721,7 @@
                 <label for="accomComment16"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next16">
                 <a href="#" class="btn alt" data-set-step="15">Prev</a>
                 <a href="#" class="btn" data-set-step="17">Next</a>
             </div>
@@ -688,12 +737,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerSeventeen" id="radio33" value="Yes">
-                    <label for="radio33">YES</label>
+                    <label for="radio33" onclick="showNext17();">YES</label>
                     <input type="radio" name="accomAnswerSeventeen" id="radio34" value="No">
-                    <label for="radio34" onclick="accom17thAnswer()">NO</label>
+                    <label for="radio34" onclick="accom17thAnswer(); showNext17();">NO</label>
                     <script>
                         function accom17thAnswer() {
                         alert("pop up 17");
+                        }
+                        function showNext17(){
+                            document.getElementById("next17").style.display="Block";
                         }
                     </script>
                 </div>
@@ -711,7 +763,7 @@
                 <label for="accomComment17"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next17">
                 <a href="#" class="btn alt" data-set-step="16">Prev</a>
                 <a href="#" class="btn" data-set-step="18">Next</a>
             </div>
@@ -727,12 +779,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerEighteen" id="radio35" value="Yes">
-                    <label for="radio35">YES</label>
+                    <label for="radio35" onclick="showNext18();">YES</label>
                     <input type="radio" name="accomAnswerEighteen" id="radio36" value="No">
-                    <label for="radio36" onclick="accom18thAnswer()">NO</label>
+                    <label for="radio36" onclick="accom18thAnswer(); showNext18();">NO</label>
                     <script>
                         function accom18thAnswer() {
                         alert("pop up 18");
+                        }
+                        function showNext18(){
+                            document.getElementById("next18").style.display="Block";
                         }
                     </script>
                 </div>
@@ -750,7 +805,7 @@
                 <label for="accomComment18"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next18">
                 <a href="#" class="btn alt" data-set-step="17">Prev</a>
                 <a href="#" class="btn" data-set-step="19">Next</a>
             </div>
@@ -768,12 +823,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerNineteen" id="radio37" value="Yes">
-                    <label for="radio37">YES</label>
+                    <label for="radio37" onclick="showNext19();">YES</label>
                     <input type="radio" name="accomAnswerNineteen" id="radio38" value="No">
-                    <label for="radio38" onclick="accom19thAnswer()">NO</label>
+                    <label for="radio38" onclick="accom19thAnswer(); showNext19();">NO</label>
                     <script>
                         function accom19thAnswer() {
                         alert("pop up 19");
+                        }
+                        function showNext19(){
+                            document.getElementById("next19").style.display="Block";
                         }
                     </script>
                 </div>
@@ -791,7 +849,7 @@
                 <label for="accomComment19"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next19">
                 <a href="#" class="btn alt" data-set-step="18">Prev</a>
                 <a href="#" class="btn" data-set-step="20">Next</a>
             </div>
@@ -807,12 +865,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerTwenty" id="radio39" value="Yes">
-                    <label for="radio39">YES</label>
+                    <label for="radio39" onclick="showNext20();">YES</label>
                     <input type="radio" name="accomAnswerTwenty" id="radio40" value="No">
-                    <label for="radio40" onclick="accom20thAnswer()">NO</label>
+                    <label for="radio40" onclick="accom20thAnswer(); showNext20();">NO</label>
                     <script>
                         function accom20thAnswer() {
                         alert("Pop up 20");
+                        }
+                        function showNext20(){
+                            document.getElementById("next20").style.display="Block";
                         }
                     </script>
                 </div>
@@ -830,7 +891,7 @@
                 <label for="accomComment20"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next20">
                 <a href="#" class="btn alt" data-set-step="19">Prev</a>
                 <a href="#" class="btn" data-set-step="21">Next</a>
             </div>
@@ -846,12 +907,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerTwentyOne" id="radio41" value="Yes">
-                    <label for="radio41">YES</label>
+                    <label for="radio41" onclick="showNext21();">YES</label>
                     <input type="radio" name="accomAnswerTwentyOne" id="radio42" value="No">
-                    <label for="radio42" onclick="accom21stAnswer()">NO</label>
+                    <label for="radio42" onclick="accom21stAnswer(); showNext21();">NO</label>
                     <script>
                         function accom21stAnswer() {
                         alert("Default YES - It would be unlawful to refuse access to a disabled person accompanied by an assistance dog except in the most exceptional circumstances");
+                        }
+                        function showNext21(){
+                            document.getElementById("next21").style.display="Block";
                         }
                     </script>
                 </div>
@@ -869,7 +933,7 @@
                 <label for="accomComment21"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next21">
                 <a href="#" class="btn alt" data-set-step="20">Prev</a>
                 <a href="#" class="btn" data-set-step="22">Next</a>
             </div>
@@ -885,12 +949,15 @@
 
                 <div class="rating">
                     <input type="radio" name="accomAnswerTwentyTwo" id="radio43" value="Yes">
-                    <label for="radio43">YES</label>
+                    <label for="radio43" onclick="showNext22();">YES</label>
                     <input type="radio" name="accomAnswerTwentyTwo" id="radio44" value="No">
-                    <label for="radio44" onclick="accom22ndAnswer()">NO</label>
+                    <label for="radio44" onclick="accom22ndAnswer(); showNext22();">NO</label>
                     <script>
                         function accom22ndAnswer() {
                         alert("pop up 22");
+                        }
+                        function showNext22(){
+                            document.getElementById("next22").style.display="Block";
                         }
                     </script>
                 </div>
@@ -908,7 +975,7 @@
                 <label for="accomComment22"></label>
             </div>	
 
-            <div class="buttons">
+            <div class="buttons" hidden id="next22">
                 <a href="#" class="btn alt" data-set-step="21">Prev</a>
                 <a href="#" class="btn" data-set-step="23">Next</a>
             </div>
@@ -953,7 +1020,9 @@
     <?php if (!empty($_POST)): ?>
         //steps = number of questions + 1 for the generate pdf page
     setStep(23);
-    <?php endif; ?>
+    <?php endif;?>
     </script>
     </body>
+
+
 </html>

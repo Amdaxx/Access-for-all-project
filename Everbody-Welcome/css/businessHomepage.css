@@ -35,21 +35,53 @@ button:hover {
 .background-counter{
 
     position: absolute;
-    width: 700px;
-    height: 650px;
+    width: 600px;
+    height: 670px;
     left: 786px;
     top: 135px;
-
-    background: #6B6B6B;
+    border-style: solid;
+    border-color: #696969;
+    border-width: 25px;
+    padding: 15px;
+    background: #c7c7c7;
 }
 
 .counter-text{
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .text{
-    color: white;
-    font-size: 30px;
+    color: black;
+    font-size: 15px;
 
 }
+
+.hr {
+    color: white;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-3 {width: 25%;}
+}
+
+[class*="col-"] {
+    width: 100%;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }

@@ -40,6 +40,7 @@
       <input type="text" name="post" class="form-control" id="pstcde" placeholder="PostCode"> <br>
     </div>
   </div>
+  
   <div class="form-group row">
   <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
     <div class="col-sm-6">
