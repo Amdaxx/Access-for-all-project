@@ -18,12 +18,17 @@
   <div class = "background-counter">
     <h1 class = "counter-text">Company Information</h1>
     <br><br>
-    <p class="text"><u><hr>Company Name: </u> </p><br>
-    <p class="text"><u><hr>Email: </u></p><br>
-    <p class="text"><u><hr>Address: </u></p><br>
-    <p class="text"><u><hr>Post Code: </u></p><br>
-    <p class="text"><u><hr>Contact Number: </u></p><br>
-    <p class="text"><u><hr>Venues Added: </u></p><br>    
+    <p class="text"><u>Company Name: </u> </p><br>
+    <hr>
+    <p class="text"><u>Email: </u></p><br>
+    <hr>
+    <p class="text"><u>Address: </u></p><br>
+    <hr>
+    <p class="text"><u>Post Code: </u></p><br>
+    <hr>
+    <p class="text"><u>Contact Number: </u></p><br>
+    <hr>
+    <p class="text"><u>Venues Added: </u></p><br>    
   </div>
 </div>
   <?php include "../public/footer.php" ?>
