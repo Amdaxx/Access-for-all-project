@@ -44,6 +44,7 @@
     <hr>
     <p class="text"><u>Venues Added: </u></p>
     <br>    
+    <?php echo $res[5]; ?>
   </div>
 </div>
   <?php include "../public/footer.php" ?>
