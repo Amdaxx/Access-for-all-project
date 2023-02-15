@@ -9,14 +9,23 @@
   </div>
   <div class="button-background">
     <btn-group>
-      <button><a href="createVenue.php">Create New Venue</a></button>
-      <button><a href="viewVenues.php">View Venues</a></button>
+
+      <button><a href="survey.php">New Audit</a></button>
+      <button>Edit Audit</button>
       <button><a href="updateBusinessDetails.php">Edit Company Information</a></button>
     </btn-group>
   </div>
 <div>
-  <div class = "background-counter"><h1 class = "counter-text">Days since last audit</h1></div>
-  <div class="internal-shape"></div>
+  <div class = "background-counter">
+    <h1 class = "counter-text">Company Information</h1>
+    <br><br>
+    <p class="text"><u><hr>Company Name: </u> </p><br>
+    <p class="text"><u><hr>Email: </u></p><br>
+    <p class="text"><u><hr>Address: </u></p><br>
+    <p class="text"><u><hr>Post Code: </u></p><br>
+    <p class="text"><u><hr>Contact Number: </u></p><br>
+    <p class="text"><u><hr>Venues Added: </u></p><br>    
+  </div>
 </div>
   <?php include "../public/footer.php" ?>
   </body>
