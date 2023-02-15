@@ -35,7 +35,7 @@ button:hover {
 .background-counter{
 
     position: absolute;
-    width: 700px;
+    width: 600px;
     height: 650px;
     left: 786px;
     top: 135px;
@@ -50,6 +50,10 @@ button:hover {
 
 .text{
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 
+}
+
+.hr {
+    color: white;
 }

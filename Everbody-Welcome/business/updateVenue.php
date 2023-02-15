@@ -18,40 +18,47 @@
         </aboutUs>
       </div>
     </div>
-      
 
-    <form id = "centerform" >
-      <div class="form-group row">
-          <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
+    <div class="seventyfive">
+      <form id = "centerform" >
+        <div class="form-group row">
+            <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control" id="vName" placeholder="Venue Name"> <br>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control" id="vAddress" placeholder="Venue Address"> <br>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode"> <br>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
           <div class="col-sm-6">
-          <input type="text" class="form-control" id="vName" placeholder="Venue Name"> <br>
+            <input type="text" class="form-control" id="pstcde" placeholder="PostCode"> <br>
           </div>
-      </div>
-      <div class="form-group row">
-          <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
-          <div class="col-sm-6">
-          <input type="text" class="form-control" id="vAddress" placeholder="Venue Address"> <br>
-          </div>
-      </div>
-      <div class="form-group row">
-          <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
-          <div class="col-sm-6">
-          <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode"> <br>
-          </div>
-      </div>
-
-      <div class="form-group row">
-          <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
-          <div class="col-sm-6">
-              <select name="typeOfVenue" id="typeOfVenue">
-                  <option value="Accommodation">Accommodation</option>
-                  <option value="Airbnb">Airbnb</option>
-                  <option value="Experience">Experience</option>
-                  <option value="Tours">Tours</option>
-                  <option value="Events">Events</option>
-              </select>
-          </div>
-      </div>
-    </form>
+        </div>
+        <div class="form-group row">
+            <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
+            <div class="col-sm-6">
+                <select name="typeOfVenue" id="typeOfVenue">
+                    <option value="Accommodation">Accommodation</option>
+                    <option value="Airbnb">Airbnb</option>
+                    <option value="Experience">Experience</option>
+                    <option value="Tours">Tours</option>
+                    <option value="Events">Events</option>
+                </select>
+            </div>
+        </div>
+      </form>
+    </div>
+    <?php include "../public/footer.php" ?>
   </body>
 </html>

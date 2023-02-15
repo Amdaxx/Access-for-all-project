@@ -13,7 +13,7 @@
             <?php include "businessHeader.php" ?>    
         </div>
 
-		<form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		
+	    <form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		
 		
         <h1><i class="far fa-list-alt"></i>Audit Report</h1>
 
@@ -1020,7 +1020,9 @@
     <?php if (!empty($_POST)): ?>
         //steps = number of questions + 1 for the generate pdf page
     setStep(23);
-    <?php endif; ?>
+    <?php endif;?>
     </script>
     </body>
+
+
 </html>
