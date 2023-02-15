@@ -96,6 +96,15 @@ $commentTwentyTwo = $_POST["accomComment22"];
 
 $html = '<h1>Accomodation Survey Results</h1>'; //title
 $html .= "
+<head>
+<style>
+body {background-color: rgb(168,168,168);}
+h1   {color:black;}
+p    {color: red;}
+</style>
+</head>
+
+<body background-color: >
 <table border='1' style='border-collapse:collapse'>
             <tr>
                 <th>Questions</th>
@@ -244,6 +253,7 @@ $html .= "
             </tr>
 
         </table>
+</body>
 "; //body
 
 $options = new Options;
