@@ -63,7 +63,7 @@
 
                     <script>
                         function accom1stAnswer() {
-                        alert("pop up 1");
+                        alert("To find out more about accessible parking, follow this link: https://www.dpaccreditation.org.uk/about-the-dpa/about-the-dpa");
                         }
                         function showNext1(){
                             document.getElementById("next1").style.display = "block";
