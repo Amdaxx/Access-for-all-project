@@ -36,5 +36,6 @@
    $res = viewVenues($_SESSION['id']);
    foreach ($res as $venue) {
     echo $venue['venuename'] . '<br />';
-}
+    }
     ?>
+</body>
