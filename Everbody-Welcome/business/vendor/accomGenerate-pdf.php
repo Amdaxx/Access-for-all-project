@@ -96,7 +96,7 @@ $commentTwentyTwo = $_POST["accomComment22"];
 
 $html = '<h1>Accomodation Survey Results</h1>'; //title
 $html .= "
-<table border='1' style='border-collapse:collapse''>
+<table border='1' style='border-collapse:collapse'>
             <tr>
                 <th>Questions</th>
                 <th>Yes/No</th>
