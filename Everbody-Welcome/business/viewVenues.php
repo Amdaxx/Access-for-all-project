@@ -31,7 +31,8 @@ tr:hover {background-color: coral;}
       <th>Venue Address</th>
       <th>Venue Postcode</th>
       <th>Edit Venue Details</th>
-      <th>Re-take Audit</th>
+      <th>Update Audit</th>
+      <th>New Audit</th>
     </tr>
 
     <tr>
@@ -39,7 +40,8 @@ tr:hover {background-color: coral;}
       <td width='60'>FILLER2</td>
       <td  width='250'>FILLER3</td>
       <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
-      <td width='250'><input type="button" value="Re-take Audit"></td>
+      <td width='250'><input type="button" value="Update Audit"></td>
+      <td width='250'><input type="button" value="New Audit"></td>
     </tr>
 
     <tr>
@@ -47,6 +49,7 @@ tr:hover {background-color: coral;}
       <td width='60'>FILLER</td>
       <td  width='250'>FILLER</td>
       <td width='200'>FILLER</td>
+      <td width='250'>FILLER</td>
       <td width='250'>FILLER</td>
     </tr>
 
