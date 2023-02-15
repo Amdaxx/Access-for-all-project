@@ -56,14 +56,14 @@
                 </p>
 
 		        <div class="rating">
-                    <input type="radio" name="accomAnswerOne" id="radio1" value="Yes">
+                    <input type="radio" class="popuptext" name="accomAnswerOne" id="radio1" value="Yes">
                     <label for="radio1" onclick="showNext1();">YES</label>
                     <input type="radio" name="accomAnswerOne" id="radio2" value="No">
                     <label for="radio2" onclick="accom1stAnswer(); showNext1();">NO</label>
 
                     <script>
                         function accom1stAnswer() {
-                        alert("pop up 1");
+                        alert("To find out more about accessible parking, follow this link: https://www.dpaccreditation.org.uk/about-the-dpa/about-the-dpa");
                         }
                         function showNext1(){
                             document.getElementById("next1").style.display = "block";
