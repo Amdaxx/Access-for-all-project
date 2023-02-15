@@ -732,7 +732,7 @@
         <div class="step-content" data-step="17">
             <div class="fields">
                 <p name="q17" id="Q17">
-                If there is an emergency call system with vibrating pillow pad available to alert someone with hearing loss if the fire alarm is activated
+                Is there an emergency call system with vibrating pillow pad available to alert someone with hearing loss if the fire alarm is activated?
                 </p>
 
                 <div class="rating">
