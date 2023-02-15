@@ -291,6 +291,11 @@
         $stmt2->execute();
         $res2 = $stmt2->fetchAll();
 
-        $result = array($res[0]['companyName'], $res[0]['postcode'], $res[0]['address'], $res[0]['phone'], $res2[0]['email']);
+        $del = $conn->prepare("SELECT COUNT(*) FROM venues WHERE logid=:id");
+        $del->bindParam(':id', $id);
+        $del->execute();
+        $count = $del->rowCount();
+
+        $result = array($res[0]['companyName'], $res[0]['postcode'], $res[0]['address'], $res[0]['phone'], $res2[0]['email'], $count);
         return $result;
     }
