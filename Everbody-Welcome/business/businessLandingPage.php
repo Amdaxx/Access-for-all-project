@@ -14,5 +14,7 @@
       <button>Edit Company Information</button>
     </btn-group>
   </div>
+  
+
   <?php include "../public/footer.php" ?>
   </body>

@@ -1,5 +1,5 @@
 
-html, body, div, input, span, a, select, textarea, option, h1, h2, h3, h4, main, aside, article, section, header, p, footer, nav, pre {
+html, body, div, input, span, a, select, textarea, option, h1, h2, h3, h4, main, aside, article, section, header,p, footer, nav, pre {
     box-sizing: border-box;
     font-family: Tahoma, Geneva, sans-serif;
 }
@@ -11,7 +11,7 @@ h1 {
     margin: 0;
     padding: 35px 25px 25px 25px;
     font-size: 20px;
-    color: #6a737f;
+    color: #696969;
     font-weight: 600;
 }
 h1 i {
@@ -27,6 +27,7 @@ h1 i {
 .survey-form .fields {
     position: relative;
     padding: 20px;
+    color:#696969;
 }
 .survey-form select {
     appearance: none;
@@ -39,7 +40,7 @@ h1 i {
     display: none;
  }
 .survey-form input[type="date"]::-webkit-calendar-picker-indicator {
-    color: #ddd;
+    color: #696969;
     filter: invert(0.8);
 }
 .survey-form input[type="text"], 
@@ -50,7 +51,7 @@ h1 i {
     display: flex;
     margin-top: 10px;
     padding: 15px;
-    border: 1px solid #dfe0e0;
+    border: 1px solid #696969;
     width: 100%;
     flex-basis: 100%;
     height: 47px;
@@ -60,7 +61,7 @@ h1 i {
 .survey-form input[type="tel"]:focus,
 .survey-form input[type="date"]:focus,
 .survey-form select:focus {
-    border: 1px solid #c6c7c7;
+    border: 1px solid #696969;
 }
 .survey-form input[type="text"]::placeholder, 
 .survey-form input[type="email"]::placeholder, 
@@ -68,22 +69,22 @@ h1 i {
 .survey-form input[type="date"]:invalid, 
 .survey-form textarea::placeholder,
 .survey-form select:invalid {
-    color: #858688;
+    color: #696969;
 }
 .survey-form textarea {
     resize: none;
     margin-top: 15px;
     padding: 15px;
-    border: 1px solid #dfe0e0;
+    border: 1px solid #696969;
     width: 100%;
     height: 150px;
 }
 .survey-form textarea:focus {
-    border: 1px solid #c6c7c7;
+    border: 1px solid #696969;
 }
 .survey-form .buttons {
     padding: 20px;
-    border-top: 1px solid #eceff2;
+    border-top: 1px solid #696969;
 }
 .survey-form .btn {
     display: inline-block;
@@ -123,11 +124,11 @@ h1 i {
 .survey-form label, .survey-form p {
     font-size: 14px;
     font-weight: 600;
-    color: #8e939b;
+    color: #696969;
 }
 .survey-form .field i {
     position: absolute;
-    color: #dfe2e5;
+    color: #696969;
     top: 25px;
     left: 15px;
     z-index: 10;
@@ -165,7 +166,7 @@ h1 i {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #f2f4f7;
+    background-color: #c7c7c7;
     margin: auto 0;
     top: 0;
     bottom: 0;
@@ -174,14 +175,15 @@ h1 i {
 .survey-form .steps .step {
     width: 10px;
     height: 10px;
-    background-color: #f2f4f7;
-    border: 3px solid #f2f4f7;
+    background-color: #c7c7c7;
+    border: 3px solid #c7c7c7;
     border-radius: 50px;
     
     z-index: 1;
 }
 .survey-form .steps .step.current {
     background-color: #696969;
+    border: 6px;
 }
 .survey-form .steps .step.complete {
     background-color: #696969;
@@ -207,7 +209,7 @@ h1 i {
     width: 31px;
     height: 31px;
     cursor: pointer;
-    color: #8e939b;
+    color: #696969;
     z-index: 10;
 }
 .survey-form .rating input[type="radio"]:checked + label:before,
@@ -218,7 +220,7 @@ h1 i {
     top: 0;
     width: 30px;
     height: 30px;
-    border: 1px solid #dfe0e0;
+    border: 1px solid #696969;
     border-radius: 100%;
     background: #fff;
     z-index: -1;
@@ -248,7 +250,7 @@ h1 i {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    color: #8e939b;
+    color: #696969;
     padding: 15px 0 25px;      
 }
 .survey-form .group {
@@ -273,18 +275,18 @@ h1 i {
     height: 16px;
     padding: 2px;
     background-clip: content-box;
-    border: 1px solid #dfe0e0;
+    border: 1px solid #696969;
     background-color: #eef1f1;
     border-radius: 50%;
     margin-right: 10px;
 }
 .survey-form .group input[type="radio"]:hover,
 .survey-form .group input[type="checkbox"]:hover {
-    border: 1px solid #d2d3d3;
+    border: 1px solid #696969;
 }
 .survey-form .group input[type="radio"]:checked,
 .survey-form .group input[type="checkbox"]:checked {
-    border: 1px solid #d2d3d3;
+    border: 1px solid #696969;
     background-color: #696969;
 }
 .survey-form .group input[type="checkbox"] {
@@ -300,7 +302,7 @@ h1 i {
     padding: 25px;
 }
 .survey-form .result h3 {
-    color: #6a737f;
+    color: #696969;
 }
 .survey-form .result p {
     font-weight: 500;
