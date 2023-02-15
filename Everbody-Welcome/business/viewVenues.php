@@ -17,8 +17,8 @@
     <tr>
       <td width='250'>FILLER1</td>
       <td width='60'>FILLER2</td>
-      <td  width='250'></td>
-      <td width='200'><input type="button" value="Edit Venue Details"></td>
+      <td  width='250'>FILLER3</td>
+      <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
       <td width='250'><input type="button" value="Re-take Audit"></td>
     </tr>
     <tr>
