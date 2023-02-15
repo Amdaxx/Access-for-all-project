@@ -50,7 +50,8 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         </form>
-        <?php include  'C:\xampp\htdocs\Access-for-all-project\Everbody-Welcome\public\footer.php' ?>
+        
     </body>
+    <?php include  '../public/footer.php' ?>
     </main>
 </div>

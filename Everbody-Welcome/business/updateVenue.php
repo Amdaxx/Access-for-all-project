@@ -7,9 +7,9 @@
   </head>
 
   <body>
-    <div id="header">
-      <?php include "businessHeader.php" ?>    
-    </div>
+     <div id="header">
+    <?php include "businessHeader.php" ?>    
+  </div>
 
     <div class="row">
       <div class = "onecolumn">
@@ -58,8 +58,6 @@
             </div>
         </div>
       </form>
-
-      
     </div>
     <?php include "../public/footer.php" ?>
   </body>
