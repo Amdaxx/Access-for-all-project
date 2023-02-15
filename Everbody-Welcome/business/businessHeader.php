@@ -13,6 +13,7 @@ checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 
 
+
 ?>
 
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  

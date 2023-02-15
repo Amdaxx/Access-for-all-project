@@ -3,16 +3,22 @@
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
 
 <div id="header">
-  <?php include "businessHeader.php" ?>    
+  <?php include "businessHeader.php";
+  
+  if (isset($_POST['submit'])){
+    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone'], $_POST['pwd']);
+    
+  }
+  ?>    
 </div>
 
 <body>
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
-<form id = "centerform" >
+<form id = "centerform" method="post">
 <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="cName" placeholder="Company Name"> <br>
+      <input type="text" name="cname" class="form-control" id="cName" placeholder="Company Name"> <br>
     </div>
   </div>
   <div class="form-group row">
@@ -24,26 +30,26 @@
   <div class="form-group row">
     <label for="addr" class="col-sm-2 col-form-label">Address</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="addr" placeholder="Address"> <br>
+      <input type="text" name="address" class="form-control" id="addr" placeholder="Address"> <br>
     </div>
   </div>
 
   <div class="form-group row">
     <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="pstcde" placeholder="PostCode"> <br>
+      <input type="text" name="post" class="form-control" id="pstcde" placeholder="PostCode"> <br>
     </div>
   </div>
   <div class="form-group row">
   <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="num" placeholder="Contact Number"> <br>
+      <input type="text" class="form-control" name="phone" id="num" placeholder="Contact Number"> <br>
     </div>
   </div>
   <div class="form-group row">
     <label for="pwd" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-6">
-      <input type="password" class="form-control" id="pwd" placeholder="Password"> <br>
+      <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password"> <br>
       <input type="checkbox" onclick="myFunction()">Show Password
 
       <script>
@@ -60,7 +66,7 @@ function myFunction() {
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" name ="submit" class="btn btn-primary">Update</button>
     </div>
   </div>
 </form>
