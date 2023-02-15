@@ -238,7 +238,45 @@
         } 
     }
 
-    function updateVenue()
+
+    function viewVenues($id)
+    {
+            $conn = connectToDatabase();
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE logid=:id");
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
+       
+    }
+
+    function updateVenue($venueID)
     {
         
+    }
+
+    function updateBusinessDetails($id, $cname, $post, $address, $phone, $pwd)
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       
+
+        $sql1 = "UPDATE businessinfos SET companyName=:cname, postcode=:post, address=:address, phone=:phone WHERE logid=:id";
+        $stmt = $conn->prepare($sql1);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':cname', $cname);
+        $stmt->bindParam(':post', $post);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->execute();
+
+        $pwd = password_hash($pwd, PASSWORD_DEFAULT);
+        $sql2 = "UPDATE logs SET pwd=:pwd WHERE logid=:id";
+        $stmt2 = $conn->prepare($sql2);
+        $stmt2->bindParam(':id', $id);
+        $stmt2->bindParam(':pwd', $pwd);
+        $stmt2->execute();
+
+        echo "hehe updated";
     }
