@@ -210,7 +210,6 @@
             $id = rand(1,9999999);
             $stmt->execute();
             
-            $myfile = fopen("testfile.txt", "w");
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }   
