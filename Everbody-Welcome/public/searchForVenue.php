@@ -100,6 +100,7 @@
 
 
             <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
+            <input type="text" class="form-control" id="Distance" name="Distance" placeholder="Distance" style="width: 100px"> <br>
           </div>
         </div>
 
