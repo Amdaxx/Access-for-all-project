@@ -22,7 +22,7 @@
       </div>
     </div>
 
-  
+    
     <div class="twocolumn" >
       <div class ="company-info">
         <h1><b>Company Information</b></h1>
