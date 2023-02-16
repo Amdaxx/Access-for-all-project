@@ -7,7 +7,6 @@
 
 
       .columnones{
-        width:50%;
         float: left;
       }
 
@@ -16,130 +15,110 @@
         grid-template-columns: auto auto auto;
         background-color: #696969;
         padding: 10px;
-        width:75%;
       }
+
       .grid-item {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
+        background-color:cdc7c7;
+        border: 3px solid #696969;
         padding: 20px;
         font-size: 30px;
         text-align: center;
       }
       .sidebar {
-        margin: 0;
-        padding: 0;
+        padding:10px;
+        margin-left: 20px;
         width: 200px;
-        background-color: #f1f1f1;
-        
-      
-        overflow: auto;
+        background-color:cdc7c7;
+        border-color: #696969;
+        border-width: 13px;
+        border-style: solid;
       }
 
-      /* Sidebar links */
-      .sidebar a {
-        display: block;
-        color: black;
-        padding: 16px;
-        text-decoration: none;
-      }
-
-      /* Active/current link */
-      .sidebar a.active {
-        background-color: #04AA6D;
-        color: white;
-      }
-
-      /* Links on mouse-over */
-      .sidebar a:hover:not(.active) {
-        background-color: #555;
-        color: white;
-      }
-
-      /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-      div.content {
-        margin-left: 200px;
-        padding: 1px 16px;
-        height: 1000px;
-      }
-
-      /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
+      @media screen and (max-width: 1400px) {
+        .grid-container{
+          display:block;
           text-align: center;
-          float: none;
+          width: 100%
         }
       }
+
+      @media screen and (max-width: 1400px) {
+        .columnones{
+          display:block;
+          text-align: center;
+          width: 100%
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        .columnones {
+          display:flex;
+          justify-content: center;
+        }
+      }
+
     </style>
     <title> Everybody Welcome</title>
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
+    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   </head>
 
-  <div id="header">
-    <?php include "publicHeader.php" ?>    
-  </div>
-
-  <body style = "background-color:cdc7c7">
-    <div>
-      <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
+  <div class = "flex-wrapper">
+    <div id="header">
+      <?php include "publicHeader.php" ?>    
     </div>
+
+    <body style = "background-color:cdc7c7">
+      <div>
+        <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
+      </div>
+      
+      <div class="SearchBar">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search"style="width: 600px; margin-left:25% ">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class = "rows">
+        <div class = "columnones" style = "width:15%">
+          <div class="sidebar">
+            <h2 class="w3-bar-item">Filter Search</h2>
+            <h4 class="w3-bar-item">Venue Type:</h4>
+            <input type="checkbox" id="vType" name="VenueType" value="vType">
+            <label for="vehicle1"> Accommodation</label><br>
+
+            <input type="checkbox" id="vType" name="VenueType" value="vType">
+            <label for="vehicle1"> Experience</label><br>
+
+            <input type="checkbox" id="vType" name="VenueType" value="vType">
+            <label for="vehicle1"> Tours</label><br>
+
+            <input type="checkbox" id="vType" name="VenueType" value="vType">
+            <label for="vehicle1"> Events</label><br>
+
+
+            <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
+          </div>
+        </div>
+
+        <div class = "columnones"style = "width:85%">
+          <div class="grid-container" >
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+          </div>
+        </div>
+      </div>
+    </body>
     
-    <div class="SearchBar">
-      <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search"style="width: 600px; margin-left:25% ">
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-
-    <div class = "rows">
-      <div class = "columnones">
-        <div class="sidebar">
-          <h2 class="w3-bar-item">Filter Search</h2>
-          <h4 class="w3-bar-item">Venue Type:</h4>
-          <input type="checkbox" id="vType" name="VenueType" value="vType">
-          <label for="vehicle1"> Accommodation</label><br>
-
-          <input type="checkbox" id="vType" name="VenueType" value="vType">
-          <label for="vehicle1"> Experience</label><br>
-
-          <input type="checkbox" id="vType" name="VenueType" value="vType">
-          <label for="vehicle1"> Tours</label><br>
-
-          <input type="checkbox" id="vType" name="VenueType" value="vType">
-          <label for="vehicle1"> Events</label><br>
-
-
-          <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
-        </div>
-      </div>
-
-      <div class = "columnones">
-        <div class="grid-container" >
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-          <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-        </div>
-      </div>
-    </div>
-  </body>
-  
-  <?php include "footer.php" ?>
-
+    <?php include "footer.php" ?>
+  </div>
 </html>
