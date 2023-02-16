@@ -251,7 +251,7 @@
         
     }
 
-    function updateBusinessDetails($id, $cname, $post, $address, $phone, $pwd)
+    function updateBusinessDetails($id, $cname, $post, $address, $phone)
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -265,15 +265,7 @@
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':phone', $phone);
         $stmt->execute();
-
-        $pwd = password_hash($pwd, PASSWORD_DEFAULT);
-        $sql2 = "UPDATE logs SET pwd=:pwd WHERE logid=:id";
-        $stmt2 = $conn->prepare($sql2);
-        $stmt2->bindParam(':id', $id);
-        $stmt2->bindParam(':pwd', $pwd);
-        $stmt2->execute();
-
-    
+        header('Location:  ../business/businessLandingPage.php?id='.$id);
     }
 
     function displayBusinessDetails($id)
@@ -298,4 +290,15 @@
 
         $result = array($res[0]['companyName'], $res[0]['postcode'], $res[0]['address'], $res[0]['phone'], $res2[0]['email'], $count);
         return $result;
+    }
+
+    function updatePassword($id, $pwd)
+    {
+        $conn = connectToDatabase();
+        $pwd = password_hash($pwd, PASSWORD_DEFAULT);
+        $sql = "UPDATE logs SET pwd=:pwd WHERE logid=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':pwd', $pwd);
+        $stmt->execute();
     }
