@@ -225,7 +225,7 @@ $html = "<head>
                         <td width='200'>$commentEighteen</td>
                     </tr>
                     <tr>
-                        <td width='250'>Is there is level access (without steps or thresholds) from the accessible entrance to the restaurant, including access by ramp or lift
+                        <td width='250'>Is there level access (without steps or thresholds) from the accessible entrance to the restaurant, including access by ramp or lift
                         AND is the route from the accessible entrance to the restaurant at least 75cm wide, at it’s narrowest point 
                         AND is the door opening at least 75cm wide?</td>
                         <td width='60'>$a19</td>
