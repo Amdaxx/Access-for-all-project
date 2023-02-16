@@ -11,6 +11,7 @@
       <?php include "businessHeader.php";
       if (isset($_POST['submit'])){
         createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
+        header("Location: viewVenues.php");
         }
       ?>    
     </div>
