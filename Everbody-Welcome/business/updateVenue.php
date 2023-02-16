@@ -20,7 +20,7 @@
     </div>
 
     <div class="seventyfive">
-      <form id = "centerform" >
+      <form id = "centerform" onsubmit="return validateForm()">
         <div class="form-group row">
             <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
             <div class="col-sm-6">

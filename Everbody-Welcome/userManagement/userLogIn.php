@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
   <body>
     <br><br><br>
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
-        <form id = "centerform" method="post">
+        <form id = "centerform" method="post" onsubmit="return validateForm()">
         <div class="form-group row">
             <label for="mail" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-6">
