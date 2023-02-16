@@ -7,34 +7,36 @@
 <style>
 table {
   border-collapse: collapse;
+  border-spacing: 0;
   width: 100%;
+  border: 1px solid #ddd;
 }
 
 th, td {
-  padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  padding: 8px;
 }
 
 tr:hover {background-color: coral;}
 </style>
+
 </head>
 
 <body style = "background-color:cdc7c7">
   <div id="header">
     <?php include "businessHeader.php";?>    
   </div>
-
+  <div style="overflow-x:auto;">
   <table class="center" border='1' style='border-collapse:collapse'>
     <tr>
+      <th>Venue Name</th>
       <th>Venue Type</th>
-      <th>Venue Address</th>
       <th>Venue Postcode</th>
+      <th>Venue Address</th>
       <th>Edit Venue Details</th>
       <th>Update Audit</th>
       <th>New Audit</th>
     </tr>
-
 
     <?php 
      $res = viewVenues($_SESSION['id']);
@@ -50,4 +52,5 @@ tr:hover {background-color: coral;}
     </tr>
       <?php endforeach;?>
   </table>
+  </div>
 </body>
