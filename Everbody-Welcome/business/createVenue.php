@@ -47,7 +47,7 @@ function validateForm() {
 </script>
       
 
-    <form id = "centerform" method="post" onsubmit="return validateForm()">
+    <form id = "centerform" method="post" onsubmit="return validateForm();">
       <div class="form-group row">
           <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
           <div class="col-sm-6">
