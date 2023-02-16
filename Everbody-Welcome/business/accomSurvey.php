@@ -1023,6 +1023,7 @@
     <?php endif;?>
     </script>
     </body>
+    <?php include "../public/footer.php" ?>
 
 
 </html>

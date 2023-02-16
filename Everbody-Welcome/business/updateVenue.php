@@ -1,15 +1,15 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css">  
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
+    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css">  
     <title>Update Venue</title>
   </head>
 
   <body>
      <div id="header">
-    <?php include "businessHeader.php" ?>    
-  </div>
+      <?php include "businessHeader.php" ?>    
+    </div>
 
     <div class="row">
       <div class = "onecolumn">
@@ -58,6 +58,6 @@
       </div>
       </form>
     </div>
-    <?php include "../public/footer.php" ?>
   </body>
+  <?php include "../public/footer.php" ?>
 </html>
