@@ -3,14 +3,25 @@ require_once('../SQL/sql.php');
 if (isset($_POST['submit'])) {
     verifyLogin($_POST['email'], $_POST['pass']);
 }
-
-
-
-
 ?>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
+<script>
+    var x = document.forms["centerform"]["email"].value;
+    if (x == "" || x == null) {
+        alert("Email must be filled out");
+        return false;
+    }
+
+    var x = document.forms["centerform"]["password"].value;
+    if (x == "" || x == null) {
+        alert("Password must be filled out");
+        return false;
+    }
+
+</script>
 
 
 <div id="header">

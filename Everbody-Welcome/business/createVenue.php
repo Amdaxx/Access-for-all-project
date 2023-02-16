@@ -8,42 +8,42 @@
   </head>
   <div class="flex-wrapper">
     <div id="header">
-        <?php include "businessHeader.php";
-        if (isset($_POST['submit'])){
-          createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
-          }
-        ?>    
-      </div>
-    <body>
+      <?php include "businessHeader.php";
+      if (isset($_POST['submit'])){
+        createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
+        }
+      ?>    
+    </div>
 
-      <div class="row">
-        <div class = "onecolumn">
-          <aboutUs>
-            <h2 >Create a Venue</h2>
-          </aboutUs>
-        </div>
-      </div>
-        
 
-      <form id = "centerform" method="post">
-        <div class="form-group row">
-            <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="vName" placeholder="Venue Name" name="venueName"> <br>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="vAddress" placeholder="Venue Address" name="venueAddress"> <br>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode" name="postcode"> <br>
-            </div>
-        </div>
+    <div class="row">
+      <div class = "onecolumn">
+        <aboutUs>
+          <h2 >Create a Venue</h2>
+        </aboutUs>
+      </div>
+    </div>
+      
+
+    <form id = "centerform" method="post">
+      <div class="form-group row">
+          <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
+          <div class="col-sm-6">
+          <input type="text" class="form-control" id="vName" placeholder="Venue Name" name="venueName"> <br>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
+          <div class="col-sm-6">
+          <input type="text" class="form-control" id="vAddress" placeholder="Venue Address" name="venueAddress"> <br>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
+          <div class="col-sm-6">
+          <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode" name="postcode"> <br>
+          </div>
+      </div>
 
         <div class="form-group row">
             <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>

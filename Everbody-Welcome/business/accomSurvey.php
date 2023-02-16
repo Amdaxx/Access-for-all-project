@@ -112,6 +112,20 @@
                             }
                         </script>
                     </div>
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTwo" id="radio3" value="Yes">
+                    <label for="radio3" onclick="showNext2();">YES</label>
+                    <input type="radio" name="accomAnswerTwo" id="radio4" value="No">
+                    <label for="radio4" onclick="accom2ndAnswer(); showNext2();">NO</label>
+                    <script>
+                        function accom2ndAnswer() {
+                        alert("To find out more about level access, follow this link: https://www.lawinsider.com/dictionary/level-access#:~:text=Level%20access%20means%20step%20free,can%20board%20a%20train%20unassisted");
+                        }
+                        function showNext2(){
+                            document.getElementById("next2").style.display = "block";
+                        }
+                    </script>
+                </div>
 
                 </div>
 
@@ -126,9 +140,19 @@
                     <label for="accomComment2"></label>
                 </div>	
 
-                <div class="buttons" hidden id="next2">
-                    <a href="#" class="btn alt" data-set-step="1">Prev</a>
-                    <a href="#" class="btn" data-set-step="3">Next</a>
+                <div class="rating">
+                    <input type="radio" name="accomAnswerTwo" id="radio3" value="Yes">
+                    <label for="radio3" onclick="showNext2();">YES</label>
+                    <input type="radio" name="accomAnswerTwo" id="radio4" value="No">
+                    <label for="radio4" onclick="accom2ndAnswer(); showNext2();">NO</label>
+                    <script>
+                        function accom2ndAnswer() {
+                        alert("To find out more about level access, follow this link: https://www.lawinsider.com/dictionary/level-access#:~:text=Level%20access%20means%20step%20free,can%20board%20a%20train%20unassisted");
+                        }
+                        function showNext2(){
+                            document.getElementById("next2").style.display = "block";
+                        }
+                    </script>
                 </div>
 
             </div>
@@ -154,6 +178,20 @@
                             }
                         </script>
                     </div>
+                <div class="rating">
+                    <input type="radio" onclick="showNext3();" name="accomAnswerThree" id="radio5" value="Yes">
+                    <label for="radio5">YES</label>
+                    <input type="radio" name="accomAnswerThree" id="radio6" value="No">
+                    <label for="radio6" onclick="accom3rdAnswer(); showNext3();">NO</label>
+                    <script>
+                        function accom3rdAnswer() {
+                        alert("To find out more about alternative entrances, follow this link: https://www.euansguide.com/campaigns/make-an-accessible-entrance/");
+                        }
+                        function showNext3(){
+                            document.getElementById("next3").style.display = "block";
+                        }
+                    </script>
+                </div>
 
                 </div>
 
@@ -168,9 +206,19 @@
                     <label for="accomComment3"></label>
                 </div>	
 
-                <div class="buttons" hidden id="next3">
-                    <a href="#" class="btn alt" data-set-step="2">Prev</a>
-                    <a href="#" class="btn" data-set-step="4">Next</a>
+                <div class="rating">
+                    <input type="radio" onclick="showNext3();" name="accomAnswerThree" id="radio5" value="Yes">
+                    <label for="radio5">YES</label>
+                    <input type="radio" name="accomAnswerThree" id="radio6" value="No">
+                    <label for="radio6" onclick="accom3rdAnswer(); showNext3();">NO</label>
+                    <script>
+                        function accom3rdAnswer() {
+                        alert("To find out more about alternative entrances, follow this link: https://www.euansguide.com/campaigns/make-an-accessible-entrance/");
+                        }
+                        function showNext3(){
+                            document.getElementById("next3").style.display = "block";
+                        }
+                    </script>
                 </div>
 
             </div>
@@ -197,6 +245,20 @@
                             }
                         </script>
                     </div>
+                <div class="rating">
+                    <input type="radio" name="accomAnswerFour" id="radio7" value="Yes">
+                    <label for="radio7" onclick="showNext4();" >YES</label>
+                    <input type="radio" name="accomAnswerFour" id="radio8" value="No">
+                    <label for="radio8" onclick="accom4thAnswer(); showNext4();">NO</label>
+                    <script>
+                        function accom4thAnswer() {
+                        alert("If you would like to know more about");
+                        }
+                        function showNext4(){
+                            document.getElementById("next4").style.display="block";
+                        }
+                    </script>
+                </div>
 
                 </div>
 
@@ -211,9 +273,19 @@
                     <label for="accomComment4"></label>
                 </div>	
 
-                <div class="buttons" hidden id="next4">
-                    <a href="#" class="btn alt" data-set-step="3">Prev</a>
-                    <a href="#" class="btn" data-set-step="5">Next</a>
+                <div class="rating">
+                    <input type="radio" name="accomAnswerFour" id="radio7" value="Yes">
+                    <label for="radio7" onclick="showNext4();" >YES</label>
+                    <input type="radio" name="accomAnswerFour" id="radio8" value="No">
+                    <label for="radio8" onclick="accom4thAnswer(); showNext4();">NO</label>
+                    <script>
+                        function accom4thAnswer() {
+                        alert("If you would like to know more about");
+                        }
+                        function showNext4(){
+                            document.getElementById("next4").style.display="block";
+                        }
+                    </script>
                 </div>
 
             </div>
@@ -999,29 +1071,58 @@
                 </div>
             </div>
 
-        </form>                    
-        <script>
-        const setStep = step => {
-            document.querySelectorAll(".step-content").forEach(element => element.style.display = "none");
-            document.querySelector("[data-step='" + step + "']").style.display = "block";
-            document.querySelectorAll(".steps .step").forEach((element, index) => {
-                index < step-1 ? element.classList.add("complete") : element.classList.remove("complete");
-                index == step-1 ? element.classList.add("current") : element.classList.remove("current");
-            });
-        };
-        document.querySelectorAll("[data-set-step]").forEach(element => {
-            element.onclick = event => {
-                event.preventDefault();
-                setStep(parseInt(element.dataset.setStep));
-            };
+            <div class="fields">
+                Add a comment:
+                <input type="text" name="accomComment22" id="accomComment22">
+                <label for="accomComment22"></label>
+            </div>	
+
+            <div class="buttons" hidden id="next22">
+                <a href="#" class="btn alt" data-set-step="21">Prev</a>
+                <a href="#" class="btn" data-set-step="23">Next</a>
+            </div>
+
+        </div>
+
+        <!-- page 23 -->
+        <div class="step-content" data-step="23">
+
+            <div class="fields">
+                <p>
+                You can now view/download a PDF file of your audit
+                </p>
+                <div class="rating">
+            </div>	
+
+            <button class="btn">Generate PDF</button>
+
+            <div class="buttons">
+            <a href="#" class="btn alt" data-set-step="22">Prev</a>
+            </div>
+        </div>
+
+    </form>                  
+        
+    <script>
+    const setStep = step => {
+        document.querySelectorAll(".step-content").forEach(element => element.style.display = "none");
+        document.querySelector("[data-step='" + step + "']").style.display = "block";
+        document.querySelectorAll(".steps .step").forEach((element, index) => {
+            index < step-1 ? element.classList.add("complete") : element.classList.remove("complete");
+            index == step-1 ? element.classList.add("current") : element.classList.remove("current");
         });
-        <?php if (!empty($_POST)): ?>
-            //steps = number of questions + 1 for the generate pdf page
-        setStep(23);
-        <?php endif;?>
-        </script>
-        </body>
-        <?php include "../public/footer.php" ?>
-    </div>    
+    };
+    document.querySelectorAll("[data-set-step]").forEach(element => {
+        element.onclick = event => {
+            event.preventDefault();
+            setStep(parseInt(element.dataset.setStep));
+        };
+    });
+    <?php if (!empty($_POST)): ?>
+        //steps = number of questions + 1 for the generate pdf page
+    setStep(23);
+    <?php endif;?>
+    </script>
+    </body>
 
 </html>
