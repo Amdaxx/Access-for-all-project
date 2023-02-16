@@ -3,10 +3,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css">
+    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css">
     <title>Create Venue</title>
   </head>
-
-  <body>
+  <div class="flex-wrapper">
     <div id="header">
       <?php include "businessHeader.php";
       if (isset($_POST['submit'])){
@@ -23,31 +23,9 @@
         </aboutUs>
       </div>
     </div>
-
-    <script>
-function validateForm() {
-  var x = document.forms["centerform"]["venueName"].value;
-  if (x == "" || x == null) {
-    alert("Venue name must be filled out");
-    return false;
-  }
-
-  var x = document.forms["centerform"]["venueAddress"].value;
-  if (x == "" || x == null) {
-    alert("Venue address must be filled out");
-    return false;
-  }
-
-  var x = document.forms["centerform"]["postcode"].value;
-  if (x == "" || x == null) {
-    alert("Postcode must be filled out");
-    return false;
-  }
-}
-</script>
       
 
-    <form id = "centerform" method="post" onsubmit="return validateForm();">
+    <form id = "centerform" method="post">
       <div class="form-group row">
           <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
           <div class="col-sm-6">
@@ -67,25 +45,26 @@ function validateForm() {
           </div>
       </div>
 
-      <div class="form-group row">
-          <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
-          <div class="col-sm-6">
-              <select name="typeOfVenue" id="typeOfVenue">
-                  <option  value="Accommodation">Accommodation</option>
-                  <option  value="Airbnb">Airbnb</option>
-                  <option  value="Experience">Experience</option>
-                  <option  value="Tours">Tours</option>
-                  <option  value="Events">Events</option>
-              </select>
-          </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-10">
-          <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+        <div class="form-group row">
+            <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
+            <div class="col-sm-6">
+                <select name="typeOfVenue" id="typeOfVenue">
+                    <option  value="Accommodation">Accommodation</option>
+                    <option  value="Airbnb">Airbnb</option>
+                    <option  value="Experience">Experience</option>
+                    <option  value="Tours">Tours</option>
+                    <option  value="Events">Events</option>
+                </select>
+            </div>
         </div>
-      </div>
-    </form>
-  
-  </body>
-  <?php include "../public/footer.php" ?>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+          </div>
+        </div>
+      </form>
+    
+    </body>
+    <?php include "../public/footer.php" ?>
+  </div>
 </html>
