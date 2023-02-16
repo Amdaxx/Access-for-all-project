@@ -32,29 +32,11 @@
     <div style="overflow-x:auto;">
       <table class="center" border='1' style='border-collapse:collapse'>
         <tr>
-          <th>Venue Name</th>
-          <th>Venue Type</th>
-          <th>Venue Postcode</th>
-          <th>Venue Address</th>
-          <th>Edit Venue Details</th>
-          <th>Update Audit</th>
-          <th>New Audit</th>
+          <th>Audit Number</th>
+          <th>Audit Name</th>
+          <th>Date Submitted</th>
+`
         </tr>
-
-        <?php 
-        $res = viewVenues($_SESSION['id']);
-        foreach ($res as $venue):
-        ?>
-        <tr>
-          <td width='250'><?php echo $venue['venuename']; ?></td>
-          <td width='60'><?php echo $venue['type']; ?></td>
-          <td  width='250'><?php echo $venue['postcode']; ?></td>
-          <td  width='250'><?php echo $venue['address']; ?></td>
-          <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
-          <td width='250'><input type="button" value="Update Audit"></td>
-          <td width='250'><input type="button" value="New Audit"></td>
-        </tr>
-          <?php endforeach;?>
       </table>
     </div>
   </body>

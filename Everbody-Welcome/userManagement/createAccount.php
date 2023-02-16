@@ -10,11 +10,52 @@ if (isset($_POST['submit'])){
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
 <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
 
+
+<script>
+function validateForm() {
+  var x = document.forms["centerform"]["companyName"].value;
+  if (x == "" || x == null) {
+    alert("Company name must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["email"].value;
+  if (x == "" || x == null) {
+    alert("Company address must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["address"].value;
+  if (x == "" || x == null) {
+    alert("Company address must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["postcode"].value;
+  if (x == "" || x == null) {
+    alert("Postcode must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["phone"].value;
+  if (x == "" || x == null) {
+    alert("Company phone number must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["password"].value;
+  if (x == "" || x == null) {
+    alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+
 <div id="header">
   <?php include "../public/publicHeader.php" ?>     
 </div>
 <body>
-    <form style = "padding-top: 50px;" id = "centerform" method="post" >
+    <form style = "padding-top: 50px;" id = "centerform" method="post" onsubmit="return validateForm()">
     <div class="form-group row">
     <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
     <div class="col-sm-6">

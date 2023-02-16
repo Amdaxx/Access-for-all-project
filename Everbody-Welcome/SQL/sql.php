@@ -209,8 +209,6 @@
             $stmt->bindParam(':type', $type);
             $id = rand(1,9999999);
             $stmt->execute();
-            $_SESSION['venueID'] = $id;
-            header('Location:  ../business/survey.php?id='.$id);
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }   

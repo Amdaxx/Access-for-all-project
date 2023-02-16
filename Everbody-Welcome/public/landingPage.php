@@ -3,58 +3,69 @@
     <title> Everybody Welcome</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
+    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css">
   </head>
-
-  <body style = "background-color:cdc7c7">
+  <div class="flex-wrapper">
     <div id="header">
-      <?php include "publicHeader.php" ?>    
-    </div>
-   
-    <div>
-      <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
-    </div>
-
-
-    <div class="row">
-      <div class = "onecolumn">
-        <aboutUs>
-          <h3><b>About Us</b></h3>
-          <p style= "font-size:22px">
-            Professional access consultancy, training, auditing and design appraisal
-            services to clients large and small across all sectors. People are at the heart of 
-            everything we do because people make change happen. Working in partnership, we enable people to 
-            create places, services and experiences which are accessible and inclusive for all.
-            
-          </p>
-        </aboutUs>
+        <?php include "publicHeader.php" ?>    
       </div>
-    </div>
 
+    <body style = "background-color:cdc7c7">
+    
+      <div>
+        <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
+      </div>
 
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <h3><b>Search For Venue</b></h3>
-          <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+      <div class="row">
+        <div class = "onecolumn">
+          <aboutUs>
+            <h3><b>About Us</b></h3>
+            <p style= "font-size:22px">
+            There are one billion people in the world with additional access needs, including over 14 million disabled
+            people in the U.K.
+            <br>
+            93% will search for access information about your venue before they visit and, if they can't find what they
+            are looking for, 41% will take their business elsewhere meaning that you could be missing out on valuable
+            custom just for the sake of providing relevant information*.
+            <br>
+            But what information should you provide? How should you provide it, when should you promote it and
+            where?
+            <br>
+            Everybody Welcome is the easy way to share your accessibility information and welcome the world.
+            So what are you waiting for?
+            <br>
+            <button4 style="cursor:pointer" onclick="window.location.href='../userManagement/createAccount.php';" type= "button"><b>Start creating your listing now!</b> <button4>
+            </p>
+          </aboutUs>
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <h3><b>Our Services</b></h3>
-          <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3><b>Search For Venue</b></h3>
+            <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3><b>More Information</b></h3>
+            <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3><b>Contact Us</b></h3>
+            <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
+          </div>
         </div>
       </div>
-      
-      <div class="column">
-        <div class="card">
-          <h3><b>Contact Us</b></h3>
-          <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
-        </div>
-      </div>
-    </div>
+
+    </body>
+    
     <?php include "footer.php" ?>
-  </body>
-
-
+  </div>
 </html>

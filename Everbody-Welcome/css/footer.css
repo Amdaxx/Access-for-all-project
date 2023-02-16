@@ -2,7 +2,10 @@ footer{
     width: 100%;
     text-align:center;
     background-color: #696969;
-  }
+    margin-top: auto;
+}
+
+
 
   .fourcolumn {
     float: left;
