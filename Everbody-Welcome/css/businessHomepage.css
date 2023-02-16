@@ -85,14 +85,15 @@ button:hover {
   
 @media screen and (max-width: 1100px) {
     .company-info {
+      margin-top: 10px;  
       text-align: center;
     }
   }
 
 @media screen and (max-width: 1100px) {
-    .company-info {
-      display: block;
-      margin: auto;
+    .button-background {
+      display:flex;
+      justify-content: center;
     }
   }
 
