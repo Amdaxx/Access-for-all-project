@@ -24,9 +24,31 @@
         </aboutUs>
       </div>
     </div>
+
+    <script>
+function validateForm() {
+  var x = document.forms["centerform"]["venueName"].value;
+  if (x == "" || x == null) {
+    alert("Venue name must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["venueAddress"].value;
+  if (x == "" || x == null) {
+    alert("Venue address must be filled out");
+    return false;
+  }
+
+  var x = document.forms["centerform"]["postcode"].value;
+  if (x == "" || x == null) {
+    alert("Postcode must be filled out");
+    return false;
+  }
+}
+</script>
       
 
-    <form id = "centerform" method="post">
+    <form id = "centerform" method="post" onsubmit="return validateForm()">
       <div class="form-group row">
           <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
           <div class="col-sm-6">
