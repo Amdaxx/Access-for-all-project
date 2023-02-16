@@ -10,74 +10,46 @@
   $res = displayBusinessDetails($_SESSION['id']);
   if (isset($_POST['submit'])){
     updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
-    $_SESSION['name'] = $_POST['cname'];
-  
+    $_SESSION['name'] = $_POST['cName'];
   }
   ?>    
 </div>
 
-<script>
-function validateForm() {
-  var x = document.forms["centerform"]["cname"].value;
-  if (x == "" || x == null) {
-    alert("Company name must be filled out");
-    return false;
-  }
 
-  var x = document.forms["centerform"]["address"].value;
-  if (x == "" || x == null) {
-    alert("Company address must be filled out");
-    return false;
-  }
-
-  var x = document.forms["centerform"]["post"].value;
-  if (x == "" || x == null) {
-    alert("Postcode must be filled out");
-    return false;
-  }
-
-  var x = document.forms["centerform"]["phone"].value;
-  if (x == "" || x == null) {
-    alert("Company phone number must be filled out");
-    return false;
-  }
-}
-
-</script>
 
 <body>
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
-<form id = "centerform" method="post" onsubmit="return validateForm()">
+<form id = "centerform" method="post" >
   <div class="form-group row">
       <label for="cName" class="col-sm-2 col-form-label">Company Name </label>
       <div class="col-sm-6">
-        <input type="text" name="cname" class="form-control" id="cName" placeholder="<?php echo $res[0];?>"> <br>
+        <input type="text" name="cname" class="form-control" id="cName" value="<?php echo $res[0];?>"> <br>
       </div>
     </div>
     <div class="form-group row">
       <label for="mail" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-6">
-        <input type="email" class="form-control" id="mail" placeholder="<?php echo $res[4];?>"> <br>
+        <input type="email" class="form-control" id="mail" value="<?php echo $res[4];?>"> <br>
       </div>
     </div>
     <div class="form-group row">
       <label for="addr" class="col-sm-2 col-form-label">Address</label>
       <div class="col-sm-6">
-        <input type="text" name="address" class="form-control" id="addr" placeholder="<?php echo $res[2];?>"> <br>
+        <input type="text" name="address" class="form-control" id="addr" value="<?php echo $res[2];?>"> <br>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
       <div class="col-sm-6">
-        <input type="text" name="post" class="form-control" id="pstcde" placeholder="<?php echo $res[1];?>"> <br>
+        <input type="text" name="post" class="form-control" id="pstcde" value="<?php echo $res[1];?>"> <br>
       </div>
     </div>
     
     <div class="form-group row">
     <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" name="phone" id="num" placeholder="<?php echo $res[3];?>"> <br>
+        <input type="text" class="form-control" name="phone" id="num" value="<?php echo $res[3];?>"> <br>
       </div>
     </div>
     <div class="form-group row">

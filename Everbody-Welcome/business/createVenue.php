@@ -30,7 +30,7 @@ function validateForm() {
     return false;
   }
 
-  var x = document.forms["centerform"]["post"].value;
+  var x = document.forms["centerform"]["postcode"].value;
   if (x == "" || x == null) {
     alert("Postcode must be filled out");
     return false;
