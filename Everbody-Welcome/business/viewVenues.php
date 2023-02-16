@@ -43,8 +43,9 @@ tr:hover {background-color: coral;}
      foreach ($res as $venue):
     ?>
     <tr>
-      <td width='250'><?php echo $venue['venueid']; ?></td>
-      <td width='60'><?php echo $venue['venuename']; ?></td>
+      <td width='250'><?php echo $venue['venuename']; ?></td>
+      <td width='60'><?php echo $venue['type']; ?></td>
+      <td  width='250'><?php echo $venue['postcode']; ?></td>
       <td  width='250'><?php echo $venue['address']; ?></td>
       <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
       <td width='250'><input type="button" value="Update Audit"></td>
