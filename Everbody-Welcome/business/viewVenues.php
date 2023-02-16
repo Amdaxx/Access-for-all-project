@@ -50,4 +50,5 @@ tr:hover {background-color: coral;}
     </tr>
       <?php endforeach;?>
   </table>
+  <?php include "../public/footer.php" ?>
 </body>

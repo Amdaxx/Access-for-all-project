@@ -2,7 +2,14 @@ footer{
     width: 100%;
     text-align:center;
     background-color: #696969;
+    bottom: 0;
+    position:relative;
   }
+
+body{
+  height:100%;
+}
+
 
   .fourcolumn {
     float: left;
