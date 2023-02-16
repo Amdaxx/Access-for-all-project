@@ -42,6 +42,7 @@
     </div> 
   </div>
 
-  <?php include "../public/footer.php" ?>
+  
 
 </body>
+<?php include "../public/footer.php" ?>

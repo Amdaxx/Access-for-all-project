@@ -147,7 +147,7 @@
                     <label for="radio6" onclick="accom3rdAnswer(); showNext3();">NO</label>
                     <script>
                         function accom3rdAnswer() {
-                        alert("pop up 3");
+                        alert("To find out more about alternative entrances, follow this link: https://www.euansguide.com/campaigns/make-an-accessible-entrance/");
                         }
                         function showNext3(){
                             document.getElementById("next3").style.display = "block";
@@ -190,7 +190,7 @@
                     <label for="radio8" onclick="accom4thAnswer(); showNext4();">NO</label>
                     <script>
                         function accom4thAnswer() {
-                        alert("pop up 4");
+                        alert("If you would like to know more about");
                         }
                         function showNext4(){
                             document.getElementById("next4").style.display="block";
