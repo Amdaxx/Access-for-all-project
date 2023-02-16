@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   </head>
 
+  <div id="header">
+    <?php include "publicHeader.php" ?>    
+  </div>
+
   <body style = "background-color:cdc7c7">
-    <div id="header">
-      <?php include "publicHeader.php" ?>    
-    </div>
     <div class="row">
         <div class = "onecolumn">
             <h3 ><b>Meet The Team</b></h3>
@@ -51,9 +52,6 @@
             </div>
         </div>
     </div>
-
-    <?php include "footer.php" ?>
   </body>
-
-
+  <?php include "footer.php" ?>
 </html>

@@ -19,7 +19,6 @@ th, td {
 
 tr:hover {background-color: coral;}
 </style>
-
 </head>
 
 <body style = "background-color:cdc7c7">
@@ -55,3 +54,4 @@ tr:hover {background-color: coral;}
   </table>
   </div>
 </body>
+<?php include "../public/footer.php" ?>
