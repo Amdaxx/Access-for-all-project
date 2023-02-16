@@ -210,7 +210,6 @@
             $id = rand(1,9999999);
             $stmt->execute();
             
-            $myfile = fopen("testfile.txt", "w");
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }   
@@ -283,10 +282,11 @@
         $stmt2->execute();
         $res2 = $stmt2->fetchAll();
 
-        $del = $conn->prepare("SELECT COUNT(*) FROM venues WHERE logid=:id");
-        $del->bindParam(':id', $id);
-        $del->execute();
-        $count = $del->rowCount();
+        $sql3 = "SELECT count(*) FROM venues WHERE logid=:id"; 
+        $result3 = $conn->prepare($sql3); 
+        $result3->bindParam(':id', $id);
+        $result3->execute(); 
+        $count = $result3->fetchColumn(); 
 
         $result = array($res[0]['companyName'], $res[0]['postcode'], $res[0]['address'], $res[0]['phone'], $res2[0]['email'], $count);
         return $result;
