@@ -54,8 +54,8 @@
           <td  width='250'><?php echo $venue['postcode']; ?></td>
           <td  width='250'><?php echo $venue['address']; ?></td>
           <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
-          <td width='250'><input type="button" value="Update Audit"></td>
-          <td width='250'><input type="button" value="New Audit"></td>
+          <td width='250'><input type="button" value="Past Audits" onclick="window.location.href='previousAudits.php';"></td>
+          <td width='250'><input type="button" value="New Audit" onclick="window.location.href='survey.php';"></td>
         </tr>
           <?php endforeach;?>
       </table>
