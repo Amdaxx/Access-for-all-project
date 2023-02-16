@@ -7,13 +7,14 @@
 
 <body style = "background-color:cdc7c7">
   <div id="header">
-    <?php include "businessHeader.php" ?>    
+    <?php include "businessHeader.php";
+    echo $_SESSION['venueID'];
+     ?>    
   </div>
   
 
   <div class="btn-group">
     <button><a href="accomSurvey.php">Accommodation Audit</a></button>
-    <button>Airbnb</button>
     <button>Experiences</button>
     <button>Tours</button>
     <button>Events</button>
