@@ -105,7 +105,7 @@
                     <label for="radio4" onclick="accom2ndAnswer(); showNext2();">NO</label>
                     <script>
                         function accom2ndAnswer() {
-                        alert("pop up 2");
+                        alert("To find out more about level access, follow this link: https://www.lawinsider.com/dictionary/level-access#:~:text=Level%20access%20means%20step%20free,can%20board%20a%20train%20unassisted");
                         }
                         function showNext2(){
                             document.getElementById("next2").style.display = "block";
