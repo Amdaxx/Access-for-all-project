@@ -5,10 +5,10 @@
   <head>
     <title>Our Services</title>
   </head>
+  <div id="header">
+    <?php include "publicHeader.php" ?>    
+  </div>
   <body>
-    <div id="header">
-      <?php include "publicHeader.php" ?>    
-    </div>
     <div class="row">
       <div class = "onecolumn">
         <aboutUs>
@@ -40,6 +40,6 @@
         <p>
       </div>
     </div>
-    <?php include "footer.php" ?>
   </body>
+  <?php include "footer.php" ?>
 </html>

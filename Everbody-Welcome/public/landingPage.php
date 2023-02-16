@@ -4,16 +4,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
   </head>
-
-  <body style = "background-color:cdc7c7">
-    <div id="header">
+  <div id="header">
       <?php include "publicHeader.php" ?>    
     </div>
-   
+
+  <body style = "background-color:cdc7c7">
+  
     <div>
       <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
     </div>
-
 
     <div class="row">
       <div class = "onecolumn">
@@ -53,8 +52,9 @@
         </div>
       </div>
     </div>
-    <?php include "footer.php" ?>
-  </body>
 
+  </body>
+  
+  <?php include "footer.php" ?>
 
 </html>

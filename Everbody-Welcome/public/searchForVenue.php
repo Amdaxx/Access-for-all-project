@@ -77,15 +77,10 @@ div.content {
   </head>
 
   <body style = "background-color:cdc7c7">
-    <div id="header">
-      <ul>
-        <li><a href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/userLogin.php">Log In</a></li>
-        <button2 onclick="window.location.href='http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
-        <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/userManagement/createAccount.php">Create Account</a></li>
-      </ul>    
-    </div>
+  <div id="header">
+    <?php include "publicHeader.php" ?>    
+  </div>
 
-   
     <div>
       <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
     </div>
@@ -117,19 +112,19 @@ div.content {
 <div class="button-background">
    
   </div>
-  <div class="grid-container">
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-  <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-</div>
+    <div class="grid-container">
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+    <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+  </div>
 
   </body>
-
+  <?php include "footer.php" ?>
 
 </html>
