@@ -47,7 +47,6 @@ button:hover {
 }
 
 .background-counter{
-
     position: absolute;
     width: 600px;
     height: 670px;
@@ -59,6 +58,7 @@ button:hover {
     padding: 15px;
     background: #c7c7c7;
 }
+
 
 .counter-text{
     text-align: center;

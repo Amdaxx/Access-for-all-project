@@ -21,7 +21,7 @@ $id = $_SESSION['id'];
 
 <div id="header">
   <ul>
-    <li> <img style = "float:left;" src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></li>
+    <li><button3 onclick="window.location.href='../public/landingPage.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button3></li>
     <li style = "font-size: 40px" ><?php echo $_SESSION['name']?></li>
     <li style="float:right"><a class="active" href="http://localhost/Access-for-all-project/Everbody-Welcome/public/landingPage.php">Sign Out</a></li>
   </ul>    
