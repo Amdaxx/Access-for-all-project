@@ -25,7 +25,7 @@
     </div>
       
 
-    <form id = "centerform" method="post">
+    <form id = "centerform" method="post" >
       <div class="form-group row">
           <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
           <div class="col-sm-6">
@@ -59,7 +59,7 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+            <button type="submit" name ="submit" class="btn btn-primary" >Create Venue</button>
           </div>
         </div>
       </form>
