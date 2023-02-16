@@ -21,11 +21,20 @@
           <aboutUs>
             <h3><b>About Us</b></h3>
             <p style= "font-size:22px">
-              Professional access consultancy, training, auditing and design appraisal
-              services to clients large and small across all sectors. People are at the heart of 
-              everything we do because people make change happen. Working in partnership, we enable people to 
-              create places, services and experiences which are accessible and inclusive for all.
-              
+            There are one billion people in the world with additional access needs, including over 14 million disabled
+            people in the U.K.
+            <br>
+            93% will search for access information about your venue before they visit and, if they can't find what they
+            are looking for, 41% will take their business elsewhere meaning that you could be missing out on valuable
+            custom just for the sake of providing relevant information*.
+            <br>
+            But what information should you provide? How should you provide it, when should you promote it and
+            where?
+            <br>
+            Everybody Welcome is the easy way to share your accessibility information and welcome the world.
+            So what are you waiting for?
+            <br>
+            <button4 style="cursor:pointer" onclick="window.location.href='../userManagement/createAccount.php';" type= "button"><b>Start creating your listing now!</b> <button4>
             </p>
           </aboutUs>
         </div>
@@ -42,7 +51,7 @@
 
         <div class="column">
           <div class="card">
-            <h3><b>Our Services</b></h3>
+            <h3><b>More Information</b></h3>
             <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
           </div>
         </div>
