@@ -40,12 +40,6 @@
             </div>
         </div>
         <div class="form-group row">
-          <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
-          <div class="col-sm-6">
-            <input type="text" class="form-control" id="pstcde" placeholder="PostCode"> <br>
-          </div>
-        </div>
-        <div class="form-group row">
             <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
             <div class="col-sm-6">
                 <select name="typeOfVenue" id="typeOfVenue">
@@ -57,6 +51,11 @@
                 </select>
             </div>
         </div>
+        <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+        </div>
+      </div>
       </form>
     </div>
     <?php include "../public/footer.php" ?>
