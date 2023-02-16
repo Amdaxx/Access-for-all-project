@@ -999,8 +999,7 @@
             </div>
         </div>
 
-    </form>
-    <?php include "../public/footer.php" ?>                   
+    </form>                  
         
     <script>
     const setStep = step => {
@@ -1023,7 +1022,5 @@
     <?php endif;?>
     </script>
     </body>
-    <?php include "../public/footer.php" ?>
-
 
 </html>
