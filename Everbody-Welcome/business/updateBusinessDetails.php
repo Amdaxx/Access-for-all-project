@@ -4,10 +4,11 @@
 
 <div id="header">
   <?php include "businessHeader.php";
-  
+  $res = displayBusinessDetails($_SESSION['id']);
   if (isset($_POST['submit'])){
-    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone'], $_POST['pwd']);
-    
+    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
+    $_SESSION['name'] = $_POST['cname'];
+  
   }
   ?>    
 </div>
@@ -16,53 +17,35 @@
     <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
 <form id = "centerform" method="post">
 <div class="form-group row">
-    <label for="cName" class="col-sm-2 col-form-label">Company Name</label>
+    <label for="cName" class="col-sm-2 col-form-label">Company Name </label>
     <div class="col-sm-6">
-      <input type="text" name="cname" class="form-control" id="cName" placeholder="Company Name"> <br>
+      <input type="text" name="cname" class="form-control" id="cName" placeholder="<?php echo $res[0];?>"> <br>
     </div>
   </div>
   <div class="form-group row">
     <label for="mail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-6">
-      <input type="email" class="form-control" id="mail" placeholder="Email"> <br>
+      <input type="email" class="form-control" id="mail" placeholder="<?php echo $res[4];?>"> <br>
     </div>
   </div>
   <div class="form-group row">
     <label for="addr" class="col-sm-2 col-form-label">Address</label>
     <div class="col-sm-6">
-      <input type="text" name="address" class="form-control" id="addr" placeholder="Address"> <br>
+      <input type="text" name="address" class="form-control" id="addr" placeholder="<?php echo $res[2];?>"> <br>
     </div>
   </div>
 
   <div class="form-group row">
     <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
     <div class="col-sm-6">
-      <input type="text" name="post" class="form-control" id="pstcde" placeholder="PostCode"> <br>
+      <input type="text" name="post" class="form-control" id="pstcde" placeholder="<?php echo $res[1];?>"> <br>
     </div>
   </div>
   
   <div class="form-group row">
   <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" name="phone" id="num" placeholder="Contact Number"> <br>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="pwd" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-6">
-      <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password"> <br>
-      <input type="checkbox" onclick="myFunction()">Show Password
-
-      <script>
-function myFunction() {
-  var x = document.getElementById("pwd");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script>
+      <input type="text" class="form-control" name="phone" id="num" placeholder="<?php echo $res[3];?>"> <br>
     </div>
   </div>
   <div class="form-group row">
