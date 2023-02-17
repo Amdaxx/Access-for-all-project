@@ -40,7 +40,7 @@
     </div>
 
     <div class="form-group row">
-      <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
+      <label for="pstcde" class="col-sm-2 col-form-label">Postcode</label>
       <div class="col-sm-6">
         <input type="text" name="post"  class="form-control" id="pstcde" value="<?php echo $res[1];?>"> <br>
       </div>

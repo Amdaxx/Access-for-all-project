@@ -35,7 +35,13 @@
           <th>Audit Number</th>
           <th>Audit Name</th>
           <th>Date Submitted</th>
-`
+          <th>View Audit</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Accommodation Audit</td>
+          <td>17/02/2023</td>
+          <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
         </tr>
       </table>
     </div>
