@@ -28,7 +28,6 @@ $commentFive = $_POST["accomComment5"];
 
 $html = "<head>
         <style>
-        body {background-color: rgb(168,168,168);}
         h1   {color:black;}
         p    {color: red;}
         </style>
