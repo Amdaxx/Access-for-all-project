@@ -9,8 +9,15 @@
   <?php include "businessHeader.php";
   $res = displayBusinessDetails($_SESSION['id']);
   if (isset($_POST['submit'])){
+<<<<<<< HEAD
     $_SESSION['name'] = $_POST['cname'];
     updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
+=======
+    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
+    $_SESSION['name'] = $_POST['cname'];
+    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['address'],  $_POST['post'], $_POST['phone']);
+    $_SESSION['name'] = $_POST['cName'];
+>>>>>>> b5a2d20e151fd40ac96de8cdc3f02d79eb5cf5a5
   }
   ?>    
 </div>
