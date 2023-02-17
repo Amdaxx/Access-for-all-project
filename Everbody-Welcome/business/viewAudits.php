@@ -11,7 +11,7 @@
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #696969;
   }
 
   th, td {
@@ -29,7 +29,7 @@
     <?php include "businessHeader.php";?>    
   </div>
   <body>
-    <div style="overflow-x:auto;">
+    <div style="overflow-x:auto;margin-top:20px;">
       <table class="center" border='1' style='border-collapse:collapse'>
       <th>Question No.</th>
       <th>Question</th>

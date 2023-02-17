@@ -7,6 +7,7 @@
 <style>
 
   table {
+    top:20px;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
@@ -29,7 +30,7 @@
   </div>
 
   <body>
-    <div style="overflow-x:auto;">
+    <div style="overflow-x:auto;   top: 20px;position: relative;">
       <table class="center" border='1' style='border-collapse:collapse'>
         <th>Audit Number</th>
         <th>Audit Name</th>
