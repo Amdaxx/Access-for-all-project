@@ -213,7 +213,7 @@
             $stmt->bindParam(':type', $type);
             $id = rand(1,9999999);
             $stmt->execute();
-            header('Location:  ../business/businessLandingPage.php?id='.$id.'&type='.$type);
+            header('Location:  ../business/survey.php?id='.$id.'&type='.$type);
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -250,10 +250,6 @@
        
     }
 
-    function updateVenue($venueID)
-    {
-        
-    }
 
     function updateBusinessDetails($id, $cname, $post, $address, $phone)
     {
@@ -318,4 +314,22 @@
         $res = $stmt->fetchAll();
 
         return $res;
+    }
+
+
+    function updateVenue($id, $vname, $post, $address, $type)
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       
+
+        $sql1 = "UPDATE venues SET venuename=:vname, postcode=:post, address=:address, type=:type WHERE venueid=:id";
+        $stmt = $conn->prepare($sql1);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':vname', $vname);
+        $stmt->bindParam(':post', $post);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':type', $type);
+        $stmt->execute();
+        header('Location:  ../business/viewVenues.php?id='.$id);
     }

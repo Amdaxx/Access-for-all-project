@@ -53,10 +53,22 @@
           <td width='60'><?php echo $venue['type']; ?></td>
           <td  width='250'><?php echo $venue['postcode']; ?></td>
           <td  width='250'><?php echo $venue['address']; ?></td>
-          <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
-          <td width='250'><input type="button" value="Past Audits" onclick="window.location.href='previousAudits.php';"></td>
-          <td width='250'><input type="button" value="New Audit" onclick="window.location.href='survey.php';"></td>
-        </tr>
+          
+          <td width='200'><div class="btn-group">
+          <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
+          <input type="button" value="Edit Venue Details"></div>
+          </a>
+
+          <td width='200'><div class="btn-group">
+          <a href="previousAudits.php?id=<?php echo $venue['venueid']; ?>">
+          <input type="button" value="Past Audits"></div>
+          </a>
+
+          <td width='200'><div class="btn-group">
+          <a href="survey.php?id=<?php echo $venue['venueid']; ?>&type=<?php echo $venue['type']?>">
+          <input type="button" value="Past Audits"></div>
+          </a>
+          
           <?php endforeach;?>
       </table>
     </div>
