@@ -18,7 +18,10 @@
     padding: 8px;
   }
 
-  tr:hover {background-color: coral;}
+  .data :hover {
+    background-color: coral;
+  }
+  
 </style>
 </head>
 
@@ -30,14 +33,14 @@
 
   <body>
     <div style="overflow-x:auto;">
-      <table class="center" border='1' style='border-collapse:collapse'>
-        <tr>
+      <table class="center" border='1' style='border-collapse:collapse;margin-top:10px;'>
+        <tr class = "header">
           <th>Venue Name</th>
           <th>Venue Type</th>
           <th>Venue Postcode</th>
           <th>Venue Address</th>
           <th>Edit Venue Details</th>
-          <th>Update Audit</th>
+          <th>View Past Audits</th>
           <th>New Audit</th>
         </tr>
 
@@ -45,23 +48,14 @@
         $res = viewVenues($_SESSION['id']);
         foreach ($res as $venue):
         ?>
-        <tr>
+        <tr class = "data">
           <td width='250'><?php echo $venue['venuename']; ?></td>
           <td width='60'><?php echo $venue['type']; ?></td>
           <td  width='250'><?php echo $venue['postcode']; ?></td>
           <td  width='250'><?php echo $venue['address']; ?></td>
-          <td width='200'><div class="btn-group">
-          <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
-          <input type="button" value="Edit Venue Details"></div>
-          </a>
-        </td>
-          <td width='250'><input type="button" value="Update Audit"></td>
-          <td width='250'>
-          <a href="accomSurvey.php?id=<?php echo $venue['venueid']; ?>&type=<?php echo $venue['type'];?>">
-            <input type="button" value="New Audit">
-            </a>
-          </td>
-
+          <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
+          <td width='250'><input type="button" value="Past Audits" onclick="window.location.href='previousAudits.php';"></td>
+          <td width='250'><input type="button" value="New Audit" onclick="window.location.href='survey.php';"></td>
         </tr>
           <?php endforeach;?>
       </table>

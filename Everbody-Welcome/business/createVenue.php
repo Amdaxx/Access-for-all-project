@@ -11,6 +11,7 @@
       <?php include "businessHeader.php";
       if (isset($_POST['submit'])){
         createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
+        header("Location: viewVenues.php");
         }
       ?>    
     </div>
@@ -30,7 +31,7 @@ function validateForm() {
     return false;
   }
 
-  var x = document.forms["centerform"]["post"].value;
+  var x = document.forms["centerform"]["postcode"].value;
   if (x == "" || x == null) {
     alert("Postcode must be filled out");
     return false;
@@ -82,7 +83,7 @@ function validateForm() {
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+            <button type="submit" name ="submit" class="btn btn-primary" >Create Venue</button>
           </div>
         </div>
       </form>
