@@ -46,7 +46,7 @@
         </div>
         <div class="form-group row">
         <div class="col-sm-10">
-          <button type="submit" name ="submit" class="btn btn-primary">Create Venue</button>
+          <button type="submit" name ="submit" class="btn btn-primary">Update Venue</button>
         </div>
         </div>
       </form>
