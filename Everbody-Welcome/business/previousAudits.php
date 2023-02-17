@@ -73,6 +73,12 @@
         <td>17/02/2023</td>
         <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
       </tr>
+      <tr class = "data">
+        <td>6</td>
+        <td>Cantor</td>
+        <td>17/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
     </table>
   </div>
 </body>

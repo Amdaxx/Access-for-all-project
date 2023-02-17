@@ -38,38 +38,38 @@
       <th>Comments</th>
       <tr class = "data">
         <td width='200'><?php echo '1'; ?></td>
-        <td width='200'><?php echo 'Are clearly marked designated accessible parking spaces available at or near the venue?'; ?></td>
-        <td width='40'><?php echo 'A1'; ?></td>
-        <td  width='200'><?php echo 'Proof1'; ?></td>
-        <td  width='200'><?php echo 'Comment1'; ?></td>
+        <td width='200'><?php echo 'Is there an accessible bathroom?'; ?></td>
+        <td width='40'><?php echo 'YES'; ?></td>
+        <td  width='200'><img  src="../pictures/dummyPictures/C1.jpg" alt="ME"></td>
+        <td  width='200'><?php echo 'Yes, there are several accessible bathrooms throughout the Cantor buidling.'; ?></td>
       </tr>
       <tr class = "data">
         <td width='200'><?php echo '2'; ?></td>
-        <td width='250'><?php echo 'Does the main entrance have level access (without steps or raised thresholds)? Level access includes access by ramp (permanent or temporary) or lift.'; ?></td>
-        <td width='40'><?php echo 'A2'; ?></td>
-        <td  width='200'><?php echo 'Proof2'; ?></td>
-        <td  width='200'><?php echo 'Comment2'; ?></td>
+        <td width='250'><?php echo 'Is there a disabled refuge point?'; ?></td>
+        <td width='40'><?php echo 'YES'; ?></td>
+        <td  width='200'><img  src="../pictures/dummyPictures/C2.jpg" alt="ME"></td>
+        <td  width='200'><?php echo 'There is a disabled refuge point.'; ?></td>
       </tr>
       <tr class = "data">
         <td width='200'><?php echo '3'; ?></td>
-        <td width='250'><?php echo 'Is there an alternative entrance, with level access (without steps or raised thresholds)? Level access includes access by ramp (permanent or temporary) or lift.'; ?></td>
-        <td width='40'><?php echo 'A3'; ?></td>
-        <td  width='200'><?php echo 'Proof3'; ?></td>
-        <td  width='200'><?php echo 'Comment3'; ?></td>
+        <td width='250'><?php echo 'Is there a stairlift?'; ?></td>
+        <td width='40'><?php echo 'NO'; ?></td>
+        <td  width='200'><img  src="../pictures/dummyPictures/C3.jpg" alt="ME"></td>
+        <td  width='200'><?php echo 'There is a stairlift available to travel between floors.'; ?></td>
       </tr>
       <tr class = "data">
         <td width='200'><?php echo '4'; ?></td>
-        <td width='250'><?php echo 'Is the clear door opening width of the entrance with level access more than 75cm?'; ?></td>
-        <td width='40'><?php echo 'A4'; ?></td>
-        <td  width='200'><?php echo 'Proof4'; ?></td>
-        <td  width='200'><?php echo 'Comment4'; ?></td>
+        <td width='250'><?php echo 'Is the clear door opening width of the entrance more than 75cm?'; ?></td>
+        <td width='40'><?php echo 'YES'; ?></td>
+        <td  width='200'><img  src="../pictures/dummyPictures/C4.jpg" alt="ME"></td>
+        <td  width='200'><?php echo 'The door openings are adequately sized.'; ?></td>
       </tr>
       <tr class = "data">
         <td width='200'><?php echo '5'; ?></td>
-        <td width='250'><?php echo 'Is there level access (without steps or thresholds) from the accessible entrance to the public toilet, including access by ramp or lift and the door opening is at least 75cm wide?'; ?></td>
-        <td width='40'><?php echo 'A5'; ?></td>
-        <td  width='200'><?php echo 'Proof5'; ?></td>
-        <td  width='200'><?php echo 'Comment5'; ?></td>
+        <td width='250'><?php echo 'Is there an elevator available?'; ?></td>
+        <td width='40'><?php echo 'NO'; ?></td>
+        <td  width='200'><img  src="../pictures/dummyPictures/C5.jpg" alt="ME"></td>
+        <td  width='200'><?php echo 'There is an elevator to travel between floors.'; ?></td>
       </tr>
       </table>
     </div>
