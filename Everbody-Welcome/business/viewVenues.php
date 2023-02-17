@@ -18,9 +18,7 @@
     padding: 8px;
   }
 
-  .data :hover {
-    background-color: coral;
-  }
+  tr:hover {background-color: coral;}
   
 </style>
 </head>
@@ -55,7 +53,7 @@
           <td  width='250'><?php echo $venue['address']; ?></td>
           <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
           <td width='250'><input type="button" value="Past Audits" onclick="window.location.href='previousAudits.php';"></td>
-          <td width='250'><input type="button" value="New Audit" onclick="window.location.href='survey.php';"></td>
+          <td width='250'><input type="button" value="New Audit" onclick="window.location.href='accomSurvey.php';"></td>
         </tr>
           <?php endforeach;?>
       </table>

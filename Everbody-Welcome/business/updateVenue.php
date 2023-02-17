@@ -19,19 +19,19 @@
         <div class="form-group row">
             <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="vName" placeholder="Venue Name"> <br>
+            <input type="text" class="form-control" id="vName" value="Venue Name"> <br>
             </div>
         </div>
         <div class="form-group row">
             <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="vAddress" placeholder="Venue Address"> <br>
+            <input type="text" class="form-control" id="vAddress" value="Venue Address"> <br>
             </div>
         </div>
         <div class="form-group row">
             <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode"> <br>
+            <input type="text" class="form-control" id="vPostcode" value="Venue Postcode"> <br>
             </div>
         </div>
         <div class="form-group row">
@@ -39,7 +39,6 @@
             <div class="col-sm-6">
                 <select name="typeOfVenue" id="typeOfVenue">
                     <option value="Accommodation">Accommodation</option>
-                    <option value="Airbnb">Airbnb</option>
                     <option value="Experience">Experience</option>
                     <option value="Tours">Tours</option>
                     <option value="Events">Events</option>
