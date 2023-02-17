@@ -18,7 +18,7 @@
     padding: 8px;
   }
 
-  tr:hover {background-color: coral;}
+  .data:hover {background-color: coral;}
   
 </style>
 </head>
@@ -31,16 +31,14 @@
 
   <body>
     <div style="overflow-x:auto;">
-      <table class="center" border='1' style='border-collapse:collapse;margin-top:10px;'>
-        <tr class = "header">
-          <th>Venue Name</th>
-          <th>Venue Type</th>
-          <th>Venue Postcode</th>
-          <th>Venue Address</th>
-          <th>Edit Venue Details</th>
-          <th>View Past Audits</th>
-          <th>New Audit</th>
-        </tr>
+      <table class="center" border='1' style='border-collapse:collapse;margin-top:10px;'>  
+        <th>Venue Name</th>
+        <th>Venue Type</th>
+        <th>Venue Postcode</th>
+        <th>Venue Address</th>
+        <th>Edit Venue Details</th>
+        <th>View Past Audits</th>
+        <th>New Audit</th>
 
         <?php 
         $res = viewVenues($_SESSION['id']);
