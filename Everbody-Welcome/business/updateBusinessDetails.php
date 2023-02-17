@@ -11,6 +11,8 @@
   if (isset($_POST['submit'])){
     updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
     $_SESSION['name'] = $_POST['cname'];
+    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['address'],  $_POST['post'], $_POST['phone']);
+    $_SESSION['name'] = $_POST['cName'];
   }
   ?>    
 </div>
@@ -42,7 +44,7 @@
     <div class="form-group row">
       <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
       <div class="col-sm-6">
-        <input type="text" name="post" class="form-control" id="pstcde" value="<?php echo $res[1];?>"> <br>
+        <input type="text" name="post"  class="form-control" id="pstcde" value="<?php echo $res[1];?>"> <br>
       </div>
     </div>
     
