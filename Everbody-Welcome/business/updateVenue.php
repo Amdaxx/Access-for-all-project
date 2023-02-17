@@ -10,13 +10,11 @@
   <div class="flex-wrapper">
 
     <div id="header">
-        <?php include "businessHeader.php";
-         ?>    
-      </div>
+      <?php include "businessHeader.php";?>    
     </div>
 
-    <body style="margin-top:20px">
-      <form id = "centerform" onsubmit="return validateForm()">
+    <body>
+      <form id = "centerform" onsubmit="return validateForm()" style="margin-top:auto;margin-bottom:auto;">
         <div class="form-group row">
             <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
             <div class="col-sm-6">

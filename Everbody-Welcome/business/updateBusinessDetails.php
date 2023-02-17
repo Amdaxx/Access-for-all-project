@@ -35,14 +35,14 @@
     <div class="form-group row">
       <label for="addr" class="col-sm-2 col-form-label">Address</label>
       <div class="col-sm-6">
-        <input type="text" name="address" class="form-control" id="addr" value="<?php echo $res[1];?>"> <br>
+        <input type="text" name="address" class="form-control" id="addr" value="<?php echo $res[2];?>"> <br>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="pstcde" class="col-sm-2 col-form-label">PostCode</label>
       <div class="col-sm-6">
-        <input type="text" name="post"  class="form-control" id="pstcde" value="<?php echo $res[2];?>"> <br>
+        <input type="text" name="post"  class="form-control" id="pstcde" value="<?php echo $res[1];?>"> <br>
       </div>
     </div>
     
