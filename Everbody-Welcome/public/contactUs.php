@@ -23,7 +23,10 @@
       <div class="seventyfive">
         <h3>To: Access For All</h3>
         <h3><textarea placeholder="Enter Your Message Here" style = "overflow:scroll;max-width:95%;" name="comment" rows="10" cols="150"></textarea></h3>
-        <h3>From: <input type="text" placeholder="Enter Your Email Here"></h3>
+        <h3>From: <input type="text" placeholder="Enter Your Email Here">
+        <button onClick="window.location.href=window.location.href">Submit</button>
+      </h3>
+
         <div class="row">
 
           <div class = "twocolumn" >
