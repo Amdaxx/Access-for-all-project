@@ -10,33 +10,51 @@
   <div class="flex-wrapper">
 
     <div id="header">
-      <?php include "businessHeader.php";?>    
+      <?php include "businessHeader.php";
+      if (isset($_POST['submit'])){
+        updateVenue($_GET['id'], $_POST['name'], $_POST['post'],  $_POST['address'], $_POST['type']);
+      }
+      
+      $res = viewVenues2($_GET['id']);
+      $venueName;
+      $venueAddress;
+      $venuePostcode;
+      $venueType;
+     
+      foreach ($res as $venue){
+      $venueName = $venue['venuename'];
+      $venueAddress = $venue['address'];
+      $venuePostcode = $venue['postcode'];
+      $venueType = $venue['type'];
+      
+      }
+      ?>    
     </div>
 
     <body>
-      <form id = "centerform" onsubmit="return validateForm()" style="margin-top:auto;margin-bottom:auto;">
+      <form id = "centerform" method="post" onsubmit="return validateForm()" style="margin-top:auto;margin-bottom:auto;">
         <div class="form-group row">
             <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="vName" value="Venue Name"> <br>
+            <input type="text" class="form-control" name="name" id="vName" value="<?php echo $venueName; ?>"> <br>
             </div>
         </div>
         <div class="form-group row">
             <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="vAddress" value="Venue Address"> <br>
+            <input type="text" class="form-control" name="address" id="vAddress" value="<?php echo $venueAddress; ?>"> <br>
             </div>
         </div>
         <div class="form-group row">
             <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
             <div class="col-sm-6">
-            <input type="text" class="form-control" id="vPostcode" value="Venue Postcode"> <br>
+            <input type="text" name="post" class="form-control" id="vPostcode" value="<?php echo $venuePostcode; ?>"> <br>
             </div>
         </div>
         <div class="form-group row">
             <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
             <div class="col-sm-6">
-                <select name="typeOfVenue" id="typeOfVenue">
+                <select name="type" id="typeOfVenue">
                     <option value="Accommodation">Accommodation</option>
                     <option value="Experience">Experience</option>
                     <option value="Tours">Tours</option>

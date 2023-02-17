@@ -251,6 +251,18 @@
     }
 
 
+    function viewVenues2($id)
+    {
+            $conn = connectToDatabase();
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE venueid=:id");
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
+       
+    }
+
     function updateBusinessDetails($id, $cname, $post, $address, $phone)
     {
         $conn = connectToDatabase();

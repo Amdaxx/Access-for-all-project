@@ -62,6 +62,10 @@
         <a href="survey.php?id=<?php echo $venue['venueid']; ?>&type=<?php echo $venue['type']?>">
         <input type="button" value="New Audit"></div>
         </a>
+
+        <td width='200'><div class="btn-group">
+        <input type="button" value="Published"></div>
+
         
         <?php endforeach;?>
     </table>
