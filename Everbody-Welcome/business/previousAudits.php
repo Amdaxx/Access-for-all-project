@@ -39,7 +39,37 @@
       </tr>
       <tr class = "data">
         <td>1</td>
-        <td>Accommodation Audit</td>
+        <td>Treasure Hunt - Sheffield</td>
+        <td>13/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
+      <tr class = "data">
+        <td>2</td>
+        <td>Premier Inn - Sheffield</td>
+        <td>14/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
+      <tr class = "data">
+        <td>3</td>
+        <td>Go Ape</td>
+        <td>15/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
+      <tr class = "data">
+        <td>4</td>
+        <td>Hampton Hotel</td>
+        <td>16/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
+      <tr class = "data">
+        <td>5</td>
+        <td>Spa Natural</td>
+        <td>16/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
+      <tr class = "data">
+        <td>6</td>
+        <td>The Rutland Hotel</td>
         <td>17/02/2023</td>
         <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
       </tr>
