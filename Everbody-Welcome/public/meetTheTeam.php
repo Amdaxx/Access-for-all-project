@@ -22,7 +22,7 @@
           <div class="row">
           <div class="column">
               <div class="card">
-              <img  src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/jane.jpg" alt="Jane" style="width:75%; height: 50% ">
+              <img  src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/jane.jpg" alt="Jane" style="width:400px; height: 500px ">
               <h2>Jane Doe</h2>
               <p class="title">CEO &amp; Founder</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -33,7 +33,7 @@
 
           <div class="column">
               <div class="card">
-              <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/charlie.jpg" alt="Charlie" style="width:75% ; height:50%">
+              <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/charlie.jpg" alt="Charlie" style="width:400px; height: 500px">
               <h2>Mike Ross</h2>
               <p class="title">Art Director</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -44,7 +44,7 @@
 
           <div class="column">
               <div class="card">
-              <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/mo.jpg" alt="Mo" style="width:50%; height:50%">
+              <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/mo.jpg" alt="Mo" style="width:400px; height: 500px">
               <h2>John Doe</h2>
               <p class="title">Designer</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>

@@ -16,9 +16,9 @@
             ?>    
         </div>
         <body>
-            <form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		
+            <form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php"  style="margin-top:20px">		
             
-            <h1><i class="far fa-list-alt"></i><?php echo $_GET['type'] ?> Audit  Report</h1>
+            <h1><i class="far fa-list-alt"></i><?php echo $_GET['type'] ?> Audit</h1>
 
             <div class="steps">
                 <div class="step current"></div>

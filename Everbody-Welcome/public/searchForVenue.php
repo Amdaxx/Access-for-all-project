@@ -34,7 +34,7 @@
         border-style: solid;
       }
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: 1000px) {
         .grid-container{
           display:block;
           text-align: center;
@@ -42,20 +42,29 @@
         }
       }
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: 1000px) {
         .columnones{
           display:block;
           text-align: center;
-          width: 100%
+          width: 100%;
+          margin-bottom:10px;
         }
       }
+      @media screen and (max-width: 1000px) {
+        .SearchBar{
+          display:block;
+          text-align: center;
+          width: 100%;
+          margin-bottom:10px;
+        }
+      }
+      .SearchBar{
+          display:block;
+          margin-bottom:10px;
+          margin-left:auto;
+          margin-right:auto;
+        }
 
-      @media screen and (max-width: 1100px) {
-        .columnones {
-          display:flex;
-          justify-content: center;
-        }
-      }
 
     </style>
     <title> Everybody Welcome</title>
@@ -70,14 +79,15 @@
     </div>
 
     <body style = "background-color:cdc7c7">
+
       <div>
         <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
       </div>
       
       <div class="SearchBar">
         <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search"style="width: 600px; margin-left:25% ">
-          <button type="submit">Submit</button>
+          <input type="text" placeholder="Search For A Venue By Name" name="search"style="width: 350px; height:35px;text-align: center; font-size:18px">
+          <button style="height:30px ;font-size:18px" type="submit" >Search</button>
         </form>
       </div>
 
