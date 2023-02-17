@@ -38,10 +38,14 @@
                     type VARCHAR(15) NOT NULL
                 )";
               
-
+                $sql4 = "CREATE TABLE questions(
+                    question VARCHAR(50) NOT NULL,
+                    type VARCHAR(15) NOT NULL
+                    )";
                 mysqli_query($conn, $sql1);
                 mysqli_query($conn, $sql2);   
                 mysqli_query($conn, $sql3);   
+                mysqli_query($conn, $sql4);   
                           
             }
          }
@@ -209,6 +213,8 @@
             $stmt->bindParam(':type', $type);
             $id = rand(1,9999999);
             $stmt->execute();
+            header('Location:  ../business/businessLandingPage.php?id='.$id.'&type='.$type);
+
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }   
@@ -300,4 +306,16 @@
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':pwd', $pwd);
         $stmt->execute();
+    }
+
+    function getQuestions($type)
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM questions WHERE type=:type";
+        $stmt= $conn->prepare($sql);
+        $stmt->bindParam('type', $type);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+
+        return $res;
     }

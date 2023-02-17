@@ -10,7 +10,10 @@
 	</head>
     <div class="flex-wrapper">
         <div id="header">
-            <?php include "businessHeader.php" ?>    
+            <?php include "businessHeader.php";
+            echo $_GET['type'];
+            echo $_GET['id'];
+            ?>    
         </div>
         <body>
             <form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php">		

@@ -50,9 +50,18 @@
           <td width='60'><?php echo $venue['type']; ?></td>
           <td  width='250'><?php echo $venue['postcode']; ?></td>
           <td  width='250'><?php echo $venue['address']; ?></td>
-          <td width='200'><div class="btn-group"><input type="button" value="Edit Venue Details"></div></td>
+          <td width='200'><div class="btn-group">
+          <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
+          <input type="button" value="Edit Venue Details"></div>
+          </a>
+        </td>
           <td width='250'><input type="button" value="Update Audit"></td>
-          <td width='250'><input type="button" value="New Audit"></td>
+          <td width='250'>
+          <a href="accomSurvey.php?id=<?php echo $venue['venueid']; ?>&type=<?php echo $venue['type'];?>">
+            <input type="button" value="New Audit">
+            </a>
+          </td>
+
         </tr>
           <?php endforeach;?>
       </table>
