@@ -18,9 +18,7 @@
     padding: 8px;
   }
 
-  .data :hover {
-    background-color: coral;
-  }
+  tr:hover {background-color: coral;}
   
 </style>
 </head>

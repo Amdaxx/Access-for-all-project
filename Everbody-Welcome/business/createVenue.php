@@ -73,7 +73,6 @@ function validateForm() {
             <div class="col-sm-6">
                 <select name="typeOfVenue" id="typeOfVenue">
                     <option  value="Accommodation">Accommodation</option>
-                    <option  value="Airbnb">Airbnb</option>
                     <option  value="Experience">Experience</option>
                     <option  value="Tours">Tours</option>
                     <option  value="Events">Events</option>
