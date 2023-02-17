@@ -38,24 +38,34 @@
         .grid-container{
           display:block;
           text-align: center;
-          width: 100%
+          width: 100%;
+          margin-left:auto;
+          margin-right:auto;
+          padding:10px;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        .columnones{
+          display: contents;
+          padding-bottom: 20px;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        .sidebar{
+          margin-left:auto;
+          margin-right:auto;
+          margin-bottom:20px;
         }
       }
 
       @media screen and (max-width: 1000px) {
-        .columnones{
-          display:block;
-          text-align: center;
-          width: 100%;
-          margin-bottom:10px;
-        }
-      }
-      @media screen and (max-width: 1000px) {
         .SearchBar{
           display:block;
-          text-align: center;
-          width: 100%;
           margin-bottom:10px;
+          margin-left:auto;
+          margin-right:auto;
         }
       }
       .SearchBar{
@@ -116,15 +126,15 @@
 
         <div class = "columnones"style = "width:85%">
           <div class="grid-container" >
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
-            <div class="grid-item"><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"><br>Everyone Welcome</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50"><br>Donnigton Parkhouse</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue2.jpg" alt="Logo" width="100" height="50"><br>City Hall</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue3.jpg" alt="Logo" width="100" height="50"><br>American Embassy</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue4.jpg" alt="Logo" width="100" height="50"><br>Village Hall</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue5.jpg" alt="Logo" width="100" height="50"><br>Twycross School</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue6.jpg" alt="Logo" width="100" height="50"><br>Chester Zoo</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue7.jpg" alt="Logo" width="100" height="50"><br>Wembley Premier Inn</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue8.jpg" alt="Logo" width="100" height="50"><br>Camp Nou</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue9.jpg" alt="Logo" width="100" height="50"><br>Ponds Forge</div>
           </div>
         </div>
       </div>
