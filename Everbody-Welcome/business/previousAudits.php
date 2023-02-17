@@ -18,7 +18,7 @@
     padding: 8px;
   }
 
-  tr:hover {background-color: coral;}
+  .data:hover {background-color: coral;}
 </style>
 </head>
 
@@ -31,22 +31,21 @@
   <body>
     <div style="overflow-x:auto;">
       <table class="center" border='1' style='border-collapse:collapse'>
-        <tr>
-          <th>Audit Number</th>
-          <th>Audit Name</th>
-          <th>Date Submitted</th>
-          <th>View Audit</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Accommodation Audit</td>
-          <td>17/02/2023</td>
-          <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
-        </tr>
-      </table>
-    </div>
-  </body>
+        <th>Audit Number</th>
+        <th>Audit Name</th>
+        <th>Date Submitted</th>
+        <th>View Audit</th>
+      </tr>
+      <tr class = "data">
+        <td>1</td>
+        <td>Accommodation Audit</td>
+        <td>17/02/2023</td>
+        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+      </tr>
+    </table>
+  </div>
+</body>
 
-  <?php include "../public/footer.php" ?>
+<?php include "../public/footer.php" ?>
 
 </div>
