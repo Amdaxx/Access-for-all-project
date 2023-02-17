@@ -53,7 +53,7 @@
       <tr class = "data">
         <td width='200'><?php echo '3'; ?></td>
         <td width='250'><?php echo 'Is there a stairlift?'; ?></td>
-        <td width='40'><?php echo 'NO'; ?></td>
+        <td width='40'><?php echo 'YES'; ?></td>
         <td  width='200'><img  src="../pictures/dummyPictures/C3.jpg" alt="ME"></td>
         <td  width='200'><?php echo 'There is a stairlift available to travel between floors.'; ?></td>
       </tr>
@@ -66,10 +66,24 @@
       </tr>
       <tr class = "data">
         <td width='200'><?php echo '5'; ?></td>
-        <td width='250'><?php echo 'Is there an elevator available?'; ?></td>
+        <td width='250'><?php echo 'Is there a hearing loop?'; ?></td>
         <td width='40'><?php echo 'NO'; ?></td>
+        <td  width='200'></td>
+        <td  width='200'><?php echo 'There is not currently a hearing loop.'; ?></td>
+      </tr>
+      <tr class = "data">
+        <td width='200'><?php echo '6'; ?></td>
+        <td width='250'><?php echo 'Is there an elevator available?'; ?></td>
+        <td width='40'><?php echo 'YES'; ?></td>
         <td  width='200'><img  src="../pictures/dummyPictures/C5.jpg" alt="ME"></td>
         <td  width='200'><?php echo 'There is an elevator to travel between floors.'; ?></td>
+      </tr>
+      <tr class = "data">
+        <td width='200'><?php echo '7'; ?></td>
+        <td width='250'><?php echo 'Is there an alternative entrance, with level access (without steps or raised thresholds)?'; ?></td>
+        <td width='40'><?php echo 'NO'; ?></td>
+        <td  width='200'></td>
+        <td  width='200'><?php echo 'There is not.'; ?></td>
       </tr>
       </table>
     </div>
