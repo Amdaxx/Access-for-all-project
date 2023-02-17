@@ -9,8 +9,8 @@
   <?php include "businessHeader.php";
   $res = displayBusinessDetails($_SESSION['id']);
   if (isset($_POST['submit'])){
-    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
-    $_SESSION['name'] = $_POST['cName'];
+    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['address'],  $_POST['post'], $_POST['phone']);
+    $_SESSION['name'] = $_POST['cname'];
   }
   ?>    
 </div>
