@@ -10,7 +10,8 @@
   <div class="flex-wrapper">
 
     <div id="header">
-        <?php include "businessHeader.php" ?>    
+        <?php include "businessHeader.php";
+         ?>    
       </div>
     </div>
 
