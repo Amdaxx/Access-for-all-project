@@ -219,7 +219,7 @@
         }   
     }
 
-    function addQuestion($question)
+    function addQuestion()
     {
         try{
             $conn = connectToDatabase();
