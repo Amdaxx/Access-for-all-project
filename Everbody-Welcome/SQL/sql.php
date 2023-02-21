@@ -39,8 +39,7 @@
                 )";
               
                 $sql4 = "CREATE TABLE questions(
-                    question VARCHAR(50) NOT NULL,
-                    type VARCHAR(15) NOT NULL
+                    question VARCHAR(50) NOT NULL
                     )";
                 mysqli_query($conn, $sql1);
                 mysqli_query($conn, $sql2);   
@@ -213,6 +212,7 @@
             $stmt->bindParam(':type', $type);
             $id = rand(1,9999999);
             $stmt->execute();
+            $myfile = fopen($id, "w");
             header('Location:  ../business/survey.php?id='.$id.'&type='.$type);
 
         } catch(PDOException $e) {
@@ -220,18 +220,18 @@
         }   
     }
 
-    function addQuestion($question, $type)
+    function addQuestion()
     {
         try{
             $conn = connectToDatabase();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $stmt = $conn->prepare("INSERT INTO questions (question, type) 
-            VALUES (:question, :type)");
-            $stmt->bindParam(':question', $question);
-            $stmt->bindParam(':type', $type);
-            $stmt->execute();           
+            $conn->beginTransaction();
+            $conn->exec("INSERT INTO questions (question)
+                VALUES ('question1')");   
+            $conn->exec("INSERT INTO questions (question)
+            VALUES ('question2')");            
             
+            $conn->commit();
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         } 
@@ -344,4 +344,15 @@
         $stmt->bindParam(':type', $type);
         $stmt->execute();
         header('Location:  ../business/viewVenues.php?id='.$id);
+    }
+
+ 
+    function readQuestions()
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("SELECT * FROM questions");
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
     }
