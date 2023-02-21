@@ -12,10 +12,9 @@ color: #666;
 }
 
 #centerform {
-  margin-left: 10%;
-  margin-right:10%;
-  width: 80%;
-  padding-left: 15%;
+  margin: auto;
+  max-width: 750px;
+  position: relative;
 }
 
 header {
@@ -25,9 +24,9 @@ header {
 .logo {
   display: block;
   margin: auto;
-  width: 20%;
-  height:20%;
-  margin-bottom: 5%;
+  margin-bottom: 15px;
+  max-width: 400px;
+  height: auto;
 }
 
 .uLogo {
