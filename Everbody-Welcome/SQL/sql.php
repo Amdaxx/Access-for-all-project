@@ -212,6 +212,7 @@
             $stmt->bindParam(':type', $type);
             $id = rand(1,9999999);
             $stmt->execute();
+            $myfile = fopen($id, "w");
             header('Location:  ../business/survey.php?id='.$id.'&type='.$type);
 
         } catch(PDOException $e) {
