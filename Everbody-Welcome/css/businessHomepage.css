@@ -6,7 +6,7 @@
     font-size: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #c7c7c7;
+    background: #cdc7c7;
 }
 
 
@@ -15,7 +15,7 @@ u{
     font-size: 20px;
 }
 button {
-    background-color: #c7c7c7;
+    background-color: #cdc7c7;
     padding: 50px;
     width: 400px;
     color: #666; /* White text */
@@ -38,7 +38,7 @@ button:not(:last-child) {
 button:hover {
     background-color: #696969;
     font-weight: bold;
-    color:#c7c7c7;
+    color:#cdc7c7;
     font-weight: bold;
 }
 
@@ -57,7 +57,7 @@ button:hover {
     border-color: #696969;
     border-width: 25px;
     padding: 15px;
-    background: #c7c7c7;
+    background: #cdc7c7;
 }
 
 
