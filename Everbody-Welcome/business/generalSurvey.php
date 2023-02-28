@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>General Questionnaire</title>
-    <h2>General Questionnaire</h2>
+    <title>Generic Survey</title>
+    <h2>Generic Survey</h2>
     <style>
         .container {
             max-width: 600px;
