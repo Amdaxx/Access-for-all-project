@@ -2,14 +2,21 @@
 <html>
 <head>
     <title>Generic Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <div id="header">
+    <?php include "businessHeader.php";
+    ?>  
+
     <h2>Generic Survey</h2>
+
+    </div>
     <style>
         .container {
             max-width: 600px;
             margin: 0 auto;
         }
         .question {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
         .question label {
             display: inline-block;
@@ -28,6 +35,9 @@
         }
     </style>
 </head>
+
+
+
 <body>
     <div class="container">
         <form id="questionnaire-form" method="post">
@@ -35,16 +45,24 @@
             // Define the questions as an array
             $questions = array(
                 array(
-                    'question' => 'Does the venue have level access?',
-                    'name' => 'like_cats'
+                    'question' => '1) Does the venue have level access?',
+                    'name' => 'q1'
                 ),
                 array(
-                    'question' => 'Does the venue have a lift?',
-                    'name' => 'like_dogs'
+                    'question' => '2) Does the venue have a lift?',
+                    'name' => 'q2'
                 ),
                 array(
-                    'question' => 'Is there a hearing-loop?',
-                    'name' => 'like_birds'
+                    'question' => '3) Is there a hearing-loop?',
+                    'name' => 'q3'
+                ),
+                array(
+                  'question' => '4) Are guide-dogs allowed?',
+                  'name' => 'q4'
+                ),
+                array(
+                  'question' => '5) Is there an accessible public toilet?',
+                  'name' => 'q5'
                 )
             );
 
@@ -57,9 +75,10 @@
                 echo '</div>';
             }
             ?>
-            <button type="submit" id="submit-btn">Submit</button>
+            <button type="submit" id="submit-btn" onclick="submitValidation">Submit</button>
         </form>
         <div id="error-message" class="error"></div>
     </div>
 </body>
+<?php include "../public/footer.php" ?>
 </html>
