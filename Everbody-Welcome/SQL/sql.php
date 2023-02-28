@@ -5,17 +5,17 @@
         $servername = 'localhost';
         $username = 'root';
         $password = '';
-        $dbname = 'dbs';
+        $dbname = 'newDBXX';
 
         try {
             $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
          }
          catch (PDOException $e) {
             $mysql = mysqli_connect('localhost', 'root', '');
-            $sql = "CREATE DATABASE dbs";
+            $sql = "CREATE DATABASE newDBXX";
             if($mysql->query($sql))
             {
-                $conn = mysqli_connect('localhost', 'root', '', 'dbs');
+                $conn = mysqli_connect('localhost', 'root', '', 'newDBXX');
                 $sql1 = "CREATE TABLE logs(
                     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
                     email VARCHAR(30) NOT NULL,
@@ -263,6 +263,18 @@
        
     }
 
+    function getQuestions()
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM questions";
+        $stmt= $conn->prepare($sql);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+
+        return $res;
+    }
+
+
     function updateBusinessDetails($id, $cname, $post, $address, $phone)
     {
         $conn = connectToDatabase();
@@ -316,18 +328,7 @@
         $stmt->execute();
     }
 
-    function getQuestions($type)
-    {
-        $conn = connectToDatabase();
-        $sql = "SELECT * FROM questions WHERE type=:type";
-        $stmt= $conn->prepare($sql);
-        $stmt->bindParam('type', $type);
-        $stmt->execute();
-        $res = $stmt->fetchAll();
-
-        return $res;
-    }
-
+  
 
     function updateVenue($id, $vname, $post, $address, $type)
     {
