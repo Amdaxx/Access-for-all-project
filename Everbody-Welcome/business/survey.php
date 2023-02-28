@@ -49,7 +49,6 @@
                             function showNext1(){
                                 document.getElementById("next1").style.display = "block";
                             }
-
                         </script>
                     </div>	
                 </div>
