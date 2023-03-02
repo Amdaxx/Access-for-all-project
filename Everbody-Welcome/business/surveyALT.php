@@ -79,13 +79,15 @@
                 )
             );
             $step = 0;
+            $step = display($step+1, $questions);
             // Loop through the questions and create the form inputs
-            foreach ($questions as $question) {
-                $step+=1;
+            //foreach ($questions as $question) {
+            function display($step, $questions){
+                //$step+=1;
                 echo '<div class="step-content current" data-step="'.$step .'">';
-                echo '<label for="' . $question['name'] . '">' . $question['question'] . '</label>';
-                echo '<input type="radio" name="' . $question['name'] . '" value="yes">Yes';
-                echo '<input type="radio" name="' . $question['name'] . '" value="no">No';
+                echo '<label for="' . $questions[$step-1]['name'] . '">' . $questions[$step-1]['question'] . '</label>';
+                echo '<input type="radio" name="' . $questions[$step-1]['name'] . '" value="yes">Yes';
+                echo '<input type="radio" name="' . $questions[$step-1]['name'] . '" value="no">No';
                 //echo '</div>';
                 echo'<div class="buttons">
                     Upload proof:
@@ -96,13 +98,16 @@
                     Add a comment:
                     <input type="text" name="accomComment1" id="accomComment1">
                     <label for="accomComment1"></label>
-                </div>
-                <div class="buttons"  id="next1">
-                    <a href="#" class="btn" data-set-step="2">Next</a>
-                </div>';	
+                </div>';
+                	
                 echo '</div>';
+                return $step;
             }
+            
             ?>
+            
+            <button type = "button" onclick="$step = display($step+1, $questions)">Next</button>
+             
             <button type="submit" id="submit-btn" onclick="submitValidation">Submit</button>
         </form>
         <div id="error-message" class="error"></div>
