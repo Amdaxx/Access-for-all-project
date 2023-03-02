@@ -9,7 +9,7 @@
     <?php include "businessHeader.php";
     ?>  
 
-    <h1><i class="far fa-list-alt"></i><?php //echo $_GET['type'] ?> Audit</h1>
+    
     
     </div>
     <style>
@@ -43,6 +43,9 @@
 <body>
     
     <div class="container">
+       
+        <form class="survey-form" method="post" action="vendor/accomGenerate-pdf.php"  style="margin-top:20px">
+        <h1><i class="far fa-list-alt"></i><?php //echo $_GET['type'] ?> Audit</h1>
         <div class="steps">
             <div class="step current"></div>
             <div class="step"></div>
@@ -51,7 +54,6 @@
             <div class="step"></div>
             <div class="step"></div>
         </div>
-        <form id="questionnaire-form" method="post">
             <?php
             // Define the questions as an array
             $questions = array(
