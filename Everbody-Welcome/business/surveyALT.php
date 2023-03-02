@@ -96,6 +96,9 @@
                     Add a comment:
                     <input type="text" name="accomComment1" id="accomComment1">
                     <label for="accomComment1"></label>
+                </div>
+                <div class="buttons"  id="next1">
+                    <a href="#" class="btn" data-set-step="2">Next</a>
                 </div>';	
                 echo '</div>';
             }
