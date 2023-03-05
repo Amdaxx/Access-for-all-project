@@ -5,17 +5,17 @@
         $servername = 'localhost';
         $username = 'root';
         $password = '';
-        $dbname = 'newDBXX';
+        $dbname = 'LASTDBXX';
 
         try {
             $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
          }
          catch (PDOException $e) {
             $mysql = mysqli_connect('localhost', 'root', '');
-            $sql = "CREATE DATABASE newDBXX";
+            $sql = "CREATE DATABASE LASTDBXX";
             if($mysql->query($sql))
             {
-                $conn = mysqli_connect('localhost', 'root', '', 'newDBXX');
+                $conn = mysqli_connect('localhost', 'root', '', 'LASTDBXX');
                 $sql1 = "CREATE TABLE logs(
                     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
                     email VARCHAR(30) NOT NULL,
@@ -41,10 +41,19 @@
                 $sql4 = "CREATE TABLE questions(
                     question VARCHAR(50) NOT NULL
                     )";
+                $sql5 = "CREATE TABLE audits(
+                    venueid VARCHAR(10) NOT NULL ,
+                    question VARCHAR(50) NOT NULL ,
+                    answer VARCHAR(3) NOT NULL ,
+                    comment VARCHAR(40) ,
+                    proof VARCHAR(30) ,
+                    auditnumber INTEGER NOT NULL 
+                )";
                 mysqli_query($conn, $sql1);
                 mysqli_query($conn, $sql2);   
                 mysqli_query($conn, $sql3);   
                 mysqli_query($conn, $sql4);   
+                mysqli_query($conn, $sql5);
                           
             }
          }
@@ -212,7 +221,6 @@
             $stmt->bindParam(':type', $type);
             $id = rand(1,9999999);
             $stmt->execute();
-            $myfile = fopen($id, "w");
             header('Location:  ../business/survey.php?id='.$id.'&type='.$type);
 
         } catch(PDOException $e) {
@@ -356,4 +364,27 @@
         $stmt->execute();
         $res = $stmt->fetchAll();
         return $res;
+    }
+
+    function recordAudit($venueid, $data, $auditnumber) 
+    {
+
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        foreach($data as $row)
+        {
+            $stmt = $conn->prepare("INSERT INTO audits (venueid, question, answer, comment, proof, auditnumber) 
+            VALUES (:venueid, :question, :answer, :comment, :proof, :auditnumber)");
+            $stmt->bindParam(':venueid', $venueid);
+            $stmt->bindParam(':question', $row['question']);
+            $stmt->bindParam(':answer', $row['response']);
+            $stmt->bindParam(':comment', $row['comment']);
+            $stmt->bindParam(':proof', $row['proof']);
+            $stmt->bindParam(':auditnumber', $auditnumber);
+            $stmt->execute();
+        }
+
+      
+
     }

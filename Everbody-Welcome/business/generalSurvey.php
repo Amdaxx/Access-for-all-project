@@ -36,49 +36,53 @@
     </style>
 </head>
 
+<?php 
 
+$ques = array(
+    "1) Does the venue have level access?",
+     "2) Does the venue have a lift?",
+      "3) Is there a hearing-loop?",
+      "4) Are guide-dogs allowed?",
+      "5) Is there an accessible public toilet?"
+    );
+
+    $data = array();
+    $number = 1;
+    if (isset($_POST['submit']))
+    {
+        foreach ($ques as $index => $que) {
+            if (isset($_POST[$index])) {
+                $response = $_POST[$index];
+            } else {
+                $response = '';
+            }
+            $data[] = array('question' => $que, 'response' => $response, 'proof' => "", 'comment' => "",);
+        }   
+
+       recordAudit($_GET['id'], $data, "2");
+    }
+?>
 
 <body>
     <div class="container">
         <form id="questionnaire-form" method="post">
             <?php
-            // Define the questions as an array
-            $questions = array(
-                array(
-                    'question' => '1) Does the venue have level access?',
-                    'name' => 'q1'
-                ),
-                array(
-                    'question' => '2) Does the venue have a lift?',
-                    'name' => 'q2'
-                ),
-                array(
-                    'question' => '3) Is there a hearing-loop?',
-                    'name' => 'q3'
-                ),
-                array(
-                  'question' => '4) Are guide-dogs allowed?',
-                  'name' => 'q4'
-                ),
-                array(
-                  'question' => '5) Is there an accessible public toilet?',
-                  'name' => 'q5'
-                )
-            );
-
+            
             // Loop through the questions and create the form inputs
-            foreach ($questions as $question) {
+            foreach ($ques as $index => $que) {
                 echo '<div class="question">';
-                echo '<label for="' . $question['name'] . '">' . $question['question'] . '</label>';
-                echo '<input type="radio" name="' . $question['name'] . '" value="yes">Yes';
-                echo '<input type="radio" name="' . $question['name'] . '" value="no">No';
+                echo '<label for="' . $index . '">' . $que. '</label>';
+                echo '<input type="radio" name="' . $index . '" value="yes">Yes';
+                echo '<input type="radio" name="' . $index . '" value="no">No';
                 echo '</div>';
             }
-            ?>
-            <button type="submit" id="submit-btn" onclick="submitValidation">Submit</button>
+            
+        ?>
+            <button type="submit" name ="submit" id="submit-btn" onclick="submitValidation">Submit</button>
         </form>
         <div id="error-message" class="error"></div>
     </div>
+   
 </body>
 <?php include "../public/footer.php" ?>
 </html>
