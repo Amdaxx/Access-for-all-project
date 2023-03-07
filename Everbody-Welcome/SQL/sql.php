@@ -385,6 +385,6 @@
             $stmt->execute();
         }
 
-      
+        header('Location: ../business/generalSurveyResults.php');
 
     }
