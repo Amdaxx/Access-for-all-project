@@ -1,64 +1,70 @@
 <?php
-    function connectToDatabase()
-    {
+   function connectToDatabase()
+   {
 
-        $servername = 'localhost';
-        $username = 'root';
-        $password = '';
-        $dbname = 'LASTDBXX';
+       //$servername = 'localhost';
+       //$username = 'root';
+       //$password = '';
+       //$dbname = 'LASTDBXX';
 
-        try {
-            $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
-         }
-         catch (PDOException $e) {
-            $mysql = mysqli_connect('localhost', 'root', '');
-            $sql = "CREATE DATABASE LASTDBXX";
-            if($mysql->query($sql))
-            {
-                $conn = mysqli_connect('localhost', 'root', '', 'LASTDBXX');
-                $sql1 = "CREATE TABLE logs(
-                    logid VARCHAR(10) NOT NULL PRIMARY KEY ,
-                    email VARCHAR(30) NOT NULL,
-                    pwd VARCHAR(300) NOT NULL,
-                    stat VARCHAR(30) NOT NULL 
-                )";
-                $sql2 = "CREATE TABLE businessinfos(
-                    logid VARCHAR(10) NOT NULL PRIMARY KEY ,
-                    companyName VARCHAR(30) NOT NULL,
-                    postcode VARCHAR(10) NOT NULL,
-                    address VARCHAR(30) NOT NULL,
-                    phone VARCHAR(15) NOT NULL
-                )";
-                $sql3 = "CREATE TABLE venues(
-                    venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
-                    logid VARCHAR(10) NOT NULL,
-                    venuename VARCHAR(30) NOT NULL,
-                    address VARCHAR(30) NOT NULL,
-                    postcode VARCHAR(10) NOT NULL,
-                    type VARCHAR(15) NOT NULL
-                )";
-              
-                $sql4 = "CREATE TABLE questions(
-                    question VARCHAR(50) NOT NULL
-                    )";
-                $sql5 = "CREATE TABLE audits(
-                    venueid VARCHAR(10) NOT NULL ,
-                    question VARCHAR(50) NOT NULL ,
-                    answer VARCHAR(3) NOT NULL ,
-                    comment VARCHAR(40) ,
-                    proof VARCHAR(30) ,
-                    auditnumber INTEGER NOT NULL 
-                )";
-                mysqli_query($conn, $sql1);
-                mysqli_query($conn, $sql2);   
-                mysqli_query($conn, $sql3);   
-                mysqli_query($conn, $sql4);   
-                mysqli_query($conn, $sql5);
-                          
-            }
-         }
-         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    }
+       $servername = 'afpproject-server.mysql.database.azure.com';
+       $username = 'tkgwwyrhag';
+       $password = 'RI41G4S77ZWA1QYW';
+       $dbname = 'afpproject-database';
+
+       try {
+           $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
+        }
+        catch (PDOException $e) {
+           $mysql = mysqli_connect($servername, $username, $password);
+           $sql = "CREATE DATABASE LASTDBXX";
+           if($mysql->query($sql))
+           {
+               $conn = mysqli_connect($servername, $username, '', $dbname);
+               $sql1 = "CREATE TABLE logs(
+                   logid VARCHAR(10) NOT NULL PRIMARY KEY ,
+                   email VARCHAR(30) NOT NULL,
+                   pwd VARCHAR(300) NOT NULL,
+                   stat VARCHAR(30) NOT NULL 
+               )";
+               $sql2 = "CREATE TABLE businessinfos(
+                   logid VARCHAR(10) NOT NULL PRIMARY KEY ,
+                   companyName VARCHAR(30) NOT NULL,
+                   postcode VARCHAR(10) NOT NULL,
+                   address VARCHAR(30) NOT NULL,
+                   phone VARCHAR(15) NOT NULL
+               )";
+               $sql3 = "CREATE TABLE venues(
+                   venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
+                   logid VARCHAR(10) NOT NULL,
+                   venuename VARCHAR(30) NOT NULL,
+                   address VARCHAR(30) NOT NULL,
+                   postcode VARCHAR(10) NOT NULL,
+                   type VARCHAR(15) NOT NULL ,
+                   numberofaudits NOT NULL
+               )";
+               $sql4 = "CREATE TABLE questions(
+                   question VARCHAR(50) NOT NULL
+                   )";
+               $sql5 = "CREATE TABLE audits(
+                   venueid VARCHAR(10) NOT NULL ,
+                   question VARCHAR(50) NOT NULL ,
+                   answer VARCHAR(3) NOT NULL ,
+                   comment VARCHAR(40) ,
+                   proof VARCHAR(30) ,
+                   auditnumber INTEGER NOT NULL 
+               )";
+               mysqli_query($conn, $sql1);
+               mysqli_query($conn, $sql2);   
+               mysqli_query($conn, $sql3);   
+               mysqli_query($conn, $sql4);   
+               mysqli_query($conn, $sql5);
+                         
+           }
+        }
+        return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+   }
+
         
 
     function createUser($email, $pwd, $name, $phone, $postcode, $address){
@@ -176,7 +182,7 @@
     {
         session_start();
         session_destroy();
-        header('Location: ../public/landingPage.php');
+        header('Location: /Everbody-Welcome/public/landingPage.php');
         exit;
     }
 
@@ -385,6 +391,12 @@
             $stmt->execute();
         }
 
-        header('Location:  ../business/surveyResults.php');      
+        header('Location:  ../business/generalSurveyResults.php');      
 
+    }
+
+
+    function getResults($venueid, $id)
+    {
+        
     }

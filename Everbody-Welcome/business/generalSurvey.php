@@ -41,17 +41,18 @@
 
 <body>
     <?php 
-    $ques = array(
-        "1) Does the venue have level access?",
-        "2) Does the venue have a lift?",
-        "3) Is there a hearing-loop?",
-        "4) Are guide-dogs allowed?",
-        "5) Is there an accessible public toilet?"
+   $ques = array(
+    "1) Does the venue have level access?",
+     "2) Does the venue have a lift?",
+      "3) Is there a hearing-loop?",
+      "4) Are guide-dogs allowed?",
+      "5) Is there an accessible public toilet?"
     );
 
     $data = array();
     $number = 1;
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit']))
+    {
         foreach ($ques as $index => $que) {
             if (isset($_POST[$index])) {
                 $response = $_POST[$index];
@@ -60,11 +61,10 @@
             }
             $data[] = array('question' => $que, 'response' => $response, 'proof' => "", 'comment' => "",);
         }   
-        
-        //recordAudit($_GET['id'], $data, "2");
-        include "generalSurveyResults.php";
-        exit();
+
+       recordAudit($_GET['id'], $data, "2");
     }
+?>
     ?>
 
     <div class="container">
@@ -77,7 +77,6 @@
                 echo '<input type="radio" name="' . $index . '" value="yes">Yes';
                 echo '<input type="radio" name="' . $index . '" value="no">No';
                 echo '</div>';
-                echo '<hr>'; // Add a horizontal line after each question
             }
             ?>
             <button type="submit" name="submit" id="submit-btn" onclick="submitValidation()">Submit</button>
