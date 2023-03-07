@@ -4,11 +4,10 @@
 require_once 'config.php'; 
  
 // Include the Stripe PHP library 
-require_once 'stripe-php/init.php'; 
+require_once '../stripe-php/init.php';
  
 // Set API key 
-$stripe = new \Stripe\StripeClient(STRIPE_API_KEY); 
- 
+$stripe = new \Stripe\StripeClient(STRIPE_API_KEY);
 $response = array( 
     'status' => 0, 
     'error' => array( 
