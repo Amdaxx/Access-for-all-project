@@ -17,9 +17,7 @@
          }
          catch (PDOException $e) {
             $mysql = mysqli_connect($servername, $username, $password);
-            $sql = "CREATE DATABASE LASTDBXX";
-            if($mysql->query($sql))
-            {
+           
                 $conn = mysqli_connect($servername, $username, '', $dbname);
                 $sql1 = "CREATE TABLE logs(
                     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
@@ -60,10 +58,11 @@
                 mysqli_query($conn, $sql4);   
                 mysqli_query($conn, $sql5);
                           
-            }
          }
          return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     }
+
+
         
 
     function createUser($email, $pwd, $name, $phone, $postcode, $address){
@@ -181,7 +180,7 @@
     {
         session_start();
         session_destroy();
-        header('Location: ../public/landingPage.php');
+        header('Location: /Everbody-Welcome/public/landingPage.php');
         exit;
     }
 
