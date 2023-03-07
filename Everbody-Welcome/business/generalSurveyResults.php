@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css">
     <div id="header">
         <?php 
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
         include "businessHeader.php"; ?>  
         <h2>Survey Results</h2>
     </div>

@@ -2,20 +2,25 @@
     function connectToDatabase()
     {
 
-        $servername = 'localhost';
-        $username = 'root';
-        $password = '';
-        $dbname = 'LASTDBXX';
+        //$servername = 'localhost';
+        //$username = 'root';
+        //$password = '';
+        //$dbname = 'LASTDBXX';
+
+        $servername = 'afpproject-server.mysql.database.azure.com';
+        $username = 'tkgwwyrhag';
+        $password = 'RI41G4S77ZWA1QYW';
+        $dbname = 'afpproject-database';
 
         try {
             $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
          }
          catch (PDOException $e) {
-            $mysql = mysqli_connect('localhost', 'root', '');
+            $mysql = mysqli_connect($servername, $username, $password);
             $sql = "CREATE DATABASE LASTDBXX";
             if($mysql->query($sql))
             {
-                $conn = mysqli_connect('localhost', 'root', '', 'LASTDBXX');
+                $conn = mysqli_connect($servername, $username, '', $dbname);
                 $sql1 = "CREATE TABLE logs(
                     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
                     email VARCHAR(30) NOT NULL,
@@ -35,9 +40,9 @@
                     venuename VARCHAR(30) NOT NULL,
                     address VARCHAR(30) NOT NULL,
                     postcode VARCHAR(10) NOT NULL,
-                    type VARCHAR(15) NOT NULL
+                    type VARCHAR(15) NOT NULL ,
+                    numberofaudits NOT NULL
                 )";
-              
                 $sql4 = "CREATE TABLE questions(
                     question VARCHAR(50) NOT NULL
                     )";
@@ -385,6 +390,12 @@
             $stmt->execute();
         }
 
-        header('Location:  ../business/surveyResults.php');      
+        header('Location:  ../business/generalSurveyResults.php');      
 
+    }
+
+
+    function getResults($venueid, $id)
+    {
+        
     }
