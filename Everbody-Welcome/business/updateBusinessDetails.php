@@ -1,8 +1,8 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css">
+<link rel="stylesheet" href="../css/style.css">  
+<link rel="stylesheet" href="../css/topNavhome.css">
+<link rel="stylesheet" href="../css/overall-page.css">
 </head>
 
 <div id="header">
@@ -18,7 +18,7 @@
 
 
 <body>
-    <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
+    <img src="../pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
 <form id = "centerform" method="post" >
   <div class="form-group row">
       <label for="cName" class="col-sm-2 col-form-label">Company Name </label>

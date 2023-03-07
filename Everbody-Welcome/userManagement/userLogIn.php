@@ -6,8 +6,8 @@ if (isset($_POST['submit'])) {
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
-<link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavhome.css">
+<link rel="stylesheet" href="../css/style.css">  
+<link rel="stylesheet" href="../css/topNavhome.css">
 <script>
     var x = document.forms["centerform"]["email"].value;
     if (x == "" || x == null) {
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 </div>
   <body>
     <br><br><br>
-    <img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
+    <img src="../pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
     <form id = "centerform" method="post" onsubmit="return validateForm()">
     <div class="form-group row">
         <label for="mail" class="col-sm-2 col-form-label">Email</label>

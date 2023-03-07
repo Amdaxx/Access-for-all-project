@@ -1,9 +1,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/style.css">  
-    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css">  
-    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css">
+    <link rel="stylesheet" href="../css/style.css">  
+    <link rel="stylesheet" href="../css/topNavHome.css">  
+    <link rel="stylesheet" href="../css/overall-page.css">
     <title>Update Venue</title>
   </head>
 
