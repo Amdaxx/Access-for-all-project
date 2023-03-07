@@ -16,10 +16,7 @@
            $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
         }
         catch (PDOException $e) {
-           $mysql = mysqli_connect($servername, $username, $password);
-           $sql = "CREATE DATABASE LASTDBXX";
-           if($mysql->query($sql))
-           {
+    
                $conn = mysqli_connect($servername, $username, '', $dbname);
                $sql1 = "CREATE TABLE logs(
                    logid VARCHAR(10) NOT NULL PRIMARY KEY ,
@@ -61,7 +58,7 @@
                mysqli_query($conn, $sql5);
                          
            }
-        }
+        
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
    }
 
