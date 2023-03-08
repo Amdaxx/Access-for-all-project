@@ -2,11 +2,11 @@
 require_once('../SQL/sql.php');
 
 
-
+$dbname = 'afpproject-database';
 $servername = 'afpproject-server.mysql.database.azure.com';
 $username = 'adel';
 $password = 'adel';
-$dbname = 'afpproject-database';
+
 
 
 // Create connection
