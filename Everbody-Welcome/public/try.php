@@ -8,8 +8,8 @@ echo "hello"
 
 
  $conn = mysqli_init();
- mysqli_ssl_set($conn,NULL,NULL, "{path to CA cert}", NULL, NULL);
- mysqli_real_connect($conn, "afpproject-server.mysql.database.azure.com", "tkgwwyrhag", "{Blackdown12345}", "{afpproject-database}", 3306, MYSQLI_CLIENT_SSL);
+ mysqli_ssl_set($conn,NULL,NULL, "../public/DigiCertGlobalRootCA.crt", NULL, NULL);
+ mysqli_real_connect($conn, "afpproject-server.mysql.database.azure.com", "tkgwwyrhag", "Blackdown12345", "afpproject-database", 3306, MYSQLI_CLIENT_SSL);
 
  $sql1 = "CREATE TABLE logs(
     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
