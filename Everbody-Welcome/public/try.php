@@ -7,8 +7,8 @@ echo "hello"
 <?php
 
 $servername = "afpproject-server.mysql.database.azure.com";
-$username = "adels";
-$password = "adels";
+$username = "tkgwwyrhag";
+$password = "your-password";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);

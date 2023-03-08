@@ -4,22 +4,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/topNavHome.css"/>
     <link rel="stylesheet" href="../css/overall-page.css">
-    <?php 
-    echo "hi";
-$dbname = 'afpproject-database';
-$servername = 'afpproject-server.mysql.database.azure.com';
-$username = 'adel';
-$password = 'adel';
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-    ?>
   </head>
   <div class="flex-wrapper">
     <div id="header">
@@ -27,8 +11,6 @@ echo "Connected successfully";
       </div>
 
     <body style = "background-color:cdc7c7">
-
-
     
       <div>
         <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
