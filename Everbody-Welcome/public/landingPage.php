@@ -11,6 +11,24 @@
       </div>
 
     <body style = "background-color:cdc7c7">
+
+    <?php 
+$dbname = 'afpproject-database';
+$servername = 'afpproject-server.mysql.database.azure.com';
+$username = 'adel';
+$password = 'adel';
+
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+    ?>
     
       <div>
         <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
