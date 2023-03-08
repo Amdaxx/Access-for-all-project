@@ -2,8 +2,8 @@
   <head>
     <title> Everybody Welcome</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/topNavHome.css"/>
-    <link rel="stylesheet" href="http://localhost/Access-for-all-project/Everbody-Welcome/css/overall-page.css">
+    <link rel="stylesheet" href="../css/topNavHome.css"/>
+    <link rel="stylesheet" href="../css/overall-page.css">
   </head>
   <div class="flex-wrapper">
     <div id="header">
@@ -45,21 +45,21 @@
         <div class="column">
           <div class="card">
             <h3><b>Search For Venue</b></h3>
-            <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+            <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="../pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
           </div>
         </div>
 
         <div class="column">
           <div class="card">
             <h3><b>More Information</b></h3>
-            <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
+            <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="../pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
           </div>
         </div>
         
         <div class="column">
           <div class="card">
             <h3><b>Contact Us</b></h3>
-            <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="http://localhost/Access-for-all-project/Everbody-Welcome/pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
+            <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="../pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
           </div>
         </div>
       </div>
