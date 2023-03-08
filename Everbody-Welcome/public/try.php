@@ -11,14 +11,11 @@ echo "conn 1:";
 $mysqli = new mysqli("afpproject-server.mysql.database.azure.com", "tkgwwyrhag", "Blackdown12345", "afadb");
  
 // Check connection
-if($mysqli === false){
-    echo "c'est pas bon du tt";
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+} else {
+    echo "Connected successfully!";
 }
-else
-{
-    echo "c'est good kho";
-}
-
 ?>
 
 <br>
