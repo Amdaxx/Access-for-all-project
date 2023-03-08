@@ -15,4 +15,8 @@ if($conn->connect_error)
 {
     echo "MERDE";
 }
+else
+{
+    echo "on est bon";
+}
 ?>

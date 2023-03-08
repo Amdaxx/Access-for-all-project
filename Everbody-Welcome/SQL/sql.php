@@ -62,6 +62,14 @@
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
    }
 
+   function connectToAzureDB()
+   {
+    $conn = mysqli_init();
+    mysqli_ssl_set($conn,NULL,NULL, "{path to CA cert}", NULL, NULL);
+    mysqli_real_connect($conn, "afpproject-server.mysql.database.azure.com", "tkgwwyrhag", "{your_password}", "{your_database}", 3306, MYSQLI_CLIENT_SSL);
+
+    return $conn;
+   }
         
 
     function createUser($email, $pwd, $name, $phone, $postcode, $address){
