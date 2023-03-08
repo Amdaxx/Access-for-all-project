@@ -6,17 +6,13 @@ echo "hello"
 
 <?php
 
-$servername = "afpproject-server.mysql.database.azure.com";
-$username = "tkgwwyrhag";
-$password = "your-password";
 
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+ $conn = mysqli_init();
+ mysqli_ssl_set($conn,NULL,NULL, "{path to CA cert}", NULL, NULL);
+ mysqli_real_connect($conn, "afpproject-server.mysql.database.azure.com", "tkgwwyrhag", "{your_password}", "{your_database}", 3306, MYSQLI_CLIENT_SSL);
+
+if($conn->connect_error)
+{
+    echo "MERDE";
 }
-
 ?>
