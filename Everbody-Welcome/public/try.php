@@ -2,22 +2,17 @@
 
 <?php
 
-$conn = mysqli_init();
-mysqli_ssl_set($conn,NULL,NULL, "../public/DigiCertGlobalRootCA.crt", NULL, NULL);
-if (!$conn) {
-    die("mysqli_init failed");
-    echo "A";
+define("DB_SERVER", "afpproject-server.mysql.database.azure.com" );
+define("DB_USERNAME", "tkgwwyrhag");
+define("DB_PASSWORD", "Blackdown12345");
+define("DB_NAME", "afadb");
+ 
+/* Attempt to connect to MySQL database */
+$mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($mysqli === false){
+    die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
-
-if (!mysqli_real_connect($conn, "afpproject-server.mysql.database.azure.com", "tkgwwyrhag", "Blackdown12345", "afpproject-database", 3306, MYSQLI_CLIENT_SSL)) {
-    die("Connect Error: " . mysqli_connect_error());
-    echo "B";
-}
-
-if ($conn) {
-    echo "Connection successful!";
-}
-
-
 
 ?>
