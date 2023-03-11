@@ -2,15 +2,15 @@
    function connectToDatabase()
    {
 
-       //$servername = 'localhost';
-       //$username = 'root';
-       //$password = '';
-       //$dbname = 'LASTDBXX';
+       $servername = 'localhost';
+       $username = 'root';
+       $password = '';
+       $dbname = 'LASTDBXX';
 
-       $servername = 'afpproject-server.mysql.database.azure.com';
-       $username = 'tkgwwyrhag';
-       $password = 'RI41G4S77ZWA1QYW';
-       $dbname = 'afpproject-database';
+       //$servername = 'afpproject-server.mysql.database.azure.com';
+       //$username = 'tkgwwyrhag';
+       //$password = 'RI41G4S77ZWA1QYW';
+       //$dbname = 'afpproject-database';
 
        try {
            $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
