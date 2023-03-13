@@ -7,7 +7,7 @@
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
-      //$res = displayBusinessDetails($_SESSION['id']);
+      $res = displayBusinessDetails($GET['id']);
       ?>  
   </div>
 
@@ -15,6 +15,7 @@
   <?php
 echo $_SESSION['id']; 
 echo $_SESSION['name']; 
+echo "le 77";
   ?>
     <div class = "row">
       <div class="twocolumn">
@@ -32,17 +33,17 @@ echo $_SESSION['name'];
         <div class ="company-info">
           <h1><b>Company Information</b></h1>
           <p><u>Company Name: </u> </p>
-          <?php //echo $res[0]; ?>
+          <?php echo $res[0]; ?>
           <p><u>Email: </u></p>
-          <?php  //echo $res[4]?>
+          <?php  echo $res[4]?>
           <p><u>Address: </u></p>
-          <?php //echo $res[2]; ?>
+          <?php echo $res[2]; ?>
           <p><u>Post Code: </u></p>
-          <?php //echo $res[1]; ?>
+          <?php echo $res[1]; ?>
           <p><u>Contact Number: </u></p>
-          <?php //echo $res[3]; ?>
+          <?php echo $res[3]; ?>
           <p><u>Venues Added: </u></p>       
-          <?php //echo $res[5]; ?>
+          <?php echo $res[5]; ?>
         </div> 
       </div> 
     </div> 
