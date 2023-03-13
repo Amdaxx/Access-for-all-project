@@ -145,10 +145,10 @@
                     $stmt2->bindParam(':id', $user['logid']);
                     $stmt2->execute();
                     $infos = $stmt2->fetch(); 
-                session_start();
-                $_SESSION['id'] = $user['logid'];
-                $_SESSION['business'] =  $user['stat'];
-                $_SESSION['name'] =  $infos['companyName'];
+                    session_start();
+                    $_SESSION['id'] = $user['logid'];
+                    $_SESSION['business'] =  $user['stat'];
+                    $_SESSION['name'] =  $infos['companyName'];
 
                 header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                 }
@@ -314,7 +314,8 @@
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':phone', $phone);
         $stmt->execute();
-        header('Location:  ../business/businessLandingPage.php?id='.$id);
+        header('Location: ../business/businessLandingPage.php?');
+
     }
 
     function displayBusinessDetails($id)

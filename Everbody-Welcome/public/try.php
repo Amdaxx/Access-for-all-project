@@ -21,27 +21,5 @@ if ($mysqli->connect_errno) {
 }
 
 
-
-
-$sql = "CREATE TABLE venues(
-  venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
-  logid VARCHAR(50) NOT NULL ,
-  venuename VARCHAR(3) NOT NULL ,
-  address VARCHAR(40) ,
-  postcote VARCHAR(10) ,
-  type VARCHAR(15) NOT NULL ,
-  numberofaudits INTEGER NOT NULL
-
-)";
-
-
-
-  if ($mysqli->query($sql) === TRUE) {
-    echo "Table questions created successfully";
-  } else {
-    echo "Error creating table: " . $mysqli->error;
-  }
-
-
 ?>
 
