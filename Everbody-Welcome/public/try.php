@@ -23,11 +23,11 @@ if ($mysqli->connect_errno) {
 
 $sql = "CREATE TABLE venues(
     venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
-    logid VARCHAR(10) NOT NULL FOREIGN KEY ,
-    venuename VARCHAR(30) NOT NULL,
-    address VARCHAR(30) NOT NULL,
-    postcode VARCHAR(10) NOT NULL,
-    type VARCHAR(15) NOT NULL,
+    logid VARCHAR(10) NOT NULL ,
+    venuename VARCHAR(30) NOT NULL ,
+    address VARCHAR(40) NOT NULL ,
+    postcode VARCHAR(10) NOT NULL ,
+    type VARCHAR(15) NOT NULL ,
     numberofaudits NOT NULL
 )";
 
