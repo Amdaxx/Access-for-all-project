@@ -21,9 +21,9 @@ if ($mysqli->connect_errno) {
 }
 
 
-$sql1 = "CREATE TABLE venues(
+$sql = "CREATE TABLE venues(
     venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
-    logid VARCHAR(10) NOT NULL,
+    logid VARCHAR(10) NOT NULL FOREIGN KEY ,
     venuename VARCHAR(30) NOT NULL,
     address VARCHAR(30) NOT NULL,
     postcode VARCHAR(10) NOT NULL,
@@ -32,7 +32,9 @@ $sql1 = "CREATE TABLE venues(
 )";
 
 
-  if ($mysqli->query($sql1) === TRUE) {
+
+
+  if ($mysqli->query($sql) === TRUE) {
     echo "Table venues created successfully";
   } else {
     echo "Error creating table: " . $mysqli->error;
