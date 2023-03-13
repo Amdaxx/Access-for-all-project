@@ -314,7 +314,8 @@
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':phone', $phone);
         $stmt->execute();
-        header('Location:  ../business/businessLandingPage.php?id='.$id);
+        header('Location: ../business/businessLandingPage.php?');
+
     }
 
     function displayBusinessDetails($id)
