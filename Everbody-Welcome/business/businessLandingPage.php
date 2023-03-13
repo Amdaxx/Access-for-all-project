@@ -7,6 +7,7 @@
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
+      //$res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
 

@@ -12,6 +12,9 @@ checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
 
+echo $_SESSION['id']; 
+echo $_SESSION['name']; 
+
 
 
 ?>
