@@ -8,7 +8,7 @@ define("DB_NAME", "afadb");
 echo "conn 1:";
 
 /* Attempt to connect to MySQL database */
-$conn = new mysqli('afpproject-server.mysql.database.azure.com', 'tkgwwyrhag', 'Blackdown12345', 'afadb');
+$mysqli = new mysqli('afpproject-server.mysql.database.azure.com', 'tkgwwyrhag', 'Blackdown12345', 'afadb');
  
 
 echo "hello";
