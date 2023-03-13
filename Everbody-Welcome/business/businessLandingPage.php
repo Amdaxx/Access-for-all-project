@@ -27,8 +27,7 @@ $id = $_SESSION['id'];
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
-      $id = $_GET['id'];
-      $res = displayBusinessDetails($id);
+      $res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
 
