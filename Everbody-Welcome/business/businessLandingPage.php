@@ -12,7 +12,10 @@
   </div>
 
   <body style = "background-color:cdc7c7">
-
+  <?php
+echo $_SESSION['id']; 
+echo $_SESSION['name']; 
+  ?>
     <div class = "row">
       <div class="twocolumn">
         <div class="button-background">
