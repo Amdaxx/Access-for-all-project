@@ -22,29 +22,26 @@ if ($mysqli->connect_errno) {
 
 
 
-$sql4 = "CREATE TABLE questions(
-  question VARCHAR(50) NOT NULL
-  )";
-$sql5 = "CREATE TABLE audits(
-  venueid VARCHAR(10) NOT NULL ,
-  question VARCHAR(50) NOT NULL ,
-  answer VARCHAR(3) NOT NULL ,
-  comment VARCHAR(40) ,
-  proof VARCHAR(30) ,
-  auditnumber INTEGER NOT NULL 
+
+$sql5 = "CREATE TABLE venues(
+  venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
+  logid VARCHAR(50) NOT NULL ,
+  venuename VARCHAR(3) NOT NULL ,
+  address VARCHAR(40) ,
+  postcote VARCHAR(10) ,
+  type VARCHAR(15) NOT NULL ,
+  numberofaudits INTEGER NOT NULL
+
 )";
 
 
-  if ($mysqli->query($sql4) === TRUE) {
+
+  if ($mysqli->query($sql) === TRUE) {
     echo "Table questions created successfully";
   } else {
     echo "Error creating table: " . $mysqli->error;
   }
-  if ($mysqli->query($sql5) === TRUE) {
-    echo "Table aduits created successfully";
-  } else {
-    echo "Error creating table: " . $mysqli->error;
-  }
+
 
 ?>
 
