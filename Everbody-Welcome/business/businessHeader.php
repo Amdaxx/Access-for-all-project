@@ -2,7 +2,6 @@
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
 
-session_start(); 
 if (!isset($_SESSION['business'])){
     session_unset();
     session_destroy();
