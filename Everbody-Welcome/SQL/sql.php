@@ -2,15 +2,13 @@
    function connectToDatabase()
    {
 
+    /*
        $servername = 'localhost';
        $username = 'root';
        $password = '';
        $dbname = 'LASTDBXX';
 
-       //$servername = 'afpproject-server.mysql.database.azure.com';
-       //$username = 'tkgwwyrhag';
-       //$password = 'RI41G4S77ZWA1QYW';
-       //$dbname = 'afpproject-database';
+       
 
        try {
            $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
@@ -58,8 +56,16 @@
                mysqli_query($conn, $sql5);
                          
            }
-        
+          */
+
+        $servername = 'afpproject-server.mysql.database.azure.com';
+        $dbname = 'afadb';
+        $username = 'tkgwwyrhag';
+        $password = 'Blackdown12345';
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      
+        //return new mysqli('afpproject-server.mysql.database.azure.com', 'tkgwwyrhag', 'Blackdown12345', 'afadb');
+
    }
 
    function connectToAzureDB()

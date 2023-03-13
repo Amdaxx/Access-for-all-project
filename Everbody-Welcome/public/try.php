@@ -20,6 +20,7 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
+/*
 $sql1 = "CREATE TABLE logs(
     logid VARCHAR(10) NOT NULL PRIMARY KEY ,
     email VARCHAR(30) NOT NULL,
@@ -79,3 +80,4 @@ if ($mysqli->query($sql1) === TRUE) {
     echo "Error creating table: " . $mysqli->error;
   }
 ?>
+*/
