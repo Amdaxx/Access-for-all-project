@@ -7,7 +7,7 @@
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
-      $res = displayBusinessDetails($GET['id']);
+      $res = displayBusinessDetails($_GET['id']);
       ?>  
   </div>
 
