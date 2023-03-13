@@ -125,7 +125,7 @@
 
         <div class = "columnones"style = "width:85%">
           <div class="grid-container" >
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50"><br>Donnigton Parkhouse</div>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Donnigton Parkhouse</div>
             <div class="grid-item"><img src="../pictures/dummyPictures/venue2.jpg" alt="Logo" width="100" height="50"><br>City Hall</div>
             <div class="grid-item"><img src="../pictures/dummyPictures/venue3.jpg" alt="Logo" width="100" height="50"><br>American Embassy</div>
             <div class="grid-item"><img src="../pictures/dummyPictures/venue4.jpg" alt="Logo" width="100" height="50"><br>Village Hall</div>

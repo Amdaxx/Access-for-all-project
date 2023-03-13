@@ -16,13 +16,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Contact Us</h2>
+          <h2>Contact Venue</h2>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
-          <h3>To: Everybody Welcome</h3>
+          <h3>To: Venue Name</h3>
           <textarea placeholder="Enter Your Message Here" name="comment" rows="10" class="form-control"></textarea>
         </div>
       </div>
@@ -36,24 +36,6 @@
             </div>
             <button type="submit" class="btn btn-default">Send</button>
           </form>
-
-          <div class="row">
-
-          <div class = "twocolumn" >
-            <div class="box">
-              <img class = "icons" style="vertical-align:middle" src="../pictures/phone-icon.png" alt="phone icon" >
-              <span style=""><h3>(+44) 7459 204578</h3></span>
-            </div>
-          </div>
-
-          <div class = "twocolumn" >
-            <div class="box">
-              <img class = "icons" style="vertical-align:middle" src="../pictures/email-icon.jpg" alt="email logo">
-              <span style=""><h3>EverybodyWelcome@gmail.com</h3></span>
-            </div>
-          </div>
-
-        </div>
         </div>
       </div>
     </div>
