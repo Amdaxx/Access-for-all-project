@@ -145,11 +145,11 @@
                     $stmt2->bindParam(':id', $user['logid']);
                     $stmt2->execute();
                     $infos = $stmt2->fetch(); 
-                    header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                     session_start();
                     $_SESSION['id'] = $user['logid'];
                     $_SESSION['business'] =  $user['stat'];
                     $_SESSION['name'] =  $infos['companyName'];
+                    header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                 }
            }
             else

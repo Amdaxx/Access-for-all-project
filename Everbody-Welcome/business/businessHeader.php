@@ -1,6 +1,10 @@
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
+session_start();
+                    $_SESSION['id'] = $_GET['id'];
+                    $_SESSION['business'] =  "business";
+                    $_SESSION['name'] =  "ADEL";
 
 if (!isset($_SESSION['business'])){
     session_unset();
