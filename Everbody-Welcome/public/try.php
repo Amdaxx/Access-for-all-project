@@ -23,7 +23,7 @@ if ($mysqli->connect_errno) {
 
 
 
-$sql5 = "CREATE TABLE venues(
+$sql = "CREATE TABLE venues(
   venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
   logid VARCHAR(50) NOT NULL ,
   venuename VARCHAR(3) NOT NULL ,
