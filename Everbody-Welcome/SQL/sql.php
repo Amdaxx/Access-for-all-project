@@ -149,7 +149,8 @@
                     $_SESSION['id'] = $user['logid'];
                     $_SESSION['business'] =  $user['stat'];
                     $_SESSION['name'] =  $infos['companyName'];
-                    header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
+
+                header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                 }
            }
             else

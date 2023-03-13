@@ -1,25 +1,3 @@
-<?php
-include_once("../SQL/sql.php");
-$path = "../public/LandingPage.php";
-session_start();
-                    $_SESSION['id'] = $_GET['id'];
-                    $_SESSION['business'] =  "business";
-                    $_SESSION['name'] =  "ADEL";
-
-if (!isset($_SESSION['business'])){
-    session_unset();
-    session_destroy();
-    header("Location:".$path);
-}
-checkSession ($path); //calling the function from session.php
-
-$id = $_SESSION['id']; 
-
-
-
-
-
-?>
 
 <link rel="stylesheet" href="../css/style.css">  
 <link rel="stylesheet" href="../css/topNavhome.css">
