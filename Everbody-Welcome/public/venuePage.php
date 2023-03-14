@@ -14,8 +14,11 @@
           <h2>Venue Name: Venue Type</h2>
         </font>
       </div>
+
       <div class="row">
+        
         <div class="col-sm-12 col-md-6">
+
           <p><strong>Question 1:</strong> What is the venue's capacity?</p>
           <p><strong>Answer:</strong> The venue can hold up to 500 people.</p>
           <hr>
