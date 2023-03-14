@@ -11,9 +11,7 @@ if (!isset($_SESSION['business'])){
     header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
-
 $id = $_SESSION['id']; 
-
 ?>
 
 
