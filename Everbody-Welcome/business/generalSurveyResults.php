@@ -15,8 +15,6 @@ checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
