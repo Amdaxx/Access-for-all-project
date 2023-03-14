@@ -1,23 +1,3 @@
-<?php
-include_once("../SQL/sql.php");
-$path = "../public/LandingPage.php";
-
-
-session_start();
-
-if (!isset($_SESSION['business'])){
-    session_unset();
-    session_destroy();
-    header("Location:".$path);
-}
-checkSession ($path); //calling the function from session.php
-
-$id = $_SESSION['id']; 
-
-?>
-
-
-
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
@@ -32,9 +12,7 @@ $id = $_SESSION['id'];
   </div>
 
   <body style = "background-color:cdc7c7">
-  <?php
-;
-  ?>
+
     <div class = "row">
       <div class="twocolumn">
         <div class="button-background">
