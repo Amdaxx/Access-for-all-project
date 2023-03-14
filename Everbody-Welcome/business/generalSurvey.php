@@ -84,8 +84,6 @@ $id = $_SESSION['id'];
        recordAudit($_GET['id'], $data, "2");
     }
 ?>
-    ?>
-
     <div class="container">
         <form id="questionnaire-form" method="post">
             <?php

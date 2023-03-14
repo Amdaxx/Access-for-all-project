@@ -239,7 +239,7 @@
             $stmt->bindParam(':numaudit', $numberofaudit);
             $id = rand(1,9999999);
             $stmt->execute();
-            header('Location:  ../business/survey.php?id='.$id.'&type='.$type);
+            header('Location: ../business/businessLandingPage.php');
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -315,7 +315,7 @@
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':phone', $phone);
         $stmt->execute();
-        header('Location: ../business/businessLandingPage.php?');
+        header('Location: ../business/businessLandingPage.php');
 
     }
 
