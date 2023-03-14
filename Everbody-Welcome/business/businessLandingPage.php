@@ -1,20 +1,21 @@
-<<<<<<< HEAD
-=======
-
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
+
+
 session_start();
+
 if (!isset($_SESSION['business'])){
     session_unset();
     session_destroy();
     header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
+
 $id = $_SESSION['id']; 
+
 ?>
 
->>>>>>> cdee153384173c3639e44e50cf1eb1bd94a02966
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
