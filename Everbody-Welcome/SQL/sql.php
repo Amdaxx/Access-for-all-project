@@ -227,15 +227,16 @@
         try{
             $conn = connectToDatabase();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, type) 
-            VALUES (:id, :logid, :venuename, :address, :postcode, :type)");
+            $numberofaudit = 0;
+            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, type, numberofaudits) 
+            VALUES (:id, :logid, :venuename, :address, :postcode, :type, :numaudit)");
             $stmt->bindParam(':id', $id);
             $stmt->bindParam(':logid', $logid);
             $stmt->bindParam(':venuename', $VenueName);
             $stmt->bindParam(':address', $address);
             $stmt->bindParam(':postcode', $postcode);
             $stmt->bindParam(':type', $type);
+            $stmt->bindParam(':numaudit', $numberofaudit);
             $id = rand(1,9999999);
             $stmt->execute();
             header('Location:  ../business/survey.php?id='.$id.'&type='.$type);
