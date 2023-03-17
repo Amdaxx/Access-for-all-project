@@ -439,7 +439,7 @@
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT auditnumber FROM venues WHERE venueid=:venueid");
+        $stmt = $conn->prepare("SELECT numberofaudits FROM venues WHERE venueid=:venueid");
         $stmt->bindParam(':venueid', $venueid);
         $stmt->execute();
         $res = $stmt->fetch();

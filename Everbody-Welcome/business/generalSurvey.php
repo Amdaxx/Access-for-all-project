@@ -69,7 +69,8 @@ $id = $_SESSION['id'];
     );
 
     $data = array();
-    $number = 1;
+    $number = getNumberOfAudits($_GET['id']) + 1;
+    
     if (isset($_POST['submit']))
     {
         foreach ($ques as $index => $que) {
@@ -81,7 +82,7 @@ $id = $_SESSION['id'];
             $data[] = array('question' => $que, 'response' => $response, 'proof' => "", 'comment' => "",);
         }   
 
-       recordAudit($_GET['id'], $data, "2");
+       recordGeneralSurvey($_GET['id'], $data, $number);
     }
 ?>
     <div class="container">
