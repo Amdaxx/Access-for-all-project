@@ -112,7 +112,7 @@
               $_SESSION['id'] = $id;
               $_SESSION['business'] =  $stat;
               $_SESSION['name'] =  $name;
-              header('Location:  ../business/businessLandingPage.php?id='.$id);
+              header('Location:../business/businessLandingPage.php?id='.$id);
 
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -315,7 +315,7 @@
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':phone', $phone);
         $stmt->execute();
-        header('Location: ../business/businessLandingPage.php');
+        header('Location:../business/businessLandingPage.php');
 
     }
 
@@ -371,7 +371,7 @@
         $stmt->bindParam(':address', $address);
         $stmt->bindParam(':type', $type);
         $stmt->execute();
-        header('Location:  ../business/viewVenues.php?id='.$id);
+        header('Location:../business/viewVenues.php?id='.$id);
     }
 
  
@@ -415,7 +415,7 @@
             $stmt->execute();
 
 
-        header('Location:  ../business/generalSurveyResults.php');      
+        header('Location:../business/generalSurveyResults.php');      
 
     }
 
@@ -438,7 +438,7 @@
             $stmt->execute();
         }
 
-        header('Location:  ../business/generalSurveyResults.php');      
+        header('Location:../business/generalSurveyResults.php');      
     }
 
 
