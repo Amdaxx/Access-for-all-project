@@ -236,7 +236,7 @@
             $stmt->bindParam(':address', $address);
             $stmt->bindParam(':postcode', $postcode);
             $stmt->bindParam(':type', $type);
-            $stmt->bindParam(':numaudit', $numberofaudit);
+         $stmt->bindParam(':numaudit', $numberofaudit);
             $id = rand(1,9999999);
             $stmt->execute();
             header('Location: ../business/businessLandingPage.php');
