@@ -1,8 +1,6 @@
-
 <link rel="stylesheet" href="../css/style.css">  
 <link rel="stylesheet" href="../css/topNavhome.css">
 <link rel="stylesheet" href="../css/businessHeader.css">
-
 <div id="header">
   <ul>
     <button3 onclick="window.location.href='../business/businessLandingPage.php';" type= "button" >
@@ -12,4 +10,3 @@
     <li class="sign-out"><a class="active" href="../public/landingPage.php">Sign Out</a></li>
   </ul>    
 </div>
-

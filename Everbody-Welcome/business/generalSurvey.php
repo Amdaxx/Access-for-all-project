@@ -73,7 +73,6 @@ $id = $_SESSION['id'];
             }
             $data[] = array('question' => $que, 'response' => $response);
         }
-    
         recordGeneralSurvey($_GET['venueid'], $data, $number);
     }
 ?>
@@ -95,7 +94,6 @@ $id = $_SESSION['id'];
     </div>
     <script>
         function submitValidation() {
-            // Add validation code here
         }
     </script>
 </body>

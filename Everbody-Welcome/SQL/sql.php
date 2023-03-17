@@ -447,3 +447,4 @@
         $res = $stmt->fetch();
         return $res['numberofaudits'];
     }
+?>
