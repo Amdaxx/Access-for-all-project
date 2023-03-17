@@ -17,7 +17,7 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
-
+/*
 $sql0 = "DROP TABLE audits";
 
 if (mysqli_query($mysqli, $sql0)) {
@@ -27,15 +27,9 @@ if (mysqli_query($mysqli, $sql0)) {
 }
 
 
+*/
 
-$sql9 = "DROP TABLE questions";
-
-if (mysqli_query($mysqli, $sql9)) {
-    echo "Table deleted successfully";
-} else {
-    echo "Error deleting table: " . mysqli_error($mysqli);
-}
-
+/*
 $sql1 = "CREATE TABLE recordaudits(
     venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
     auditnumber VARCHAR(30) NOT NULL,
@@ -90,3 +84,4 @@ if ($mysqli->query($sql1) === TRUE) {
 
 ?>
 
+*/
