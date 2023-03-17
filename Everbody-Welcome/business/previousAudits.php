@@ -49,7 +49,7 @@ $id = $_SESSION['id'];
   </div>
 
   <?php 
-  $numberofaudits = getNumberOfAudits($_SESSION['id']);
+  $numberofaudits = getNumberOfAudits($_GET['venueid']);
   echo $numberofaudits;
   ?>
   <body>
