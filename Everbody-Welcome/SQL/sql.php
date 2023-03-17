@@ -414,6 +414,7 @@
 
             $stmt->execute();
 
+
         header('Location:  ../business/generalSurveyResults.php');      
 
     }
@@ -438,6 +439,7 @@
         }
 
         header('Location:  ../business/generalSurveyResults.php');      
+        exit();
 
     }
 
