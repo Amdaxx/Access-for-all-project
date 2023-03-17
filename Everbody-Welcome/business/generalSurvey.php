@@ -5,17 +5,16 @@ session_start();
 if (!isset($_SESSION['business'])){
     session_unset();
     session_destroy();
-    //header("Location:".$path);
+    header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 ?>
-<!DOCTYPE html>
-<html>
 <head>
     <title>Generic Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <div id="header">
+        <?php include "businessHeader.php"; ?>  
         <h2>Generic Survey</h2>
     </div>
     <style>
@@ -96,4 +95,4 @@ $id = $_SESSION['id'];
         }
     </script>
 </body>
-</html>
+<?php include "../public/footer.php" ?>
