@@ -385,7 +385,28 @@
         return $res;
     }
 
-    function recordAudit($venueid, $data, $auditnumber) 
+    function recordGeneralSurvey($venueid, $data, $auditnumber) 
+    {
+
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        foreach($data as $row)
+        {
+            $stmt = $conn->prepare("INSERT INTO generalsurveyresults (venueid, question, answer, auditnumber) 
+            VALUES (:venueid, :question, :answer, :auditnumber)");
+            $stmt->bindParam(':venueid', $venueid);
+            $stmt->bindParam(':question', $row['question']);
+            $stmt->bindParam(':answer', $row['response']);
+            $stmt->bindParam(':auditnumber', $auditnumber);
+            $stmt->execute();
+        }
+
+        header('Location:  ../business/generalSurveyResults.php');      
+
+    }
+
+    function recordAdvancedSurvey($venueid, $data, $auditnumber) 
     {
 
         $conn = connectToDatabase();
@@ -418,7 +439,7 @@
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT auditnumber FROM logs WHERE venueid=:venueid");
+        $stmt = $conn->prepare("SELECT auditnumber FROM venues WHERE venueid=:venueid");
         $stmt->bindParam(':venueid', $venueid);
         $stmt->execute();
         $res = $stmt->fetch();
