@@ -17,8 +17,8 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
-/*
-$sql0 = "DROP TABLE audits";
+
+$sql0 = "DROP TABLE recordaudits";
 
 if (mysqli_query($mysqli, $sql0)) {
     echo "Table deleted successfully";
@@ -27,15 +27,22 @@ if (mysqli_query($mysqli, $sql0)) {
 }
 
 
-*/
 
-/*
+
 $sql1 = "CREATE TABLE recordaudits(
-    venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
+    venueid VARCHAR(10) NOT NULL  ,
     auditnumber VARCHAR(30) NOT NULL,
     type VARCHAR(30) NOT NULL,
     dates DATE NOT NULL
 )";
+
+if ($mysqli->query($sql1) === TRUE) {
+    echo "Table recordaudits created successfully";
+  } else {
+    echo "Error creating table: " . $mysqli->error;
+  }
+
+/*
 
 $sql2 = "CREATE TABLE generalsurveyresults(
     venueid VARCHAR(10) NOT NULL ,
@@ -58,11 +65,6 @@ $sql4 = "CREATE TABLE question(
     type VARCHAR(30) NOT NULL 
 )";
 
-if ($mysqli->query($sql1) === TRUE) {
-    echo "Table recordaudits created successfully";
-  } else {
-    echo "Error creating table: " . $mysqli->error;
-  }
 
   if ($mysqli->query($sql2) === TRUE) {
     echo "Table generalsurveyresults created successfully";
