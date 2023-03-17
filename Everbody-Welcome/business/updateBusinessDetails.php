@@ -13,6 +13,12 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
+
+$res = displayBusinessDetails($_SESSION['id']);
+if (isset($_POST['submit'])){
+  $_SESSION['name'] = $_POST['cname'];
+  updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
+}
 ?>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,11 +28,6 @@ $id = $_SESSION['id'];
 </head>
 <div id="header">
   <?php include "businessHeader.php";
-  $res = displayBusinessDetails($_SESSION['id']);
-  if (isset($_POST['submit'])){
-    $_SESSION['name'] = $_POST['cname'];
-    updateBusinessDetails($_SESSION['id'], $_POST['cname'], $_POST['post'],  $_POST['address'], $_POST['phone']);
-  }
   ?>    
 </div>
 <body>

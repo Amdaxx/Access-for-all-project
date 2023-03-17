@@ -13,6 +13,9 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
+if (isset($_POST['submit'])){
+  createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
+  }
 
 ?>
   
@@ -28,9 +31,6 @@ $id = $_SESSION['id'];
   <div class="flex-wrapper">
     <div id="header">
       <?php include "businessHeader.php";
-      if (isset($_POST['submit'])){
-        createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
-        }
       ?>    
     </div>
 
