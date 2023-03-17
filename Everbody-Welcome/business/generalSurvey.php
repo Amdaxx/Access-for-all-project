@@ -69,7 +69,7 @@ $id = $_SESSION['id'];
     );
 
     $data = array();
-    $number = getNumberOfAudits($_GET['id']) + 1;
+    $number = getNumberOfAudits($_GET['venueid']) + 1;
     
     if (isset($_POST['submit']))
     {
@@ -79,10 +79,10 @@ $id = $_SESSION['id'];
             } else {
                 $response = '';
             }
-            $data[] = array('question' => $que, 'response' => $response, 'proof' => "", 'comment' => "",);
+            $data[] = array('question' => $que, 'response' => $response);
         }   
 
-       recordGeneralSurvey($_GET['id'], $data, $number);
+       recordGeneralSurvey($_GET['venueid'], $data, $number);
     }
 ?>
     <div class="container">
