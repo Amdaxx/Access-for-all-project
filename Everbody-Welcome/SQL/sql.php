@@ -402,6 +402,18 @@
             $stmt->execute();
         }
 
+            $type = "General Survey";
+            $date = date('d-m-y h:i:s');
+
+           $stmt = $conn->prepare("INSERT INTO recordaudits (venueid, auditnumber, type, dates) 
+            VALUES (:venueid, :auditnumber, :type, :dates)");
+            $stmt->bindParam(':venueid', $venueid);
+            $stmt->bindParam(':auditnumber', $auditnumber);
+            $stmt->bindParam(':type', $type);
+            $stmt->bindParam(':dates', $date);
+
+            $stmt->execute();
+
         header('Location:  ../business/generalSurveyResults.php');      
 
     }
