@@ -70,6 +70,7 @@ $auditNumber = $_GET['number'];
                 </tr>
                 </thead>
                 <tbody>";
+        $data = getGeneralSurveyResult($_GET['venueid'], $_GET['number']);        
         foreach ($data as $d) {
             echo "<tr>
                     <td>" . $d['question'] . "</td>

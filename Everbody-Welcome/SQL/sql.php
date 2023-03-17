@@ -442,12 +442,13 @@
     }
 
 
-    function getGeneralSurveyResult($venueid, $id)
+    function getGeneralSurveyResult($venueid, $auditnumber)
     {
         $conn = connectToDatabase();
-        $sql = "SELECT * FROM generalsurveyresults  WHERE venueid=:id";
+        $sql = "SELECT * FROM generalsurveyresults  WHERE venueid=:id AND auditnumber=:auditnumber ";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id', $venueid);
+        $stmt->bindParam(':auditnumber', $auditnumber);
         $stmt->execute();
         $res = $stmt->fetchAll();
         return $res;
