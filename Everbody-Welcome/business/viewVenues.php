@@ -77,7 +77,7 @@ $id = $_SESSION['id'];
         </a>
 
         <td width='200'><div class="btn-group">
-        <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&type=<?php echo $venue['type']?>">
+        <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
         <input type="button" value="New Audit"></div>
         </a>
 

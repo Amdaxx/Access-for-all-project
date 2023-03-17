@@ -13,7 +13,7 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-
+$auditNumber = $_GET['number'];
 ?>
 <!DOCTYPE html>
 <html>

@@ -442,9 +442,15 @@
     }
 
 
-    function getResults($venueid, $id, $type)
+    function getGeneralSurveyResult($venueid, $id)
     {
-        
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM generalsurveyresults  WHERE venueid=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $venueid);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
     }
 
     function getNumberOfAudits($venueid)
