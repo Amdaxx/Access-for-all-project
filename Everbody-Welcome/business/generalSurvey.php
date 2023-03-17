@@ -15,8 +15,6 @@ checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +24,6 @@ $id = $_SESSION['id'];
         <?php include "businessHeader.php"; ?>  
         <h2>Generic Survey</h2>
     </div>
-    
     <style>
         .container {
             max-width: 600px;
@@ -57,7 +54,6 @@ $id = $_SESSION['id'];
         }
     </style>
 </head>
-
 <body>
     <?php 
    $ques = array(
@@ -102,8 +98,6 @@ $id = $_SESSION['id'];
         </form>
         <div id="error-message" class="error"></div>
     </div>
-    
-    
     <script>
         function submitValidation() {
             // Add validation code here

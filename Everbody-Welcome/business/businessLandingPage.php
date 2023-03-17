@@ -13,7 +13,6 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-
 ?>
 
 <head>

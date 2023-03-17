@@ -13,17 +13,13 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-
 ?>
-
-
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/style.css">  
 <link rel="stylesheet" href="../css/topNavhome.css">
 <link rel="stylesheet" href="../css/overall-page.css">
 </head>
-
 <div id="header">
   <?php include "businessHeader.php";
   $res = displayBusinessDetails($_SESSION['id']);
@@ -33,9 +29,6 @@ $id = $_SESSION['id'];
   }
   ?>    
 </div>
-
-
-
 <body>
     <img src="../pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
 <form id = "centerform" method="post" >
@@ -57,14 +50,12 @@ $id = $_SESSION['id'];
         <input type="text" name="address" class="form-control" id="addr" value="<?php echo $res[2];?>"> <br>
       </div>
     </div>
-
     <div class="form-group row">
       <label for="pstcde" class="col-sm-2 col-form-label">Postcode</label>
       <div class="col-sm-6">
         <input type="text" name="post"  class="form-control" id="pstcde" value="<?php echo $res[1];?>"> <br>
       </div>
     </div>
-    
     <div class="form-group row">
     <label for="num" class="col-sm-2 col-form-label">Contact Number</label>
       <div class="col-sm-6">
@@ -78,7 +69,5 @@ $id = $_SESSION['id'];
     </div>
   </form>
   </body>
-
   <?php include "../public/footer.php"?>
-  
-</div>  
+</div> 

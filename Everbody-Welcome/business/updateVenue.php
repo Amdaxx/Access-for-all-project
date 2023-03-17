@@ -15,7 +15,6 @@ checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 
 ?>
-
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,9 +23,7 @@ $id = $_SESSION['id'];
     <link rel="stylesheet" href="../css/overall-page.css">
     <title>Update Venue</title>
   </head>
-
   <div class="flex-wrapper">
-
     <div id="header">
       <?php include "businessHeader.php";
       if (isset($_POST['submit'])){
@@ -48,7 +45,6 @@ $id = $_SESSION['id'];
       }
       ?>    
     </div>
-
     <body>
       <form id = "centerform" method="post" onsubmit="return validateForm()" style="margin-top:auto;margin-bottom:auto;">
         <div class="form-group row">
