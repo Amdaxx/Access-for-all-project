@@ -71,8 +71,9 @@ $id = $_SESSION['id'];
     $data = array();
     $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
     
-    if (isset($_POST['submit']))
-    {
+    if (isset($_POST['submit']) && !isset($_POST['processed'])) {
+        $_POST['processed'] = true;
+    
         foreach ($ques as $index => $que) {
             if (isset($_POST[$index])) {
                 $response = $_POST[$index];
@@ -80,9 +81,9 @@ $id = $_SESSION['id'];
                 $response = '';
             }
             $data[] = array('question' => $que, 'response' => $response);
-        }   
-
-       recordGeneralSurvey($_GET['venueid'], $data, $number);
+        }
+    
+        recordGeneralSurvey($_GET['venueid'], $data, $number);
     }
 ?>
     <div class="container">

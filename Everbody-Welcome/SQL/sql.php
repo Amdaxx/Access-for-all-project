@@ -439,8 +439,6 @@
         }
 
         header('Location:  ../business/generalSurveyResults.php');      
-        exit();
-
     }
 
 
