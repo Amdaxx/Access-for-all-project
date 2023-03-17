@@ -409,7 +409,18 @@
     }
 
 
-    function getResults($venueid, $id)
+    function getResults($venueid, $id, $type)
     {
         
+    }
+
+    function getNumberOfAudits($venueid)
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("SELECT auditnumber FROM logs WHERE venueid=:venueid");
+        $stmt->bindParam(':venueid', $venueid);
+        $stmt->execute();
+        $res = $stmt->fetch();
+        return $res['auditnumber'];
     }

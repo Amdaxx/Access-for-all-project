@@ -48,6 +48,10 @@ $id = $_SESSION['id'];
     <?php include "businessHeader.php";?>    
   </div>
 
+  <?php 
+  $numberofaudits = getNumberOfAudits($_SESSION['id']);
+  echo $numberofaudits;
+  ?>
   <body>
     <div style="overflow-x:auto;   top: 20px;position: relative;">
       <table class="center" border='1' style='border-collapse:collapse'>
