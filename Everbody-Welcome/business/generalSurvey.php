@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['business'])){
     session_unset();
     session_destroy();
-    header("Location:".$path);
+    //header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
@@ -96,5 +96,4 @@ $id = $_SESSION['id'];
         }
     </script>
 </body>
-<?php include "../public/footer.php" ?>
 </html>
