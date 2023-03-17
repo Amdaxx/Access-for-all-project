@@ -13,10 +13,8 @@ $id = $_SESSION['id'];
 <head>
     <title>Generic Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <div id="header">
         <?php include "businessHeader.php"; ?>  
         <h2>Generic Survey</h2>
-    </div>
     <style>
         .container {
             max-width: 600px;
