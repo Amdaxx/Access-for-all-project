@@ -422,5 +422,5 @@
         $stmt->bindParam(':venueid', $venueid);
         $stmt->execute();
         $res = $stmt->fetch();
-        return $res['auditnumber'];
+        return $res['numberofaudits'];
     }
