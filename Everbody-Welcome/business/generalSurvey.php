@@ -9,6 +9,31 @@ if (!isset($_SESSION['business'])){
 }
 checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
+
+$ques = array(
+ "1) Does the venue have level access?",
+  "2) Does the venue have a lift?",
+   "3) Is there a hearing-loop?",
+   "4) Are guide-dogs allowed?",
+   "5) Is there an accessible public toilet?"
+ );
+
+ $data = array();
+ $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
+ 
+ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
+     $_POST['processed'] = true;
+ 
+     foreach ($ques as $index => $que) {
+         if (isset($_POST[$index])) {
+             $response = $_POST[$index];
+         } else {
+             $response = '';
+         }
+         $data[] = array('question' => $que, 'response' => $response);
+     }
+     recordGeneralSurvey($_GET['venueid'], $data, $number);
+ }
 ?>
 <head>
     <title>Generic Survey</title>
@@ -46,32 +71,6 @@ $id = $_SESSION['id'];
     </style>
 </head>
 <body>
-    <?php 
-   $ques = array(
-    "1) Does the venue have level access?",
-     "2) Does the venue have a lift?",
-      "3) Is there a hearing-loop?",
-      "4) Are guide-dogs allowed?",
-      "5) Is there an accessible public toilet?"
-    );
-
-    $data = array();
-    $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
-    
-    if (isset($_POST['submit']) && !isset($_POST['processed'])) {
-        $_POST['processed'] = true;
-    
-        foreach ($ques as $index => $que) {
-            if (isset($_POST[$index])) {
-                $response = $_POST[$index];
-            } else {
-                $response = '';
-            }
-            $data[] = array('question' => $que, 'response' => $response);
-        }
-        recordGeneralSurvey($_GET['venueid'], $data, $number);
-    }
-?>
     <div class="container">
         <form id="questionnaire-form" method="post">
             <?php
