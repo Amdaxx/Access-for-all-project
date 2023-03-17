@@ -72,7 +72,7 @@ $id = $_SESSION['id'];
         </a>
 
         <td width='200'><div class="btn-group">
-        <a href="previousAudits.php?id=<?php echo $venue['venueid']; ?>">
+        <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
         <input type="button" value="Past Audits"></div>
         </a>
 
