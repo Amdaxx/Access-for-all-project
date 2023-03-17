@@ -148,7 +148,6 @@
                     $_SESSION['id'] = $user['logid'];
                     $_SESSION['business'] =  $user['stat'];
                     $_SESSION['name'] =  $infos['companyName'];
-
                 header('Location: ../business/businessLandingPage.php?id='.$user['logid']);
                 }
            }
@@ -239,7 +238,6 @@
             $id = rand(1,9999999);
             $stmt->execute();
             header('Location: ../business/businessLandingPage.php');
-
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }   
@@ -304,8 +302,6 @@
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-       
-
         $sql1 = "UPDATE businessinfos SET companyName=:cname, postcode=:post, address=:address, phone=:phone WHERE logid=:id";
         $stmt = $conn->prepare($sql1);
         $stmt->bindParam(':id', $id);
@@ -359,8 +355,6 @@
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-       
-
         $sql1 = "UPDATE venues SET venuename=:vname, postcode=:post, address=:address, type=:type WHERE venueid=:id";
         $stmt = $conn->prepare($sql1);
         $stmt->bindParam(':id', $id);
@@ -385,10 +379,8 @@
 
     function recordGeneralSurvey($venueid, $data, $auditnumber) 
     {
-
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
         foreach($data as $row)
         {
             $stmt = $conn->prepare("INSERT INTO generalsurveyresults (venueid, question, answer, auditnumber) 
@@ -399,20 +391,15 @@
             $stmt->bindParam(':auditnumber', $auditnumber);
             $stmt->execute();
         }
-
             $type = "General Survey";
             $date = date('d-m-y h:i:s');
-
            $stmt = $conn->prepare("INSERT INTO recordaudits (venueid, auditnumber, type, dates) 
             VALUES (:venueid, :auditnumber, :type, :dates)");
             $stmt->bindParam(':venueid', $venueid);
             $stmt->bindParam(':auditnumber', $auditnumber);
             $stmt->bindParam(':type', $type);
             $stmt->bindParam(':dates', $date);
-
             $stmt->execute();
-
-
         header('Location:../business/generalSurveyResults.php');      
     }
 
@@ -434,7 +421,6 @@
             $stmt->bindParam(':auditnumber', $auditnumber);
             $stmt->execute();
         }
-
         header('Location:../business/generalSurveyResults.php');      
     }
 
