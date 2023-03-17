@@ -113,7 +113,6 @@
               $_SESSION['business'] =  $stat;
               $_SESSION['name'] =  $name;
               header('Location:../business/businessLandingPage.php?id='.$id);
-
         } catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -316,7 +315,6 @@
         $stmt->bindParam(':phone', $phone);
         $stmt->execute();
         header('Location:../business/businessLandingPage.php');
-
     }
 
     function displayBusinessDetails($id)
@@ -416,7 +414,6 @@
 
 
         header('Location:../business/generalSurveyResults.php');      
-
     }
 
     function recordAdvancedSurvey($venueid, $data, $auditnumber) 
