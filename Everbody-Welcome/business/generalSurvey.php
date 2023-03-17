@@ -69,7 +69,7 @@ $id = $_SESSION['id'];
     );
 
     $data = array();
-    $number = getNumberOfAudits($_GET['venueid']) + 1;
+    $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
     
     if (isset($_POST['submit']))
     {

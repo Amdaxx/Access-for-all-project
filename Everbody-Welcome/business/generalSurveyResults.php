@@ -74,7 +74,7 @@ $auditNumber = $_GET['number'];
         foreach ($data as $d) {
             echo "<tr>
                     <td>" . $d['question'] . "</td>
-                    <td>" . $d['response'] . "</td>
+                    <td>" . $d['answer'] . "</td>
                 </tr>";
         }
         echo "</tbody>
