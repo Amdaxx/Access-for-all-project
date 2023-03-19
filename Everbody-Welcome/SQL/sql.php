@@ -477,7 +477,6 @@
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $conn->prepare("SELECT * FROM venues WHERE numberofaudits!=0");
-        $stmt->bindParam(':id', $venueid);
         $stmt->execute();
         $res = $stmt->fetchAll();
         return $res;
