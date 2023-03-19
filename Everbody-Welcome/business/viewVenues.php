@@ -80,11 +80,6 @@ $id = $_SESSION['id'];
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
         <input type="button" value="New Audit"></div>
         </a>
-
-        <td width='200'><div class="btn-group">
-        <input type="button" value="Published"></div>
-
-        
         <?php endforeach;?>
     </table>
   </body>
