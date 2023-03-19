@@ -454,4 +454,9 @@
         $res = $stmt->fetch();
         return $res['numberofaudits'];
     }
-?>
+
+
+    function deleteVenue()
+    {
+        
+    }
