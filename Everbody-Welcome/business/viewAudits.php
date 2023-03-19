@@ -14,6 +14,23 @@ checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
 
+
+
+// Include the QR code library
+  include "phpqrcode/qrlib.php";
+
+  // The URL you want to encode into the QR code
+$url = "https://afpproject.azurewebsites.net/Everbody-Welcome/public/landingPage.php";
+
+
+// Set the size and error correction level of the QR code
+  $size = 10;
+  $level = "L";
+
+// Generate the QR code and output it to the browser
+  QRcode::png($url, false, $level, $size);
+
+
 ?>
 
 <head>
@@ -105,24 +122,6 @@ $id = $_SESSION['id'];
       </tr>
       </table>
     </div>
-
-    <?php
-// Include the QR code library
-  include "phpqrcode/qrlib.php";
-
-  // The URL you want to encode into the QR code
-  $url = "../business/generalSurveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber";
-  
-
-
-// Set the size and error correction level of the QR code
-  $size = 10;
-  $level = "L";
-
-// Generate the QR code and output it to the browser
-  QRcode::png($url, false, $level, $size);
-?>
-
 
   </body>
 
