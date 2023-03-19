@@ -123,17 +123,12 @@
           </div>
         </div>
 
+        <?php $res = displayAllVenues(); ?>
         <div class = "columnones"style = "width:85%">
           <div class="grid-container" >
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Donnigton Parkhouse</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue2.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>City Hall</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue3.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>American Embassy</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue4.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Village Hall</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue5.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Twycross School</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue6.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Chester Zoo</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue7.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Wembley Premier Inn</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue8.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Camp Nou</div>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue9.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br>Ponds Forge</div>
+            <?php foreach ($res as $venue): ?>
+            <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br><?php echo $venue['venuename'] ?></div>
+          <?php endforeach;?>
           </div>
         </div>
       </div>
