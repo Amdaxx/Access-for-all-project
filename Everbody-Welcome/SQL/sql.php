@@ -407,8 +407,8 @@
             $stmt2->bindParam(':numberofaudits', $auditnumber);
             $stmt2->execute();
 
-        header('Location:../business/generalSurveyResults.php');      
-    }
+            header('Location: ../business/generalSurveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber);
+        }
 
     function recordAdvancedSurvey($venueid, $data, $auditnumber) 
     {
