@@ -49,41 +49,24 @@ $id = $_SESSION['id'];
   </div>
 
   <?php 
-  $numberofaudits = getNumberOfAudits($_GET['venueid']);
-  echo $numberofaudits;
+  $res = getAudits($_GET['venueid']);
   ?>
   <body>
     <div style="overflow-x:auto;   top: 20px;position: relative;">
       <table class="center" border='1' style='border-collapse:collapse'>
         <th>Audit Number</th>
-        <th>Audit Name</th>
+        <th>Audit Type</th>
         <th>Date Submitted</th>
         <th>View Audit</th>
       </tr>
+      <?php foreach ($res as $venue): ?>
       <tr class = "data">
-        <td>1</td>
-        <td>Cantor</td>
-        <td>13/02/2023</td>
+        <td><?php echo $venue['auditnumber']?></td>
+        <td><?php echo $venue['type']?></td>
+        <td><?php echo $venue['dates']?></td>
         <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
       </tr>
-      <tr class = "data">
-        <td>2</td>
-        <td>Cantor</td>
-        <td>14/02/2023</td>
-        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
-      </tr>
-      <tr class = "data">
-        <td>3</td>
-        <td>Cantor</td>
-        <td>15/02/2023</td>
-        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
-      </tr>
-      <tr class = "data">
-        <td>4</td>
-        <td>Cantor</td>
-        <td>17/02/2023</td>
-        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
-      </tr>
+      <?php endforeach; ?>
     </table>
   </div>
 </body>
