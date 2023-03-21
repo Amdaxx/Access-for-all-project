@@ -1,11 +1,11 @@
 
 <?php
-/*
+
 include_once("sql.php");
 if (isset($_POST['submit'])){
     verifyLogin($_POST['email'], $_POST['pwd']);
     }
-    */
+    
 ?>
 
 
