@@ -3,6 +3,7 @@
 // Set your API access token
 $access_token = "YOUR_ACCESS_TOKEN";
 
+// Set the URL you want to shorten
 $url = "https://www.example.com";
 
 // Build the API endpoint URL
