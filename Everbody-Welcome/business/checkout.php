@@ -1,5 +1,11 @@
 <?php   
 require_once 'config.php';  
+
+
+
+payment($_GET['venueid'], $product, $productPrice, $item_price_currency, $STRIPE_API_KEY);
+
+
 ?>
 
 <link rel=""

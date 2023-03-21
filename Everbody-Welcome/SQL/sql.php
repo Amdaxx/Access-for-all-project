@@ -481,3 +481,18 @@
         $res = $stmt->fetchAll();
         return $res;
     }
+
+    function payment($venueid, $item_name, $item_price, $item_price_currency, $stripe_checkout_session_id)
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("INSERT INTO transactions 
+        (venueid, item_name, item_price, item_price_currency, stripe_checkout_session_id) 
+        VALUES (:venueid, :item_name, :item_price, :item_price_currency :stripe_checkout_session_id)");
+        $stmt->bindParam(':venueid', $venueid);
+        $stmt->bindParam(':item_name', $item_name);
+        $stmt->bindParam(':item_price', $item_price);
+        $stmt->bindParam(':item_price_currency', $item_price_currency);
+        $stmt->bindParam(':stripe_checkout_session_id', $stripe_checkout_session_id);
+        $stmt->execute();
+    }

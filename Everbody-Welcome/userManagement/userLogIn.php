@@ -1,6 +1,4 @@
 <?php
-
-
 include_once("../SQL/sql.php");
 if (isset($_POST['submit'])){
     verifyLogin($_POST['email'], $_POST['pwd']);
