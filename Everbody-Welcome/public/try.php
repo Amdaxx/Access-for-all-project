@@ -1,9 +1,4 @@
-
-
 <?php
-
-
-define("DB_NAME", "afadb");
  
 echo "conn 1:";
 
@@ -17,7 +12,28 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
+$sql = "CREATE TABLE transactions (
+  id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  venueid varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  item_name varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  item_price float(10,2) NOT NULL,
+  item_price_currency varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  paid_amount float(10,2) NOT NULL,
+  paid_amount_currency varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  txn_id varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  payment_status varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  stripe_checkout_session_id varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  created datetime NOT NULL,
+  modified datetime NOT NULL
+)";
 
+if (mysqli_query($mysqli, $sql)) {
+  echo "Table created successfully";
+} else {
+  echo "Error creating table: " . mysqli_error($mysqli);
+}
+
+/*
 $sql0 = "DROP TABLE generalsurveyresults";
 
 if (mysqli_query($mysqli, $sql0)) {
@@ -26,8 +42,9 @@ if (mysqli_query($mysqli, $sql0)) {
     echo "Error deleting table: " . mysqli_error($mysqli);
 }
 
+*/
 
-
+/*
 $sql1 = "CREATE TABLE generalsurveyresults(
     venueid VARCHAR(10) NOT NULL ,
     question VARCHAR(50) NOT NULL ,
@@ -40,7 +57,7 @@ if ($mysqli->query($sql1) === TRUE) {
   } else {
     echo "Error creating table: " . $mysqli->error;
   }
-
+*/
 /*
 $sql1 = "CREATE TABLE recordaudits(
     venueid VARCHAR(10) NOT NULL  ,
