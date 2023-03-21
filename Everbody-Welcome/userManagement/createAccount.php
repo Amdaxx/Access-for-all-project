@@ -32,7 +32,7 @@
       <label for="confirm-password">Confirm Password</label>
       <input type="password" id="confirm-password" placeholder="Confirm your password" required>
 
-      <button type="submit" disabled>Sign Up</button>
+      <button type="submit">Sign Up</button>
     </form>
     <p>Already have an account? <a href="userLogIn.php">Log in</a></p>
   </div>
