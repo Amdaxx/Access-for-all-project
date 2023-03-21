@@ -1,8 +1,16 @@
-<link rel="stylesheet" href="topNavHome.css" />
-<div id="header">
-  <ul>
-    <li><a href="../userManagement/userLogin.php">Log In</a></li>
-    <button2 onclick="window.location.href='../public/landingPage.php';" type= "button" ><img style = "  margin-top: 14px;" src="../pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></img></button2>
-    <li style="float:right"><a class="active" href="../userManagement/createAccount.php">Create Account</a></li>
-  </ul>    
-</div>
+<link rel="stylesheet" href="topnav.css" />
+
+
+<ul class="menu cf">
+  <li><a href="../public/landingPage.php">Home</a></li>
+  <li><a href="../public/searchForVenue.php">Search For Venue</a>
+  <li><a href="../public/ourServices.php">Our Services</a></li>
+  <li><a href="../public/contactUs.php">Contact us</a></li>
+  <li><a href="../public/landingPage.php">Other</a></li>
+  <ul class="submenu">
+    <li><a href="../public/meetTheTeam.php">Meet The Team</a></li>
+    <li><a href="https://www.disabilityrightsuk.org/">Start a Charity</a></li>
+    <li><a href="https://www.disabilityrightsuk.org/">Disabled Charities</a></li>
+    <li><a href="https://www.mcdonalds.com/gb/en-gb/menu.html">Company Policies</a></li>
+  </ul>
+</ul>
