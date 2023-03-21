@@ -12,11 +12,11 @@
       <div class="text-center">
         <font size="+2">
           <h2>Venue Name: Venue Type</h2>
+          <img src="../pictures/worldIcon.png" alt="world icon" width="225" height="225"></img>
         </font>
       </div>
 
       <div class="row">
-        
         <div class="col-sm-12 col-md-6">
 
           <p><strong>Question 1:</strong> What is the venue's capacity?</p>
