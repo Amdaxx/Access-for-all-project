@@ -10,7 +10,7 @@
 <div class="signup-container">
   <div class="signup-form">
     <h2>Sign Up</h2>
-    <form>
+    <form method="post">
       <label for="companyname">Company Name</label>
       <input type="text" id="companyname" placeholder="Enter your company name" required>
 

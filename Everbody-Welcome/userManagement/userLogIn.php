@@ -21,7 +21,7 @@ if (isset($_POST['submit'])){
     <div class="login-container">
       <div class="login-form">
         <h2>Login Form</h2>
-        <form>
+        <form method="post">
           <label for="email">Email</label>
           <input type="email" id="email" required />
 
