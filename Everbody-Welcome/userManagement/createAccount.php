@@ -34,7 +34,7 @@
 
       <button type="submit" disabled>Sign Up</button>
     </form>
-    <p>Already have an account? <a href="#">Log in</a></p>
+    <p>Already have an account? <a href="userLogIn.php">Log in</a></p>
   </div>
 </div>
   </body>

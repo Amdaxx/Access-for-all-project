@@ -1,11 +1,12 @@
 
 <?php
 
+/*
 include_once("sql.php");
 if (isset($_POST['submit'])){
     verifyLogin($_POST['email'], $_POST['pwd']);
     }
-    
+    */
 ?>
 
 
@@ -29,7 +30,7 @@ if (isset($_POST['submit'])){
 
           <button type="submit">Login</button>
         </form> 
-        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <p>Don't have an account? <a href="createAccount.php">Sign up</a></p>
       </div>
     </div>
   </body>
