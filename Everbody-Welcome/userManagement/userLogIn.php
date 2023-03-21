@@ -29,7 +29,7 @@ if (isset($_POST['submit'])){
           <input type="password" id="pwd" name="pwd" required />
 
 
-          <button type="submit">Login</button>
+          <button type="submit" name="submit" >Login</button>
 
           <script>
             const form = document.querySelector('.login-form');
