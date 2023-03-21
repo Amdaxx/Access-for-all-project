@@ -1,68 +1,48 @@
+
 <?php
-require_once('../SQL/sql.php');
-if (isset($_POST['submit'])) {
-    verifyLogin($_POST['email'], $_POST['pass']);
-}
+
+
+include_once("sql.php");
+if (isset($_POST['submit'])){
+    verifyLogin($_POST['email'], $_POST['pwd']);
+    }
+  
 ?>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/style.css">  
-<link rel="stylesheet" href="../css/topNavhome.css">
-<script>
-    var x = document.forms["centerform"]["email"].value;
-    if (x == "" || x == null) {
-        alert("Email must be filled out");
-        return false;
-    }
 
-    var x = document.forms["centerform"]["password"].value;
-    if (x == "" || x == null) {
-        alert("Password must be filled out");
-        return false;
-    }
-
-</script>
-
-
-<div id="header">
-    <?php include "../public/publicHeader.php" ?>     
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../css/userManagementStyle.css"/>
+  </head>
   <body>
-    <br><br><br>
-    <img src="../pictures/Everybody-Welcome-logo.png" alt="logo" class="logo">
-    <form id = "centerform" method="post" onsubmit="return validateForm()">
-    <div class="form-group row">
-        <label for="mail" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-6">
-        <input type="email" class="form-control" id="mail" name="email" placeholder="Email"> <br>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="pwd" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-6">
-        <input type="password" class="form-control" id="pwd" name="pass" placeholder="Password"> <br>
-        <input type="checkbox" onclick="myFunction()">Show Password
+    <div class="login-container">
+      <div class="login-form">
+        <h2>Login Form</h2>
+        <form method="post">
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
 
-        <script>
-    function myFunction() {
-    var x = document.getElementById("pwd");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-    }
-    </script>
-        </div>
+          <label for="password">Password</label>
+          <input type="password" name="pwd" required />
+
+          <button type="submit">Login</button>
+
+          <script>
+            const form = document.querySelector('.login-form');
+            form.addEventListener('submit', function(event) {
+              event.preventDefault();
+              const email = form.email.value;
+              const password = form.password.value;
+              // Add your login logic here
+            });
+          </script>
+
+        </form> 
+        <p>Don't have an account? <a href="createAccount.php">Sign up</a></p>
+      </div>
     </div>
-    <div class="form-group row">
-        <div class="col-sm-10">
-        <button type="submit" name="submit" class="btn btn-primary">Log in</button>
-        </div>
-    </div>
-    </form>
-        
-    </body>
-    <?php include  '../public/footer.php' ?>
-    </main>
-</div>
+  </body>
+</html>
