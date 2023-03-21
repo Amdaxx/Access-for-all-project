@@ -22,15 +22,13 @@ if (isset($_POST['submit'])){
         <h2>Login Form</h2>
         <form method="post">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email">
 
           <label for="password">Password</label>
-          <input type="password" id="pwd" name="pwd" required />
+          <input type="password" id="pwd" name="pwd">
 
 
           <button type="submit" name="submit" >Login</button>
-
-
         </form> 
         <p>Don't have an account? <a href="createAccount.php">Sign up</a></p>
       </div>
