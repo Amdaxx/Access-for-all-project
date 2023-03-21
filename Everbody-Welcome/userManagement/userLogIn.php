@@ -27,14 +27,6 @@ if (isset($_POST['submit'])){
           <label for="password">Password</label>
           <input type="password" id="pwd" name="pwd">
 
-        <script> 
-        const form = document.querySelector('.login-form');
-        form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const email = form.email.value;
-        const password = form.password.value;
-            });
-        </script>
           <button type="submit" name="submit" >Login</button>
         </form> 
         <p>Don't have an account? <a href="createAccount.php">Sign up</a></p>
