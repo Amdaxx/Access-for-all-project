@@ -23,10 +23,11 @@ if (isset($_POST['submit'])){
         <h2>Login Form</h2>
         <form method="post">
           <label for="email">Email</label>
-          <input type="email" name="email" required />
+          <input type="email" id="email" name="email" required />
 
           <label for="password">Password</label>
-          <input type="password" name="pwd" required />
+          <input type="password" id="pwd" name="pwd" required />
+
 
           <button type="submit">Login</button>
 
