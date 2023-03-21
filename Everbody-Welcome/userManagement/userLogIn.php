@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -31,15 +30,6 @@ if (isset($_POST['submit'])){
 
           <button type="submit" name="submit" >Login</button>
 
-          <script>
-            const form = document.querySelector('.login-form');
-            form.addEventListener('submit', function(event) {
-              event.preventDefault();
-              const email = form.email.value;
-              const password = form.password.value;
-              // Add your login logic here
-            });
-          </script>
 
         </form> 
         <p>Don't have an account? <a href="createAccount.php">Sign up</a></p>
