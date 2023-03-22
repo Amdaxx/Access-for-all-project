@@ -1,16 +1,20 @@
 <?php 
 // Include configuration file  
 require_once 'config.php'; 
-include_once("../SQL/sql.php");
-
+ 
 // Include database connection file  
-
-//UNCOMMENT WHEN CONNECTED
-//include_once 'dbConnect.php'; 
+include_once 'dbConnect.php'; 
  
 $payment_id = $statusMsg = ''; 
 $status = 'error'; 
+$db = new mysqli('afpproject-server.mysql.database.azure.com', 'tkgwwyrhag', 'Blackdown12345', 'afadb');
  
+
+if ($db->connect_errno) {
+    echo "Failed to connect to MySQL: " . $db->connect_error;
+} else {
+    echo "Connected successfully!";
+}
 // Check whether stripe checkout session is not empty 
 if(!empty($_GET['session_id'])){ 
     $session_id = $_GET['session_id']; 
@@ -93,7 +97,7 @@ if(!empty($_GET['session_id'])){
                         // Insert transaction data into the database 
                         $sqlQ = "INSERT INTO transactions (customer_name,customer_email,item_name,item_number,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,stripe_checkout_session_id,created,modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())"; 
                         $stmt = $db->prepare($sqlQ); 
-                        $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $product, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
+                        $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $productName, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
                         $insert = $stmt->execute(); 
                          
                         if($insert){ 
@@ -132,7 +136,7 @@ if(!empty($_GET['session_id'])){
     <p><b>Email:</b> <?php echo $customer_email; ?></p>
 	
     <h4>Product Information</h4>
-    <p><b>Name:</b> <?php echo $product; ?></p>
+    <p><b>Name:</b> <?php echo $productName; ?></p>
     <p><b>Price:</b> <?php echo $productPrice.' '.$currency; ?></p>
 <?php }else{ ?>
     <h1 class="error">Your Payment been failed!</h1>

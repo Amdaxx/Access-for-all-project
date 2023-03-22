@@ -459,36 +459,4 @@
         return $res;
     }
 
-    function payment($venueid, $item_name, $item_price, $item_price_currency, $stripe_checkout_session_id)
-    {
-        $conn = connectToDatabase();
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("INSERT INTO transactions 
-        (venueid, item_name, item_price, item_price_currency, stripe_checkout_session_id) 
-        VALUES (:venueid, :item_name, :item_price, :item_price_currency :stripe_checkout_session_id)");
-        $stmt->bindParam(':venueid', $venueid);
-        $stmt->bindParam(':item_name', $item_name);
-        $stmt->bindParam(':item_price', $item_price);
-        $stmt->bindParam(':item_price_currency', $item_price_currency);
-        $stmt->bindParam(':stripe_checkout_session_id', $stripe_checkout_session_id);
-        $stmt->execute();
-    }
-
-    function getTransactions($stripe_checkout_session_id)
-    {
-        // Fetch transaction data from the database if already exists 
-        $sqlQ = "SELECT * FROM transactions WHERE stripe_checkout_session_id = ?"; 
-        $stmt = $db->prepare($sqlQ);  
-        $stmt->bind_param("s", $db_session_id); 
-        $db_session_id = $session_id; 
-        $stmt->execute(); 
-        $result = $stmt->get_result(); 
-
-        $conn = connectToDatabase();
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT logid, email, pwd, stat FROM logs WHERE email=:email");
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        $user = $stmt->fetch();     
-         
-    }
+ 
