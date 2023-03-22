@@ -20,9 +20,9 @@ if (mysqli_query($mysqli, $sql0)) {
     echo "Error deleting table: " . mysqli_error($mysqli);
 }
 */
-$sql25 = "CREATE TABLE transactions (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  customer_name varchar(50) PRIMARY KEY COLLATE utf8_unicode_ci NOT NULL,
+$sql25 = "CREATE TABLE transactions(
+  id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  customer_name varchar(50)  COLLATE utf8_unicode_ci NOT NULL,
   customer_email varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   item_name varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   item_number varchar(50) COLLATE utf8_unicode_ci NOT NULL,
