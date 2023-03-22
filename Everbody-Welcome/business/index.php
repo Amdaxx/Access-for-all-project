@@ -18,11 +18,6 @@ use Stripe\Terminal\Location;
 
 
 
-
-if (isset($_POST['submit'])){
-
-}
-
 ?>
 
 <link rel=""

@@ -37,7 +37,7 @@ $sql25 = "CREATE TABLE transactions (
   modified datetime NOT NULL
 )";
 
-if (mysqli_query($mysqli, $sql)) {
+if (mysqli_query($mysqli, $sql25)) {
   echo "Table created successfully";
 } else {
   echo "Error creating table: " . mysqli_error($mysqli);
