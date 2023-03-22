@@ -42,7 +42,7 @@ if (mysqli_query($mysqli, $sql25)) {
 } else {
   echo "Error creating table: " . mysqli_error($mysqli);
 }
-
+echo "wsh hamid";
 /*
 
 
