@@ -136,7 +136,7 @@
                     session_start();
                     $_SESSION['id'] = $user['logid'];
                     $_SESSION['uadmin'] =  $user['stat'];
-                    header('Location: admin.php?id='.$user['logid']);
+                    header('Location: ../admin/adminLandingPage.php?id='.$user['logid']);
                 }
                 else
                 {
@@ -196,29 +196,6 @@
     }
 
 
-    function createAdmin($email, $pwd){
-        try{
-            
-            $id = "15";
-            $stat = "admin";
-            $pwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-            $conn = connectToDatabase();
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $stmt = $conn->prepare("INSERT INTO logs (logid, email, pwd, stat) 
-            VALUES (:id, :email, :passw, :statu)");
-            $stmt->bindParam(':id', $id);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':passw', $pwd);
-            $stmt->bindParam(':statu', $stat);
-            $stmt->execute();
-
-        } catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-        
-    }
 
     function createVenue($logid, $VenueName, $address, $postcode, $type)
     {
