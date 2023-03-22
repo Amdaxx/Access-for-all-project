@@ -12,13 +12,29 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
-$sql = "CREATE TABLE transactions (
-  id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  venueid varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+$sql0 = "DROP TABLE transactions";
+
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
+
+$sql25 = "CREATE TABLE transactions (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  customer_name varchar(50) PRIMARY KEY COLLATE utf8_unicode_ci NOT NULL,
+  customer_email varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   item_name varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  item_number varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   item_price float(10,2) NOT NULL,
   item_price_currency varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  stripe_checkout_session_id varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+  paid_amount float(10,2) NOT NULL,
+  paid_amount_currency varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  txn_id varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  payment_status varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  stripe_checkout_session_id varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  created datetime NOT NULL,
+  modified datetime NOT NULL
 )";
 
 if (mysqli_query($mysqli, $sql)) {
@@ -28,13 +44,7 @@ if (mysqli_query($mysqli, $sql)) {
 }
 
 /*
-$sql0 = "DROP TABLE generalsurveyresults";
 
-if (mysqli_query($mysqli, $sql0)) {
-    echo "Table deleted successfully";
-} else {
-    echo "Error deleting table: " . mysqli_error($mysqli);
-}
 
 */
 

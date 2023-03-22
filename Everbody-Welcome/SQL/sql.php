@@ -473,3 +473,22 @@
         $stmt->bindParam(':stripe_checkout_session_id', $stripe_checkout_session_id);
         $stmt->execute();
     }
+
+    function getTransactions($stripe_checkout_session_id)
+    {
+        // Fetch transaction data from the database if already exists 
+        $sqlQ = "SELECT * FROM transactions WHERE stripe_checkout_session_id = ?"; 
+        $stmt = $db->prepare($sqlQ);  
+        $stmt->bind_param("s", $db_session_id); 
+        $db_session_id = $session_id; 
+        $stmt->execute(); 
+        $result = $stmt->get_result(); 
+
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("SELECT logid, email, pwd, stat FROM logs WHERE email=:email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        $user = $stmt->fetch();     
+         
+    }

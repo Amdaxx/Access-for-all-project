@@ -1,10 +1,13 @@
-<?php   
+<?php
+
+use Stripe\Terminal\Location;
+
 require_once 'config.php';  
 
 
+if (isset($_POST['submit'])){
 
-payment($_GET['venueid'], $product, $productPrice, $item_price_currency, $STRIPE_API_KEY);
-
+}
 
 ?>
 
@@ -22,11 +25,12 @@ Improving accessibility in your building can attract a wider range of customers 
 <p>Price: <b>£<?php echo $productPrice.' '.strtoupper($currency); ?></b></p>
 
 <!-- Payment button -->
-<button class="stripe-button" id="payButton">
+<form method=""post>
+<button class="stripe-button" name="submit" id="payButton">
     <div class="spinner hidden" id="spinner"></div>
     <span id="buttonText">Pay Now</span>
 </button>
-
+</form>
 <script>
 // Set Stripe publishable key to initialize Stripe.js
 const stripe = Stripe('<?php echo STRIPE_PUBLISHABLE_KEY; ?>');
