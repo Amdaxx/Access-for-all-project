@@ -2,10 +2,9 @@
  
 // Include the configuration file 
 require_once 'config.php'; 
- 
 // Include the Stripe PHP library 
-require_once '../stripe-php-10.9.0-beta.1/init.php';
- 
+include_once("../stripe-php-10.9.0-beta.1/init.php");
+
 // Set API key 
 $stripe = new \Stripe\StripeClient(STRIPE_API_KEY);
 $response = array( 
