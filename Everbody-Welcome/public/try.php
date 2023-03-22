@@ -11,7 +11,7 @@ if ($mysqli->connect_errno) {
 } else {
     echo "Connected successfully!";
 }
-
+/*
 $sql0 = "DROP TABLE transactions";
 
 if (mysqli_query($mysqli, $sql0)) {
@@ -19,7 +19,7 @@ if (mysqli_query($mysqli, $sql0)) {
 } else {
     echo "Error deleting table: " . mysqli_error($mysqli);
 }
-
+*/
 $sql25 = "CREATE TABLE transactions (
   id int(11) NOT NULL AUTO_INCREMENT,
   customer_name varchar(50) PRIMARY KEY COLLATE utf8_unicode_ci NOT NULL,
