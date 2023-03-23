@@ -14,8 +14,10 @@ $currency = "gbp";
  */ 
 define('STRIPE_API_KEY', 'sk_test_51MgTEkABIo4c0M7G9lrmsnlUPwxinApGa6AvVPaXmpRUx2ooHun06a9xK9zqTnk1HL7XhPXBunadFKRfz0T1OQu300FBQ7GpK6'); 
 define('STRIPE_PUBLISHABLE_KEY', 'pk_test_51MgTEkABIo4c0M7GjhESu3hlaIF7SW00hXeASZMlxfG2IPXBeegKv1cBbR0tlRsWyhUrpBFwHFvABPiLtGoHPm3n00gitZlgTE'); 
-define('STRIPE_SUCCESS_URL', '../business/payment-success.php'); //Payment success URL 
-define('STRIPE_CANCEL_URL', '../business/payment-cancel.php'); //Payment cancel URL 
+define('STRIPE_SUCCESS_URL', 'https://afpproject.azurewebsites.net/Everbody-Welcome/business/payment-success.php'); //Payment success URL 
+define('STRIPE_CANCEL_URL', 'https://afpproject.azurewebsites.net/Everbody-Welcome/business/payment-cancel.php'); //Payment cancel URL 
+
+
 
 
  
