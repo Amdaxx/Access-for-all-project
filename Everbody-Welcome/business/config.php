@@ -2,7 +2,7 @@
  
 // Product Details  
 // Minimum amount is $0.50 US  
-$product = "Specific Audit";  
+$productname = "Specific Audit";  
 $productID = "AA12345";  
 $productPrice = 3; 
 $currency = "gbp"; 
