@@ -37,7 +37,7 @@ if(!empty($request->createCheckoutSession)){
             'line_items' => [[ 
                 'price_data' => [ 
                     'product_data' => [ 
-                        'name' => $productName, 
+                        'name' => $productname, 
                         'metadata' => [ 
                             'pro_id' => $productID 
                         ] 
