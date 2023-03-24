@@ -4,7 +4,8 @@
 require_once 'config.php'; 
  
 // Include the Stripe PHP library 
-require_once '../stripe-php/init.php';
+require_once "../stripe-php/init.php";
+
  
 // Set API key 
 $stripe = new \Stripe\StripeClient(STRIPE_API_KEY);
@@ -36,7 +37,7 @@ if(!empty($request->createCheckoutSession)){
             'line_items' => [[ 
                 'price_data' => [ 
                     'product_data' => [ 
-                        'name' => $productName, 
+                        'name' => $productname, 
                         'metadata' => [ 
                             'pro_id' => $productID 
                         ] 

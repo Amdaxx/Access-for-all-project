@@ -11,11 +11,21 @@ if ($mysqli->connect_errno) {
 } else {
     echo "Connected successfully!";
 }
+/*
+$sql0 = "DROP TABLE transactions";
 
-$sql = "CREATE TABLE transactions (
-  id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  venueid varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
+*/
+$sql25 = "CREATE TABLE transactions(
+  id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  customer_name varchar(50)  COLLATE utf8_unicode_ci NOT NULL,
+  customer_email varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   item_name varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  item_number varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   item_price float(10,2) NOT NULL,
   item_price_currency varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   paid_amount float(10,2) NOT NULL,
@@ -27,20 +37,14 @@ $sql = "CREATE TABLE transactions (
   modified datetime NOT NULL
 )";
 
-if (mysqli_query($mysqli, $sql)) {
+if (mysqli_query($mysqli, $sql25)) {
   echo "Table created successfully";
 } else {
   echo "Error creating table: " . mysqli_error($mysqli);
 }
-
+echo "wsh hamid";
 /*
-$sql0 = "DROP TABLE generalsurveyresults";
 
-if (mysqli_query($mysqli, $sql0)) {
-    echo "Table deleted successfully";
-} else {
-    echo "Error deleting table: " . mysqli_error($mysqli);
-}
 
 */
 
