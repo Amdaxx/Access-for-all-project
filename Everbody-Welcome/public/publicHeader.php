@@ -21,11 +21,8 @@
   }
 
   .menu {   
-  margin: 50px auto;
-  width: 800px;   
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content; 
+  margin: 10px auto;
+  width: fit-content;
   color: #696969;
   }
 
