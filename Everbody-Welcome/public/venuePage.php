@@ -17,22 +17,23 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-12 col-md-6">
-
-          <p><strong>Question 1:</strong> What is the venue's capacity?</p>
-          <p><strong>Answer:</strong> The venue can hold up to 500 people.</p>
-          <hr>
-          <p><strong>Question 2:</strong> Are there parking facilities?</p>
-          <p><strong>Answer:</strong> Yes, there is a parking lot available for guests.</p>
-          <hr>
-          <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities?</p>
-          <p><strong>Answer:</strong> Yes, the venue is wheelchair accessible.</p>
-          <hr>
-          <p><strong>Question 4:</strong> What is the venue's location?</p>
-          <p><strong>Answer:</strong> The venue is located in downtown, close to the subway station.</p>
-          <hr>
-          <p><strong>Question 5:</strong> Does the venue provide catering services?</p>
-          <p><strong>Answer:</strong> Yes, the venue has its own catering service that can provide food and drinks.</p>
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+          <div class="col-xs-12">
+            <p style="font-size: 1.5em;"><strong>Question 1:</strong> What is the venue's capacity?</p>
+            <p style="font-size: 1.2em;"><strong>Answer:</strong> The venue can hold up to 500 people.</p>
+            <hr>
+            <p style="font-size: 1.5em;"><strong>Question 2:</strong> Are there parking facilities?</p>
+            <p style="font-size: 1.2em;"><strong>Answer:</strong> Yes, there is a parking lot available for guests.</p>
+            <hr>
+            <p style="font-size: 1.5em;"><strong>Question 3:</strong> Is the venue accessible for people with disabilities?</p>
+            <p style="font-size: 1.2em;"><strong>Answer:</strong> Yes, the venue is wheelchair accessible.</p>
+            <hr>
+            <p style="font-size: 1.5em;"><strong>Question 4:</strong> What is the venue's location?</p>
+            <p style="font-size: 1.2em;"><strong>Answer:</strong> The venue is located in downtown, close to the subway station.</p>
+            <hr>
+            <p style="font-size: 1.5em;"><strong>Question 5:</strong> Does the venue provide catering services?</p>
+            <p style="font-size: 1.2em;"><strong>Answer:</strong> Yes, the venue has its own catering service that can provide food and drinks.</p>
+          </div>
         </div>
       </div>
       <hr>
