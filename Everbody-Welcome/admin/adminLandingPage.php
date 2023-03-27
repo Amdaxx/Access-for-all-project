@@ -26,15 +26,12 @@ $id = $_SESSION['id'];
 <div class="flex-wrapper">
   <div id="header">
       
-<<<<<<< HEAD
         
-=======
->>>>>>> 432be3d550a37dc2bff1b291cbd8e4e0d6fa364b
   </div>
 
   <body style = "background-color:cdc7c7">
     
-      <div class="onecolumn">
+      
         <div class="button-background">
           <btn-group>
             <button><a href="viewVenues.php">View Questions</a></button>
@@ -42,7 +39,7 @@ $id = $_SESSION['id'];
             <button><a href="updateBusinessDetails.php">Delete Question</a></button>
           </btn-group>
         </div>
-      </div>
+      
 
       
       
