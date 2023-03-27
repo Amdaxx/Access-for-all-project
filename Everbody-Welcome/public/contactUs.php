@@ -36,7 +36,7 @@
               <label for="email">From:</label>
               <input type="email" class="form-control" id="email" placeholder="Enter Your Email Here">
             </div>
-            <button type="submit" class="btn btn-default">Send</button>
+            <button type="submit" name="submit" class="btn btn-default">Send</button>
           </form>
 
           <div class="row">
