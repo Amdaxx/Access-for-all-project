@@ -5,6 +5,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This page displays the venue information including venue name, venue type and the venue's
+    answers to the general survey.">
     <title>Venue Page</title>
   </head>
   <body>
