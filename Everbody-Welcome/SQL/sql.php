@@ -558,3 +558,14 @@
         return $res;
 
     }
+
+    function goPremium($venueid)
+    {
+        $premium = "YES";
+        $conn = connectToDatabase();
+        $sql1 = "UPDATE venues SET premium=:premium WHERE venueid=:venueid";
+        $stmt = $conn->prepare($sql1);
+        $stmt->bindParam(':premium', $premium);
+        $stmt->bindParam(':venueid', $venueid);
+        $stmt->execute();
+    }
