@@ -241,6 +241,16 @@
        
     }
 
+    function viewBusiness()
+    {
+            $conn = connectToDatabase();
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $conn->prepare("SELECT * FROM businessinfos");
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
+    }
+
 
     function viewVenues2($id)
     {
