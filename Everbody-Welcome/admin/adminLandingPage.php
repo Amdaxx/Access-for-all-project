@@ -25,7 +25,6 @@ $id = $_SESSION['id'];
 
 <div class="flex-wrapper">
   <div id="header">
-      <?php include "businessHeader.php";
       
       ?>  
   </div>
@@ -35,9 +34,9 @@ $id = $_SESSION['id'];
       <div class="twocolumn">
         <div class="button-background">
           <btn-group>
-            <button><a href="viewVenues.php">View Venues</a></button>
-            <button><a href="createVenue.php">Create New Venue</a></button>
-            <button><a href="updateBusinessDetails.php">Edit Company Information</a></button>
+            <button><a href="viewVenues.php">View Questions</a></button>
+            <button><a href="createVenue.php">Add Question</a></button>
+            <button><a href="updateBusinessDetails.php">Delete Question</a></button>
           </btn-group>
         </div>
       </div>
@@ -66,6 +65,5 @@ $id = $_SESSION['id'];
   
 
   </body>
-  <?php include "../public/footer.php" ?>
   
 </div>  
