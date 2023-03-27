@@ -128,18 +128,6 @@ require_once('../SQL/sql.php');
             </select>
     <button type="submit">Submit</button>
   </form>
-  ?>
-</body>
-</html>
-In this example, we've added a label for the drop-down list using the for attribute and the id attribute to link the label to the select element. We've also added a line break (<br>) to make the form look nicer.
-
-After the form, we've added the PHP code that retrieves the selected item using the $_POST global variable and displays it using an echo statement. You can replace the echo statement with whatever code you need to process the selected item.
-
-
-
-
-
-
         
             <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
           </div>
