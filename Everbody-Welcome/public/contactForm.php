@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
                "From: " . $email;
 
     // Send email and handle errors
-    if (mail($to, $subject, $message, $headers)) {
+    if (mail($to, $subject, $message, $headers, "-f $email")) {
         header("Location: landingPage.php?mailsent");
         exit();
     } else {
