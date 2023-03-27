@@ -16,7 +16,7 @@ if ($mysqli->connect_errno) {
 $sql0 = "DROP TABLE venues";
 
 if (mysqli_query($mysqli, $sql0)) {
-    echo "Table questions deleted successfully";
+    echo "Table venues deleted successfully";
 } else {
     echo "Error deleting table: " . mysqli_error($mysqli);
 }
@@ -42,6 +42,13 @@ if (mysqli_query($mysqli, $sql3)) {
 } else {
   echo "Error deleting table: " . mysqli_error($mysqli);
 }
+
+if (mysqli_query($mysqli, $sql4)) {
+  echo "Table venues created successfully";
+} else {
+  echo "Error deleting table: " . mysqli_error($mysqli);
+}
+
 
 
 
