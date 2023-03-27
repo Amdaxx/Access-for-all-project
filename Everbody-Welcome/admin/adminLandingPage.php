@@ -5,7 +5,7 @@ $path = "../public/LandingPage.php";
 
 session_start();
 
-if (!isset($_SESSION['admin'])){
+if (!isset($_SESSION['uadmin'])){
     session_unset();
     session_destroy();
     header("Location:".$path);

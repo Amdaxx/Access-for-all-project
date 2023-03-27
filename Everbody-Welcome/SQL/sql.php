@@ -468,28 +468,48 @@
         if (isset($type) && isset($city) && isset($postcode)) {
             // All three variables are set
             // Perform your search function with all three variables
-            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, ");
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, city=:city, postcode=:postcode ");
+            $stmt->bindParam(':type', $type);
+            $stmt->bindParam(':city', $city);
+            $stmt->bindParam(':postcode', $postcode);
+
         } elseif (isset($type) && isset($city)) {
             // Only $var1 and $var2 are set
             // Perform your search function with $var1 and $var2
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, city=:city ");
+            $stmt->bindParam(':type', $type);
+            $stmt->bindParam(':city', $city);            
         } elseif (isset($type) && isset($postcode)) {
             // Only $var1 and $var3 are set
             // Perform your search function with $var1 and $var3
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, postcode=:postcode ");
+            $stmt->bindParam(':type', $type);
+            $stmt->bindParam(':postcode', $postcode);
         } elseif (isset($city) && isset($postcode)) {
             // Only $var2 and $var3 are set
             // Perform your search function with $var2 and $var3
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city, postcode=:postcode ");
+            $stmt->bindParam(':city', $city);
+            $stmt->bindParam(':postcode', $postcode);
         } elseif (isset($type)) {
             // Only $var1 is set
             // Perform your search function with $var1
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type");
+            $stmt->bindParam(':type', $type);
         } elseif (isset($city)) {
             // Only $var2 is set
             // Perform your search function with $var2
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city ");
+            $stmt->bindParam(':city', $city);
+
         } elseif (isset($postcode)) {
             // Only $var3 is set
             // Perform your search function with $var3
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE postcode=:postcode ");
+            $stmt->bindParam(':postcode', $postcode);
+
         } else {
             // None of the variables are set
             // Handle this case as appropriate for your application
         }
-        
     }
