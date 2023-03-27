@@ -16,7 +16,7 @@ if ($mysqli->connect_errno) {
 
 
 
-$sql0 = "DROP TABLE questions";
+$sql0 = "DROP TABLE venues";
 
 if (mysqli_query($mysqli, $sql0)) {
     echo "Table deleted successfully";
