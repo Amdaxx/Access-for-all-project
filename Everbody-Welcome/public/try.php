@@ -27,8 +27,8 @@ $sql3 = "CREATE TABLE venues(
   address VARCHAR(30) NOT NULL,
   postcode VARCHAR(10) NOT NULL,
   city VARCHAR(20) NOT NULL,
-  type VARCHAR(15) NOT NULL ,
-  numberofaudits NOT NULL
+  type VARCHAR(15) NOT NULL,
+  numberofaudits INTEGER NOT NULL
 )";
 
 if (mysqli_query($mysqli, $sql3)) {
