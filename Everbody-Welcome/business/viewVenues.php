@@ -47,6 +47,10 @@ $id = $_SESSION['id'];
   </div>
 
   <body>
+  <?php
+   $res = viewVenues($_SESSION['id']);
+   if($res!=NULL){
+  ?>
     <table class="center" border='1' style='border-collapse:collapse;margin-top:20px;'>  
       <th>Venue Name</th>
       <th>Venue Type</th>
@@ -56,11 +60,8 @@ $id = $_SESSION['id'];
       <th>Edit Venue Details</th>
       <th>View Past Audits</th>
       <th>New Audit</th>
-
-      <?php 
-      $res = viewVenues($_SESSION['id']);
-      foreach ($res as $venue):
-      ?>
+  
+      <?php foreach ($res as $venue):?>
       <tr class = "data">
         <td width='250'><?php echo $venue['venuename']; ?></td>
         <td width='60'><?php echo $venue['type']; ?></td>
@@ -84,6 +85,11 @@ $id = $_SESSION['id'];
         </a>
         <?php endforeach;?>
     </table>
+        <?php } 
+        else{
+                  echo "You have no venues you can create one";
+        }
+        ?>
   </body>
 
   <?php include "../public/footer.php" ?>
