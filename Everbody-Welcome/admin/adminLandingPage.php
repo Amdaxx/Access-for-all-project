@@ -25,7 +25,6 @@ $id = $_SESSION['id'];
 
 <div class="flex-wrapper">
   <div id="header">
-      <?php include "businessHeader.php";
       
       ?>  
   </div>
@@ -66,6 +65,5 @@ $id = $_SESSION['id'];
   
 
   </body>
-  <?php include "../public/footer.php" ?>
   
 </div>  
