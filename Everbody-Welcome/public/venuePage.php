@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="../css/overall-page.css">
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Venue Page</title>
   </head>
   <body>
