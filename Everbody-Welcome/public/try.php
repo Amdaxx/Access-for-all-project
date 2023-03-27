@@ -13,13 +13,7 @@ if ($mysqli->connect_errno) {
 }
 
 
-$sql0 = "DROP TABLE venues";
 
-if (mysqli_query($mysqli, $sql0)) {
-    echo "Table venues deleted successfully";
-} else {
-    echo "Error deleting table: " . mysqli_error($mysqli);
-}
 
 $sql4 = "CREATE TABLE questions(
   question VARCHAR(50) NOT NULL ,
