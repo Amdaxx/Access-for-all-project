@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
         'Reply-To: '.$email."\r\n" .
         'X-Mailer: PHP/' . phpversion();
     $subject = 'Message from Everybody Welcome Website';
-    $to = 'youremail@example.com'; // Replace with your email address
+    $to = 'jonahcole01091989@example.com'; // Replace with your email address
     $message = "You have received an email from Everybody Welcome. \n\n" .
                "Message: " . $comment . "\n\n" .
                "From: " . $email;
