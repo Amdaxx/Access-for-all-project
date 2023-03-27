@@ -45,10 +45,11 @@ if (mysqli_query($mysqli, $sql25)) {
 
 */
 
+
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://wft-geo-db.p.rapidapi.com/v1/geo/cities",
+	CURLOPT_URL => "https://wft-geo-db.p.rapidapi.com/v1/geo/countries/UK/regions",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
