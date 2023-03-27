@@ -2,6 +2,13 @@
 if (isset($_POST['submit'])) {
     $comment = $_POST['comment'];
     $email = $_POST['email'];
+    
+    // Validate email address
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+        exit();
+    }
+    
     $headers = 'From: '.$email."\r\n".
         'Reply-To: '.$email."\r\n" .
         'X-Mailer: PHP/' . phpversion();
@@ -11,10 +18,16 @@ if (isset($_POST['submit'])) {
                "Message: " . $comment . "\n\n" .
                "From: " . $email;
 
+    // Send email and handle errors
     if (mail($to, $subject, $message, $headers)) {
         header("Location: landingPage.php?mailsent");
+        exit();
     } else {
         echo "Error sending email";
+        exit();
     }
+} else {
+    echo "No form submitted";
+    exit();
 }
 ?>
