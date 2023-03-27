@@ -17,6 +17,7 @@ $id = $_SESSION['id'];
 
 <head>
 <title>Admin Landing Page</title>
+<h1>Admin Page</h1>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
