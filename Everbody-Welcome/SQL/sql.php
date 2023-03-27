@@ -459,7 +459,7 @@
         return $res;
     }
     
-    function filterVenues()
+    function filterVenues($type, $city, $postcode)
     {
-        
+
     }
