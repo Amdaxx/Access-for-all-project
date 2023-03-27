@@ -569,3 +569,15 @@
         $stmt->bindParam(':venueid', $venueid);
         $stmt->execute();
     }
+
+    function viewQuestions($surveytype)
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM questions  WHERE surveytype=:surveytype";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':surveytype', $surveytype);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
+    }
+
