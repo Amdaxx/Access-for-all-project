@@ -37,6 +37,8 @@ $ques = array(
 ?>
 <head>
     <title>Generic Survey</title>
+    <meta name="description" content="This page displays a short list accessibility questions about the venue and prompts the user
+    to the answer them - yes or no.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <?php include "businessHeader.php"; ?>  
         <h2>Generic Survey</h2>

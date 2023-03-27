@@ -19,6 +19,7 @@ $auditNumber = $_GET['number'];
 <html>
 <head>
     <title>Survey Results</title>
+    <meta name="description" content="This page displays the results from the user's responses to the general survey.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">  
     <link rel="stylesheet" href="../css/topNavHome.css">
