@@ -17,6 +17,7 @@ $id = $_SESSION['id'];
 
 <head>
 <title>Admin Landing Page</title>
+<h1>Admin Page</h1>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 
@@ -31,26 +32,20 @@ $id = $_SESSION['id'];
   </div>
 
   <body style = "background-color:cdc7c7">
-  
-  <div class="box">
-  <button>Update Genral Survey Questions</button>
-  </div>
+    
 
-  <div class="box">
-  <button>Update Advanced Suvery Questions</button>
-  </div>
 
-  <?php $res = viewBusiness();
+  <?php $res = viewVenues($_GET['id']);
   ?>
   <div class="table-container">
   <table class="table">
     <thead>
       <tr>
-        <th>Company Name</th>
+        <th>Venue Name</th>
         <th>Phone</th>
         <th>Postcode</th>
         <th>Address</th>
-        <th>Action</th>
+        <th>Number Of Audits</th>
       </tr>
     </thead>
     <tbody>
@@ -65,8 +60,8 @@ $id = $_SESSION['id'];
       <?php endforeach; ?>
     </tbody>
   </table>
-</div>
+
+
 
   </body>
   
-</div>  
