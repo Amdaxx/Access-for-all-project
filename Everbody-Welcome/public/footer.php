@@ -34,7 +34,7 @@
 
       <div class="fourcolumn">
         <div class="card">
-          <button2 onclick="window.location.href='landingPage.php';" type= "button" ><img  src="../pictures/Everybody-Welcome-logo.png" alt="logo" width="225" height="130"></img></button2>
+          <button2 onclick="window.location.href='../public/landingPage.php';" type= "button" ><img  src="../pictures/Everybody-Welcome-logo.png" alt="logo" width="225" height="130"></img></button2>
         </div>
       </div>
 
