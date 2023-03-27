@@ -20,7 +20,7 @@ $id = $_SESSION['id'];
 <h1>Admin Page</h1>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="../css/businessHomepage.css">
+
 <link rel="stylesheet" href="../css/overall-page.css">
 </head>
 
@@ -33,7 +33,7 @@ $id = $_SESSION['id'];
   <body style = "background-color:cdc7c7">
     
       
-        <div class="button-background"style = "align-items: center;">
+        <div class="button-background">
           <btn-group>
             <button><a href="viewVenues.php">View Questions</a></button>
             <button><a href="createVenue.php">Add Question</a></button>
