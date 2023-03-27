@@ -14,7 +14,7 @@ checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
 if (isset($_POST['submit'])){
-  createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['typeOfVenue']);
+  createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['city'], $_POST['typeOfVenue']);
   }
 
 ?>
@@ -86,6 +86,13 @@ function validateForm() {
           <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
           <div class="col-sm-6">
           <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode" name="postcode"> <br>
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="vPostcode" class="col-sm-2 col-form-label">City</label>
+          <div class="col-sm-6">
+          <input type="text" class="form-control" id="vCity" placeholder="Venue City" name="city"> <br>
           </div>
       </div>
 
