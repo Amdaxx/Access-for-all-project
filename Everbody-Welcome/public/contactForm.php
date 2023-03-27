@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         header("Location: landingPage.php?mailsent");
         exit();
     } else {
-        echo "Error sending email";
+        echo "Error sending email: " . error_get_last()['message'];
         exit();
     }
 } else {
