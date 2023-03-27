@@ -187,19 +187,20 @@
 
 
 
-    function createVenue($logid, $VenueName, $address, $postcode, $type)
+    function createVenue($logid, $VenueName, $address, $postcode, $city, $type)
     {
         try{
             $conn = connectToDatabase();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $numberofaudit = 0;
-            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, type, numberofaudits) 
-            VALUES (:id, :logid, :venuename, :address, :postcode, :type, :numaudit)");
+            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, city, type, numberofaudits) 
+            VALUES (:id, :logid, :venuename, :address, :postcode, :city, :type, :numaudit)");
             $stmt->bindParam(':id', $id);
             $stmt->bindParam(':logid', $logid);
             $stmt->bindParam(':venuename', $VenueName);
             $stmt->bindParam(':address', $address);
             $stmt->bindParam(':postcode', $postcode);
+            $stmt->bindParam(':city', $city);
             $stmt->bindParam(':type', $type);
          $stmt->bindParam(':numaudit', $numberofaudit);
             $id = rand(1,9999999);
@@ -322,12 +323,13 @@
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql1 = "UPDATE venues SET venuename=:vname, postcode=:post, address=:address, type=:type WHERE venueid=:id";
+        $sql1 = "UPDATE venues SET venuename=:vname, postcode=:post, city=:city, address=:address, type=:type WHERE venueid=:id";
         $stmt = $conn->prepare($sql1);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':vname', $vname);
         $stmt->bindParam(':post', $post);
         $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':city', $city);
         $stmt->bindParam(':type', $type);
         $stmt->execute();
         header('Location:../business/viewVenues.php?id='.$id);
@@ -466,6 +468,7 @@
         if (isset($type) && isset($city) && isset($postcode)) {
             // All three variables are set
             // Perform your search function with all three variables
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, ");
         } elseif (isset($type) && isset($city)) {
             // Only $var1 and $var2 are set
             // Perform your search function with $var1 and $var2
