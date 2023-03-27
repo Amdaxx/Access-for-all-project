@@ -190,11 +190,12 @@
     function createVenue($logid, $VenueName, $address, $postcode, $city, $type)
     {
         try{
+            $premium = "NO";
             $conn = connectToDatabase();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $numberofaudit = 0;
-            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, city, type, numberofaudits) 
-            VALUES (:id, :logid, :venuename, :address, :postcode, :city, :type, :numaudit)");
+            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, city, type, premium, numberofaudits) 
+            VALUES (:id, :logid, :venuename, :address, :postcode, :city, :type, :premium, :numaudit)");
             $stmt->bindParam(':id', $id);
             $stmt->bindParam(':logid', $logid);
             $stmt->bindParam(':venuename', $VenueName);
@@ -202,7 +203,8 @@
             $stmt->bindParam(':postcode', $postcode);
             $stmt->bindParam(':city', $city);
             $stmt->bindParam(':type', $type);
-         $stmt->bindParam(':numaudit', $numberofaudit);
+            $stmt->bindParam(':premium', $premium);
+            $stmt->bindParam(':numaudit', $numberofaudit);
             $id = rand(1,9999999);
             $stmt->execute();
             header('Location: ../business/businessLandingPage.php');

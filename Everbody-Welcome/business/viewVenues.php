@@ -52,6 +52,7 @@ $id = $_SESSION['id'];
       <th>Venue Type</th>
       <th>Venue Postcode</th>
       <th>Venue Address</th>
+      <th>Premium</th>
       <th>Edit Venue Details</th>
       <th>View Past Audits</th>
       <th>New Audit</th>
@@ -65,6 +66,7 @@ $id = $_SESSION['id'];
         <td width='60'><?php echo $venue['type']; ?></td>
         <td  width='250'><?php echo $venue['postcode']; ?></td>
         <td  width='250'><?php echo $venue['address']; ?></td>
+        <td  width='250'><?php echo $venue['premium']; ?></td>
         
         <td width='200'><div class="btn-group">
         <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">

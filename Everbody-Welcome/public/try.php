@@ -15,10 +15,23 @@ if ($mysqli->connect_errno) {
 
 
 
+
+$sql0 = "DROP TABLE questions";
+
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
+
+
 $sql4 = "CREATE TABLE questions(
   question VARCHAR(50) NOT NULL ,
-  type VARCHAR(30) NOT NULL 
+  type VARCHAR(30) NOT NULL,
+  surveytype VARCHAR(30) NOT NULL 
 )";
+
+
 
 $sql3 = "CREATE TABLE venues(
   venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
@@ -28,21 +41,21 @@ $sql3 = "CREATE TABLE venues(
   postcode VARCHAR(10) NOT NULL,
   city VARCHAR(20) NOT NULL,
   type VARCHAR(15) NOT NULL,
+  premium VARCHAR(3) NOT NULL,
   numberofaudits INTEGER NOT NULL
 )";
 
-if (mysqli_query($mysqli, $sql3)) {
+if (mysqli_query($mysqli, $sq34)) {
   echo "Table venues created successfully";
 } else {
   echo "Error deleting table: " . mysqli_error($mysqli);
 }
 
 if (mysqli_query($mysqli, $sql4)) {
-  echo "Table venues created successfully";
+  echo "Table questions created successfully";
 } else {
   echo "Error deleting table: " . mysqli_error($mysqli);
 }
-
 
 
 

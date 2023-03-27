@@ -25,10 +25,6 @@ $id = $_SESSION['id'];
 </head>
 
 <div class="flex-wrapper">
-  <div id="header">
-      
-        
-  </div>
 
   <body style = "background-color:cdc7c7">
   
