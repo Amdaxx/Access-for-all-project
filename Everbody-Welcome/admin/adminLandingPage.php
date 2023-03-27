@@ -43,23 +43,7 @@ $id = $_SESSION['id'];
       </div>
 
       
-      <div class="twocolumn" >
-        <div class ="company-info">
-          <h1><b>Company Information</b></h1>
-          <p><u>Company Name: </u> </p>
-          
-          <p><u>Email: </u></p>
-          
-          <p><u>Address: </u></p>
-          
-          <p><u>Post Code: </u></p>
-          
-          <p><u>Contact Number: </u></p>
-          
-          <p><u>Venues Added: </u></p>       
-          
-        </div> 
-      </div> 
+      
     </div> 
   </div>
 
