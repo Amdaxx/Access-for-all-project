@@ -33,11 +33,11 @@ $id = $_SESSION['id'];
   <body style = "background-color:cdc7c7">
   
   <div class="box">
-  <button>Update Genral Survey Questions</button>
+  <button>Update Genral Survey</button>
   </div>
 
   <div class="box">
-  <button>Update Advanced Suvery Questions</button>
+  <button>Update Premium Suvery</button>
   </div>
 
   <?php $res = viewBusiness();
