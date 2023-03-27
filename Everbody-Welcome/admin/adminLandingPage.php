@@ -16,9 +16,8 @@ $id = $_SESSION['id'];
 ?>
 
 <head>
-<title>Business Landing Page</title>
-<meta name="description" content="This page displays information about the user's account such as company name and email. Also,
-on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
+<title>Admin Landing Page</title>
+<meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
 <link rel="stylesheet" href="../css/overall-page.css">
@@ -27,7 +26,7 @@ on this page there are links to the venues pages (view venues and create new ven
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
-      $res = displayBusinessDetails($_SESSION['id']);
+      
       ?>  
   </div>
 
