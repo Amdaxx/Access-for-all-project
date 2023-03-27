@@ -28,7 +28,7 @@ use Stripe\Terminal\Location;
 <script src="https://js.stripe.com/v3/"></script>
 	
 <!-- Product details -->
-<h2><?php echo $product; ?></h2>
+<h2><?php echo $productname; ?></h2>
 <p>By investing in our service, you can ensure compliance with legal requirements, enhance your reputation, and increase patronage. We provide you with a comprehensive report outlining our findings and recommendations for improvement. With our service, you can make your building more inclusive and accessible for all.
 Improving accessibility in your building can attract a wider range of customers and tenants, including people with disabilities. It also helps you reduce liability and enhance your reputation as an inclusive and welcoming place.</p>
 <p>Price: <b>£<?php echo $productPrice.' '.strtoupper($currency); ?></b></p>

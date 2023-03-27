@@ -107,22 +107,41 @@ require_once('../SQL/sql.php');
         <div class = "columnones" style = "width:15%">
           <div class="sidebar">
             <h2 class="w3-bar-item">Filter Search</h2>
-            <h4 class="w3-bar-item">Venue Type:</h4>
-            <input type="checkbox" id="vType" name="VenueType" value="vType">
-            <label for="vehicle1"> Accommodation</label><br>
+            <h4 class="w3-bar-item">Filter by Venue Type:</h4>
+            <form method="post">
+          <label for="item">Select an item:</label>
+          <select name="item" id="item">
+              <option value="item1">Accomodation</option>
+              <option value="item2">Experience</option>
+              <option value="item3">Tours</option>
+              <option value="item3">Events</option>
+            </select>
+     <br>
+     <h4 class="w3-bar-item">Filter by Postcode Type:</h4>
+     <input type="text">
+     <h4 class="w3-bar-item">Filter by City:</h4>
+     <select name="item" id="item">
+              <option value="City1">City1</option>
+              <option value="City2">City2</option>
+              <option value="City3">City3</option>
+              <option value="City4">City4</option>
+            </select>
+    <button type="submit">Submit</button>
+  </form>
+  ?>
+</body>
+</html>
+In this example, we've added a label for the drop-down list using the for attribute and the id attribute to link the label to the select element. We've also added a line break (<br>) to make the form look nicer.
 
-            <input type="checkbox" id="vType" name="VenueType" value="vType">
-            <label for="vehicle1"> Experience</label><br>
-
-            <input type="checkbox" id="vType" name="VenueType" value="vType">
-            <label for="vehicle1"> Tours</label><br>
-
-            <input type="checkbox" id="vType" name="VenueType" value="vType">
-            <label for="vehicle1"> Events</label><br>
+After the form, we've added the PHP code that retrieves the selected item using the $_POST global variable and displays it using an echo statement. You can replace the echo statement with whatever code you need to process the selected item.
 
 
+
+
+
+
+        
             <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
-            <input type="text" class="form-control" id="Distance" name="Distance" placeholder="Distance" style="width: 100px"> <br>
           </div>
         </div>
 

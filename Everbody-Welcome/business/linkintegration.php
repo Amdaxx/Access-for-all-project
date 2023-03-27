@@ -1,7 +1,7 @@
 <?php
 
 // Set your API access token
-$access_token = "YOUR_ACCESS_TOKEN";
+$access_token = "1e46d40bf5c59cbd3a54c2a25fdca46e13ca2d68";
 
 // Set the URL you want to shorten
 $url = "https://www.example.com";
