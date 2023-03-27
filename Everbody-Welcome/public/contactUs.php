@@ -56,6 +56,7 @@
   </div>
 </div>  
 </body>
+<?php include "footer.php" ?>
   <?php
     if (isset($_GET['mailsent'])) {
       echo '<div class="alert alert-success">Your message has been sent successfully.</div>';
