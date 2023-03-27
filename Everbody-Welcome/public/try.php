@@ -19,7 +19,7 @@ if (mysqli_query($mysqli, $sql0)) {
 } else {
     echo "Error deleting table: " . mysqli_error($mysqli);
 }
-*/
+
   $sql25 = "CREATE TABLE transactions(
     id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     customer_name varchar(50)  COLLATE utf8_unicode_ci NOT NULL,
@@ -42,7 +42,36 @@ if (mysqli_query($mysqli, $sql25)) {
 } else {
   echo "Error creating table: " . mysqli_error($mysqli);
 }
-echo "wsh hamid";
+
+*/
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+	CURLOPT_URL => "https://wft-geo-db.p.rapidapi.com/v1/geo/cities",
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_FOLLOWLOCATION => true,
+	CURLOPT_ENCODING => "",
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 30,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => "GET",
+	CURLOPT_HTTPHEADER => [
+		"X-RapidAPI-Host: wft-geo-db.p.rapidapi.com",
+		"X-RapidAPI-Key: 4683d37fa3msh40650b94c291a6dp1aaa5ejsn1e28e9fca779"
+	],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+	echo "cURL Error #:" . $err;
+} else {
+	echo $response;
+}
 /*
 
 
