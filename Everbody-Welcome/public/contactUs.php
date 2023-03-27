@@ -44,14 +44,14 @@
           <div class = "twocolumn" >
             <div class="box">
               <img class = "icons" style="vertical-align:middle" src="../pictures/phone-icon.png" alt="phone icon" >
-              <span style=""><h3>(+44) 7459 204578</h3></span>
+              <span><h3>(+44) 7459 204578</h3></span>
             </div>
           </div>
 
           <div class = "twocolumn" >
             <div class="box">
               <img class = "icons" style="vertical-align:middle" src="../pictures/email-icon.jpg" alt="email logo">
-              <span style=""><h3>EverybodyWelcome@gmail.com</h3></span>
+              <span><h3>EverybodyWelcome@gmail.com</h3></span>
             </div>
           </div>
 
