@@ -5,6 +5,8 @@
 <html>
   <head>
     <title>Our Services</title>
+    <meta name="description" content="This page displays an explanation of the website and also of Everybody Welcome,
+    such as the advantages of using the website as well as the cost of the Access Tracker tool.">
   </head>
   <div class="flex-wrapper">
     <div id="header">
