@@ -33,14 +33,12 @@ $id = $_SESSION['id'];
 
   <body style = "background-color:cdc7c7">
     
-      
-        <div class="button-background">
-          <btn-group>
-            <button><a href="viewVenues.php">View Questions</a></button>
-            <button><a href="createVenue.php">Add Question</a></button>
-            <button><a href="updateBusinessDetails.php">Delete Question</a></button>
-          </btn-group>
-        </div>    
+  <div class="box">
+  <button>Update Genral Survey Questions</button>
+  </div>
+
+  <div class="box">
+  <button>Update Advanced Suvery Questions</button>
   </div>
 
   <?php $res = viewBusiness();
