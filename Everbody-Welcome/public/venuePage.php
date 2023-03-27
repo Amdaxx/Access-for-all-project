@@ -40,8 +40,8 @@
         </div>
       </div>
       <hr>
-      <?php include "footer.php" ?>
       <button class="btn btn-primary btn-lg" style="position: fixed; bottom: 20px; right: 20px;" onclick="window.location.href='../public/contactVenue.php';">Contact This Venue</button>
+      <?php include "footer.php" ?>
     </div> 
   </body>
 </html>
