@@ -530,7 +530,7 @@
         } else {
             // None of the variables are set
             // Handle this case as appropriate for your application
-            return getAllVenues();
+            getAllVenues();
         }
     }
 
