@@ -461,5 +461,32 @@
     
     function filterVenues($type, $city, $postcode)
     {
-
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        if (isset($type) && isset($city) && isset($postcode)) {
+            // All three variables are set
+            // Perform your search function with all three variables
+        } elseif (isset($type) && isset($city)) {
+            // Only $var1 and $var2 are set
+            // Perform your search function with $var1 and $var2
+        } elseif (isset($type) && isset($postcode)) {
+            // Only $var1 and $var3 are set
+            // Perform your search function with $var1 and $var3
+        } elseif (isset($city) && isset($postcode)) {
+            // Only $var2 and $var3 are set
+            // Perform your search function with $var2 and $var3
+        } elseif (isset($type)) {
+            // Only $var1 is set
+            // Perform your search function with $var1
+        } elseif (isset($city)) {
+            // Only $var2 is set
+            // Perform your search function with $var2
+        } elseif (isset($postcode)) {
+            // Only $var3 is set
+            // Perform your search function with $var3
+        } else {
+            // None of the variables are set
+            // Handle this case as appropriate for your application
+        }
+        
     }

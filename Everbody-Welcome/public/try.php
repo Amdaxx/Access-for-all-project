@@ -13,9 +13,15 @@ if ($mysqli->connect_errno) {
 }
 
 
+$sql0 = "DROP TABLE question";
 
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table questions deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
 
-$sql4 = "CREATE TABLE question(
+$sql4 = "CREATE TABLE questions(
   question VARCHAR(50) NOT NULL ,
   type VARCHAR(30) NOT NULL 
 )";
@@ -23,7 +29,7 @@ $sql4 = "CREATE TABLE question(
 if (mysqli_query($mysqli, $sql4)) {
   echo "Table questions created successfully";
 } else {
-  echo "Error creating table: " . mysqli_error($mysqli);
+  echo "Error deleting table: " . mysqli_error($mysqli);
 }
 
 /*
