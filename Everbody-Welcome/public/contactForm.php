@@ -1,6 +1,5 @@
 <?php 
-
-if($_POST['submit']){
+if(isset($_POST['submit'])){
     $comment = $_POST['comment'];
     $email = $_POST['email'];
 
@@ -11,3 +10,4 @@ if($_POST['submit']){
     mail($mailTo, $comment, $txt, $headers);
     header("Location: landingPage.php?mailsent");
 }
+?>

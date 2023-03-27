@@ -25,42 +25,38 @@
       <div class="row">
         <div class="col-md-12">
           <h3>To: Everybody Welcome</h3>
-          <textarea placeholder="Enter Your Message Here" name="comment" rows="10" class="form-control"></textarea>
+          <form method="post" action="contactForm.php">
+            <textarea placeholder="Enter Your Message Here" name="comment" rows="10" class="form-control"></textarea>
+            <div class="form-group">
+              <label for="email">From:</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Here">
+            </div>
+            <button type="submit" name="submit" class="btn btn-default">Send</button>
+          </form>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
-          <form>
-            <div class="form-group">
-              <label for="email">From:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter Your Email Here">
-            </div>
-            <button type="submit" name="submit" class="btn btn-default">Send</button>
-          </form>
-
           <div class="row">
+            <div class = "twocolumn" >
+              <div class="box">
+                <img class = "icons" style="vertical-align:middle" src="../pictures/phone-icon.png" alt="phone icon" >
+                <span><h3>(+44) 7459 204578</h3></span>
+              </div>
+            </div>
 
-          <div class = "twocolumn" >
-            <div class="box">
-              <img class = "icons" style="vertical-align:middle" src="../pictures/phone-icon.png" alt="phone icon" >
-              <span><h3>(+44) 7459 204578</h3></span>
+            <div class = "twocolumn" >
+              <div class="box">
+                <img class = "icons" style="vertical-align:middle" src="../pictures/email-icon.jpg" alt="email logo">
+                <span><h3>EverybodyWelcome@gmail.com</h3></span>
+              </div>
             </div>
           </div>
-
-          <div class = "twocolumn" >
-            <div class="box">
-              <img class = "icons" style="vertical-align:middle" src="../pictures/email-icon.jpg" alt="email logo">
-              <span><h3>EverybodyWelcome@gmail.com</h3></span>
-            </div>
-          </div>
-
-        </div>
         </div>
       </div>
     </div>
-
-    <?php include "footer.php" ?>
   </div>  
 </body>
+<?php include "footer.php" ?>
 </html>
