@@ -17,20 +17,22 @@ $id = $_SESSION['id'];
 
 <head>
 <title>Admin Landing Page</title>
+<h1>Admin Page</h1>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="../css/businessHomepage.css">
+
 <link rel="stylesheet" href="../css/overall-page.css">
 </head>
 
 <div class="flex-wrapper">
   <div id="header">
       
+        
   </div>
 
   <body style = "background-color:cdc7c7">
-    <div class = "row">
-      <div class="twocolumn">
+    
+      
         <div class="button-background">
           <btn-group>
             <button><a href="viewVenues.php">View Questions</a></button>
@@ -38,11 +40,11 @@ $id = $_SESSION['id'];
             <button><a href="updateBusinessDetails.php">Delete Question</a></button>
           </btn-group>
         </div>
-      </div>
+      
 
       
       
-    </div> 
+    
   </div>
 
   
