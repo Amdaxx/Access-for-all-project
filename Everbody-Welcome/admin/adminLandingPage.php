@@ -33,7 +33,7 @@ $id = $_SESSION['id'];
   <body style = "background-color:cdc7c7">
     
       
-        <div class="button-background">
+        <div class="button-background"style = "align-items: center;">
           <btn-group>
             <button><a href="viewVenues.php">View Questions</a></button>
             <button><a href="createVenue.php">Add Question</a></button>
