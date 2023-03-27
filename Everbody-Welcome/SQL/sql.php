@@ -472,44 +472,77 @@
             $stmt->bindParam(':type', $type);
             $stmt->bindParam(':city', $city);
             $stmt->bindParam(':postcode', $postcode);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
 
         } elseif (isset($type) && isset($city)) {
             // Only $var1 and $var2 are set
             // Perform your search function with $var1 and $var2
             $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, city=:city ");
             $stmt->bindParam(':type', $type);
-            $stmt->bindParam(':city', $city);            
+            $stmt->bindParam(':city', $city);        
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;    
         } elseif (isset($type) && isset($postcode)) {
             // Only $var1 and $var3 are set
             // Perform your search function with $var1 and $var3
             $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type, postcode=:postcode ");
             $stmt->bindParam(':type', $type);
             $stmt->bindParam(':postcode', $postcode);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
         } elseif (isset($city) && isset($postcode)) {
             // Only $var2 and $var3 are set
             // Perform your search function with $var2 and $var3
             $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city, postcode=:postcode ");
             $stmt->bindParam(':city', $city);
             $stmt->bindParam(':postcode', $postcode);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
         } elseif (isset($type)) {
             // Only $var1 is set
             // Perform your search function with $var1
             $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type");
             $stmt->bindParam(':type', $type);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
         } elseif (isset($city)) {
             // Only $var2 is set
             // Perform your search function with $var2
             $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city ");
             $stmt->bindParam(':city', $city);
-
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
         } elseif (isset($postcode)) {
             // Only $var3 is set
             // Perform your search function with $var3
             $stmt = $conn->prepare("SELECT * FROM venues WHERE postcode=:postcode ");
             $stmt->bindParam(':postcode', $postcode);
-
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
         } else {
             // None of the variables are set
             // Handle this case as appropriate for your application
+            return getAllVenues();
         }
+    }
+
+
+    function searchVenueByName($name)
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("SELECT * FROM venues WHERE venuename=:name");
+        $stmt->bindParam(':name', $name);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
+
     }
