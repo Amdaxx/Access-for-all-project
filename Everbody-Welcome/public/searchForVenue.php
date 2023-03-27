@@ -80,6 +80,8 @@ require_once('../SQL/sql.php');
 
     </style>
     <title> Everybody Welcome</title>
+    <meta name="description" content="This page displays the venues available on the website and allows users to filter their searches
+    in order to find a specific venue.">
     <link rel="stylesheet" href="../css/topNavHome.css"/>
     <link rel="stylesheet" href="../css/overall-page.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>

@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Contact Venue</title>
+  <meta name="description" content="This page contains two entry boxes, one to enter a message and the other to enter their email,
+  in order to allow users to contact each venue.">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">  
   <link rel="stylesheet" href="../css/topNavHome.css">  

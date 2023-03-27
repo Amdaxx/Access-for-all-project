@@ -3,6 +3,8 @@
 <html>
   <head>
     <title> Everybody Welcome</title>
+    <meta name="description" content="This page displays pictures for each member of the Everybody Welcome team and some information
+    about each team member.">
     <link rel="stylesheet" href="../css/topNavHome.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/overall-page.css">

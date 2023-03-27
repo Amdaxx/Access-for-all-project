@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact Venue</title>
+  <title>Contact Us</title>
+  <meta name="description" content="This page displays the contact information for EverybodyWelcome as well as two entry boxes
+  to allow the user to enter their message to send and their email address to send the message from.">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">  
   <link rel="stylesheet" href="../css/topNavHome.css">  
