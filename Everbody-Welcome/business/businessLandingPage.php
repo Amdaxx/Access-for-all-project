@@ -37,8 +37,8 @@ on this page there are links to the venues pages (view venues and create new ven
   <body style = "background-color:cdc7c7">
 
   <div class = "homeButtons"> 
-    <button class="btn btn-primary btn-md"><a href="createVenue.php">Add Venues</a></button>
-    <button class="btn btn-primary btn-md"><a href="updateBusinessDetails.php">Edit Company Info</a></button>
+    <a href="createVenue.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
+    <a href="updateBusinessDetails.php"><button class="btn btn-primary btn-md">Edit Company Info</button></a>
   </div>
       
       <?php
@@ -54,6 +54,7 @@ on this page there are links to the venues pages (view venues and create new ven
       <th>Edit Venue Details</th>
       <th>View Past Audits</th>
       <th>New Audit</th>
+      <th>Delete Venue</th>
   
       <?php foreach ($res as $venue):?>
       <tr class = "data">
@@ -76,6 +77,11 @@ on this page there are links to the venues pages (view venues and create new ven
         <td width='200'><div class="btn-group">
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
         <input type="button" value="New Audit"></div>
+        </a>
+
+        <td width='200'><div class="btn-group">
+        <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Delete Venue"></div>
         </a>
         <?php endforeach;?>
     </table>
