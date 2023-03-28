@@ -83,16 +83,15 @@ button:hover {
 }
 
 .adminButtons {
-  position: absolute;
+  position: fixed;
   top: 25px;
   left: 25px;
   margin-bottom: 45px;
-  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
   .adminButtons {
-    position: static;
+    position: relative;
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 10px;
