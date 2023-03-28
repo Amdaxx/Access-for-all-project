@@ -29,11 +29,11 @@ $id = $_SESSION['id'];
   <body style = "background-color:cdc7c7">
   
   <div class="box">
-  <a href="adminViewQuestions.php?type='general'"><button>Update General Survey</button></a>
+  <a href="adminViewQuestions.php?type=general"><button>Update General Survey</button></a>
   </div>
 
   <div class="box">
-  <a href="adminViewQuestions.php?type='premium'"><button>Update Premium Survey</button></a>
+  <a href="adminViewQuestions.php?type=premium"><button>Update Premium Survey</button></a>
   </div>
 
   <?php $res = viewBusiness();
