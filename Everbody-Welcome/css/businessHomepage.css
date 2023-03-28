@@ -130,3 +130,10 @@ button:hover {
   tbody tr:hover {
     background: #cdc7c7;
   }
+
+  .homeButtons {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    margin-right: 5px;
+  }
