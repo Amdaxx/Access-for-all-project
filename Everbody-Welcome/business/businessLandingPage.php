@@ -37,8 +37,8 @@ on this page there are links to the venues pages (view venues and create new ven
   <body style = "background-color:cdc7c7">
 
   <div class = "homeButtons"> 
-    <button class="btn btn-primary btn-lg"><a href="createVenue.php">Add Venues</a></button>
-    <button class="btn btn-primary btn-lg"><a href="updateBusinessDetails.php">Edit Company Info</a></button>
+    <button class="btn btn-primary btn-md"><a href="createVenue.php">Add Venues</a></button>
+    <button class="btn btn-primary btn-md"><a href="updateBusinessDetails.php">Edit Company Info</a></button>
   </div>
       
       <?php
