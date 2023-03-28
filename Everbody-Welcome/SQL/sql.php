@@ -566,3 +566,14 @@
         $stmt->bindParam(':surveytype', $surveytype);
         $stmt->execute();
     }
+
+    function deleteQuestion($question, $type, $surveytype)
+    {
+        $conn = connectToDatabase();
+        $sql = "DELETE FROM questions  WHERE question=:question AND type=:type AND surveytype=:surveytype";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':question', $question);
+        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':surveytype', $surveytype);
+        $stmt->execute();
+    }

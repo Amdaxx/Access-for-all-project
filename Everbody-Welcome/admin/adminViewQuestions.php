@@ -15,7 +15,9 @@ checkSession ($path); //calling the function from session.php
 if (isset($_POST['submit'])){
 	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
 }
-
+if (isset($_POST['delete'])){
+	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
+}
 ?>
 
 <head>
@@ -53,15 +55,17 @@ if (isset($_POST['submit'])){
 
     <div class="question-list">
       <h2>Question List</h2>
+      <form method="POST">
       <ul id="questions">
 		<?php foreach($res as $question): ?>
         <li class="question-card">
-          <span class="question-type"><?php echo $question['type']?>:</span>
-          <span class="question-text"><?php echo $question['question']?></span>
-          <button class="delete-btn delete">Delete</button>
+          <span class="question-type" name="question"><?php echo $question['type']?>:</span>
+          <span class="question-text" name="type"><?php echo $question['question']?></span>
+          <button class="delete-btn delete" name="delete">Delete</button>
         </li>
 		<?php endforeach;?>
       </ul>
+      </form>
     </div>
   </div>
 </body>
