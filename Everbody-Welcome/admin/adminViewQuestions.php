@@ -61,7 +61,7 @@ if (isset($_POST['delete'])){
         <li class="question-card">
           <span class="question-type" name="question"><?php echo $question['type']?>:</span>
           <span class="question-text" name="type"><?php echo $question['question']?></span>
-          <button class="delete-btn delete" name="delete">Delete</button>
+          <button class="delete-btn delete" type="delete" name="delete">Delete</button>
         </li>
 		<?php endforeach;?>
       </ul>
