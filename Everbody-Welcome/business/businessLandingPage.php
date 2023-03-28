@@ -24,6 +24,9 @@ on this page there are links to the venues pages (view venues and create new ven
 <link rel="stylesheet" href="../css/overall-page.css">
 </head>
 
+
+
+
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
@@ -32,6 +35,11 @@ on this page there are links to the venues pages (view venues and create new ven
   </div>
 
   <body style = "background-color:cdc7c7">
+
+  <div class = "homeButtons"> 
+    <button><a href="venueVenues.php">View Venues</a></button>
+    <button><a href="updateBusinessDetails.php">Edit Company Info</a></button>
+  </div>
       
       <?php
    $res = viewVenues($_SESSION['id']);
