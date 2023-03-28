@@ -129,14 +129,6 @@ require_once('../SQL/sql.php');
 
 
           <?php $res = displayAllVenues(); ?>
-          <div class = "columnones"style = "width:85%">
-            <div class="grid-container" >
-              <?php foreach ($res as $venue): ?>
-              <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br><?php echo $venue['venuename'] ?></div>
-            <?php endforeach;?>
-            </div>
-          </div>
-
           <div class="items">
             <?php foreach ($res as $venue): ?>
               <div class="item">
@@ -152,9 +144,6 @@ require_once('../SQL/sql.php');
         </div>
       </div>
     </body>
-    
-    <?php include "footer.php" ?>
-  
 </html>
 
 
