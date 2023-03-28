@@ -32,17 +32,6 @@ on this page there are links to the venues pages (view venues and create new ven
   </div>
 
   <body style = "background-color:cdc7c7">
-    <div class = "row">
-      <div class="twocolumn">
-        <div class="button-background">
-          <btn-group>
-            <button><a href="viewVenues.php">View Venues</a></button>
-            <button><a href="createVenue.php">Create New Venue</a></button>
-            <button><a href="updateBusinessDetails.php">Edit Company Information</a></button>
-          </btn-group>
-        </div>
-      </div>
-
       
       <?php
    $res = viewVenues($_SESSION['id']);
