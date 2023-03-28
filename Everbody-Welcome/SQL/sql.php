@@ -556,7 +556,7 @@
     }
 
 
-    function addQuestion($question, $surveytype, $type)
+    function addQuestion($question, $type, $surveytype)
     {   
         $conn = connectToDatabase();
         $stmt = $conn->prepare("INSERT INTO questions (question, type, surveytype) 

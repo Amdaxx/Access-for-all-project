@@ -26,12 +26,17 @@ if (isset($_POST['submit'])){
 <?php $res = viewQuestions($_GET['type']); ?>
 
 <h1><?php echo $_GET['type'];?> Survey</h1>
-
+<?php
+	foreach($res as $quest)
+	{
+		echo $quest['question'];
+	}
+?>
 <body>
   <div class="container">
     <div class="add-question">
       <h2>Add Question</h2>
-      <form method="post">
+      <form method="POST">
         <label for="question">Question:</label>
         <input type="text" id="question" name="question" required>
 
