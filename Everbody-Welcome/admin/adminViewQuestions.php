@@ -12,5 +12,46 @@ if (!isset($_SESSION['uadmin'])){
 }
 checkSession ($path); //calling the function from session.php
 
-$id = $_SESSION['id']; 
 ?>
+
+<head>
+	<title>Questions</title>
+	<link rel="stylesheet" type="text/css" href="../css/questions.css">
+</head>
+
+<?php $res = viewQuestions($_GET['type']); ?>
+
+<body>
+  <div class="container">
+    <div class="add-question">
+      <h2>Add Question</h2>
+      <form>
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required>
+
+        <label for="question-type">Question Type:</label>
+        <select id="question-type" name="question-type">
+          <option value="text">Text</option>
+          <option value="checkbox">Checkbox</option>
+          <option value="radio">Radio Button</option>
+        </select>
+
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="question-list">
+      <h2>Question List</h2>
+      <ul id="questions">
+		<?php foreach($res as $question): ?>
+        <li class="question-card">
+          <span class="question-type"><?php echo $question['type']?>:</span>
+          <span class="question-text"><?php echo $question['question']?></span>
+          <button class="delete-btn delete">Delete</button>
+        </li>
+		<?php endforeach;?>
+      </ul>
+    </div>
+  </div>
+</body>
+

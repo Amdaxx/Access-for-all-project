@@ -213,22 +213,7 @@
         }   
     }
 
-    function addQuestion()
-    {
-        try{
-            $conn = connectToDatabase();
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $conn->beginTransaction();
-            $conn->exec("INSERT INTO questions (question)
-                VALUES ('question1')");   
-            $conn->exec("INSERT INTO questions (question)
-            VALUES ('question2')");            
-            
-            $conn->commit();
-        } catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        } 
-    }
+
 
 
     function viewVenues($id)
@@ -264,17 +249,6 @@
             $res = $stmt->fetchAll();
             return $res;
        
-    }
-
-    function getQuestions()
-    {
-        $conn = connectToDatabase();
-        $sql = "SELECT * FROM questions";
-        $stmt= $conn->prepare($sql);
-        $stmt->execute();
-        $res = $stmt->fetchAll();
-
-        return $res;
     }
 
 
@@ -581,3 +555,14 @@
         return $res;
     }
 
+
+    function addQuestion($question, $surveytype, $type)
+    {   
+        $conn = connectToDatabase();
+        $stmt = $conn->prepare("INSERT INTO questions (question, type, surveytype) 
+        VALUES (:question, :type, :surveytype)");
+        $stmt->bindParam(':question', $question);
+        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':surveytype', $surveytype);
+        $stmt->execute();
+    }
