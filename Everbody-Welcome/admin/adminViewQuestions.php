@@ -51,16 +51,19 @@ if (isset($_POST['delete'])){
     <div class="question-list">
       <h2>Question List</h2>
       <form method="POST">
-      <ul id="questions">
-		<?php foreach($res as $question): ?>
-        <li class="question-card">
-          <span class="question-type" name="question" value="<?php echo $question['type'];?>"><?php echo $question['type']?>:</span>
-          <span class="question-text" name="type" value="<?php echo $question['question'];?>"><?php echo $question['question']?></span>
-          <button class="delete-btn delete" type="delete" name="delete">Delete</button>
-        </li>
-		<?php endforeach;?>
-      </ul>
-      </form>
+  <ul id="questions">
+    <?php foreach($res as $question): ?>
+      <li class="question-card">
+        <span class="question-type"><?php echo $question['type']; ?>:</span>
+        <span class="question-text"><?php echo $question['question']; ?></span>
+        <input type="hidden" name="type" value="<?php echo $question['type']; ?>">
+        <input type="hidden" name="question" value="<?php echo $question['question']; ?>">
+        <button class="delete-btn delete" type="delete" name="delete">Delete</button>
+      </li>
+    <?php endforeach;?>
+  </ul>
+</form>
+
     </div>
   </div>
 </body>
