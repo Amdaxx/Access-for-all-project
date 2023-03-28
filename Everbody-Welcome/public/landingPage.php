@@ -1,73 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta name="description" content="This page provides a description of the website and links to other website sections.">
-    <title> Everybody Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../css/topNavHome.css"/>
-    <link rel="stylesheet" href="../css/overall-page.css">
-  </head>
-  <div class="flex-wrapper">
-    <div id="header">
-        <?php include "publicHeader.php" ?>    
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="../css/homepage.css">
+  <link rel="stylesheet" href="../css/contactUs.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <body style = "background-color:cdc7c7">
-    
-      <div>
-        <p style = "font-size:40 ;  width: 100%;text-align: center"><b>Everybody Welcome</b></p>
-      </div>
+  <script>src="../public/homepage.js"</script>
+</head>
 
-      <div class="row">
-        <div class = "onecolumn">
-          <aboutUs>
-            <h3><b>About Us</b></h3>
-            <p style= "font-size:22px">
-            There are one billion people in the world with additional access needs, including over 14 million disabled
-            people in the U.K.
-            <br>
-            93% will search for access information about your venue before they visit and, if they can't find what they
-            are looking for, 41% will take their business elsewhere meaning that you could be missing out on valuable
-            custom just for the sake of providing relevant information*.
-            <br>
-            But what information should you provide? How should you provide it, when should you promote it and
-            where?
-            <br>
-            Everybody Welcome is the easy way to share your accessibility information and welcome the world.
-            So what are you waiting for?
-            <br>
-            <button4 style="cursor:pointer" onclick="window.location.href='../userManagement/createAccount.php';" type= "button"><b>Start creating your listing now!</b> <button4>
-            </p>
-          </aboutUs>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <h3><b>Search For Venue</b></h3>
-            <button1 onclick="window.location.href='searchForVenue.php';" type= "button" ><img src="../pictures/worldIcon.png" alt="world icon" width="225" height="225"></img></button1>
+<body>
+  <?php include '../public/publicHeader.php';?>
+  <main>
+    <section id="home">
+      <?php include '../public/searchForVenue.php';?>
+    </section>
+    <section id="about">
+      <?php include '../public/ourServices.php';?>
+    </section>
+    <section id="work">
+    <body>
+      <div class="container-contact100">
+        <div class="wrap-contact100">
+          <form class="contact100-form validate-form">
+            <span class="contact100-form-title">
+            Send Us A Message
+            </span>
+            <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+              <input class="input100" type="text" name="name" placeholder="Full Name" fdprocessedid="l1kcx6">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
+              <input class="input100" type="text" name="email" placeholder="E-mail" fdprocessedid="quig3o">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
+              <input class="input100" type="text" name="phone" placeholder="Phone" fdprocessedid="hdtcb">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Please enter your message">
+              <textarea class="input100" name="message" placeholder="Your Message"></textarea>
+              <span class="focus-input100"></span>
+            </div>
+              <div class="container-contact100-form-btn">
+              <button class="contact100-form-btn" fdprocessedid="qwd0ra">
+            <span>
+            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+            Send
+            </span>
+          </button>
           </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <h3><b>More Information</b></h3>
-            <button1 onclick="window.location.href='ourServices.php';" type= "button" ><img src="../pictures/peopleIcon.png" alt="people icon" width="225" height="225"></img></button1>
-          </div>
-        </div>
-        
-        <div class="column">
-          <div class="card">
-            <h3><b>Contact Us</b></h3>
-            <button1 onclick="window.location.href='contactUs.php';" type= "button" ><img src="../pictures/contactUsIcon.png" alt="contact us icon" width="225" height="225"></img></button1>
-          </div>
+          </form>
         </div>
       </div>
 
-    </body>
-    
-    <?php include "footer.php" ?>
-  </div>
+    </section>
+    <section id="contact">
+      <?php include '../public/meetTheTeam.php';?>
+    </section>
+  </main>
+
+  <?php include '../public/footer.php';?>
+
+</body>
+
 </html>
