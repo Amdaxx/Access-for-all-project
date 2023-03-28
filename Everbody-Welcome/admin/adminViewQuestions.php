@@ -12,6 +12,10 @@ if (!isset($_SESSION['uadmin'])){
 }
 checkSession ($path); //calling the function from session.php
 
+if (isset($_POST['submit'])){
+	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
+}
+
 ?>
 
 <head>
@@ -25,18 +29,18 @@ checkSession ($path); //calling the function from session.php
   <div class="container">
     <div class="add-question">
       <h2>Add Question</h2>
-      <form>
+      <form method="post">
         <label for="question">Question:</label>
         <input type="text" id="question" name="question" required>
 
         <label for="question-type">Question Type:</label>
-        <select id="question-type" name="question-type">
+        <select id="question-type" name="type">
           <option value="text">Text</option>
           <option value="checkbox">Checkbox</option>
           <option value="radio">Radio Button</option>
         </select>
 
-        <button type="submit">Add</button>
+        <button type="submit" name="submit">Add</button>
       </form>
     </div>
 
