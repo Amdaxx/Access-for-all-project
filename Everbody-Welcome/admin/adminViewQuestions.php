@@ -25,6 +25,8 @@ if (isset($_POST['submit'])){
 
 <?php $res = viewQuestions($_GET['type']); ?>
 
+<h1><?php echo $_GET['type'];?> Survey</h1>
+
 <body>
   <div class="container">
     <div class="add-question">
