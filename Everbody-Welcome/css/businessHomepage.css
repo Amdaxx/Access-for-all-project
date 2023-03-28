@@ -105,14 +105,14 @@ button:hover {
   }
 
   table {
-    background: #012B39;
+    background: #696966;
     border-radius: 0.25em;
     border-collapse: collapse;
     margin: 1em;
   }
   th {
-    border-bottom: 1px solid #364043;
-    color: #E2B842;
+    border-bottom: 1px solid #00000071;
+    color: #cdcdcd;
     font-size: 0.85em;
     font-weight: 600;
     padding: 0.5em 1em;
@@ -123,10 +123,10 @@ button:hover {
     font-weight: 400;
     padding: 0.65em 1em;
   }
-  
+
   tbody tr {
     transition: background 0.25s ease;
   }
   tbody tr:hover {
-    background: #014055;
+    background: #cdc7c7;
   }
