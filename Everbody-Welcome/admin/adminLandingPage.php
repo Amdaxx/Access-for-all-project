@@ -20,7 +20,6 @@ $id = $_SESSION['id'];
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 
-<link rel="stylesheet" href="../css/overall-page.css">
 <link rel="stylesheet" href="../css/table.css">
 </head>
 

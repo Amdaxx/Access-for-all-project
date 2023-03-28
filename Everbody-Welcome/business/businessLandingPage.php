@@ -21,7 +21,6 @@ $id = $_SESSION['id'];
 on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
-<link rel="stylesheet" href="../css/overall-page.css">
 </head>
 
 
