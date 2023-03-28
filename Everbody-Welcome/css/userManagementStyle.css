@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #67d5b8, #47ede5);
+    background: #CDCDCD;
   }
   
   /* Form container */
@@ -18,17 +18,21 @@
     padding: 30px;
     max-width: 400px;
     width: 100%;
+    background-color: #696969;
   }
   
   .login-form h2 {
+    font-family: sans-serif;
+    font-weight: lighter;
     font-size: 2rem;
-    color: #444;
+    color: #fff;
     margin-bottom: 20px;
     text-align: center;
   }
   
   .login-form label {
-    color: #444;
+    font-family: sans-serif;
+    color: #fff;
     font-size: 1.2rem;
     margin-bottom: 10px;
     text-align: left;
@@ -55,7 +59,7 @@
   }
   
   .login-form button {
-    background-color: #1d201d;
+    background-color: #595959;
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -66,7 +70,7 @@
   }
   
   .login-form button:hover {
-    background-color: #7F00FF;
+    background-color: #CDCDCD;
   }
   
   .login-form button:disabled {
