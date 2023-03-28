@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This page displays the venue information including venue name, venue type and the venue's answers to the general survey.">
     <title>Venue Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">  
-    <link rel="stylesheet" href="../css/topNavHome.css">  
-    <link rel="stylesheet" href="../css/overall-page.css">
     <link rel="stylesheet" href="../css/venuePage.css">
     <style>
       .btn-primary {
