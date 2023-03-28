@@ -132,8 +132,8 @@ button:hover {
   }
 
   .homeButtons {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    margin-right: 5px;
+    position: relative;
+    top: 30px;
+    left: 25px;
+    padding-right: 10px;
   }
