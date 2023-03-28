@@ -16,7 +16,7 @@ if (isset($_POST['submit'])){
 	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
 }
 if (isset($_POST['delete'])){
-	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
+	deleteQuestion($_POST['question'], $_POST['type'], $_GET['type']);
 }
 ?>
 
