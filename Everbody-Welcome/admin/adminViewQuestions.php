@@ -28,12 +28,7 @@ if (isset($_POST['delete'])){
 <?php $res = viewQuestions($_GET['type']); ?>
 
 <h1><?php echo $_GET['type'];?> Survey</h1>
-<?php
-	foreach($res as $quest)
-	{
-		echo $quest['question'];
-	}
-?>
+
 <body>
   <div class="container">
     <div class="add-question">
@@ -59,8 +54,8 @@ if (isset($_POST['delete'])){
       <ul id="questions">
 		<?php foreach($res as $question): ?>
         <li class="question-card">
-          <span class="question-type" name="question"><?php echo $question['type']?>:</span>
-          <span class="question-text" name="type"><?php echo $question['question']?></span>
+          <span class="question-type" name="question" value="<?php echo $question['type'];?>"><?php echo $question['type']?>:</span>
+          <span class="question-text" name="type" value="<?php echo $question['question'];?>"><?php echo $question['question']?></span>
           <button class="delete-btn delete" type="delete" name="delete">Delete</button>
         </li>
 		<?php endforeach;?>
