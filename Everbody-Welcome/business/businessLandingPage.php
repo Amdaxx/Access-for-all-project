@@ -36,48 +36,54 @@ on this page there are links to the venues pages (view venues and create new ven
 
   <body style = "background-color:cdc7c7">
 
-  <div class="homeButtons"> 
-    <button class="btn btn-primary btn-lg"><a href="updateBusinessDetails.php">Edit Company Info</a></button>
-    <button class="btn btn-primary btn-lg"><a href="createVenue.php">Add New Venue</a></button>
-</div>
+  <div class = "homeButtons"> 
+    <button><a href="venueVenues.php">View Venues</a></button>
+    <button><a href="createVenue.php">Edit Company Info</a></button>
+  </div>
+      
+      <?php
+   $res = viewVenues($_SESSION['id']);
+   if($res!=NULL){
+  ?>
+    <table>  
+      <th>Venue Name</th>
+      <th>Venue Type</th>
+      <th>Venue Postcode</th>
+      <th>Venue Address</th>
+      <th>Premium</th>
+      <th>Edit Venue Details</th>
+      <th>View Past Audits</th>
+      <th>New Audit</th>
+  
+      <?php foreach ($res as $venue):?>
+      <tr class = "data">
+        <td width='250'><?php echo $venue['venuename']; ?></td>
+        <td width='60'><?php echo $venue['type']; ?></td>
+        <td  width='250'><?php echo $venue['postcode']; ?></td>
+        <td  width='250'><?php echo $venue['address']; ?></td>
+        <td  width='250'><?php echo $venue['premium']; ?></td>
+        
+        <td width='200'><div class="btn-group">
+        <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Edit Venue Details"></div>
+        </a>
 
-<?php
-$res = viewVenues($_SESSION['id']);
-if($res!=NULL){
-?>
-    <table class="table table-striped table-bordered">  
-        <thead>
-            <tr>
-                <th>Venue Name</th>
-                <th>Venue Type</th>
-                <th>Venue Postcode</th>
-                <th>Venue Address</th>
-                <th>Premium</th>
-                <th>Edit Venue Details</th>
-                <th>View Past Audits</th>
-                <th>New Audit</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($res as $venue):?>
-            <tr>
-                <td><?php echo $venue['venuename']; ?></td>
-                <td><?php echo $venue['type']; ?></td>
-                <td><?php echo $venue['postcode']; ?></td>
-                <td><?php echo $venue['address']; ?></td>
-                <td><?php echo $venue['premium']; ?></td>
-                <td><a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>" class="btn btn-info">Edit</a></td>
-                <td><a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>" class="btn btn-info">View</a></td>
-                <td><a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>" class="btn btn-success">New</a></td>
-            </tr>
+        <td width='200'><div class="btn-group">
+        <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Past Audits"></div>
+        </a>
+
+        <td width='200'><div class="btn-group">
+        <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
+        <input type="button" value="New Audit"></div>
+        </a>
         <?php endforeach;?>
-        </tbody>
     </table>
-<?php } 
-else{
-    echo "<p>You have no venues, you can create one</p>";
-}
-?>
+        <?php } 
+        else{
+                  echo "You have no venues you can create one";
+        }
+        ?>
 
   
 
