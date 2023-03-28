@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
 
         <button type="submit" name="submit" >Login</button>
     </form> 
-    <p>Don't have an account? <a style="color:black" href="../userManagement/signUp.php">Sign up</a></p>
+    <p>Don't have an account? <a style="color:black" href="../userManagement/createAccount.php">Sign up</a></p>
     </div>
 </div>
 </body>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../css/userManagementStyle.css">
-<?php include '../public/publicHeadereader.php';?>
+<?php include '../public/publicHeader.php';?>
 <body>
     <div class="signup-container">
     <div class="signup-form">
