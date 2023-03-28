@@ -1,56 +1,57 @@
 footer{
-    width: 100%;
-    text-align:center;
-    background-color: #696969;
-    margin-top: auto;
+  width: 100%;
+  text-align:center;
+  background: #f857a8;
+  background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+  background: linear-gradient(45deg, #f857a8, #ff5858);
+  margin-top: auto;
+  color:white;
+
+}
+
+.fourcolumn {
+  float: left;
+  width: 25%;
+  text-align: center;
 }
 
 
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1050px) {
   .fourcolumn {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-    text-align: center;
-    border-right: 1px;
-    border-color: #cdc7c7;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    border-bottom: 1px;
+    border-width: 1px;
   }
-  
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {
-    margin: 0 -5px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 1050px) {
-    .fourcolumn {
-      width: 100%;
-      display: block;
-      margin-bottom: 5px;
-      border-bottom: 1px;
-      border-color: #cdc7c7;
-      border-width: 1px;
-    }
-  }
+}
 
 
-  a {
-    color:#333;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #cdc7c7;
-    font-weight: bold;
-    background-color: transparent;
-  }
-  
+link:any-link {
+  text-decoration: none;
+  color: white;
+}
+
+h3{
+  font-weight: bold;
+  color: white;
+}
+
+
+button2{
+  top: 25px;
+  position: relative;
+}

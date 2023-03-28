@@ -3,88 +3,7 @@ require_once('../SQL/sql.php');
 ?>
 <html>
   <head>
-    <style>
-      .rows{
-        width:100%;
-      }
-
-
-      .columnones{
-        float: left;
-      }
-
-      .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: #696969;
-        padding: 10px;
-      }
-
-      .grid-item {
-        background-color:cdc7c7;
-        border: 3px solid #696969;
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-      }
-      .sidebar {
-        padding:10px;
-        margin-left: 20px;
-        width: 200px;
-        background-color:cdc7c7;
-        border-color: #696969;
-        border-width: 13px;
-        border-style: solid;
-      }
-
-      @media screen and (max-width: 1000px) {
-        .grid-container{
-          display:block;
-          text-align: center;
-          width: 100%;
-          margin-left:auto;
-          margin-right:auto;
-        }
-      }
-
-      @media screen and (max-width: 1400px) {
-        .columnones{
-          display: contents;
-          padding-bottom: 20px;
-        }
-      }
-
-      @media screen and (max-width: 1400px) {
-        .sidebar{
-          margin-left:auto;
-          margin-right:auto;
-          margin-bottom:20px;
-        }
-      }
-
-      @media screen and (max-width: 1000px) {
-        .SearchBar{
-          display:block;
-          margin-bottom:10px;
-          margin-left:auto;
-          margin-right:auto;
-        }
-      }
-      .SearchBar{
-          display:block;
-          margin-bottom:10px;
-          margin-left:auto;
-          margin-right:auto;
-        }
-
-
-    </style>
-    <title> Everybody Welcome</title>
-    <meta name="description" content="This page displays the venues available on the website and allows users to filter their searches
-    in order to find a specific venue.">
-    <link rel="stylesheet" href="../css/topNavHome.css"/>
-    <link rel="stylesheet" href="../css/overall-page.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/searchForVenue.css"/>
   </head>
 
   <div class = "flex-wrapper">
@@ -92,60 +11,140 @@ require_once('../SQL/sql.php');
       <?php include "publicHeader.php" ?>    
     </div>
 
-    <body style = "background-color:cdc7c7">
+    <body>
 
-      <div>
-        <p style = "font-size:40 ; color:black; width: 100%;text-align: center"><b>Search for a Venue</b></p>
-      </div>
-      
-      <div class="SearchBar">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search For A Venue By Name" name="search"style="width: 350px; height:35px;text-align: center; font-size:18px">
-          <button style="height:30px ;font-size:18px" type="submit" >Search</button>
-        </form>
-      </div>
+      <div class="page">
 
-      <div class = "rows">
-        <div class = "columnones" style = "width:15%">
-          <div class="sidebar">
-            <h2 class="w3-bar-item">Filter Search</h2>
-            <h4 class="w3-bar-item">Filter by Venue Type:</h4>
-            <form method="post">
-          <label for="item">Select an item:</label>
-          <select name="item" id="item">
-              <option value="item1">Accomodation</option>
-              <option value="item2">Experience</option>
-              <option value="item3">Tours</option>
-              <option value="item3">Events</option>
-            </select>
-     <br>
-     <h4 class="w3-bar-item">Filter by Postcode Type:</h4>
-     <input type="text">
-     <h4 class="w3-bar-item">Filter by City:</h4>
-     <select name="item" id="item">
-              <option value="City1">City1</option>
-              <option value="City2">City2</option>
-              <option value="City3">City3</option>
-              <option value="City4">City4</option>
-            </select>
-    <button type="submit">Submit</button>
-  </form>
-        
-            <input type="text" class="form-control" id="pstcode" name="PostCode" placeholder="PostCode" style="width: 100px"> <br>
+        <div class="sidebar">
+          <h2 class="sidebar__title">Venues (354)</h2>
+
+          <div class="sidebar__category">
+            <div class="sidebar__heading">Type <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
+              <polyline points="18 15 12 9 6 15"></polyline>
+              </svg></div>
+            <div class="sidebar__options">
+              <label class="check">
+                <input type="checkbox" class="check__input">
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Accomodation</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input">
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Tours</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input">
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Experience</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input">
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Events</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="sidebar__category">
+            <div class="sidebar__heading">Location<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
+              <polyline points="18 15 12 9 6 15"></polyline>
+              </svg></div>
+            <div class="sidebar__options">
+              <label class="check">
+                <input type="checkbox" class="check__input" checked>
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Birmingham</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input" checked>
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Manchester</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input" checked>
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Newcastle</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input" checked>
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">Liverpool</p>
+              </label>
+              <label class="check">
+                <input type="checkbox" class="check__input" checked>
+                <span class="check__checkbox">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <p class="check__text">London</p>
+              </label>
+            </div>
           </div>
         </div>
+        
 
-        <?php $res = displayAllVenues(); ?>
-        <div class = "columnones"style = "width:85%">
-          <div class="grid-container" >
+        <div class="main">
+          <h2 class="main__title">Plants (354)</h2>
+            <div class="filters">
+                <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..." />
+                <button class="button">Search</button>
+            </div>
+        </div>
+
+
+          <?php $res = displayAllVenues(); ?>
+          <div class="items">
             <?php foreach ($res as $venue): ?>
-            <div class="grid-item"><img src="../pictures/dummyPictures/venue1.jpg" alt="Logo" width="100" height="50" onclick="window.location.href='../public/venuePage.php';"><br><?php echo $venue['venuename'] ?></div>
-          <?php endforeach;?>
+              <div class="item">
+                <div class="item__position">
+                  <img src="../pictures/dummyPictures/venue1.jpg" alt="building" class="item__image item__image--hue"  onclick="window.location.href='../public/venuePage.php';">
+                </div>
+                <div class="item__detail">
+                  <p><?php echo $venue['venuename'] ?></p>
+                </div>
+              </div>
+            <?php endforeach;?>
           </div>
         </div>
       </div>
     </body>
-    
-    <?php include "footer.php" ?>
-  </div>
 </html>
+
+
+
