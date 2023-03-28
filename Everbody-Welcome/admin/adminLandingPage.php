@@ -27,13 +27,10 @@ $id = $_SESSION['id'];
 <div class="flex-wrapper">
 
   <body style = "background-color:cdc7c7">
-  
-  <div class="box">
-  <a href="adminViewQuestions.php?type=general"><button>Update General Survey</button></a>
-  </div>
 
-  <div class="box">
-  <a href="adminViewQuestions.php?type=premium"><button>Update Premium Survey</button></a>
+  <div class = "adminButtons"> 
+    <a href="adminViewQuestions.php?type=general"><button class="btn btn-primary btn-md">Update General Survey</button></a>
+    <a href="adminViewQuestions.php?type=premium"><button class="btn btn-primary btn-md">Update Premium Survey</button></a>
   </div>
 
   <?php $res = viewBusiness();
