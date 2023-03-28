@@ -44,25 +44,49 @@ on this page there are links to the venues pages (view venues and create new ven
       </div>
 
       
-      <div class="twocolumn" >
-        <div class ="company-info">
-          <h1><b>Company Information</b></h1>
-          <p><u>Company Name: </u> </p>
-          <?php echo $res[0]; ?>
-          <p><u>Email: </u></p>
-          <?php  echo $res[4]?>
-          <p><u>Address: </u></p>
-          <?php echo $res[2]; ?>
-          <p><u>Post Code: </u></p>
-          <?php echo $res[1]; ?>
-          <p><u>Contact Number: </u></p>
-          <?php echo $res[3]; ?>
-          <p><u>Venues Added: </u></p>       
-          <?php echo $res[5]; ?>
-        </div> 
-      </div> 
-    </div> 
-  </div>
+      <?php
+   $res = viewVenues($_SESSION['id']);
+   if($res!=NULL){
+  ?>
+    <table>  
+      <th>Venue Name</th>
+      <th>Venue Type</th>
+      <th>Venue Postcode</th>
+      <th>Venue Address</th>
+      <th>Premium</th>
+      <th>Edit Venue Details</th>
+      <th>View Past Audits</th>
+      <th>New Audit</th>
+  
+      <?php foreach ($res as $venue):?>
+      <tr class = "data">
+        <td width='250'><?php echo $venue['venuename']; ?></td>
+        <td width='60'><?php echo $venue['type']; ?></td>
+        <td  width='250'><?php echo $venue['postcode']; ?></td>
+        <td  width='250'><?php echo $venue['address']; ?></td>
+        <td  width='250'><?php echo $venue['premium']; ?></td>
+        
+        <td width='200'><div class="btn-group">
+        <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Edit Venue Details"></div>
+        </a>
+
+        <td width='200'><div class="btn-group">
+        <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Past Audits"></div>
+        </a>
+
+        <td width='200'><div class="btn-group">
+        <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
+        <input type="button" value="New Audit"></div>
+        </a>
+        <?php endforeach;?>
+    </table>
+        <?php } 
+        else{
+                  echo "You have no venues you can create one";
+        }
+        ?>
 
   
 
