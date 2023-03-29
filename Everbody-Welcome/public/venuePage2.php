@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,83 +6,79 @@
     <title>Venue Page</title>
     <link rel="stylesheet" href="../css/contactUs.css">  
     <style>
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-/* The grid: Three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 50px;
-  text-align: center;
-  font-size: 25px;
-  cursor: pointer;
-  color: white;
-}
 
-.containerTab {
-  color: white;
-}
+    /* The grid: Three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 50px;
+      text-align: center;
+      font-size: 25px;
+      cursor: pointer;
+      color: white;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .containerTab {
+      color: white;
+    }
 
-/* Closable button inside the container tab */
-.closebtn {
-  float: right;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-h2{
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
+    /* Closable button inside the container tab */
+    .closebtn {
+      float: right;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+    }
 
-h3{
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
+    h2{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    h3{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
 
 
 </style>
 </head>
+
 <body>
 <?php include '../public/publicHeader.php';?>
-<div style="text-align:center">
-<h2 style="margin-top:75px">Business Name</h2>
-</div>
 
+<main   style="background-color: #ddd;">
 <!-- Three columns -->
 <div class="row">
-  <div class="column" onclick="openTab('b1');" style="background:green;">
+  <div class="column" onclick="openTab('b1');" style="background-color: #aaa;">
     Venue Information
   </div>
-  <div class="column" onclick="openTab('b2');" style="background:blue;">
+  <div class="column" onclick="openTab('b2');" style="background-color: #888;">
     Last Survey Results
   </div>
-  <div class="column" onclick="openTab('b3');" style="background:red;">
+  <div class="column" onclick="openTab('b3');" style="background-color: #666;">
     Contact Venue
   </div>
 </div>
 
 <!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:green">
+<div id="b1" class="containerTab" style="background-color: #aaa;">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Venue Information</h2>
 <h3>Venue Name</h3>
@@ -92,7 +87,7 @@ h3{
     <h3 id="h4">Postcode</h3>
 </div>
 
-<div id="b2" class="containerTab" style="display:none;background:blue">
+<div id="b2" class="containerTab" style="display:none;background-color: #888;">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Last Survey Results</h2>
     <p><strong>Question 1:</strong> What is the venue's capacity? </p>
@@ -101,11 +96,11 @@ h3{
     <p style="margin-block-end: 0em;"><strong>Proof:</strong></p>
 </div>
 
-<div id="b3" class="containerTab" style="display:none;background:red">
+<div id="b3" class="containerTab" style="display:none;background-color: #666;">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <section id="work">
-      <div class="container-contact100">
-        <div class="wrap-contact100">
+  <section id="work"style ="background-color: #666;">
+      <div class="container-contact100" style ="background-color: #666;">
+        <div class="wrap-contact100"style ="background-color: #666;">
           <form class="contact100-form validate-form">
             <span class="contact100-form-title">
             Send Venue A Message
@@ -151,8 +146,8 @@ function openTab(tabName) {
 }
 </script>
 
+</main>
 
+<?php include "footer.php" ?>
 
 </body>
-<?php include "footer.php" ?>
-</html> 

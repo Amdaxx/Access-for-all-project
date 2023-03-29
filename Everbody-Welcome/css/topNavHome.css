@@ -8,14 +8,30 @@ button {
 button:focus, input:focus {
   outline: 0;
 }
+
+
+
+main {
+  min-height: calc(100% - (60px + 200px));
+  /* replace headerHeight and footerHeight with the actual heights of your header and footer */
+}
+
+footer {
+  height: 200px;
+}
+
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /*-------------Layout-------------*/
 body {
   line-height: 1.5em;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 #home {
@@ -43,10 +59,6 @@ body {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
 }
 #nav {
   background-color: #fff;
