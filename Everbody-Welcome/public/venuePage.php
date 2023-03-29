@@ -16,6 +16,7 @@
       font-size: large;
       font-family: "Saira Semi Condensed", sans-serif;
     }
+  
 
     body{
       background-color: #b3b3b3;
@@ -96,7 +97,8 @@
     }
 
     .container {
-        max-width: 1200px
+        width: 100%;
+        padding-right: 100 px;
     }
 
     .container-contact100 {
@@ -297,6 +299,7 @@
     margin: auto;
     width: 80%;
     padding: 10px;
+    
   }
   .column {
     width: 100%;
@@ -364,16 +367,16 @@
     
     <div class="container">
       
-    <div id="venueInfo">
+      <div id="venueInfo">
     
-    <br>
-    <br>
-    <br>
-      <h1>Venue Name</h1>
-      <h4 id="h4">Venue Type</h4>
-      <h4 id="h4">Venue Address</h4>
-      <h4 id="h4">Postcode</h4>
-    </div>
+      <br>
+      <br>
+      <br>
+        <h1>Venue Name</h1>
+        <h4 id="h4">Venue Type</h4>
+        <h4 id="h4">Venue Address</h4>
+        <h4 id="h4">Postcode</h4>
+      </div>
       
 
       
@@ -381,6 +384,7 @@
         <div class="card">
         
           <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
+
             <h2>Latest Survey Result</h2>
             <hr>
             <p><strong>Question 1:</strong> What is the venue's capacity? <strong>Answer:</strong> venue can hold up to 500 people. <strong>Comment:</strong> <strong>Proof:</strong></p>
@@ -392,11 +396,11 @@
             <p><strong>Question 4:</strong> What is the venue's location? <strong>Answer:</strong>The venue is located in downtown, close to the subway station. <strong>Comment: </strong> <strong>Proof:</strong></p>
             <hr>
             <p><strong>Question 5:</strong> Does the venue provide catering services? <strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. <strong>Comment: </strong> <strong>Proof:</strong></p>
+
           </div>
         </div>
       </div>
     </div>
-
   <br>
   <br>
   <br>
