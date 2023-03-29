@@ -8,10 +8,14 @@
     <style>
     #LatestSurveyResults {
     font-size: large;
-    text-align: right; 
+    text-align: center; 
+    padding-left: 500px;
     }
     #venueInfo {
       font-size: large;
+    }
+    #h4 {
+      font-size: larger;
     }
     
 
@@ -277,12 +281,13 @@
     <div class="container">
       
     <div id="venueInfo">
-      <br>
-      <br>
+    
+    <br>
+    <br>
+    <br>
       <h1>Venue Name</h1>
-
-      <h4>Venue Type</h4>
-      <h4>Postcode</h4>
+      <h4 id="h4">Venue Type</h4>
+      <h4 id="h4">Postcode</h4>
     </div>
       
 
