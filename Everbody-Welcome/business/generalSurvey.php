@@ -10,13 +10,10 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 
-$ques = array(
- "1) Does the venue have level access?",
-  "2) Does the venue have a lift?",
-   "3) Is there a hearing-loop?",
-   "4) Are guide-dogs allowed?",
-   "5) Is there an accessible public toilet?"
- );
+
+
+$res = viewQuestions("premium");
+$ques = array_column($res, "question");
 
  $data = array();
  $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;

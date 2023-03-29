@@ -16,8 +16,8 @@ checkSession ($path); //calling the function from session.php
 
 use Stripe\Terminal\Location;
 
-$venueid= $_GET['venueid'];
-
+$venue = $_GET['venueid'];
+goPremium($venue);
 ?>
 
 <link rel=""
@@ -61,10 +61,12 @@ payBtn.addEventListener("click", function (evt) {
         }
     });
 });
-    
+
+
 // Create a Checkout Session with the selected product
+<?php $url = "payment_init.php?venueid=" . $_GET['venueid']; ?>
 const createCheckoutSession = function (stripe) {
-    return fetch("payment_init.php", {
+    return fetch("<?php echo $url; ?>", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
