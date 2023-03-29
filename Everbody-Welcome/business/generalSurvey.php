@@ -12,7 +12,8 @@ $id = $_SESSION['id'];
 
 
 
- $ques = viewQuestions("general");
+$res = viewQuestions("premium");
+$ques = array_column($res, "question");
 
  $data = array();
  $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
