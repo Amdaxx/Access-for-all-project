@@ -12,7 +12,6 @@ $id = $_SESSION['id'];
 
 $res = viewQuestions("premium");
 $questions = array_column($res, "question");
-echo $_GET['venueid'];
 $venueid = $_GET['venueid'];
 $number = intval(getNumberOfAudits($venueid)) + 1;
 
@@ -63,7 +62,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
       $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
   }
 
-  recordGeneralSurvey($_GET['venueid'],$data, $number);
+  recordGeneralSurvey($venueid,$data, $number);
 }
 
 ?>
