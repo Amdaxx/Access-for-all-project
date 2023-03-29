@@ -24,8 +24,6 @@ on this page there are links to the venues pages (view venues and create new ven
 </head>
 
 
-
-
 <div class="flex-wrapper">
   <div id="header">
       <?php include "businessHeader.php";
@@ -62,20 +60,6 @@ on this page there are links to the venues pages (view venues and create new ven
         <td  width='250'><?php echo $venue['postcode']; ?></td>
         <td  width='250'><?php echo $venue['address']; ?></td>
         <td  width='250'><?php echo $venue['premium']; ?></td>
-
-        <?php if($venue['premium']=="NO"):?>
-        <td width='200'><div class="btn-group">
-        <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Go Premium"></div>
-        </a>
-        <?php endif; ?>
-
-        <?php if($venue['premium']=="YES"):?>
-        <td width='200'><div class="btn-group">
-        <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Go Premium"></div>
-        </a>
-        <?php endif; ?>
         
         <td width='200'><div class="btn-group">
         <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
@@ -89,8 +73,23 @@ on this page there are links to the venues pages (view venues and create new ven
 
         <td width='200'><div class="btn-group">
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="New Audit"></div>
+        <input type="button" value="Take General Audit"></div>
         </a>
+    
+
+        <?php if($venue['premium']=="NO"):?>
+        <td width='200'><div class="btn-group">
+        <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Go Premium"></div>
+        </a>
+        <?php endif; ?>
+
+        <?php if($venue['premium']=="YES"):?>
+          <td width='200'><div class="btn-group">
+        <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
+        <input type="button" value="Take Advanced Audit"></div>
+        </a>
+        <?php endif; ?>
 
         <td width='200'><div class="btn-group">
         <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">

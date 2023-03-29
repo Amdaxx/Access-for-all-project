@@ -2,26 +2,41 @@
 <html>
 <head>
 	<title>Three Tabs Page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	
     <style>
+
  * {
-	margin: 0;
+	
 	padding: 0;
 	box-sizing: border-box;
-    font-family: "Saira Semi Condensed", sans-serif;
+  	font-family: "Saira Semi Condensed", sans-serif;
+	
 }
+
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
+  
+  
+  
+}
+p{
+	font-size: 14px;
+}
+h2{
+	font-size: 30px;
+	  
+}
+h4{
+	font-size: 20px;
 }
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-family: "Saira Semi Condensed", sans-serif;
 	
-	
-    font-family: "Saira Semi Condensed", sans-serif;
 }
 
 .tabs {
@@ -38,11 +53,15 @@ footer {
 	margin-right: 10px;
 	flex: 1;
 	text-align: center;
+	
 }
 
 .tab.active {
-	background-color: #333;
+	background: #f857a8;
+	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+	background: linear-gradient(45deg, #f857a8, #ff5858);
 	color: #fff;
+	
 }
 
 .tab-content-container {
@@ -52,7 +71,9 @@ footer {
 }
 
 .tab-content {
-	background-color: #ccc;
+	background: #f857a8;
+	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+	background: linear-gradient(45deg, #f857a8, #ff5858);
 	color: #333;
 	padding: 20px;
 	display: none;
@@ -75,6 +96,7 @@ footer {
   .email-form label {
 	display: block;
 	margin-bottom: 10px;
+	color:  white;
 }
 
 .email-form input[type="email"],
@@ -95,8 +117,8 @@ footer {
 	display: block;
 	margin-top: 20px;
 	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
+	background-color: #fff;
+	color: #f857a8;
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
@@ -111,7 +133,7 @@ footer {
 <body>
 <?php include "publicHeader.php" ?>
 <div style="text-align:center">
-<h2 style="margin-top:75px">Business Name</h2>
+<h2 style="margin-top:100px">Business Name</h2>
 </div>
 <div class="container">
 		<div class="tabs">
