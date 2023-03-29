@@ -3,7 +3,7 @@ include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
 include '../public/publicHeader.php';
 
-/*
+
 session_start();
 
 if (!isset($_SESSION['uadmin'])){
@@ -14,7 +14,7 @@ if (!isset($_SESSION['uadmin'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-*/
+
 
 ?>
 
@@ -36,7 +36,7 @@ $id = $_SESSION['id'];
     <a href="adminViewQuestions.php?type=premium"><button class="btn btn-primary btn-md">Update Premium Survey</button></a>
   </div>
 
-  <?php // $res = viewBusiness();
+  <?php  $res = viewBusiness();
   ?>
   
   <div class="table-container">
@@ -53,10 +53,10 @@ $id = $_SESSION['id'];
     <tbody>
       <?php foreach($res as $business):?>
       <tr>
-        <td><?php //echo $business['companyName']?></td>
-        <td><?php //echo $business['phone']?></td>
-        <td><?php //echo $business['postcode']?></td>
-        <td><?php //echo $business['address']?></td>
+        <td><?php echo $business['companyName']?></td>
+        <td><?php echo $business['phone']?></td>
+        <td><?php echo $business['postcode']?></td>
+        <td><?php echo $business['address']?></td>
         <td>VIEW</td>
       </tr>
       <?php endforeach; ?>
