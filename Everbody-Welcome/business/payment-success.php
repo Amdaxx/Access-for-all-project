@@ -2,8 +2,7 @@
 // Include configuration file  
 require_once 'config.php'; 
  
-// Include database connection file  
-include_once 'dbConnect.php'; 
+// Include database connection file   
  
 $payment_id = $statusMsg = ''; 
 $status = 'error'; 
@@ -97,7 +96,7 @@ if(!empty($_GET['session_id'])){
                         // Insert transaction data into the database 
                         $sqlQ = "INSERT INTO transactions (customer_name,customer_email,item_name,item_number,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,stripe_checkout_session_id,created,modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())"; 
                         $stmt = $db->prepare($sqlQ); 
-                        $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $productName, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
+                        $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $productname, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
                         $insert = $stmt->execute(); 
                         goPremium($_SESSION['venueid']);
                         if($insert){ 
