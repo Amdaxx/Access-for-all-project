@@ -371,6 +371,7 @@
     <br>
       <h1>Venue Name</h1>
       <h4 id="h4">Venue Type</h4>
+      <h4 id="h4">Venue Address</h4>
       <h4 id="h4">Postcode</h4>
     </div>
       
