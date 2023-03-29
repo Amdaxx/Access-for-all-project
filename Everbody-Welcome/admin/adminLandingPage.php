@@ -61,7 +61,7 @@ $id = $_SESSION['id'];
   </table>
 </div>
 
+    <?php include '../public/footer.php';?>
   </body>
   
 </div>  
-<?php include '../public/footer.php';?>
