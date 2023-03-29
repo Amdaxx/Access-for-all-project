@@ -28,41 +28,12 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
       $fileNameNew = "";
       //save proof
       //$proof = (isset($_FILES['proof'])) ? $_FILES['proof'] : '';
-      if (isset($_FILES['proof'])) {
-        $file = $_FILES['proof'];
-        $fileName = $file['name'];
-        $fileTempName = $file['tmp_name'];
-        $fileSize = $file['size'];
-        $fileError = $file['error'];
-        $fileType = $file['type'];
-    
-        $fileExt = explode('.', $fileName);
-        $fileActualExt = strtolower(end($fileExt));
-    
-        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
-    
-        if (in_array($fileActualExt, $allowed)) {
-            if ($fileError === 0) {
-                if ($fileSize < 1000000) {
-                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-                    $fileDestination = 'uploads/' . $fileNameNew;
-                    move_uploaded_file($fileTempName, $fileDestination);
-                    $proof = $fileDestination;
-                } else {
-                    echo "Your file is too big!";
-                }
-            } else {
-                echo "There was an error uploading your file!";
-            }
-        } else {
-            echo "You cannot upload files of this type!";
-        }
-    }
+     $proof = "";
     //send data array
       $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
   }
 
-  recordGeneralSurvey($venueid,$data, $number);
+  recordAdvancedSurvey($venueid,$data, $number);
 }
 
 ?>
@@ -154,7 +125,7 @@ $index = 0;
 // Check if the index is valid or not
 if ($index >= 0 && $index < count($questions)) {
 // Start the form to answer the questions
-echo "<form class='answer' method='post' action='submit.php' enctype='multipart/form-data'>";
+echo "<form class='answer' method='post' enctype='multipart/form-data'>";
 
 // Display the current question
 echo "<div class='question'>";
@@ -188,7 +159,7 @@ echo "<input class='button' type='submit' value='Submit'>";
 
 // Display a link to the next question if it exists
 if ($index < count($questions) - 1) {
-  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venue . "'>Next question</a>";
+  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venueid . "'>Next question</a>";
 }
 
 // End the form
