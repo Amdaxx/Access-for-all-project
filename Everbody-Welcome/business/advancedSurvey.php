@@ -63,7 +63,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
       $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
   }
 
-  recordAdvancedSurvey($_GET['venueid'],$data, $number);
+  recordGeneralSurvey($_GET['venueid'],$data, $number);
 }
 
 ?>
