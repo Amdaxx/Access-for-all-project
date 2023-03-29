@@ -115,6 +115,6 @@ function validateForm() {
       </form>
     
     </body>
-    <?php include "../public/footer.php" ?>
   </div>
+  <?php include "../public/footer.php" ?>
 </html>

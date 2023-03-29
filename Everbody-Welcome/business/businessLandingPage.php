@@ -100,6 +100,5 @@ on this page there are links to the venues pages (view venues and create new ven
   
 
   </body>
-  <?php include "../public/footer.php" ?>
-  
 </div>  
+<?php include "../public/footer.php" ?>
