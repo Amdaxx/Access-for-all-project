@@ -188,7 +188,7 @@ echo "<input class='button' type='submit' value='Submit'>";
 
 // Display a link to the next question if it exists
 if ($index < count($questions) - 1) {
-echo "<a href='?index=" . ($index + 1) . "'>Next question</a>";
+  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venue . "'>Next question</a>";
 }
 
 // End the form
