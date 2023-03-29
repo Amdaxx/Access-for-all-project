@@ -377,7 +377,7 @@
       
 
       
-      <div class="row" style = "position:relative; left:300px; top:2px;">
+      <div class="row" style = "position:relative; margin:auto; top:2px;">
         <div class="card">
         
           <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
