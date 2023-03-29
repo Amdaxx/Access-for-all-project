@@ -62,7 +62,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
       $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
   }
 
-  recordGeneralSurvey($venueid,$data, $number);
+  recordAdvancedSurvey($venueid,$data, $number);
 }
 
 ?>
@@ -188,7 +188,7 @@ echo "<input class='button' type='submit' value='Submit'>";
 
 // Display a link to the next question if it exists
 if ($index < count($questions) - 1) {
-  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venue . "'>Next question</a>";
+  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venueid . "'>Next question</a>";
 }
 
 // End the form
