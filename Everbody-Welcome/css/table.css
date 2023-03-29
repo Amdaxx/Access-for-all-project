@@ -84,7 +84,7 @@ button:hover {
 }
 
 .adminButtons {
-  position: relative;
+  position: static;
   top: 100px;
   left: 25px;
   margin-bottom: 45px;
