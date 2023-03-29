@@ -149,7 +149,8 @@
         -webkit-transition: all .4s;
         -o-transition: all .4s;
         -moz-transition: all .4s;
-        transition: all .4s
+        transition: all .4s;
+        font-family: "Saira Semi Condensed", sans-serif;
     }
 
     .wrap-input100 {
