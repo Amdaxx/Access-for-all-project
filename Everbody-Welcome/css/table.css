@@ -90,7 +90,8 @@ button:hover {
   margin-bottom: 45px;
 }
 
-@media screen and (max-width: 768px) {
+
+ /* @media screen and (max-width: 768px) {
   .adminButtons {
     padding-top: 60px;
     position: relative;
@@ -98,5 +99,4 @@ button:hover {
     margin-bottom: 20px;
     margin-left: 10px;
   }
-}
-  
+} */
