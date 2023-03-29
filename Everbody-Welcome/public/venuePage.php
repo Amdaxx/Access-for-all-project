@@ -9,18 +9,22 @@
     #LatestSurveyResults {
     font-size: large;
     text-align: center; 
-    padding-left: 500px;
+    
     font-family: "Saira Semi Condensed", sans-serif;
     }
     #venueInfo {
       font-size: large;
       font-family: "Saira Semi Condensed", sans-serif;
     }
+
+    body{
+      background-color: #b3b3b3;
+    }
+
     #h4 {
       font-size: larger;
     }
     
-
     input {
         outline: none;
         border: none
@@ -138,7 +142,7 @@
         width: 100%;
         height: 100%;
         top: 0;
-        left: 55%;
+        left: 50%;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -276,6 +280,94 @@
         background: linear-gradient(45deg, #f857a8, #ff5858);
         width: calc(100% + 20px)
     }
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  section {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #f857a8 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 1em 0;
+    color: #000000;
+  }
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .icon-wrapper {
+    background-color: #000000;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  .card:hover {
+    background-position: 0 100%;
+    background:linear-gradient(45deg, #f857a8, #ff5858)
+  }
+  .card:hover .icon-wrapper {
+    background-color: #000000;
+
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
     </style>
     <?php include "publicHeader.php" ?>
   </head>
@@ -294,24 +386,26 @@
     </div>
       
 
-
+      
       <div class="row">
+        <div class="card">
         
-      <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
-        <h2>Latest Survey Result</h2>
-        <hr>
-        <p><strong>Question 1:</strong> What is the venue's capacity? <strong>Answer:</strong> venue can hold up to 500 people. <strong>Comment:</strong> <strong>Proof:</strong></p>
-        <hr>
-        <p><strong>Question 2:</strong> Are there parking facilities? <strong>Answer:</strong>Yes, there is a parking lot available for guests. <strong>Comment: </strong> <strong>Proof:</strong></p>
-        <hr>
-        <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? <strong>Answer:</strong>Yes, the venue is wheelchair accessible. <strong>Comment: </strong> <strong>Proof:</strong></p>
-        <hr>
-        <p><strong>Question 4:</strong> What is the venue's location? <strong>Answer:</strong>The venue is located in downtown, close to the subway station. <strong>Comment: </strong> <strong>Proof:</strong></p>
-        <hr>
-        <p><strong>Question 5:</strong> Does the venue provide catering services? <strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. <strong>Comment: </strong> <strong>Proof:</strong></p>
+        <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
+          <h2>Latest Survey Result</h2>
+          <hr>
+          <p><strong>Question 1:</strong> What is the venue's capacity? <strong>Answer:</strong> venue can hold up to 500 people. <strong>Comment:</strong> <strong>Proof:</strong></p>
+          <hr>
+          <p><strong>Question 2:</strong> Are there parking facilities? <strong>Answer:</strong>Yes, there is a parking lot available for guests. <strong>Comment: </strong> <strong>Proof:</strong></p>
+          <hr>
+          <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? <strong>Answer:</strong>Yes, the venue is wheelchair accessible. <strong>Comment: </strong> <strong>Proof:</strong></p>
+          <hr>
+          <p><strong>Question 4:</strong> What is the venue's location? <strong>Answer:</strong>The venue is located in downtown, close to the subway station. <strong>Comment: </strong> <strong>Proof:</strong></p>
+          <hr>
+          <p><strong>Question 5:</strong> Does the venue provide catering services? <strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. <strong>Comment: </strong> <strong>Proof:</strong></p>
+        </div>
       </div>
     </div>
-  </div>
+    </div>
 
   <br>
   <br>
@@ -356,7 +450,6 @@
           </form>
         </div>
       </div>
-
     </section>
   
 </div> 
