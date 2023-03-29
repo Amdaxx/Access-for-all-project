@@ -407,7 +407,7 @@
         <div class="wrap-contact100">
           <form class="contact100-form validate-form">
             <span class="contact100-form-title">
-            Send Us A Message
+            Send Venue A Message
             </span>
             <div class="wrap-input100 validate-input" data-validate="Please enter your name">
               <input class="input100" type="text" name="name" placeholder="Full Name" fdprocessedid="l1kcx6">
