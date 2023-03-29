@@ -43,7 +43,7 @@ if(!empty($_GET['session_id'])){
         $statusMsg = 'Your Payment has been Successful!'; 
     }else{ 
         // Include the Stripe PHP library 
-        require_once 'stripe-php/init.php'; 
+        require_once '../stripe-php/init.php'; 
          
         // Set API key 
         $stripe = new \Stripe\StripeClient(STRIPE_API_KEY); 
