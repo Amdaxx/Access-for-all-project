@@ -312,8 +312,6 @@
     background-position: 0 2.5%;
     border-radius: 25px;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    transition: 0.5s;
   }
   h3 {
     font-size: 20px;
@@ -339,20 +337,8 @@
     place-items: center;
     transition: 0.5s;
   }
-  .card:hover {
-    background-position: 0 100%;
-    background:linear-gradient(45deg, #f857a8, #ff5858)
-  }
-  .card:hover .icon-wrapper {
-    background-color: #000000;
-
-  }
-  .card:hover h3 {
-    color: #ffffff;
-  }
-  .card:hover p {
-    color: #f0f0f0;
-  }
+ 
+  
   @media screen and (min-width: 768px) {
     section {
       padding: 0 2em;
@@ -390,7 +376,7 @@
       
 
       
-      <div class="row" style = "position:relative; left:370px; top:2px;">
+      <div class="row" style = "position:relative; left:300px; top:2px;">
         <div class="card">
         
           <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
@@ -410,9 +396,6 @@
       </div>
     </div>
 
-  <br>
-  <br>
-  <br>
   <br>
   <br>
   <br>
