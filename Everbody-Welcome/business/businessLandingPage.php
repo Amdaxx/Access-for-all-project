@@ -62,6 +62,13 @@ on this page there are links to the venues pages (view venues and create new ven
         <td  width='250'><?php echo $venue['postcode']; ?></td>
         <td  width='250'><?php echo $venue['address']; ?></td>
         <td  width='250'><?php echo $venue['premium']; ?></td>
+
+        <?php if($venue['premium']=="NO"):?>
+        <td width='200'><div class="btn-group">
+        <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Past Audits"></div>
+        </a>
+        <?php endif; ?>
         
         <td width='200'><div class="btn-group">
         <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
