@@ -26,6 +26,7 @@ p{
 }
 h2{
 	font-size: 30px;
+	  
 }
 h4{
 	font-size: 20px;
@@ -52,11 +53,15 @@ h4{
 	margin-right: 10px;
 	flex: 1;
 	text-align: center;
+	
 }
 
 .tab.active {
-	background-color: #333;
+	background: #f857a8;
+	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+	background: linear-gradient(45deg, #f857a8, #ff5858);
 	color: #fff;
+	
 }
 
 .tab-content-container {
@@ -66,7 +71,9 @@ h4{
 }
 
 .tab-content {
-	background-color: #ccc;
+	background: #f857a8;
+	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+	background: linear-gradient(45deg, #f857a8, #ff5858);
 	color: #333;
 	padding: 20px;
 	display: none;
@@ -89,6 +96,7 @@ h4{
   .email-form label {
 	display: block;
 	margin-bottom: 10px;
+	color:  white;
 }
 
 .email-form input[type="email"],
@@ -109,8 +117,8 @@ h4{
 	display: block;
 	margin-top: 20px;
 	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
+	background-color: #fff;
+	color: #f857a8;
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
