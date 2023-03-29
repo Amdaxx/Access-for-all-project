@@ -386,7 +386,6 @@
         header('Location:../business/generalSurveyResults.php');      
     }
 
-
     function getGeneralSurveyResult($venueid, $auditnumber)
     {
         $conn = connectToDatabase();

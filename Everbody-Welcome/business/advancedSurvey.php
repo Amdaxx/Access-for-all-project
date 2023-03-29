@@ -15,21 +15,59 @@ checkSession ($path); //calling the function from session.php
 $id = $_SESSION['id']; 
 $res = viewQuestions("premium");
 $questions = array_column($res, "question");
+$number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
+
 if (isset($_POST['submit']) && !isset($_POST['processed'])) {
-    $_POST['processed'] = true;
-
-    foreach ($ques as $index => $que) {
-        if (isset($_POST[$index])) {
-            $response = $_POST[$index];
+  $_POST['processed'] = true;
+  $data = array();
+  foreach ($questions as $index => $question) {
+      if (isset($_POST[$index])) {
+          $response = $_POST[$index];
+      } else {
+          $response = '';
+      }
+      $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
+      $fileNameNew = "";
+      //save proof
+      //$proof = (isset($_FILES['proof'])) ? $_FILES['proof'] : '';
+      if (isset($_FILES['proof'])) {
+        $file = $_FILES['proof'];
+        $fileName = $file['name'];
+        $fileTempName = $file['tmp_name'];
+        $fileSize = $file['size'];
+        $fileError = $file['error'];
+        $fileType = $file['type'];
+    
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+    
+        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+    
+        if (in_array($fileActualExt, $allowed)) {
+            if ($fileError === 0) {
+                if ($fileSize < 1000000) {
+                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                    $fileDestination = 'uploads/' . $fileNameNew;
+                    move_uploaded_file($fileTempName, $fileDestination);
+                    $proof = $fileDestination;
+                } else {
+                    echo "Your file is too big!";
+                }
+            } else {
+                echo "There was an error uploading your file!";
+            }
         } else {
-            $response = '';
+            echo "You cannot upload files of this type!";
         }
-        $data[] = array('question' => $que, 'response' => $response, 'comment' => $comment, 'proof' => $proof);
     }
-    recordAdvancedSurvey($_GET['venueid'], $data, $number);
-}
-?>
+    //send data array
+      $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
+  }
 
+  recordAdvancedSurvey($_GET['venueid'],$data, $number);
+}
+
+?>
 
 
 <html>
