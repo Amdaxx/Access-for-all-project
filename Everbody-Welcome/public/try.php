@@ -14,16 +14,31 @@ if ($mysqli->connect_errno) {
 
 
 
+$sql0 = "DROP TABLE venues";
+
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
+
+$sql0 = "DROP TABLE advancedsurveyresults";
+
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
 
 
-
-
-$sql4 = "CREATE TABLE questions(
+$sql2 = "CREATE TABLE advancedsurveyresults(
+  venueid VARCHAR(10) NOT NULL ,
   question VARCHAR(50) NOT NULL ,
-  type VARCHAR(30) NOT NULL,
-  surveytype VARCHAR(30) NOT NULL 
+  answer VARCHAR(3) NOT NULL ,
+  comment VARCHAR(40) ,
+  proof BLOB ,
+  auditnumber INTEGER NOT NULL 
 )";
-
 
 
 $sql3 = "CREATE TABLE venues(
@@ -45,8 +60,8 @@ if (mysqli_query($mysqli, $sql3)) {
   echo "Error deleting table: " . mysqli_error($mysqli);
 }
 
-if (mysqli_query($mysqli, $sql4)) {
-  echo "Table questions created successfully";
+if (mysqli_query($mysqli, $sql2)) {
+  echo "Table advancedrecord created successfully";
 } else {
   echo "Error deleting table: " . mysqli_error($mysqli);
 }
@@ -91,6 +106,12 @@ if (mysqli_query($mysqli, $sql25)) {
 
 
 /*
+$sql4 = "CREATE TABLE questions(
+  question VARCHAR(50) NOT NULL ,
+  type VARCHAR(30) NOT NULL,
+  surveytype VARCHAR(30) NOT NULL 
+)";
+
 
 
 */
