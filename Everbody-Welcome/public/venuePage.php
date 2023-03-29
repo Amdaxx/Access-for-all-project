@@ -270,15 +270,16 @@
         width: calc(100% + 20px)
     }
     </style>
+    <?php include "publicHeader.php" ?>
   </head>
   <body>
-    <?php include "publicHeader.php" ?>
+    
     <div class="container">
       
     <div id="venueInfo">
       <br>
       <br>
-      <h4>Venue Name</h4>
+      <h1>Venue Name</h1>
 
       <h4>Venue Type</h4>
       <h4>Postcode</h4>
@@ -314,7 +315,6 @@
   <br>
 
   <section id="work">
-    <body>
       <div class="container-contact100">
         <div class="wrap-contact100">
           <form class="contact100-form validate-form">
