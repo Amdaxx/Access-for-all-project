@@ -387,15 +387,26 @@
 
             <h2>Latest Survey Result</h2>
             <hr>
-            <p><strong>Question 1:</strong> What is the venue's capacity? <strong>Answer:</strong> venue can hold up to 500 people. <strong>Comment:</strong> <strong>Proof:</strong></p>
+            <p><strong>Question 1:</strong> What is the venue's capacity? </p>
+            <p><strong>Answer:</strong> venue can hold up to 500 people. </p>
+            <p><strong>Comment:</strong> </p>
+            <p><strong>Proof:</strong></p>
             <hr>
-            <p><strong>Question 2:</strong> Are there parking facilities? <strong>Answer:</strong>Yes, there is a parking lot available for guests. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <p><strong>Question 2:</strong> Are there parking facilities?</p>
+            <p><strong>Answer:</strong>Yes, there is a parking lot available for guests. </p>
+            <p><strong>Comment: </strong> <strong>Proof:</strong></p>
             <hr>
-            <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? <strong>Answer:</strong>Yes, the venue is wheelchair accessible. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? </p>
+            <p><strong>Answer:</strong>Yes, the venue is wheelchair accessible. </p>
+            <p><strong>Comment: </strong> <strong>Proof:</strong></p>
             <hr>
-            <p><strong>Question 4:</strong> What is the venue's location? <strong>Answer:</strong>The venue is located in downtown, close to the subway station. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <p><strong>Question 4:</strong> What is the venue's location?</p>
+            <p><strong>Answer:</strong>The venue is located in downtown, close to the subway station.</p> 
+            <p><strong>Comment: </strong> <strong>Proof:</strong></p>
             <hr>
-            <p><strong>Question 5:</strong> Does the venue provide catering services? <strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <p><strong>Question 5:</strong> Does the venue provide catering services? </p>
+            <p><strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. 
+            <p><strong>Comment: </strong> <strong>Proof:</strong></p>
 
           </div>
         </div>
