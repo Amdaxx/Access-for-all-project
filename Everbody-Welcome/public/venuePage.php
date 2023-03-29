@@ -8,10 +8,16 @@
     <style>
     #LatestSurveyResults {
     font-size: large;
-    text-align: right; 
+    text-align: center; 
+    padding-left: 500px;
+    font-family: "Saira Semi Condensed", sans-serif;
     }
     #venueInfo {
       font-size: large;
+      font-family: "Saira Semi Condensed", sans-serif;
+    }
+    #h4 {
+      font-size: larger;
     }
     
 
@@ -132,7 +138,7 @@
         width: 100%;
         height: 100%;
         top: 0;
-        left: 50%;
+        left: 55%;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -277,12 +283,13 @@
     <div class="container">
       
     <div id="venueInfo">
-      <br>
-      <br>
+    
+    <br>
+    <br>
+    <br>
       <h1>Venue Name</h1>
-
-      <h4>Venue Type</h4>
-      <h4>Postcode</h4>
+      <h4 id="h4">Venue Type</h4>
+      <h4 id="h4">Postcode</h4>
     </div>
       
 
