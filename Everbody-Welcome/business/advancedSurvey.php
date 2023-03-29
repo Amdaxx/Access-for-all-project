@@ -13,6 +13,21 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
+
+
+if (isset($_POST['submit']) && !isset($_POST['processed'])) {
+    $_POST['processed'] = true;
+
+    foreach ($ques as $index => $que) {
+        if (isset($_POST[$index])) {
+            $response = $_POST[$index];
+        } else {
+            $response = '';
+        }
+        $data[] = array('question' => $que, 'response' => $response);
+    }
+    recordAdvancedSurvey($_GET['venueid'], $data, $number);
+}
 ?>
 
 
