@@ -1,6 +1,6 @@
 <?php
    function connectToDatabase()
-   {
+   {    
 
     /*
        $servername = 'localhost';
@@ -190,11 +190,12 @@
     function createVenue($logid, $VenueName, $address, $postcode, $city, $type)
     {
         try{
+            $premium = "NO";
             $conn = connectToDatabase();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $numberofaudit = 0;
-            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, city, type, numberofaudits) 
-            VALUES (:id, :logid, :venuename, :address, :postcode, :city, :type, :numaudit)");
+            $stmt = $conn->prepare("INSERT INTO venues (venueid, logid, venuename, address, postcode, city, type, premium, numberofaudits) 
+            VALUES (:id, :logid, :venuename, :address, :postcode, :city, :type, :premium, :numaudit)");
             $stmt->bindParam(':id', $id);
             $stmt->bindParam(':logid', $logid);
             $stmt->bindParam(':venuename', $VenueName);
@@ -202,7 +203,8 @@
             $stmt->bindParam(':postcode', $postcode);
             $stmt->bindParam(':city', $city);
             $stmt->bindParam(':type', $type);
-         $stmt->bindParam(':numaudit', $numberofaudit);
+            $stmt->bindParam(':premium', $premium);
+            $stmt->bindParam(':numaudit', $numberofaudit);
             $id = rand(1,9999999);
             $stmt->execute();
             header('Location: ../business/businessLandingPage.php');
@@ -211,22 +213,7 @@
         }   
     }
 
-    function addQuestion()
-    {
-        try{
-            $conn = connectToDatabase();
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $conn->beginTransaction();
-            $conn->exec("INSERT INTO questions (question)
-                VALUES ('question1')");   
-            $conn->exec("INSERT INTO questions (question)
-            VALUES ('question2')");            
-            
-            $conn->commit();
-        } catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        } 
-    }
+
 
 
     function viewVenues($id)
@@ -241,6 +228,16 @@
        
     }
 
+    function viewBusiness()
+    {
+            $conn = connectToDatabase();
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $conn->prepare("SELECT * FROM businessinfos");
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
+    }
+
 
     function viewVenues2($id)
     {
@@ -252,17 +249,6 @@
             $res = $stmt->fetchAll();
             return $res;
        
-    }
-
-    function getQuestions()
-    {
-        $conn = connectToDatabase();
-        $sql = "SELECT * FROM questions";
-        $stmt= $conn->prepare($sql);
-        $stmt->execute();
-        $res = $stmt->fetchAll();
-
-        return $res;
     }
 
 
@@ -545,4 +531,49 @@
         $res = $stmt->fetchAll();
         return $res;
 
+    }
+
+    function goPremium($venueid)
+    {
+        $premium = "YES";
+        $conn = connectToDatabase();
+        $sql1 = "UPDATE venues SET premium=:premium WHERE venueid=:venueid";
+        $stmt = $conn->prepare($sql1);
+        $stmt->bindParam(':premium', $premium);
+        $stmt->bindParam(':venueid', $venueid);
+        $stmt->execute();
+    }
+
+    function viewQuestions($surveytype)
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM questions  WHERE surveytype=:surveytype";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':surveytype', $surveytype);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
+    }
+
+
+    function addQuestion($question, $type, $surveytype)
+    {   
+        $conn = connectToDatabase();
+        $stmt = $conn->prepare("INSERT INTO questions (question, type, surveytype) 
+        VALUES (:question, :type, :surveytype)");
+        $stmt->bindParam(':question', $question);
+        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':surveytype', $surveytype);
+        $stmt->execute();
+    }
+
+    function deleteQuestion($question, $type, $surveytype)
+    {
+        $conn = connectToDatabase();
+        $sql = "DELETE FROM questions  WHERE question=:question AND type=:type AND surveytype=:surveytype";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':question', $question);
+        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':surveytype', $surveytype);
+        $stmt->execute();
     }

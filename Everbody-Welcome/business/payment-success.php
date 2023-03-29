@@ -1,9 +1,18 @@
 <?php 
 // Include configuration file  
 require_once 'config.php'; 
+include_once("../SQL/sql.php");
+
+$path = "../public/LandingPage.php";
+session_start();
+if (!isset($_SESSION['business'])){
+    session_unset();
+    session_destroy();
+    header("Location:".$path);
+}
+checkSession ($path); //calling the function from session.php
  
-// Include database connection file  
-include_once 'dbConnect.php'; 
+// Include database connection file   
  
 $payment_id = $statusMsg = ''; 
 $status = 'error'; 
@@ -43,7 +52,7 @@ if(!empty($_GET['session_id'])){
         $statusMsg = 'Your Payment has been Successful!'; 
     }else{ 
         // Include the Stripe PHP library 
-        require_once 'stripe-php/init.php'; 
+        require_once '../stripe-php/init.php'; 
          
         // Set API key 
         $stripe = new \Stripe\StripeClient(STRIPE_API_KEY); 
@@ -97,9 +106,9 @@ if(!empty($_GET['session_id'])){
                         // Insert transaction data into the database 
                         $sqlQ = "INSERT INTO transactions (customer_name,customer_email,item_name,item_number,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,stripe_checkout_session_id,created,modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())"; 
                         $stmt = $db->prepare($sqlQ); 
-                        $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $productName, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
+                        $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $productname, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
                         $insert = $stmt->execute(); 
-                         
+                        goPremium($venue);
                         if($insert){ 
                             $payment_id = $stmt->insert_id; 
                         } 

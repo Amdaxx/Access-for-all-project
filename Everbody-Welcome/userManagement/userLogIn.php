@@ -7,28 +7,24 @@ if (isset($_POST['submit'])){
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Login Form</title>
-    <link rel="stylesheet" href="../css/userManagementStyle.css"/>
-  </head>
-  <body>
-    <div class="login-container">
-      <div class="login-form">
-        <h2>Login Form</h2>
-        <form method="post">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
+<link rel="stylesheet" href="../css/userManagementStyle.css">
 
-          <label for="password">Password</label>
-          <input type="password" id="pwd" name="pwd">
+<?php include '../public/publicHeader.php';?>
+<body>
+<div class="login-container">
+    <div class="login-form">
+    <h2>Business Portal</h2>
+    <form method="post">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
 
-          <button type="submit" name="submit" >Login</button>
-        </form> 
-        <p>Don't have an account? <a href="createAccount.php">Sign up</a></p>
-      </div>
+        <label for="password">Password</label>
+        <input type="password" id="pwd" name="pwd">
+
+        <button type="submit" name="submit" >Login</button>
+    </form> 
+    <p>Don't have an account? <a style="color:black" href="../userManagement/createAccount.php">Sign up</a></p>
     </div>
-  </body>
-</html>
+</div>
+</body>
+<?php include '../public/footer.php';?>
