@@ -294,6 +294,9 @@
   .row {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
   }
   .column {
     width: 100%;
@@ -309,8 +312,6 @@
     background-position: 0 2.5%;
     border-radius: 25px;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    transition: 0.5s;
   }
   h3 {
     font-size: 20px;
@@ -336,20 +337,8 @@
     place-items: center;
     transition: 0.5s;
   }
-  .card:hover {
-    background-position: 0 100%;
-    background:linear-gradient(45deg, #f857a8, #ff5858)
-  }
-  .card:hover .icon-wrapper {
-    background-color: #000000;
-
-  }
-  .card:hover h3 {
-    color: #ffffff;
-  }
-  .card:hover p {
-    color: #f0f0f0;
-  }
+ 
+  
   @media screen and (min-width: 768px) {
     section {
       padding: 0 2em;
@@ -382,34 +371,32 @@
     <br>
       <h1>Venue Name</h1>
       <h4 id="h4">Venue Type</h4>
+      <h4 id="h4">Venue Address</h4>
       <h4 id="h4">Postcode</h4>
     </div>
       
 
       
-      <div class="row">
+      <div class="row" style = "position:relative; left:300px; top:2px;">
         <div class="card">
         
-        <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
-          <h2>Latest Survey Result</h2>
-          <hr>
-          <p><strong>Question 1:</strong> What is the venue's capacity? <strong>Answer:</strong> venue can hold up to 500 people. <strong>Comment:</strong> <strong>Proof:</strong></p>
-          <hr>
-          <p><strong>Question 2:</strong> Are there parking facilities? <strong>Answer:</strong>Yes, there is a parking lot available for guests. <strong>Comment: </strong> <strong>Proof:</strong></p>
-          <hr>
-          <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? <strong>Answer:</strong>Yes, the venue is wheelchair accessible. <strong>Comment: </strong> <strong>Proof:</strong></p>
-          <hr>
-          <p><strong>Question 4:</strong> What is the venue's location? <strong>Answer:</strong>The venue is located in downtown, close to the subway station. <strong>Comment: </strong> <strong>Proof:</strong></p>
-          <hr>
-          <p><strong>Question 5:</strong> Does the venue provide catering services? <strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. <strong>Comment: </strong> <strong>Proof:</strong></p>
+          <div id="LatestSurveyResults" style="float:right;" class="col-xs-12">
+            <h2>Latest Survey Result</h2>
+            <hr>
+            <p><strong>Question 1:</strong> What is the venue's capacity? <strong>Answer:</strong> venue can hold up to 500 people. <strong>Comment:</strong> <strong>Proof:</strong></p>
+            <hr>
+            <p><strong>Question 2:</strong> Are there parking facilities? <strong>Answer:</strong>Yes, there is a parking lot available for guests. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <hr>
+            <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? <strong>Answer:</strong>Yes, the venue is wheelchair accessible. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <hr>
+            <p><strong>Question 4:</strong> What is the venue's location? <strong>Answer:</strong>The venue is located in downtown, close to the subway station. <strong>Comment: </strong> <strong>Proof:</strong></p>
+            <hr>
+            <p><strong>Question 5:</strong> Does the venue provide catering services? <strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. <strong>Comment: </strong> <strong>Proof:</strong></p>
+          </div>
         </div>
       </div>
     </div>
-    </div>
 
-  <br>
-  <br>
-  <br>
   <br>
   <br>
   <br>
@@ -421,7 +408,7 @@
         <div class="wrap-contact100">
           <form class="contact100-form validate-form">
             <span class="contact100-form-title">
-            Send Us A Message
+            Send Venue A Message
             </span>
             <div class="wrap-input100 validate-input" data-validate="Please enter your name">
               <input class="input100" type="text" name="name" placeholder="Full Name" fdprocessedid="l1kcx6">
