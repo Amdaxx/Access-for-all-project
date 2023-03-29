@@ -1,6 +1,7 @@
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
+include '../public/publicHeader.php';
 
 
 session_start();
@@ -19,6 +20,7 @@ $id = $_SESSION['id'];
 <title>Admin Landing Page</title>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+
 
 <link rel="stylesheet" href="../css/table.css">
 </head>
@@ -62,3 +64,4 @@ $id = $_SESSION['id'];
   </body>
   
 </div>  
+<?php include '../public/footer.php';?>
