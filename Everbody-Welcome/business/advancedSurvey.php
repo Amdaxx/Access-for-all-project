@@ -13,8 +13,8 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-
-
+$res = viewQuestions("premium");
+$questions = array_column($res, "question");
 if (isset($_POST['submit']) && !isset($_POST['processed'])) {
     $_POST['processed'] = true;
 
@@ -24,7 +24,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
         } else {
             $response = '';
         }
-        $data[] = array('question' => $que, 'response' => $response);
+        $data[] = array('question' => $que, 'response' => $response, 'comment' => $comment, 'proof' => $proof);
     }
     recordAdvancedSurvey($_GET['venueid'], $data, $number);
 }
@@ -107,10 +107,7 @@ color: #333333; /* Add some color to the question */
 <body>
 <?php
 // Define the questions array
-
-
-$questions = viewQuestions("premium");
-
+   
 // Get the current question index from the URL or set it to zero
 if (isset($_GET["index"])) {
 $index = $_GET["index"];
