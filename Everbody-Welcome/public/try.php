@@ -36,7 +36,7 @@ $sql2 = "CREATE TABLE advancedsurveyresults(
   question VARCHAR(50) NOT NULL ,
   answer VARCHAR(3) NOT NULL ,
   comment VARCHAR(40) ,
-  proof BLOB ,
+  proof VARCHAR(30) ,
   auditnumber INTEGER NOT NULL 
 )";
 
@@ -51,7 +51,7 @@ $sql3 = "CREATE TABLE venues(
   type VARCHAR(15) NOT NULL,
   premium VARCHAR(3) NOT NULL,
   numberofaudits INTEGER NOT NULL,
-  picture BLOB
+  picture VARCHAR(30) 
 )";
 
 if (mysqli_query($mysqli, $sql3)) {
