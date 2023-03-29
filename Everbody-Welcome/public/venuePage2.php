@@ -28,7 +28,6 @@ body {
 }
 
 .containerTab {
-  padding: 20px;
   color: white;
 }
 
@@ -46,6 +45,22 @@ body {
   font-size: 35px;
   cursor: pointer;
 }
+
+h2{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h3{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
 </style>
 </head>
 <body>
@@ -71,49 +86,23 @@ body {
 <div id="b1" class="containerTab" style="display:none;background:green">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Venue Information</h2>
-  <p>
-    <h3>Venue Name</h3>
+<h3>Venue Name</h3>
     <h3 id="h4">Venue Type</h3>
     <h3 id="h4">Venue Address</h3>
     <h3 id="h4">Postcode</h3>
-  </p>
 </div>
 
 <div id="b2" class="containerTab" style="display:none;background:blue">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Last Survey Results</h2>
-            <hr>
-            <p><strong>Question 1:</strong> What is the venue's capacity? </p>
-            <p><strong>Answer:</strong> venue can hold up to 500 people. </p>
-            <p><strong>Comment:</strong> </p>
-            <p><strong>Proof:</strong></p>
-            <hr>
-            <p><strong>Question 2:</strong> Are there parking facilities?</p>
-            <p><strong>Answer:</strong>Yes, there is a parking lot available for guests. </p>
-            <p><strong>Comment: </strong></p>
-            <p><strong>Proof:</strong></p>
-            <hr>
-            <p><strong>Question 3:</strong> Is the venue accessible for people with disabilities? </p>
-            <p><strong>Answer:</strong>Yes, the venue is wheelchair accessible. </p>
-            <p><strong>Comment: </strong></p>
-            <p><strong>Proof:</strong></p>
-            <hr>
-            <p><strong>Question 4:</strong> What is the venue's location?</p>
-            <p><strong>Answer:</strong>The venue is located in downtown, close to the subway station.</p> 
-            <p><strong>Comment: </strong></p>
-            <p><strong>Proof:</strong></p>
-            <hr>
-            <p><strong>Question 5:</strong> Does the venue provide catering services? </p>
-            <p><strong>Answer:</strong>Yes, the venue has its own catering service that can provide food and drinks. 
-            <p><strong>Comment: </strong> </p>
-            <p><strong>Proof:</strong></p>
-  </p>
+    <p><strong>Question 1:</strong> What is the venue's capacity? </p>
+    <p><strong>Answer:</strong> venue can hold up to 500 people. </p>
+    <p><strong>Comment:</strong> </p>
+    <p style="margin-block-end: 0em;"><strong>Proof:</strong></p>
 </div>
 
 <div id="b3" class="containerTab" style="display:none;background:red">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2>Contact Venue</h2>
-  <p>
   <section id="work">
       <div class="container-contact100">
         <div class="wrap-contact100">
@@ -149,7 +138,6 @@ body {
         </div>
       </div>
     </section>
-  </p>
 </div>
 
 <script>
