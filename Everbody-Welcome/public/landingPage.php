@@ -60,7 +60,7 @@
       <?php include '../public/meetTheTeam.php';?>
     </section>
   </main>
-#
+    <?php include '../public/footer.php';?>
 </body>
-  <?php include '../public/footer.php';?>
+
 </html>
