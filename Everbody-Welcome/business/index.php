@@ -16,8 +16,7 @@ checkSession ($path); //calling the function from session.php
 
 use Stripe\Terminal\Location;
 
-$venueid= $_GET['venueid'];
-$_SESSION['venueid'] = $venueid;
+$venue = $_GET['venueid'];
 ?>
 
 <link rel=""
