@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Three Tabs Page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	
     <style>
 
  * {
@@ -10,22 +10,32 @@
 	padding: 0;
 	box-sizing: border-box;
   	font-family: "Saira Semi Condensed", sans-serif;
-  
+	
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   width: 100%;
   
   
   
 }
+p{
+	font-size: 14px;
+}
+h2{
+	font-size: 30px;
+}
+h4{
+	font-size: 20px;
+}
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-family: "Saira Semi Condensed", sans-serif;
+	
 }
 
 .tabs {
