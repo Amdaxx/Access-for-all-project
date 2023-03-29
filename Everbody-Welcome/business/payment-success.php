@@ -1,6 +1,8 @@
 <?php 
 // Include configuration file  
 require_once 'config.php'; 
+include_once("../SQL/sql.php");
+
  
 // Include database connection file   
  
