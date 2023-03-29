@@ -4,25 +4,28 @@
 	<title>Three Tabs Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
     <style>
+
  * {
-	margin: 0;
+	
 	padding: 0;
 	box-sizing: border-box;
-    font-family: "Saira Semi Condensed", sans-serif;
+  	font-family: "Saira Semi Condensed", sans-serif;
+  
 }
+
 footer {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 0px;
   width: 100%;
+  
+  
   
 }
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
-	
-    font-family: "Saira Semi Condensed", sans-serif;
+	font-family: "Saira Semi Condensed", sans-serif;
 }
 
 .tabs {
@@ -112,7 +115,7 @@ footer {
 <body>
 <?php include "publicHeader.php" ?>
 <div style="text-align:center">
-<h2 style="margin-top:75px">Business Name</h2>
+<h2 style="margin-top:100px">Business Name</h2>
 </div>
 <div class="container">
 		<div class="tabs">
