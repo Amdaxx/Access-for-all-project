@@ -17,6 +17,7 @@ checkSession ($path); //calling the function from session.php
 use Stripe\Terminal\Location;
 
 $venue = $_GET['venueid'];
+goPremium($venue);
 ?>
 
 <link rel=""

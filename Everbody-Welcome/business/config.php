@@ -6,7 +6,7 @@ $productname = "Specific Audit";
 $productID = "AA12345";  
 $productPrice = 3; 
 $currency = "gbp"; 
-$venue = $_GET['venueid'];
+$venueid = $_GET['venueid'];
   
 /* 
  * Stripe API configuration 
