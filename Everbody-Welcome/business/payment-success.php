@@ -100,7 +100,7 @@ if(!empty($_GET['session_id'])){
                         $stmt = $db->prepare($sqlQ); 
                         $stmt->bind_param("ssssdsdssss", $customer_name, $customer_email, $productname, $productID, $productPrice, $currency, $paidAmount, $paidCurrency, $transactionID, $payment_status, $session_id); 
                         $insert = $stmt->execute(); 
-                        goPremium($_GET['venueid']);
+                        goPremium($venue);
                         if($insert){ 
                             $payment_id = $stmt->insert_id; 
                         } 
