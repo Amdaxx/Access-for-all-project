@@ -35,7 +35,8 @@ $sql3 = "CREATE TABLE venues(
   city VARCHAR(20) NOT NULL,
   type VARCHAR(15) NOT NULL,
   premium VARCHAR(3) NOT NULL,
-  numberofaudits INTEGER NOT NULL
+  numberofaudits INTEGER NOT NULL,
+  picture BLOB
 )";
 
 if (mysqli_query($mysqli, $sql3)) {
