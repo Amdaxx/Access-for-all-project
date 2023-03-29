@@ -84,11 +84,10 @@ button:hover {
 }
 
 .adminButtons {
-  position: static;
-  top: 100px;
+  position: relative;
+  top: 25px;
   left: 25px;
   margin-bottom: 45px;
-  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -100,10 +99,4 @@ button:hover {
     margin-left: 10px;
   }
 }
-
-  
-  .table td,
-  .table th {
-    padding: 10px;
-  }
   
