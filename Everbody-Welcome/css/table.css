@@ -5,6 +5,7 @@
 }
 
 .Admintable {
+  position: relative;
   background: #696966;
   border-radius: 0.25em;
   border-collapse: collapse;
