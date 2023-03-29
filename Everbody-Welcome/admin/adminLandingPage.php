@@ -37,7 +37,7 @@ $id = $_SESSION['id'];
   <?php $res = viewBusiness();
   ?>
   <div class="table-container">
-  <table class="table">
+  <table class="Admintable">
     <thead>
       <tr>
         <th>Company Name</th>

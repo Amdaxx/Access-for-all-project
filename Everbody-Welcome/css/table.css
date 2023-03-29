@@ -4,12 +4,13 @@
   clear: both;
 }
 
-table {
+.Admintable {
   background: #696966;
   border-radius: 0.25em;
   border-collapse: collapse;
   margin: 1em;
   width: 100%; /* Added */
+  padding-top: 45px;
 }
 th {
   border-bottom: 1px solid #00000071;
@@ -83,7 +84,7 @@ button:hover {
 }
 
 .adminButtons {
-  position: absolute;
+  position: static;
   top: 100px;
   left: 25px;
   margin-bottom: 45px;
