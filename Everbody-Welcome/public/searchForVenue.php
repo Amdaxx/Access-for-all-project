@@ -7,9 +7,6 @@ require_once('../SQL/sql.php');
   </head>
 
   <div class = "flex-wrapper">
-    <div id="header">
-      <?php include "publicHeader.php" ?>    
-    </div>
 
     <body>
 

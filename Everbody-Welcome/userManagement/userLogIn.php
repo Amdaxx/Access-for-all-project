@@ -11,7 +11,7 @@ if (isset($_POST['submit'])){
 
 <?php include '../public/publicHeader.php';?>
 <body>
-<div class="login-container">
+<div class="login-container" style = "min-height:100%">
     <div class="login-form">
     <h2>Business Portal</h2>
     <form method="post">
