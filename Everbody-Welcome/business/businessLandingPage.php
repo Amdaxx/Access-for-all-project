@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="../css/businessHomepage.css">
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
 
-
+/*
 session_start();
 
 if (!isset($_SESSION['business'])){
@@ -13,6 +14,7 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
+*/
 ?>
 
 <head>
