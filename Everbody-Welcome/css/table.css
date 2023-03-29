@@ -92,6 +92,7 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   .adminButtons {
+    margin-top: 20px;
     position: relative;
     margin-top: 10px;
     margin-bottom: 20px;
