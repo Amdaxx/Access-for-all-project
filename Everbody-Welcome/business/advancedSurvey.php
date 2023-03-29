@@ -1,20 +1,18 @@
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
-
-
 session_start();
-
 if (!isset($_SESSION['business'])){
     session_unset();
     session_destroy();
     header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
-
 $id = $_SESSION['id']; 
+
 $res = viewQuestions("premium");
 $questions = array_column($res, "question");
+echo $_GET['venueid'];
 $number = intval(getNumberOfAudits($_GET['venueid'])) + 1;
 
 if (isset($_POST['submit']) && !isset($_POST['processed'])) {
