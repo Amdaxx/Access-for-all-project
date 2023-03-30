@@ -4,84 +4,17 @@
 	<title>Three Tabs Page</title>
 	
     <style>
-
- * {
-	
+* {
+    font-family: "Saira Semi Condensed", sans-serif;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  	font-family: "Saira Semi Condensed", sans-serif;
-	
 }
 
-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  
-  
-  
-}
-p{
-	font-size: 14px;
-}
-h2{
-	font-size: 30px;
-	  
-}
-h4{
-	font-size: 20px;
-}
 .container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-family: "Saira Semi Condensed", sans-serif;
-	
-}
-
-.tabs {
-	display: flex;
-	width: 100%;
-}
-
-.tab {
-	background-color: #ccc;
-	color: #333;
-	padding: 10px 20px;
-	border-radius: 5px 5px 0 0;
-	cursor: pointer;
-	margin-right: 10px;
-	flex: 1;
-	text-align: center;
-	
-}
-
-.tab.active {
-	background: #f857a8;
-	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-	background: linear-gradient(45deg, #f857a8, #ff5858);
-	color: #fff;
-	
-}
-
-.tab-content-container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
-.tab-content {
-	background: #f857a8;
-	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-	background: linear-gradient(45deg, #f857a8, #ff5858);
-	color: #333;
-	padding: 20px;
-	display: none;
-	border-radius: 0 0 5px 5px;
-}
-
-.tab-content.active {
-	display: block;
+	flex-direction: row;
+	height: 100vh;
 }
 .card {
     width: 100%;
@@ -93,10 +26,56 @@ h4{
     border-radius: 25px;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
   }
-  .email-form label {
+.tabs {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	background-color: #ccc;
+}
+
+.tab {
+	background-color: #ccc;
+	color: #333;
+	padding: 10px 20px;
+	border-radius: 5px 0 0 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.tab.active {
+	background-color: #333;
+	color: #fff;
+}
+
+.tab:hover {
+	background-color: #666;
+	color: #fff;
+}
+
+.tab-content-container {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - 200px);
+	padding: 20px;
+}
+
+.tab-content {
+	background-color: #ccc;
+	color: #333;
+	padding: 20px;
+	display: none;
+	border-radius: 0 5px 5px 0;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+.email-form label {
 	display: block;
 	margin-bottom: 10px;
-	color:  white;
 }
 
 .email-form input[type="email"],
@@ -117,8 +96,8 @@ h4{
 	display: block;
 	margin-top: 20px;
 	padding: 10px 20px;
-	background-color: #fff;
-	color: #f857a8;
+	background-color: #333;
+	color: #fff;
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
@@ -128,12 +107,13 @@ h4{
 .email-form button[type="submit"]:hover {
 	background-color: #666;
 }
+
 </style>
 </head>
 <body>
 <?php include "publicHeader.php" ?>
 <div style="text-align:center">
-<h2 style="margin-top:100px">Business Name</h2>
+
 </div>
 <div class="container">
 		<div class="tabs">
@@ -144,6 +124,8 @@ h4{
 		<div class="tab-content-container">
 			<div class="tab-content active" data-tab="tab1">
                 <div class="card">
+                    <h2>Business Name</h2>
+                    <hr>
                     <h4 id="h4">Venue Type</h4>
                     <p>Venue type goes here.</p>
                     <hr>
