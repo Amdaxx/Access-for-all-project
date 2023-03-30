@@ -24,7 +24,7 @@ if (isset($_POST['delete'])){
 <meta name="description" content="This page displays information about the user's account such as company name and email. Also,
 on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="../css/businessHomepage.css">
+
 <link rel="stylesheet" href="../css/table.css">
 
 </head>
@@ -103,8 +103,13 @@ on this page there are links to the venues pages (view venues and create new ven
         </a>
 
         <form method="POST">
+        <td width='200'><div class="btn-group">
+        <a> 
         <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
         <button class="delete-btn delete" type="delete" name="delete">Delete</button>
+        </div>
+        </a>
+        
         </form>
 
       </tr>
