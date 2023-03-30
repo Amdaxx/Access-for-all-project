@@ -1,7 +1,7 @@
 <?php
 require_once('../SQL/sql.php');
 
-$res = displayAllVenues();
+//$res = displayAllVenues();
 
 if (isset($_POST['category'])) {
   $selected_category = $_POST['category'];
@@ -21,7 +21,16 @@ if (isset($_POST['category'])) {
     <body>
 
       <div class="page">
-
+      <div class="main">
+          <h2 class="main__title">Plants (354)</h2>
+            <div class="filters">
+                <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..." />
+                <button class="button">Search</button>
+            </div>
+        </div>
+        
         <div class="sidebar">
           <h2 class="sidebar__title">Venues (354)</h2>
           <form  method="post" id="form">
@@ -118,15 +127,6 @@ if (isset($_POST['category'])) {
   <button class="button" value=""filter name="filter">Search</button>
 </form>
 
-        <div class="main">
-          <h2 class="main__title">Plants (354)</h2>
-            <div class="filters">
-                <div class="input-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here..." />
-                <button class="button">Search</button>
-            </div>
-        </div>
 
 
           <div class="items">
