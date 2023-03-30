@@ -132,30 +132,40 @@ if(!empty($_GET['session_id'])){
 ?>
 
 <link rel="stylesheet" href="../css/payment-result.css">
+<link rel="stylesheet" href="../css/topNavHome.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+        <span class="gradient skew"><h1 class="logo un-skew"><img src="../pictures/logo.png"></h1></span>
+        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+      </div>
+    </nav>
+</header>
+
 <?php if(!empty($payment_id)){ ?>
     <h1 class="<?php echo $status; ?>"><?php echo $statusMsg; ?></h1>
 
-    <div class="product">
-    <div class="product-listing">
-    <div class="content">
-            <h1 class="name">Payment Information</h1>
-            <p class="info"><b>Reference Number:</b> <?php echo $payment_id; ?></p>
-            <p class="info"><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
-            <p class="info"><b>Paid Amount:</b> <?php echo $paidAmount.' '.$paidCurrency; ?></p>
-            <p class="info"><b>Payment Status:</b> <?php echo $payment_status; ?></p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title">Payment Information</h1>
+        <p class="card-text"><b>Reference Number:</b> <?php echo $payment_id; ?></p>
+        <p class="card-text"><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
+        <p class="card-text"><b>Paid Amount:</b> <?php echo $paidAmount.' '.$paidCurrency; ?></p>
+        <p class="card-text"><b>Payment Status:</b> <?php echo $payment_status; ?></p>
             
-            <h4>Customer Information</h4>
-            <p class="info"><b>Name:</b> <?php echo $customer_name; ?></p>
-            <p class="info"><b>Email:</b> <?php echo $customer_email; ?></p>
+        <h4 class="card-subtitle">Customer Information</h4>
+        <p class="card-text"><b>Name:</b> <?php echo $customer_name; ?></p>
+        <p class="card-text"><b>Email:</b> <?php echo $customer_email; ?></p>
             
-            <h4>Product Information</h4>
-            <p class="info"><b>Name:</b> <?php echo $productName; ?></p>
-            <p class="info"><b>Price:</b> <?php echo $productPrice.' '.$currency; ?></p>
+        <h4 class="card-subtitle">Product Information</h4>
+        <p class="card-text"><b>Name:</b> <?php echo $productName; ?></p>
+        <p class="card-text"><b>Price:</b> <?php echo $productPrice.' '.$currency; ?></p>
         <?php }else{ ?>
             <h1 class="error">Your Payment been failed!</h1>
             <p class="error"><?php echo $statusMsg; ?></p>
         <?php } ?>
-    </div>
-    </div>
-    </div>
+  </div>
+</div>
 	
