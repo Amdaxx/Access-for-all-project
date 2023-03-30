@@ -8,6 +8,7 @@
       </div>
       <div class="nav right">
         <a href="../business/businessLandingPage.php" class="nav-link active"><span class="nav-link-span"><span class="u-nav"><?php echo $_SESSION['name']?> - Business Portal</span></span></a>
+        <a href="../public/landingPage.php" class="nav-link"><span class="nav-link-span"><span class="u-nav">Log Out</span></span></a>
       </div>
     </nav>
 </header>
