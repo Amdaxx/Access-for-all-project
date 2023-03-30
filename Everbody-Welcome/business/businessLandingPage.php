@@ -106,7 +106,7 @@ on this page there are links to the venues pages (view venues and create new ven
         <td width='200'>
         <div class="btn-group">
         <a href="businessLandingPage.php"> 
-        <button class="option" name="delete" style = "color:black">Delete</button>
+        <input type="button" value="Delete" name="delete">
         </div>
         </a>
         
