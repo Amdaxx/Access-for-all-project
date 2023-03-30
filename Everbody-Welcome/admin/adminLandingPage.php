@@ -1,7 +1,7 @@
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
-include '../public/publicHeader.php';
+include '../admin/adminHeader.php';
 
 
 session_start();
@@ -27,8 +27,7 @@ $id = $_SESSION['id'];
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 80vh;
+    min-height: 80vh;
   }
   </style>
   <link rel="stylesheet" href="../css/table.css">
@@ -36,17 +35,18 @@ $id = $_SESSION['id'];
 
 <div class="flex-wrapper">
 
-  <body style = "background-color:cdc7c7">
+  <body style = "background-color:ddd">
   <div class="container">
-    <div class = "adminButtons"> 
-      <a href="adminViewQuestions.php?type=general"><button class="btn btn-primary btn-md">Update General Survey</button></a>
-      <a href="adminViewQuestions.php?type=premium"><button class="btn btn-primary btn-md">Update Premium Survey</button></a>
+    <h1>Welcome back Jane ... <h1>
+    <div class = "adminButtons" style="justify-content: center;display: flex;"> 
+      <a href="adminViewQuestions.php?type=general"><button class="admin">Update General Survey</button></a>
+      <a href="adminViewQuestions.php?type=premium"><button class="admin">Update Premium Survey</button></a>
     </div>
 
     <?php  $res = viewBusiness();
     ?>
 
-    <div class="table-container" style="align-items: center;">
+    <div class="table-container" style="align-items: center;border-width:7px;border-color:linear-gradient(45deg, #f857a8, #ff5858);">
       <table class="table">
         <thead>
           <tr>

@@ -31,6 +31,14 @@ if (isset($_POST['submit'])) {
 ?>
 <html>
 <head>
+<title>Business Landing Page</title>
+<meta name="description" content="This page displays information about the user's account such as company name and email. Also,
+on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="../css/businessHomepage.css">
+<link rel="stylesheet" href="../css/table.css">
+
+
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -101,41 +109,6 @@ color: #333333; /* Add some color to the question */
 
 </style>
 
-<script>
-function storeAnswer(index, answer) {
-  localStorage.setItem("answer_" + index, answer);
-}
-
-function storeComment(index, comment) {
-  localStorage.setItem("comment_" + index, comment);
-}
-
-function submitAnswers() {
-  const questionsCount = <?php echo count($questions); ?>;
-  const venueId = <?php echo $venueid; ?>;
-  const form = document.createElement("form");
-  form.method = "POST";
-  form.action = "?venueid=" + venueId;
-
-  for (let i = 0; i < questionsCount; i++) {
-    const answerInput = document.createElement("input");
-    answerInput.type = "hidden";
-    answerInput.name = "answer_" + i;
-    answerInput.value = localStorage.getItem("answer_" + i) || "";
-    form.appendChild(answerInput);
-
-    const commentInput = document.createElement("input");
-    commentInput.type = "hidden";
-    commentInput.name = "comment_" + i;
-    commentInput.value = localStorage.getItem("comment_" + i) || "";
-    form.appendChild(commentInput);
-  }
-
-  document.body.appendChild(form);
-  form.submit();
-}
-</script>
-
 </head>
 <body>
 <?php
@@ -162,4 +135,5 @@ echo "<input class='button' type='submit' name='submit' value='Submit'>";
 echo "</form>";
 ?>
 </body>
+<?php include "../public/footer.php" ?>
 </html>

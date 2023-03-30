@@ -24,27 +24,27 @@ if (isset($_POST['delete'])){
 <head>
   <style>
     body {
-    background-color: #ccc;
+    background-color: #ddd;
 }
   </style>
 	<title>Questions</title>
 	<link rel="stylesheet" type="text/css" href="../css/questions.css">
 </head>
-<?php include "../public/publicHeader.php" ?>
+<?php include "../admin/adminHeader.php" ?>
 <?php $res = viewQuestions($_GET['type']); ?>
 
-<h1><?php echo $_GET['type'];?> Survey</h1>
+<h1 style="text-align:center"><?php echo ucfirst($_GET['type']);?> Survey</h1>
 
 <body>
 
-  <div class="container">
+  <div class="container"style = "min-height:75vh">
     <div class="add-question">
       <h2>Add Question</h2>
       <form method="POST">
-        <label for="question">Question:</label>
-        <input type="text" id="question" name="question" required>
+        <h3><label for="question">Question:</label></h3>
+        <input style="margin-bottom:0;" type="text" id="question" name="question" required>
 
-        <label for="question-type">Question Type:</label>
+        <h3><label for="question-type">Question Type:</label></h3>
         <select id="question-type" name="type">
           <option value="Physical Disability">Physical Disability</option>
           <option value="Vision Impairment">Vision Impairment</option>
