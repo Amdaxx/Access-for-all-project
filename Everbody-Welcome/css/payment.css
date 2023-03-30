@@ -115,7 +115,7 @@ body::before{
 
 .name{
     font-family: 'dosis';
-    font-size: 70px;
+    font-size: 50px;
     text-transform: capitalize;
 }
 
@@ -170,3 +170,11 @@ body::before{
         font: 16px;
     }
 }
+
+#nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* optional - this determines the stacking order of the element */
+  }

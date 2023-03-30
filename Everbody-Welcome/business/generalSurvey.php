@@ -12,7 +12,7 @@ $id = $_SESSION['id'];
 
 
 
-$res = viewQuestions("premium");
+$res = viewQuestions("general");
 $ques = array_column($res, "question");
 
  $data = array();
