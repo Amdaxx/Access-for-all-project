@@ -32,7 +32,7 @@ on this page there are links to the venues pages (view venues and create new ven
 
 
 
-<div class="flex-wrapper"style = "min-height:80vh">
+<div class="flex-wrapper"style = "min-height:90vh">
   <div id="header">
       <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
@@ -41,7 +41,7 @@ on this page there are links to the venues pages (view venues and create new ven
 
   <body style = "background-color:#ddd">
 
-  <div class = "homeButtons"> 
+  <div class = "homeButtons" style="align-items: center;"> 
     <a href="createVenue.php"><button class="btnss">Add Venues</button></a>
     <a href="updateBusinessDetails.php"><button class="btnss">Edit Company Info</button></a>
   </div>
@@ -51,7 +51,7 @@ on this page there are links to the venues pages (view venues and create new ven
    if($res!=NULL){
   ?>
 
-<div class="table-container">
+<div class="table-container"style="margin-top:15px;">
   <table class="table">
     <thead>
       <tr>

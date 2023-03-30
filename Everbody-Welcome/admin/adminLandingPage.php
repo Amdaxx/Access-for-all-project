@@ -27,7 +27,7 @@ $id = $_SESSION['id'];
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    min-height: 80vh;
   }
   </style>
   <link rel="stylesheet" href="../css/table.css">
