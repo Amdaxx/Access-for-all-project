@@ -37,12 +37,12 @@ if (isset($_POST['delete'])){
 
 <body>
 
-  <div class="container">
+  <div class="container"style = "min-height:75vh">
     <div class="add-question">
       <h2>Add Question</h2>
       <form method="POST">
         <h3><label for="question">Question:</label></h3>
-        <input type="text" id="question" name="question" required>
+        <input style="margin-bottom:0;" type="text" id="question" name="question" required>
 
         <h3><label for="question-type">Question Type:</label></h3>
         <select id="question-type" name="type">
