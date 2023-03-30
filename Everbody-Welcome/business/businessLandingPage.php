@@ -61,6 +61,7 @@ on this page there are links to the venues pages (view venues and create new ven
         <th>Address</th>
         <th>Premium</th>
         <th>Action</th>
+
       </tr>
     </thead>
     <?php foreach ($res as $venue):?>
@@ -105,7 +106,7 @@ on this page there are links to the venues pages (view venues and create new ven
         <td width='200'>
         <div class="btn-group">
         <a href="businessLandingPage.php"> 
-        <input style = "background:red;color:black" type="button" value="Delete" name="delete">
+        <input style = "color:black" type="button" value="Delete" name="delete">
         </div>
         </a>
         
