@@ -115,7 +115,7 @@ if(!empty($_GET['session_id'])){
                     } 
                      
                     $status = 'success'; 
-                    $statusMsg = 'Your Payment has been Successful!'; 
+                    $statusMsg = ''; 
                 }else{ 
                     $statusMsg = "Transaction has been failed!"; 
                 } 
