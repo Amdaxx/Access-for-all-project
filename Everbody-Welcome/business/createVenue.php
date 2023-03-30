@@ -28,7 +28,7 @@ if (isset($_POST['submit'])){
   </head>
 
 
-  <div class="flex-wrapper"style = "min-height:100%;color:#ddd">
+  <div class="flex-wrapper"style = "min-height:100%;background-color:#ddd">
     <div id="header">
       <?php include "businessHeader.php";
       ?>    

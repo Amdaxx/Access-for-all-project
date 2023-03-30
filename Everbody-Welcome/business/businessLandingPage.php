@@ -35,7 +35,7 @@ on this page there are links to the venues pages (view venues and create new ven
       ?>  
   </div>
 
-  <body style = "min-height:100%;color:#ddd">
+  <body style = "min-height:100%;background-color:#ddd">
 
   <div class = "homeButtons"> 
     <a href="createVenue.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
