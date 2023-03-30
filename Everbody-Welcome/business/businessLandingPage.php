@@ -32,7 +32,7 @@ on this page there are links to the venues pages (view venues and create new ven
 
 
 
-<div class="flex-wrapper"style = "min-height:100vh">
+<div class="flex-wrapper"style = "min-height:80vh">
   <div id="header">
       <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
