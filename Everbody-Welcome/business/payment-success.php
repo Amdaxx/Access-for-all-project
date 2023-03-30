@@ -134,7 +134,7 @@ if(!empty($_GET['session_id'])){
 <link rel="stylesheet" href="../css/payment-result.css">
 <link rel="stylesheet" href="../css/topNavHome.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<head>
 <header id="nav-wrapper">
     <nav id="nav">
       <div class="nav left">
@@ -143,7 +143,10 @@ if(!empty($_GET['session_id'])){
       </div>
     </nav>
 </header>
+</head>
 
+
+<body>
 <?php if(!empty($payment_id)){ ?>
     <h1 class="<?php echo $status; ?>"><?php echo $statusMsg; ?></h1>
 
@@ -168,4 +171,5 @@ if(!empty($_GET['session_id'])){
         <?php } ?>
   </div>
 </div>
+</body>
 	
