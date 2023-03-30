@@ -22,7 +22,7 @@ $db = new mysqli('afpproject-server.mysql.database.azure.com', 'tkgwwyrhag', 'Bl
 if ($db->connect_errno) {
     echo "Failed to connect to MySQL: " . $db->connect_error;
 } else {
-    echo "Connected successfully!";
+    echo "";
 }
 // Check whether stripe checkout session is not empty 
 if(!empty($_GET['session_id'])){ 
