@@ -14,24 +14,19 @@ $questions = array_column($res, "question");
 $venueid = $_GET['venueid'];
 $number = intval(getNumberOfAudits($venueid)) + 1;
 
-if (isset($_POST['submit']) && !isset($_POST['processed'])) {
-    $_POST['processed'] = true;
-    $data = array();
+if (isset($_POST['answer_0'])) {
+  $data = array();
 
-    foreach ($questions as $index => $question) {
-        if (isset($_POST[$index])) {
-            $response = $_POST[$index];
-        } else {
-            $response = '';
-        }
-        $comment = (isset($_POST['comment_' . $index])) ? $_POST['comment_' . $index] : '';
+  foreach ($questions as $index => $question) {
+    $response = isset($_POST['answer_' . $index]) ? $_POST['answer_' . $index] : '';
+    $comment = isset($_POST['comment_' . $index]) ? $_POST['comment_' . $index] : '';
 
-        // Send data array
-        $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment);
-    }
+    $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment);
+  }
 
-    recordAdvancedSurvey($venueid, $data, $number);
+  recordAdvancedSurvey($venueid, $data, $number);
 }
+
 
 ?>
 <html>
@@ -105,64 +100,66 @@ color: #333333; /* Add some color to the question */
 }
 
 </style>
+
+<script>
+function storeAnswer(index, answer) {
+  localStorage.setItem("answer_" + index, answer);
+}
+
+function storeComment(index, comment) {
+  localStorage.setItem("comment_" + index, comment);
+}
+
+function submitAnswers() {
+  const questionsCount = <?php echo count($questions); ?>;
+  const venueId = <?php echo $venueid; ?>;
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = "?venueid=" + venueId;
+
+  for (let i = 0; i < questionsCount; i++) {
+    const answerInput = document.createElement("input");
+    answerInput.type = "hidden";
+    answerInput.name = "answer_" + i;
+    answerInput.value = localStorage.getItem("answer_" + i) || "";
+    form.appendChild(answerInput);
+
+    const commentInput = document.createElement("input");
+    commentInput.type = "hidden";
+    commentInput.name = "comment_" + i;
+    commentInput.value = localStorage.getItem("comment_" + i) || "";
+    form.appendChild(commentInput);
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+}
+</script>
+
 </head>
 <body>
 <?php
-// Define the questions array
-   
-// Get the current question index from the URL or set it to zero
-if (isset($_GET["index"])) {
-$index = $_GET["index"];
-} else {
-$index = 0;
-}
-
-// Check if the index is valid or not
-if ($index >= 0 && $index < count($questions)) {
-  // Start the form to answer the questions
-  echo "<form class='answer' method='post' enctype='multipart/form-data'>";
-
-  // Display the current question
+// Display all questions
+for ($index = 0; $index < count($questions); $index++) {
   echo "<div class='question'>";
   echo "<h1>Question " . ($index + 1) . "</h1>";
   echo "<p>" . $questions[$index] . "</p>";
-  echo "</div>";
-
-  // Hidden input to pass the question index to the next page
-  echo "<input type='hidden' name='index' value='$index'>";
 
   // Radio buttons to choose yes or no
   echo "<p>Answer:</p>";
-  echo "<input type='radio' id='yes' name='" . $index . "' value='yes'>";
-  echo "<label for='yes'>Yes</label><br>";
+  echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes' onclick='storeAnswer(" . $index . ", \"yes\")'>";
+  echo "<label for='yes_" . $index . "'>Yes</label><br>";
 
-  echo "<input type='radio' id='no' name='" . $index . "' value='no'>";
-  echo "<label for='no'>No</label><br>";
+  echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no' onclick='storeAnswer(" . $index . ", \"no\")'>";
+  echo "<label for='no_" . $index . "'>No</label><br>";
 
   // Textarea to write a comment
   echo "<p>Comment:</p>";
-  echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50'></textarea><br>";
-
-  // File input to upload a picture
-  echo "<p>Picture:</p>";
-  echo "<input class='picture' type='file' name='picture'><br>";
-
-  // Display the submit button only at the last question
-  if ($index == count($questions) - 1) {
-      echo "<input class='button' type='submit' name='submit' value='Submit'>";
-  }
-
-  // Display a link to the next question if it exists
-  if ($index < count($questions) - 1) {
-      echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venueid . "'>Next question</a>";
-  }
-
-  // End the form
-  echo "</form>";
-} else {
-  // Display a message if the index is invalid
-  echo "<p>Invalid question index.</p>";
+  echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50' onchange='storeComment(" . $index . ", this.value)'></textarea><br>";
 }
+
+// Display the submit button
+echo "<button class='button' type='button' onclick='submitAnswers()'>Submit</button>";
 ?>
 </body>
 </html>
