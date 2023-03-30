@@ -41,11 +41,10 @@ if (isset($_POST['submit'])) {
 
   <style>
     :root {
-      --main-color: #ff9900;
-      --text-color: #333333;
-      --background-color: #f0f0f0;
-      --box-bg-color: white;
-      --box-shadow-color: gray;
+      --main-color: #6c757d;
+      --text-color: #ffffff;
+      --background-color: #343a40;
+      --box-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
     body {
@@ -63,7 +62,6 @@ if (isset($_POST['submit'])) {
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px var(--box-shadow-color);
-      background-color: var(--box-bg-color);
     }
 
     .comment,
@@ -127,3 +125,4 @@ if (isset($_POST['submit'])) {
   ?>
 </body>
 </html>
+
