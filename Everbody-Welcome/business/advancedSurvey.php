@@ -27,16 +27,6 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
             $response = '';
         }
         $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
-        $fileNameNew = "";
-
-        // Save proof
-        $proof = (isset($_FILES['picture'])) ? $_FILES['picture'] : '';
-        if (!empty($proof['tmp_name'])) {
-            $target_file = $target_dir . basename($proof['name']);
-            if (move_uploaded_file($proof['tmp_name'], $target_file)) {
-                $fileNameNew = "http://afpproject.azurewebsites.net/" . $target_file;
-            }
-        }
 
         // Send data array
         $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
