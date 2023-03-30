@@ -72,34 +72,34 @@ function validateForm() {
 
       <form id = "centerform" method="post" onsubmit="return validateForm()">
         <div class="form-group row">
-            <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
-            <div class="col-sm-6">
+            <label for="vName" class="col-sm-5 col-form-label">Venue name</label>
+            <div class="col-sm-8">
             <input type="text" class="form-control" id="vName" placeholder="Venue Name" name="venueName"> <br>
             </div>
         </div>
         <div class="form-group row">
-            <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
-            <div class="col-sm-6">
+            <label for="vAddress" class="col-sm-5 col-form-label">Venue address</label>
+            <div class="col-sm-8">
             <input type="text" class="form-control" id="vAddress" placeholder="Venue Address" name="venueAddress"> <br>
             </div>
         </div>
         <div class="form-group row">
-            <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
-            <div class="col-sm-6">
+            <label for="vPostcode" class="col-sm-5 col-form-label">Postcode</label>
+            <div class="col-sm-8">
             <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode" name="postcode"> <br>
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="vPostcode" class="col-sm-2 col-form-label">City</label>
-            <div class="col-sm-6">
+            <label for="vPostcode" class="col-sm-5 col-form-label">City</label>
+            <div class="col-sm-8">
             <input type="text" class="form-control" id="vCity" placeholder="Venue City" name="city"> <br>
             </div>
         </div>
 
           <div class="form-group row">
-              <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
-              <div class="col-sm-6">
+              <label for="typeOfVenue" class="col-sm-5 col-form-label">Type of Venue</label>
+              <div class="col-sm-8">
                   <select name="typeOfVenue" id="typeOfVenue">
                       <option  value="Accommodation">Accommodation</option>
                       <option  value="Experience">Experience</option>
