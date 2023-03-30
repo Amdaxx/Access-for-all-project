@@ -28,7 +28,7 @@ on this page there are links to the venues pages (view venues and create new ven
 
 <div class="flex-wrapper">
   <div id="header">
-      <?php include "businessHeader.php";
+      <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
