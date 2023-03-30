@@ -58,63 +58,65 @@ function validateForm() {
 }
 
 </script>
+  <div class="login-container" style = "min-height:100%">
 
-  <div id="formz">
-    <div class="row">
-      <div class = "onecolumn">
-        <aboutUs>
-          <h2 >Create a Venue</h2>
-        </aboutUs>
+    <div id="formz">
+      <div class="row">
+        <div class = "onecolumn">
+          <aboutUs>
+            <h2 >Create a Venue</h2>
+          </aboutUs>
+        </div>
       </div>
-    </div>
-      
+        
 
-    <form id = "centerform" method="post" onsubmit="return validateForm()">
-      <div class="form-group row">
-          <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
-          <div class="col-sm-6">
-          <input type="text" class="form-control" id="vName" placeholder="Venue Name" name="venueName"> <br>
-          </div>
-      </div>
-      <div class="form-group row">
-          <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
-          <div class="col-sm-6">
-          <input type="text" class="form-control" id="vAddress" placeholder="Venue Address" name="venueAddress"> <br>
-          </div>
-      </div>
-      <div class="form-group row">
-          <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
-          <div class="col-sm-6">
-          <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode" name="postcode"> <br>
-          </div>
-      </div>
-
-      <div class="form-group row">
-          <label for="vPostcode" class="col-sm-2 col-form-label">City</label>
-          <div class="col-sm-6">
-          <input type="text" class="form-control" id="vCity" placeholder="Venue City" name="city"> <br>
-          </div>
-      </div>
-
+      <form id = "centerform" method="post" onsubmit="return validateForm()">
         <div class="form-group row">
-            <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
-            <div class="col-sm-6">
-                <select name="typeOfVenue" id="typeOfVenue">
-                    <option  value="Accommodation">Accommodation</option>
-                    <option  value="Experience">Experience</option>
-                    <option  value="Tours">Tours</option>
-                    <option  value="Events">Events</option>
-                </select>
+            <label for="vName" class="col-sm-5 col-form-label">Venue name</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control" id="vName" placeholder="Venue Name" name="venueName"> <br>
             </div>
         </div>
         <div class="form-group row">
-          <div class="col-sm-10">
-            <button type="submit" name ="submit" class="btn btn-primary" >Create Venue</button>
-          </div>
+            <label for="vAddress" class="col-sm-5 col-form-label">Venue address</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control" id="vAddress" placeholder="Venue Address" name="venueAddress"> <br>
+            </div>
         </div>
-      </form>
-    
-    </body>
-  </div>
+        <div class="form-group row">
+            <label for="vPostcode" class="col-sm-5 col-form-label">Postcode</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control" id="vPostcode" placeholder="Venue Postcode" name="postcode"> <br>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="vPostcode" class="col-sm-5 col-form-label">City</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control" id="vCity" placeholder="Venue City" name="city"> <br>
+            </div>
+        </div>
+
+          <div class="form-group row">
+              <label for="typeOfVenue" class="col-sm-5 col-form-label">Type of Venue</label>
+              <div class="col-sm-8">
+                  <select name="typeOfVenue" id="typeOfVenue">
+                      <option  value="Accommodation">Accommodation</option>
+                      <option  value="Experience">Experience</option>
+                      <option  value="Tours">Tours</option>
+                      <option  value="Events">Events</option>
+                  </select>
+              </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" name ="submit" class="btn btn-primary" >Create Venue</button>
+            </div>
+          </div>
+        </form>
+      
+      </body>
+    </div>
+  </div>  
   <?php include "../public/footer.php" ?>
 </html>
