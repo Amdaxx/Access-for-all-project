@@ -427,9 +427,27 @@
     }
 
 
-    function deleteVenue()
+    function deleteVenue($venueid)
     {
-        
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $stmt = $conn->prepare("DELETE FROM venues WHERE venueid=:venueid");
+        $stmt->bindParam(':venueid', $venueid);
+        $stmt->execute();
+
+        $stmt2 = $conn->prepare("DELETE FROM recordaudits WHERE venueid=:venueid");
+        $stmt2->bindParam(':venueid', $venueid);
+        $stmt2->execute();
+
+        $stmt3 = $conn->prepare("DELETE FROM advancedsurveyresults WHERE venueid=:venueid");
+        $stmt3->bindParam(':venueid', $venueid);
+        $stmt3->execute();
+
+        $stmt4 = $conn->prepare("DELETE FROM generalsurveyresults WHERE venueid=:venueid");
+        $stmt4->bindParam(':venueid', $venueid);
+        $stmt4->execute();
+
     }
 
     function getAudits($venueid)

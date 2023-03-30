@@ -13,6 +13,10 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); 
 
 $id = $_SESSION['id']; 
+
+if (isset($_POST['delete'])){
+	deleteVenue($_POST['venueid']);
+}
 ?>
 
 <head>
@@ -98,10 +102,11 @@ on this page there are links to the venues pages (view venues and create new ven
         <input type="button" value="Past Audits"></div>
         </a>
 
-        <td width='200'><div class="btn-group">
-        <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Delete Venue"></div>
-        </a>
+
+        <form method="POST">
+        <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
+        <button class="delete-btn delete" type="delete" name="delete">Delete</button>
+        </form>
 
       </tr>
     </tbody>
