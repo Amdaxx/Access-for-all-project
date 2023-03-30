@@ -24,6 +24,13 @@ $sql4 = "CREATE TABLE questions(
   type VARCHAR(30) NOT NULL,
   surveytype VARCHAR(30) NOT NULL 
 )";
+if (mysqli_query($mysqli, $sql4)) {
+  echo "Table created successfully";
+} else {
+  echo "Error created table: " . mysqli_error($mysqli);
+}
+
+
 
 /*
 $sql0 = "DROP TABLE venues";
