@@ -54,23 +54,28 @@ $id = $_SESSION['id'];
   $res = getAudits($_GET['venueid']);
   ?>
   <body>
-    <div style="overflow-x:auto;   top: 20px;position: relative;">
-      <table class="center" border='1' style='border-collapse:collapse'>
-        <th>Audit Number</th>
+  <div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+       <th>Audit Number</th>
         <th>Audit Type</th>
         <th>Date Submitted</th>
         <th>View Audit</th>
       </tr>
-      <?php foreach ($res as $venue): ?>
-      <tr class = "data">
-        <td><?php echo $venue['auditnumber']?></td>
-        <td><?php echo $venue['type']?></td>
-        <td><?php echo $venue['dates']?></td>
-        <td><input type="button" value="View Audit" onclick="window.location.href='../business/viewAudits.php';"></td>
+    </thead>
+    <?php foreach ($res as $venue):?>
+    <tbody>
+      <tr>
+      <td width='250'><?php echo $venue['auditnumber']; ?></td>
+      <td width='250'><?php echo $venue['type']; ?></td>
+      <td width='250'><?php echo $venue['dates']; ?></td>
+      <td width='250'><?php "View Audit"; ?></td>
       </tr>
-      <?php endforeach; ?>
-    </table>
-  </div>
+    </tbody>
+    <?php endforeach;?>
+  </table>
+</div>
 </body>
 
 <?php include "../public/footer.php" ?>
