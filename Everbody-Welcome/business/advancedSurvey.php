@@ -29,112 +29,101 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<?php include "../business/businessHeader.php";?>
-<title>Business Landing Page</title>
-<meta name="description" content="This page displays information about the user's account such as company name and email. Also,
-on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="../css/businessHomepage.css">
-<link rel="stylesheet" href="../css/table.css">
+  <?php include "../business/businessHeader.php";?>
+  <title>Business Landing Page</title>
+  <meta name="description" content="This page displays information about the user's account such as company name and email. Also, on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/businessHomepage.css">
+  <link rel="stylesheet" href="../css/table.css">
 
+  <style>
+    :root {
+      --main-color: #ff9900;
+      --text-color: #333333;
+      --background-color: #f0f0f0;
+      --box-bg-color: white;
+      --box-shadow-color: gray;
+    }
 
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+    }
 
-  .question {
-    margin: 20px auto; /* Center the question horizontally */
-    width: 80%; /* Reduce the width of the question */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-    background-color: white;
-  }
+    .question,
+    .answer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto;
+      width: 80%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--box-shadow-color);
+      background-color: var(--box-bg-color);
+    }
 
-  .answer {
-    margin: 20px auto; /* Center the answer horizontally */
-    width: 80%; /* Reduce the width of the answer */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-    background-color: white;
-  }
+    .comment,
+    .picture,
+    .button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
 
-  .comment {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #f0f0f0;
-  }
+    .button {
+      background-color: var(--main-color);
+      cursor: pointer;
+    }
 
-  .picture {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #f0f0f0;
-  }
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-  .button {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #ff9900;
-    color: white;
-    cursor: pointer;
-  }
+    h1 {
+      font-size: small;
+      color: var(--main-color);
+    }
 
-  a {
-    color: #ff9900;
-    text-decoration: none;
-    display: block; /* Make the link a block element */
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add some space below the link */
-  }
-
-h1 {
-font-size: small; /* Make the question number smaller */
-color: #ff9900; /* Add some color to the question number */
-}
-
-p {
-font-size: large; /* Make the question bigger */
-color: #333333; /* Add some color to the question */
-}
-
-</style>
-
+    p {
+      font-size: large;
+      color: var(--text-color);
+    }
+  </style>
 </head>
 <body>
-<?php
-echo "<form class='answer' method='post' enctype='multipart/form-data'>";
+  <?php
+    echo "<form class='answer' method='post' enctype='multipart/form-data'>";
 
-for ($index = 0; $index < count($questions); $index++) {
-  echo "<div class='question'>";
-  echo "<h1>Question " . ($index + 1) . "</h1>";
-  echo "<p>" . $questions[$index] . "</p>";
+    for ($index = 0; $index < count($questions); $index++) {
+      echo "<div class='question'>";
+      echo "<h1>Question " . ($index + 1) . "</h1>";
+      echo "<p>" . $questions[$index] . "</p>";
 
-  echo "<p>Answer:</p>";
-  echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes'>";
-  echo "<label for='yes_" . $index . "'>Yes</label><br>";
+      echo "<p>Answer:</p>";
+      echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes'>";
+      echo "<label for='yes_" . $index . "'>Yes</label><br>";
 
-  echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no'>";
-  echo "<label for='no_" . $index . "'>No</label><br>";
+      echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no'>";
+      echo "<label for='no_" . $index . "'>No</label><br>";
 
-  echo "<p>Comment:</p>";
-  echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50'></textarea><br>";
-  echo "</div>";
-}
+      echo "<p>Comment:</p>";
+      echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50'></textarea><br>";
+      echo "</div>";
+    }
 
-echo "<input class='button' type='submit' name='submit' value='Submit'>";
-echo "</form>";
-?>
+    echo "<input class='button' type='submit' name='submit' value='Submit'>";
+    echo "</form>";
+  ?>
 </body>
-<?php include "../public/footer.php" ?>
 </html>
