@@ -13,6 +13,8 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
+$res = viewVenues($id);
+
 ?>
 
 <head>
@@ -37,7 +39,6 @@ $id = $_SESSION['id'];
   </div>
       
       <?php
-   $res = viewVenues($_SESSION['id']);
    if($res!=NULL){
   ?>
     <table>  
