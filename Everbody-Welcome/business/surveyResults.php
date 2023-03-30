@@ -89,7 +89,7 @@ $auditNumber = $_GET['number'];
                 }
         echo "</tbody>
             </table>
-            <a href=\"previousAudits.php\" class=\"btn btn-primary\">Back to survey</a>
+            <a href=\"previousAudits.php\" class=\"btn btn-primary\">View Your Audits</a>
         </div>
         </body>
         </html>";
