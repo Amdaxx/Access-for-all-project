@@ -128,6 +128,7 @@ if (isset($_POST['category'])) {
             <input type="text" placeholder="Search here..." />
             <button class="button">Search</button>
           </div>
+        </div>
         <div class="items">
           <?php foreach ($res as $venue): ?>
             <div class="item">
@@ -135,7 +136,7 @@ if (isset($_POST['category'])) {
                 <img src="../pictures/dummyPictures/venue1.jpg" alt="building" class="item__image item__image--hue"  onclick="window.location.href='../public/venuePage.php';">
               </div>
               <div class="item__detail">
-                <h3<?php echo $venue['venuename'] ?></h3>
+                <h3><?php echo $venue['venuename'] ?></h3>
               </div>
             </div>
           <?php endforeach;?>

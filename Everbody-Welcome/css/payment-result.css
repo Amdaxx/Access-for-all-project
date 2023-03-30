@@ -31,7 +31,7 @@ body{
     animation: fade-in 1s forwards 1;
 }
 
-.product-listing h1 {
+.mainTitle {
     writing-mode: vertical-rl;
     font-family: 'dosis';
     font-size: 50px;
@@ -54,17 +54,12 @@ body{
     body::before{
         transform: translateX(-50%) skewX(-5deg);
     }
-    .product{
-        flex-direction: column;
-        width: 90%;
-        margin: 5vh 0;
-    }
 
     .product-listing{
         width: 100%;
         min-height: auto;
     }
-    .product-listing h1{
+    .mainTitle{
         font-size: 40px;
         line-height: 50px;
         margin-right: 0;
