@@ -40,7 +40,7 @@ $id = $_SESSION['id'];
   ?>
   
   <div class="table-container">
-  <table class="Admintable">
+  <table class="table">
     <thead>
       <tr>
         <th>Company Name</th>
