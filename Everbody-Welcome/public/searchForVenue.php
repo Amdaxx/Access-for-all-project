@@ -9,7 +9,7 @@ if (isset($_POST['filter'])) {
   $res = filterVenues($selected_category, $selected_city);
 }
 
-if (isset($_POST['filter'])) {
+if (isset($_POST['search'])) {
   $selected_name = $_POST['name'];
   $res = searchVenueByName($selected_name);
 }
@@ -128,10 +128,12 @@ if (isset($_POST['filter'])) {
 
       <div class="main">
         <div class="filters">
+          <form method="post">
             <div class="input-box">
             <i class="uil uil-search"></i>
             <input type="text" name="name" placeholder="Search here..." />
             <button class="button" name="search">Search</button>
+            </form>
           </div>
         </div>
         <div class="items">
