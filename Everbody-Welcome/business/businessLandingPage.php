@@ -41,7 +41,7 @@ on this page there are links to the venues pages (view venues and create new ven
 
   <body style = "background-color:#ddd">
 
-  <div class = "homeButtons" style="align-items: center;"> 
+  <div class = "homeButtons" style="justify-content: center;display: flex;"> 
     <a href="createVenue.php"><button class="btnss">Add Venues</button></a>
     <a href="updateBusinessDetails.php"><button class="btnss">Edit Company Info</button></a>
   </div>
