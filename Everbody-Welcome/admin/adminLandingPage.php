@@ -27,7 +27,6 @@ $id = $_SESSION['id'];
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 80vh;
   }
   </style>
@@ -36,8 +35,9 @@ $id = $_SESSION['id'];
 
 <div class="flex-wrapper">
 
-  <body style = "background-color:cdc7c7">
+  <body style = "background-color:ddd">
   <div class="container">
+    <h1>Admin Portal<h1>
     <div class = "adminButtons"> 
       <a href="adminViewQuestions.php?type=general"><button class="admin">Update General Survey</button></a>
       <a href="adminViewQuestions.php?type=premium"><button class="admin">Update Premium Survey</button></a>
@@ -46,7 +46,7 @@ $id = $_SESSION['id'];
     <?php  $res = viewBusiness();
     ?>
 
-    <div class="table-container" style="align-items: center;">
+    <div class="table-container" style="align-items: center;border-width:7px;border-color:linear-gradient(45deg, #f857a8, #ff5858);">
       <table class="table">
         <thead>
           <tr>
