@@ -3,10 +3,15 @@ require_once('../SQL/sql.php');
 
 $res = displayAllVenues();
 
-if (isset($_POST['category'])) {
+if (isset($_POST['filter'])) {
   $selected_category = $_POST['category'];
   $selected_city = $_POST['city'];
   $res = filterVenues($selected_category, $selected_city);
+}
+
+if (isset($_POST['filter'])) {
+  $selected_name = $_POST['name'];
+  $res = searchVenueByName($selected_name);
 }
 
 
@@ -125,8 +130,8 @@ if (isset($_POST['category'])) {
         <div class="filters">
             <div class="input-box">
             <i class="uil uil-search"></i>
-            <input type="text" placeholder="Search here..." />
-            <button class="button">Search</button>
+            <input type="text" name="name" placeholder="Search here..." />
+            <button class="button" name="search">Search</button>
           </div>
         </div>
         <div class="items">
