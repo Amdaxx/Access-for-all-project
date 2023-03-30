@@ -37,8 +37,8 @@ $id = $_SESSION['id'];
 
   <body style = "background-color:ddd">
   <div class="container">
-    <h1>Admin Portal<h1>
-    <div class = "adminButtons" stlye="align-items: center;"> 
+    <h1>Welcome back Jane ... <h1>
+    <div class = "adminButtons" style="align-items: center;"> 
       <a href="adminViewQuestions.php?type=general"><button class="admin">Update General Survey</button></a>
       <a href="adminViewQuestions.php?type=premium"><button class="admin">Update Premium Survey</button></a>
     </div>
