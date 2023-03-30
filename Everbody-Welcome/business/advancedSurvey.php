@@ -31,6 +31,7 @@ if (isset($_POST['submit'])) {
 ?>
 <html>
 <head>
+<?php include "../business/businessHeader.php";?>
 <title>Business Landing Page</title>
 <meta name="description" content="This page displays information about the user's account such as company name and email. Also,
 on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
