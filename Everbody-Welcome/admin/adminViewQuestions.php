@@ -33,7 +33,7 @@ if (isset($_POST['delete'])){
 <?php include "../admin/adminHeader.php" ?>
 <?php $res = viewQuestions($_GET['type']); ?>
 
-<h1 style="text-alighn:center"><?php echo $_GET['type'];?> Survey</h1>
+<h1 style="text-align:center"><?php echo ucfirst($_GET['type']);?> Survey</h1>
 
 <body>
 
@@ -41,10 +41,10 @@ if (isset($_POST['delete'])){
     <div class="add-question">
       <h2>Add Question</h2>
       <form method="POST">
-        <label for="question">Question:</label>
+        <h3><label for="question">Question:</label></h3>
         <input type="text" id="question" name="question" required>
 
-        <label for="question-type">Question Type:</label>
+        <h3><label for="question-type">Question Type:</label></h3>
         <select id="question-type" name="type">
           <option value="Physical Disability">Physical Disability</option>
           <option value="Vision Impairment">Vision Impairment</option>
