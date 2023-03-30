@@ -28,13 +28,13 @@ goPremium($venue);
 <div id="paymentResponse" class="hidden"></div>
 <script src="https://js.stripe.com/v3/"></script>
 
-<div id="header">
+<div class="flex-wrapper">
+  <div id="header">
       <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
-
-</head>
+</div>
 
 
 <body>
