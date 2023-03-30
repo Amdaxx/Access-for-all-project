@@ -18,7 +18,6 @@ $number = intval(getNumberOfAudits($venueid)) + 1;
 if (isset($_POST['submit']) && !isset($_POST['processed'])) {
     $_POST['processed'] = true;
     $data = array();
-    $target_dir = "uploads/";
 
     foreach ($questions as $index => $question) {
         if (isset($_POST[$index])) {
@@ -29,7 +28,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
         $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
 
         // Send data array
-        $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
+        $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment);
     }
 
     recordAdvancedSurvey($venueid, $data, $number);
