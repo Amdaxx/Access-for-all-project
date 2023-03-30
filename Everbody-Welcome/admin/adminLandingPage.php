@@ -38,30 +38,33 @@ $id = $_SESSION['id'];
 
   <?php  $res = viewBusiness();
   ?>
-  
-  <div class="table-container">
+
+<div class="table-container">
   <table class="table">
     <thead>
       <tr>
-        <th>Company Name</th>
+      <th>Company Name</th>
         <th>Phone</th>
         <th>Postcode</th>
         <th>Address</th>
         <th>Action</th>
       </tr>
     </thead>
-    <tbody>
-      <?php foreach($res as $business):?>
+    <?php foreach($res as $business):?>
+      <tbody>
       <tr>
-        <td><?php echo $business['companyName']?></td>
+      <td><?php echo $business['companyName']?></td>
         <td><?php echo $business['phone']?></td>
         <td><?php echo $business['postcode']?></td>
         <td><?php echo $business['address']?></td>
         <td>VIEW</td>
+
       </tr>
-      <?php endforeach; ?>
     </tbody>
+    <?php endforeach;?>
   </table>
+  
+
   <?php include '../public/footer.php';?>
 
 </div>
