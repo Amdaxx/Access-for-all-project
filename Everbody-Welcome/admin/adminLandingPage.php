@@ -24,12 +24,21 @@ $id = $_SESSION['id'];
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css%22%3E">
 
 <link rel="stylesheet" href="../css/table.css">
+<style>
+  .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+  </style>
 </head>
 
 <div class="flex-wrapper">
 
   <body style = "background-color:cdc7c7">
-
+  <div class="container">
   <div class = "adminButtons"> 
     <a href="adminViewQuestions.php?type=general"><button class="btn btn-primary btn-md">Update General Survey</button></a>
     <a href="adminViewQuestions.php?type=premium"><button class="btn btn-primary btn-md">Update Premium Survey</button></a>
@@ -62,7 +71,7 @@ $id = $_SESSION['id'];
     </tbody>
     <?php endforeach;?>
   </table>
-  
+    </div>
 
   <?php include '../public/footer.php';?>
 
