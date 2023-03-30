@@ -8,7 +8,6 @@ if (!isset($_SESSION['business'])){
     header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
-$id = $_SESSION['id'];
 
 $res = viewQuestions("premium");
 $questions = array_column($res, "question");
@@ -25,7 +24,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
         } else {
             $response = '';
         }
-        $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
+        $comment = (isset($_POST['comment_' . $index])) ? $_POST['comment_' . $index] : '';
 
         // Send data array
         $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment);
@@ -35,8 +34,6 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
 }
 
 ?>
-
-
 <html>
 <head>
 <style>
@@ -122,49 +119,49 @@ $index = 0;
 
 // Check if the index is valid or not
 if ($index >= 0 && $index < count($questions)) {
-// Start the form to answer the questions
-echo "<form class='answer' method='post' enctype='multipart/form-data'>";
+  // Start the form to answer the questions
+  echo "<form class='answer' method='post' enctype='multipart/form-data'>";
 
-// Display the current question
-echo "<div class='question'>";
-echo "<h1>Question " . ($index + 1) . "</h1>";
-echo "<p>" . $questions[$index] . "</p>";
-echo "</div>";
+  // Display the current question
+  echo "<div class='question'>";
+  echo "<h1>Question " . ($index + 1) . "</h1>";
+  echo "<p>" . $questions[$index] . "</p>";
+  echo "</div>";
 
-// Hidden input to pass the question index to the next page
-echo "<input type='hidden' name='index' value='$index'>";
+  // Hidden input to pass the question index to the next page
+  echo "<input type='hidden' name='index' value='$index'>";
 
-// Radio buttons to choose yes or no
-echo "<p>Answer:</p>";
-echo "<input type='radio' id='yes' name='answer' value='yes'>";
-echo "<label for='yes'>Yes</label><br>";
+  // Radio buttons to choose yes or no
+  echo "<p>Answer:</p>";
+  echo "<input type='radio' id='yes' name='" . $index . "' value='yes'>";
+  echo "<label for='yes'>Yes</label><br>";
 
-echo "<input type='radio' id='no' name='answer' value='no'>";
-echo "<label for='no'>No</label><br>";
+  echo "<input type='radio' id='no' name='" . $index . "' value='no'>";
+  echo "<label for='no'>No</label><br>";
 
-// Textarea to write a comment
-echo "<p>Comment:</p>";
-echo "<textarea class='comment' name='comment' rows='4' cols='50'></textarea><br>";
+  // Textarea to write a comment
+  echo "<p>Comment:</p>";
+  echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50'></textarea><br>";
 
-// File input to upload a picture
-echo "<p>Picture:</p>";
-echo "<input class='picture' type='file' name='picture'><br>";
+  // File input to upload a picture
+  echo "<p>Picture:</p>";
+  echo "<input class='picture' type='file' name='picture'><br>";
 
-// Display the submit button only at the last question
-if ($index == count($questions) - 1) {
-echo "<input class='button' type='submit' name='submit' value='Submit'>";
-}
+  // Display the submit button only at the last question
+  if ($index == count($questions) - 1) {
+      echo "<input class='button' type='submit' name='submit' value='Submit'>";
+  }
 
-// Display a link to the next question if it exists
-if ($index < count($questions) - 1) {
-  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venueid . "'>Next question</a>";
-}
+  // Display a link to the next question if it exists
+  if ($index < count($questions) - 1) {
+      echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venueid . "'>Next question</a>";
+  }
 
-// End the form
-echo "</form>";
+  // End the form
+  echo "</form>";
 } else {
-// Display a message if the index is invalid
-echo "<p>Invalid question index.</p>";
+  // Display a message if the index is invalid
+  echo "<p>Invalid question index.</p>";
 }
 ?>
 </body>
