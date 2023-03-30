@@ -32,14 +32,14 @@ on this page there are links to the venues pages (view venues and create new ven
 
 
 
-<div class="flex-wrapper">
+<div class="flex-wrapper"style = "min-height:100vh">
   <div id="header">
       <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
 
-  <body style = "min-height:100vh;background-color:#ddd">
+  <body style = "background-color:#ddd">
 
   <div class = "homeButtons"> 
     <a href="createVenue.php"><button class="btnss">Add Venues</button></a>
