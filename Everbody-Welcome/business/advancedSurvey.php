@@ -41,88 +41,116 @@ if (isset($_POST['submit'])) {
 
   <style>
     :root {
-      --main-color: #6c757d;
-      --text-color: #ffffff;
-      --background-color: #343a40;
-      --box-shadow-color: rgba(0, 0, 0, 0.2);
+      --main-color: #008080;
+      --text-color: #333333;
+      --background-color: #f5f5f5;
+      --input-bg-color: #ffffff;
+      --input-border-color: #cccccc;
+      --button-hover-color: #006666;
     }
 
     body {
       font-family: Arial, sans-serif;
       background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      padding: 20px;
     }
 
     .question,
     .answer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 20px auto;
-      width: 80%;
+      background-color: var(--input-bg-color);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px var(--box-shadow-color);
-    }
-
-    .comment,
-    .picture,
-    .button {
-      margin: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background-color: var(--background-color);
-      color: var(--text-color);
-    }
-
-    .button {
-      background-color: var(--main-color);
-      cursor: pointer;
-    }
-
-    a {
-      color: var(--main-color);
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
-      font-size: small;
+      font-size: 18px;
       color: var(--main-color);
+      margin-bottom: 15px;
     }
 
     p {
-      font-size: large;
+      font-size: 16px;
       color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--text-color);
+      cursor: pointer;
+    }
+
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--input-border-color);
+      border-radius: 5px;
+      background-color: var(--input-bg-color);
+      color: var(--text-color);
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--main-color);
+      color: #ffffff;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: var(--button-hover-color);
     }
   </style>
 </head>
 <body>
   <?php
     echo "<form class='answer' method='post' enctype='multipart/form-data'>";
+    echo "<div class='grid-container'>";
 
     for ($index = 0; $index < count($questions); $index++) {
       echo "<div class='question'>";
       echo "<h1>Question " . ($index + 1) . "</h1>";
       echo "<p>" . $questions[$index] . "</p>";
-
       echo "<p>Answer:</p>";
       echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes'>";
       echo "<label for='yes_" . $index . "'>Yes</label><br>";
-
+    
       echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no'>";
       echo "<label for='no_" . $index . "'>No</label><br>";
-
+    
       echo "<p>Comment:</p>";
-      echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50'></textarea><br>";
+      echo "<textarea class='comment' name='comment_" . $index . "' rows='4'></textarea>";
       echo "</div>";
     }
-
-    echo "<input class='button' type='submit' name='submit' value='Submit'>";
+    
+    echo "</div>"; // Close the grid container
+    echo "<div style='text-align: center; padding: 20px;'>";
+    echo "<button type='submit' class='button' name='submit'>Submit</button>";
+    echo "</div>";
     echo "</form>";
-  ?>
+    ?>
 </body>
+<?php include "../public/footer.php" ?>
 </html>
-
