@@ -1,7 +1,9 @@
 /* General Styles */
 
 
-
+.option{
+  
+}
 h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
@@ -78,8 +80,8 @@ border-right: 1px solid #e0e0e0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-button {
-  background-color: linear-gradient(45deg, #f857a8, #ff5858);;
+.btnss {
+  background: linear-gradient(45deg, #f857a8, #ff5858);
   border: none;
   color: white;
   padding: 10px 20px;

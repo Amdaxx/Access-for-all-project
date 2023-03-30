@@ -42,8 +42,8 @@ on this page there are links to the venues pages (view venues and create new ven
   <body style = "min-height:100vh;background-color:#ddd">
 
   <div class = "homeButtons"> 
-    <a href="createVenue.php"><button>Add Venues</button></a>
-    <a href="updateBusinessDetails.php"><button>Edit Company Info</button></a>
+    <a href="createVenue.php"><button class="btnss">Add Venues</button></a>
+    <a href="updateBusinessDetails.php"><button class="btnss">Edit Company Info</button></a>
   </div>
       
       <?php
@@ -75,38 +75,38 @@ on this page there are links to the venues pages (view venues and create new ven
       <td width='200'><div class="btn-group">
 
         <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Edit Venue Details"></div>
+        <input style = "color:black" type="button" value="Edit Venue Details"></div>
         </a>
     
         <td width='200'><div class="btn-group">
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="Take General Audit"></div>
+        <input style = "color:black" type="button" value="Take General Audit"></div>
         </a>
 
         <?php if($venue['premium']=="NO"):?>
         <td width='200'><div class="btn-group">
         <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Go Premium"></div>
+        <input style = "color:black" type="button" value="Go Premium"></div>
         </a>
         <?php endif; ?>
 
         <?php if($venue['premium']=="YES"):?>
         <td width='200'><div class="btn-group">
         <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Take Advanced Audit"></div>
+        <input style = "color:black" type="button" value="Take Advanced Audit"></div>
         </a>
         <?php endif; ?>
 
         <td width='200'><div class="btn-group">
         <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Past Audits"></div>
+        <input style = "color:black" type="button" value="Past Audits"></div>
         </a>
 
         <form method="POST">
-        <td width='200'><div class="btn-group">
-        <a> 
-        <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
-        <button class="btn-group" type="delete" name="delete">Delete</button>
+        <td width='200'>
+        <div class="btn-group">
+        <a href="businessLandingPage.php"> 
+        <button class="option" name="delete" style = "color:black">Delete</button>
         </div>
         </a>
         

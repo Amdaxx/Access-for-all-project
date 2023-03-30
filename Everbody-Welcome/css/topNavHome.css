@@ -16,9 +16,6 @@ main {
   /* replace headerHeight and footerHeight with the actual heights of your header and footer */
 }
 
-footer {
-  height: 200px;
-}
 
 html {
   scroll-behavior: smooth;
