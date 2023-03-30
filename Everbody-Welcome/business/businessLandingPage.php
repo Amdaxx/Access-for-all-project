@@ -33,7 +33,7 @@ on this page there are links to the venues pages (view venues and create new ven
       ?>  
   </div>
 
-  <body style = "background-color:cdc7c7">
+  <body style = "min-height:100%;color:#ddd">
 
   <div class = "homeButtons"> 
     <a href="createVenue.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
