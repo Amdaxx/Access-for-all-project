@@ -481,7 +481,7 @@
         return $res;
     }
     
-    function filterVenues($type, $city, $postcode)
+    function filterVenues($type, $city)
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
