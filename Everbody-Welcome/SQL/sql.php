@@ -497,7 +497,7 @@
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if (isset($type) && isset($city)) {
-            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type AND city=:city ");
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type AND city=:city AND numberofaudits!=0");
             $stmt->bindParam(':type', $type);
             $stmt->bindParam(':city', $city);
             $stmt->execute();
@@ -505,7 +505,7 @@
             return $res;
 
         }  elseif (isset($type)) {
-            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type");
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type AND numberofaudits!=0");
             $stmt->bindParam(':type', $type);
             $stmt->execute();
             $res = $stmt->fetchAll();
@@ -513,7 +513,7 @@
         } elseif (isset($city)) {
             
             // Perform your search function with $var2
-            $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city ");
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city AND numberofaudits!=0 ");
             $stmt->bindParam(':city', $city);
             $stmt->execute();
             $res = $stmt->fetchAll();
@@ -521,7 +521,7 @@
         } else {
             // None of the variables are set
             // Handle this case as appropriate for your application
-            getAllVenues();
+            displayAllVenues();
         }
     }
 
@@ -530,7 +530,7 @@
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT * FROM venues WHERE venuename=:name");
+        $stmt = $conn->prepare("SELECT * FROM venues WHERE venuename=:name AND numberofaudits!=0");
         $stmt->bindParam(':name', $name);
         $stmt->execute();
         $res = $stmt->fetchAll();
