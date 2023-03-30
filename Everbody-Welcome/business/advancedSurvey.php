@@ -8,7 +8,7 @@ if (!isset($_SESSION['business'])){
     header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
-$id = $_SESSION['id']; 
+$id = $_SESSION['id'];
 
 $res = viewQuestions("premium");
 $questions = array_column($res, "question");
@@ -16,24 +16,33 @@ $venueid = $_GET['venueid'];
 $number = intval(getNumberOfAudits($venueid)) + 1;
 
 if (isset($_POST['submit']) && !isset($_POST['processed'])) {
-  $_POST['processed'] = true;
-  $data = array();
-  foreach ($questions as $index => $question) {
-      if (isset($_POST[$index])) {
-          $response = $_POST[$index];
-      } else {
-          $response = '';
-      }
-      $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
-      $fileNameNew = "";
-      //save proof
-      //$proof = (isset($_FILES['proof'])) ? $_FILES['proof'] : '';
-     $proof = "";
-    //send data array
-      $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
-  }
+    $_POST['processed'] = true;
+    $data = array();
+    $target_dir = "uploads/";
 
-  recordAdvancedSurvey($venueid,$data, $number);
+    foreach ($questions as $index => $question) {
+        if (isset($_POST[$index])) {
+            $response = $_POST[$index];
+        } else {
+            $response = '';
+        }
+        $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
+        $fileNameNew = "";
+
+        // Save proof
+        $proof = (isset($_FILES['proof'])) ? $_FILES['proof'] : '';
+        if (!empty($proof['tmp_name'])) {
+            $target_file = $target_dir . basename($proof['name']);
+            if (move_uploaded_file($proof['tmp_name'], $target_file)) {
+                $fileNameNew = "http://afpproject.azurewebsites.net/" . $target_file;
+            }
+        }
+
+        // Send data array
+        $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
+    }
+
+    recordAdvancedSurvey($venueid, $data, $number);
 }
 
 ?>
