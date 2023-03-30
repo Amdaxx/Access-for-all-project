@@ -1,7 +1,7 @@
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
-include '../public/publicHeader.php';
+include '../public/adminHeader.php';
 
 
 session_start();
