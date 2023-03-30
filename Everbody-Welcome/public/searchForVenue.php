@@ -128,6 +128,7 @@ if (isset($_POST['category'])) {
             <input type="text" placeholder="Search here..." />
             <button class="button">Search</button>
           </div>
+        </div>
         <div class="items">
           <?php foreach ($res as $venue): ?>
             <div class="item">
