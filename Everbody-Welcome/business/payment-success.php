@@ -134,7 +134,6 @@ if(!empty($_GET['session_id'])){
 <link rel="stylesheet" href="../css/payment-result.css">
 
 <?php if(!empty($payment_id)){ ?>
-    <body>
     <h1 class="<?php echo $status; ?>"><?php echo $statusMsg; ?></h1>
 
     <div class="product-listing">
@@ -159,5 +158,4 @@ if(!empty($_GET['session_id'])){
         <?php } ?>
     </div>
     </div>
-    </body>
 	
