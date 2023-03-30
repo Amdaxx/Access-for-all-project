@@ -20,6 +20,7 @@ $venue = $_GET['venueid'];
 goPremium($venue);
 ?>
 
+<head>
 <link rel="stylesheet" href="../css/payment.css">
 
 
@@ -33,8 +34,10 @@ goPremium($venue);
       ?>  
   </div>
 
+</head>
 
 
+<body>
 <div class="product">
     <div class="product-img">
         <img src="../pictures/logo2.png" alt="">
@@ -55,6 +58,7 @@ goPremium($venue);
     </div>
     </div>
 </div>
+</body>
 <script>
 // Set Stripe publishable key to initialize Stripe.js
 const stripe = Stripe('<?php echo STRIPE_PUBLISHABLE_KEY; ?>');
