@@ -41,12 +41,12 @@ if (isset($_POST['submit'])) {
 
   <style>
     :root {
-      --main-color: #008080;
+      --main-color: #ff69b4;
       --text-color: #333333;
       --background-color: #f5f5f5;
-      --input-bg-color: #ffffff;
+      --input-bg-color: #ffccff;
       --input-border-color: #cccccc;
-      --button-hover-color: #006666;
+      --button-hover-color: #ff1493;
     }
 
     body {
