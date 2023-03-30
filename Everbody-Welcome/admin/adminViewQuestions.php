@@ -3,6 +3,7 @@ include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
 
 
+
 session_start();
 
 if (!isset($_SESSION['uadmin'])){
@@ -21,15 +22,21 @@ if (isset($_POST['delete'])){
 ?>
 
 <head>
+  <style>
+    body {
+    background-color: #ccc;
+}
+  </style>
 	<title>Questions</title>
 	<link rel="stylesheet" type="text/css" href="../css/questions.css">
 </head>
-
+<?php include "../public/publicHeader.php" ?>
 <?php $res = viewQuestions($_GET['type']); ?>
 
 <h1><?php echo $_GET['type'];?> Survey</h1>
 
 <body>
+
   <div class="container">
     <div class="add-question">
       <h2>Add Question</h2>
@@ -68,4 +75,7 @@ if (isset($_POST['delete'])){
     </div>
   </div>
 </body>
+<footer>
+<?php require ("../public/footer.php") ?>
+</footer>
 
