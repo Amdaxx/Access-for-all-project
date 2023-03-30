@@ -39,8 +39,8 @@ $id = $_SESSION['id'];
   <body style = "background-color:cdc7c7">
   <div class="container">
     <div class = "adminButtons"> 
-      <a href="adminViewQuestions.php?type=general"><button class="btn btn-primary btn-md">Update General Survey</button></a>
-      <a href="adminViewQuestions.php?type=premium"><button class="btn btn-primary btn-md">Update Premium Survey</button></a>
+      <a href="adminViewQuestions.php?type=general"><button class="admin">Update General Survey</button></a>
+      <a href="adminViewQuestions.php?type=premium"><button class="admin">Update Premium Survey</button></a>
     </div>
 
     <?php  $res = viewBusiness();
