@@ -14,7 +14,7 @@
 
 </head>
 <body>
-<div class="container" style = "min-height:90vh>
+<div class="container" style = "min-height:80vh">
     <div class="status">
         <h1 class="error">Your transaction was canceled!</h1>
     </div>
