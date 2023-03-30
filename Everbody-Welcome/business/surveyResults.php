@@ -71,16 +71,25 @@ $auditNumber = $_GET['number'];
                 </tr>
                 </thead>
                 <tbody>";
-        $data = getGeneralSurveyResult($_GET['venueid'], $_GET['number']);        
-        foreach ($data as $d) {
-            echo "<tr>
-                    <td>" . $d['question'] . "</td>
-                    <td>" . $d['answer'] . "</td>
-                </tr>";
-        }
+                $data;
+                if($_GET['type']=="general"){
+                    $data = getGeneralSurveyResult($_GET['venueid'], $_GET['number']);        
+                }
+                if($_GET['type']=="premium"){
+                    $data = getGeneralSurveyResult($_GET['venueid'], $_GET['number']);        
+                }
+                foreach ($data as $d) {
+                    echo "<tr>
+                            <td>" . $d['question'] . "</td>
+                            <td>" . $d['answer'] . "</td>";
+                    if ($_GET['type'] == "premium") {
+                        echo "<td>" . $d['comment'] . "</td>";
+                    }
+                    echo "</tr>";
+                }
         echo "</tbody>
             </table>
-            <a href=\"generalSurvey.php\" class=\"btn btn-primary\">Back to survey</a>
+            <a href=\"previousAudits.php\" class=\"btn btn-primary\">Back to survey</a>
         </div>
         </body>
         </html>";

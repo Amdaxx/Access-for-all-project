@@ -32,7 +32,12 @@ $id = $_SESSION['id'];
 	justify-content: center;
 	height: 100vh;
 }
-
+.table-container {
+max-width: 800px;
+margin: 50px auto;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+align-items: center;
+}
   </style>
 </head>
 
@@ -48,7 +53,7 @@ $id = $_SESSION['id'];
     <?php  $res = viewBusiness();
     ?>
 
-    <div class="table-container" style="text-align:center">
+    <div class="table-container" style="align-items: center;">
       <table class="table">
         <thead>
           <tr>
