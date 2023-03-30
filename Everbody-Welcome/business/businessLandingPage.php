@@ -39,11 +39,11 @@ on this page there are links to the venues pages (view venues and create new ven
       ?>  
   </div>
 
-  <body style = "min-height:100%;background-color:#ddd">
+  <body style = "min-height:100vh;background-color:#ddd">
 
   <div class = "homeButtons"> 
-    <a href="createVenue.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
-    <a href="updateBusinessDetails.php"><button class="btn btn-primary btn-md">Edit Company Info</button></a>
+    <a href="createVenue.php"><button>Add Venues</button></a>
+    <a href="updateBusinessDetails.php"><button>Edit Company Info</button></a>
   </div>
       
       <?php
@@ -106,7 +106,7 @@ on this page there are links to the venues pages (view venues and create new ven
         <td width='200'><div class="btn-group">
         <a> 
         <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
-        <button class="delete-btn delete" type="delete" name="delete">Delete</button>
+        <button class="btn-group" type="delete" name="delete">Delete</button>
         </div>
         </a>
         
