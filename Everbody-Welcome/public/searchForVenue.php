@@ -1,7 +1,7 @@
 <?php
 require_once('../SQL/sql.php');
 
-//$res = displayAllVenues();
+$res = displayAllVenues();
 
 if (isset($_POST['category'])) {
   $selected_category = $_POST['category'];
@@ -30,7 +30,7 @@ if (isset($_POST['category'])) {
                 <button class="button">Search</button>
             </div>
         </div>
-        
+
         <div class="sidebar">
           <h2 class="sidebar__title">Venues (354)</h2>
           <form  method="post" id="form">
