@@ -39,10 +39,10 @@ if (isset($_POST['delete'])){
 
         <label for="question-type">Question Type:</label>
         <select id="question-type" name="type">
-          <option value="text">Physical Disability</option>
-          <option value="checkbox">Vision Impairment</option>
-          <option value="checkbox">Deaf</option>
-          <option value="radio">Other</option>
+          <option value="Physical Disability">Physical Disability</option>
+          <option value="Vision Impairment">Vision Impairment</option>
+          <option value="Deaf">Deaf</option>
+          <option value="Other">Other</option>
         </select>
 
         <button type="submit" name="submit">Add</button>
