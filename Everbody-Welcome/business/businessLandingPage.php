@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/businessHomepage.css">
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
