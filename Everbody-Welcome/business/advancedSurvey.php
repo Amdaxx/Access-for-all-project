@@ -1,35 +1,42 @@
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
-
-
 session_start();
-
 if (!isset($_SESSION['business'])){
     session_unset();
     session_destroy();
     header("Location:".$path);
 }
 checkSession ($path); //calling the function from session.php
-
 $id = $_SESSION['id']; 
+
 $res = viewQuestions("premium");
 $questions = array_column($res, "question");
+$venueid = $_GET['venueid'];
+$number = intval(getNumberOfAudits($venueid)) + 1;
+
 if (isset($_POST['submit']) && !isset($_POST['processed'])) {
-    $_POST['processed'] = true;
+  $_POST['processed'] = true;
+  $data = array();
+  foreach ($questions as $index => $question) {
+      if (isset($_POST[$index])) {
+          $response = $_POST[$index];
+      } else {
+          $response = '';
+      }
+      $comment = (isset($_POST['comment'])) ? $_POST['comment'] : '';
+      $fileNameNew = "";
+      //save proof
+      //$proof = (isset($_FILES['proof'])) ? $_FILES['proof'] : '';
+     $proof = "";
+    //send data array
+      $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment, 'proof' => $fileNameNew);
+  }
 
-    foreach ($ques as $index => $que) {
-        if (isset($_POST[$index])) {
-            $response = $_POST[$index];
-        } else {
-            $response = '';
-        }
-        $data[] = array('question' => $que, 'response' => $response, 'comment' => $comment, 'proof' => $proof);
-    }
-    recordAdvancedSurvey($_GET['venueid'], $data, $number);
+  recordAdvancedSurvey($venueid,$data, $number);
 }
-?>
 
+?>
 
 
 <html>
@@ -118,7 +125,7 @@ $index = 0;
 // Check if the index is valid or not
 if ($index >= 0 && $index < count($questions)) {
 // Start the form to answer the questions
-echo "<form class='answer' method='post' action='submit.php' enctype='multipart/form-data'>";
+echo "<form class='answer' method='post' enctype='multipart/form-data'>";
 
 // Display the current question
 echo "<div class='question'>";
@@ -147,12 +154,12 @@ echo "<input class='picture' type='file' name='picture'><br>";
 
 // Display the submit button only at the last question
 if ($index == count($questions) - 1) {
-echo "<input class='button' type='submit' value='Submit'>";
+echo "<input class='button' type='submit' name='submit' value='Submit'>";
 }
 
 // Display a link to the next question if it exists
 if ($index < count($questions) - 1) {
-echo "<a href='?index=" . ($index + 1) . "'>Next question</a>";
+  echo "<a href='?index=" . ($index + 1) . "&venueid=" . $venueid . "'>Next question</a>";
 }
 
 // End the form

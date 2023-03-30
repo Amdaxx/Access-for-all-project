@@ -21,7 +21,7 @@
         <input type="password" id="confirm-password" placeholder="Confirm your password" required>
         <button type="submit">Sign Up</button>
         </form>
-        <p style="color:black">Already have an account? <a style="color:black" href="../userManagement/logIn.php">Log in</a></p>
+        <p style="color:black">Already have an account? <a style="color:black" href="../userManagement/userlogIn.php">Log in</a></p>
     </div>
     </div>
 </body>    

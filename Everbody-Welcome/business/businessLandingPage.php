@@ -10,9 +10,13 @@ if (!isset($_SESSION['business'])){
     session_destroy();
     header("Location:".$path);
 }
-checkSession ($path); //calling the function from session.php
+checkSession ($path); 
 
 $id = $_SESSION['id']; 
+
+if (isset($_POST['delete'])){
+	deleteVenue($_POST['venueid']);
+}
 ?>
 
 <head>
@@ -21,6 +25,8 @@ $id = $_SESSION['id'];
 on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
+<link rel="stylesheet" href="../css/table.css">
+
 </head>
 
 
@@ -28,12 +34,12 @@ on this page there are links to the venues pages (view venues and create new ven
 
 <div class="flex-wrapper">
   <div id="header">
-      <?php include "businessHeader.php";
+      <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
 
-  <body style = "background-color:cdc7c7">
+  <body style = "min-height:100%;background-color:#ddd">
 
   <div class = "homeButtons"> 
     <a href="createVenue.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
@@ -44,53 +50,69 @@ on this page there are links to the venues pages (view venues and create new ven
    $res = viewVenues($_SESSION['id']);
    if($res!=NULL){
   ?>
-    <table>  
-      <th>Venue Name</th>
-      <th>Venue Type</th>
-      <th>Venue Postcode</th>
-      <th>Venue Address</th>
-      <th>Premium</th>
-      <th>Edit Venue Details</th>
-      <th>View Past Audits</th>
-      <th>New Audit</th>
-      <th>Delete Venue</th>
-  
-      <?php foreach ($res as $venue):?>
-      <tr class = "data">
-        <td width='250'><?php echo $venue['venuename']; ?></td>
-        <td width='60'><?php echo $venue['type']; ?></td>
-        <td  width='250'><?php echo $venue['postcode']; ?></td>
-        <td  width='250'><?php echo $venue['address']; ?></td>
-        <td  width='250'><?php echo $venue['premium']; ?></td>
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Venue Name</th>
+        <th>Venue Type</th>
+        <th>Postcode</th>
+        <th>Address</th>
+        <th>Premium</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <?php foreach ($res as $venue):?>
+    <tbody>
+      <tr>
+      <td width='250'><?php echo $venue['venuename']; ?></td>
+      <td width='250'><?php echo $venue['type']; ?></td>
+      <td width='250'><?php echo $venue['postcode']; ?></td>
+      <td width='250'><?php echo $venue['address']; ?></td>
+      <td width='250'><?php echo $venue['premium']; ?></td>
+      <td width='200'><div class="btn-group">
+
+        <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Edit Venue Details"></div>
+        </a>
+    
+        <td width='200'><div class="btn-group">
+        <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
+        <input type="button" value="Take General Audit"></div>
+        </a>
 
         <?php if($venue['premium']=="NO"):?>
         <td width='200'><div class="btn-group">
         <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Past Audits"></div>
+        <input type="button" value="Go Premium"></div>
         </a>
         <?php endif; ?>
-        
+
+        <?php if($venue['premium']=="YES"):?>
         <td width='200'><div class="btn-group">
-        <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Edit Venue Details"></div>
+        <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Take Advanced Audit"></div>
         </a>
+        <?php endif; ?>
 
         <td width='200'><div class="btn-group">
         <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
         <input type="button" value="Past Audits"></div>
         </a>
 
-        <td width='200'><div class="btn-group">
-        <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="New Audit"></div>
-        </a>
 
-        <td width='200'><div class="btn-group">
-        <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Delete Venue"></div>
-        </a>
-        <?php endforeach;?>
-    </table>
+        <form method="POST">
+        <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
+        <button class="delete-btn delete" type="delete" name="delete">Delete</button>
+        </form>
+
+      </tr>
+    </tbody>
+    <?php endforeach;?>
+  </table>
+</div>
         <?php } 
         else{
                   echo "You have no venues you can create one";

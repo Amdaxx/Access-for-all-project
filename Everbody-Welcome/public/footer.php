@@ -5,10 +5,10 @@
     <div class="fourcolumn">
     <div class="cardy" style = "text-decoration:none">
         <h3 >Vist</h3>
-        <p><link href="../public/landingPage.php">Home</p></link>
-        <p><link href="../public/searchForVenue.php">Search For Venue</p></link>
-        <p><link href="../public/ourServices.php">Our Services</p></link>
-        <p><link href="../public/contactUs.php">Contact Us</p></link>
+        <p><a href="../public/landingPage.php" style="color:white">Home</a></p>
+        <p><a href="../public/landingPage.php#home" style="color:white">Search For Venue</a></p>
+        <p><a href="../public/landingPage.php#about"style="color:white">Our Services</a></p>
+        <p><a href="../public/landingPage.php#work"style="color:white">Contact Us</a></p>
     </div>
     </div>
     <div class="fourcolumn">
@@ -24,10 +24,10 @@
     <div class="fourcolumn">
     <div class="cardy">
         <h3>Other Links</h3>
-        <p><link href="https://www.disabilityrightsuk.org/">Disabled Charities</p></link>
-        <p><link href = "../public/meetTheTeam.php">Meet The Team</p></link>
-        <p><link href="https://www.mcdonalds.com/gb/en-gb/menu.html">Company Policy</p></link>
-        <p><link href="https://www.gov.uk/setting-up-charity/register-your-charity">Registerd Charity Info</p></link>
+        <p><a href="https://www.disabilityrightsuk.org/"style="color:white">Charities</a></p>
+        <p><a href = "../public/landingPage.php#contact"style="color:white">Meet The Team</a></p>
+        <p><a href="https://www.mcdonalds.com/gb/en-gb/menu.html"style="color:white">Company Policy</a></p>
+        <p><a href="https://www.gov.uk/setting-up-charity/register-your-charity"style="color:white">Registerd Charity Info</a></p>
     </div>
     </div>
     <div class="fourcolumn">

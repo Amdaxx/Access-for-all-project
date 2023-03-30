@@ -16,21 +16,20 @@ $id = $_SESSION['id'];
 if (isset($_POST['submit'])){
   createVenue($_SESSION['id'], $_POST['venueName'], $_POST['venueAddress'],  $_POST['postcode'], $_POST['city'], $_POST['typeOfVenue']);
   }
-
 ?>
-  
+
   
   <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">  
-    <link rel="stylesheet" href="../css/topNavHome.css">
-    <link rel="stylesheet" href="../css/overall-page.css">
+    <link rel="stylesheet" href="../css/forms.css">
     <title>Create Venue</title>
     <meta name="description" content="This page displays the information about a given venue and allows the user to edit and save this
     information.">
   </head>
-  <div class="flex-wrapper">
+
+
+  <div class="flex-wrapper"style = "min-height:100%;background-color:#ddd">
     <div id="header">
       <?php include "businessHeader.php";
       ?>    
@@ -60,6 +59,7 @@ function validateForm() {
 
 </script>
 
+  <div id="formz">
     <div class="row">
       <div class = "onecolumn">
         <aboutUs>
