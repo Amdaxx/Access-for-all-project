@@ -54,6 +54,12 @@ $id = $_SESSION['id'];
   $res = getAudits($_GET['venueid']);
   ?>
   <body>
+
+  <div class = "homeButtons"> 
+    <a href="qrcode.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
+  </div>
+
+
   <div class="table-container">
   <table class="table">
     <thead>
