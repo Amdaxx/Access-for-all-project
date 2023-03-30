@@ -20,26 +20,35 @@ $venue = $_GET['venueid'];
 goPremium($venue);
 ?>
 
-<link rel=""
+<link rel="stylesheet" href="../css/payment.css">
 
 
 <!-- Display errors returned by checkout session -->
 <div id="paymentResponse" class="hidden"></div>
 <script src="https://js.stripe.com/v3/"></script>
-	
-<!-- Product details -->
-<h2><?php echo $productname; ?></h2>
-<p>By investing in our service, you can ensure compliance with legal requirements, enhance your reputation, and increase patronage. We provide you with a comprehensive report outlining our findings and recommendations for improvement. With our service, you can make your building more inclusive and accessible for all.
-Improving accessibility in your building can attract a wider range of customers and tenants, including people with disabilities. It also helps you reduce liability and enhance your reputation as an inclusive and welcoming place.</p>
-<p>Price: <b>£<?php echo $productPrice.' '.strtoupper($currency); ?></b></p>
 
-<!-- Payment button -->
-<form method=""post>
-<button class="stripe-button" name="submit" id="payButton">
-    <div class="spinner hidden" id="spinner"></div>
-    <span id="buttonText">Pay Now</span>
-</button>
-</form>
+
+
+<div class="product">
+    <div class="product-img">
+        <img src="img/bag.png" alt="">
+        <span class="tag">new</span>
+    </div>
+    <div class="product-listing">
+    <div class="content">
+        <h1 class="name">Upgrade To Premium</h1>
+        <p class="info">By investing in our service, you can ensure compliance with legal requirements, enhance your reputation, and increase patronage. We provide you with a comprehensive report outlining our findings and recommendations for improvement. With our service, you can make your building more inclusive and accessible for all.
+        Improving accessibility in your building can attract a wider range of customers and tenants, including people with disabilities. It also helps you reduce liability and enhance your reputation as an inclusive and welcoming place.</p>
+        <p class="price"><b>£<?php echo $productPrice.' '.strtoupper($currency); ?></b></p>
+        <div class="btn">
+        <button class="stripe-button" name="submit" id="payButton">
+            <div class="spinner hidden" id="spinner"></div>
+            <span id="buttonText">Upgrade</span>
+        </button>
+        </div>
+    </div>
+    </div>
+</div>
 <script>
 // Set Stripe publishable key to initialize Stripe.js
 const stripe = Stripe('<?php echo STRIPE_PUBLISHABLE_KEY; ?>');
