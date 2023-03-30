@@ -24,7 +24,7 @@ if (isset($_POST['delete'])){
 <meta name="description" content="This page displays information about the user's account such as company name and email. Also,
 on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="../css/businessHomepage.css">
+
 <link rel="stylesheet" href="../css/table.css">
 
 </head>
@@ -32,18 +32,18 @@ on this page there are links to the venues pages (view venues and create new ven
 
 
 
-<div class="flex-wrapper">
+<div class="flex-wrapper"style = "min-height:80vh">
   <div id="header">
       <?php include "../business/businessHeader.php";
       $res = displayBusinessDetails($_SESSION['id']);
       ?>  
   </div>
 
-  <body style = "min-height:100%;background-color:#ddd">
+  <body style = "background-color:#ddd">
 
   <div class = "homeButtons"> 
-    <a href="createVenue.php"><button class="btn btn-primary btn-md">Add Venues</button></a>
-    <a href="updateBusinessDetails.php"><button class="btn btn-primary btn-md">Edit Company Info</button></a>
+    <a href="createVenue.php"><button class="btnss">Add Venues</button></a>
+    <a href="updateBusinessDetails.php"><button class="btnss">Edit Company Info</button></a>
   </div>
       
       <?php
@@ -75,36 +75,41 @@ on this page there are links to the venues pages (view venues and create new ven
       <td width='200'><div class="btn-group">
 
         <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Edit Venue Details"></div>
+        <input style = "color:black" type="button" value="Edit Venue Details"></div>
         </a>
     
         <td width='200'><div class="btn-group">
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="Take General Audit"></div>
+        <input style = "color:black" type="button" value="Take General Audit"></div>
         </a>
 
         <?php if($venue['premium']=="NO"):?>
         <td width='200'><div class="btn-group">
         <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Go Premium"></div>
+        <input style = "color:black" type="button" value="Go Premium"></div>
         </a>
         <?php endif; ?>
 
         <?php if($venue['premium']=="YES"):?>
         <td width='200'><div class="btn-group">
         <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Take Advanced Audit"></div>
+        <input style = "color:black" type="button" value="Take Advanced Audit"></div>
         </a>
         <?php endif; ?>
 
         <td width='200'><div class="btn-group">
         <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Past Audits"></div>
+        <input style = "color:black" type="button" value="Past Audits"></div>
         </a>
 
         <form method="POST">
-        <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
-        <button class="delete-btn delete" type="delete" name="delete">Delete</button>
+        <td width='200'>
+        <div class="btn-group">
+        <a href="businessLandingPage.php"> 
+        <input type="button" value="Delete" name="delete">
+        </div>
+        </a>
+        
         </form>
 
       </tr>

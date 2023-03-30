@@ -136,7 +136,7 @@ if (isset($_POST['category'])) {
                 <img src="../pictures/dummyPictures/venue1.jpg" alt="building" class="item__image item__image--hue"  onclick="window.location.href='../public/venuePage.php';">
               </div>
               <div class="item__detail">
-                <h3><?php echo $venue['venuename'] ?></h3>
+                <h3 style ="color:black"><?php echo $venue['venuename'] ?></h3>
               </div>
             </div>
           <?php endforeach;?>

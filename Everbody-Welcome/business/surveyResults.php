@@ -2,7 +2,6 @@
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
 
-
 session_start();
 
 if (!isset($_SESSION['business'])){
@@ -10,11 +9,13 @@ if (!isset($_SESSION['business'])){
     session_destroy();
     header("Location:".$path);
 }
+
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
 $auditNumber = $_GET['number'];
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,8 +26,7 @@ $auditNumber = $_GET['number'];
     <link rel="stylesheet" href="../css/topNavHome.css">
     <link rel="stylesheet" href="../css/overall-page.css">
     <div id="header">
-        <?php 
-        include "businessHeader.php"; ?>  
+        <?php include "businessHeader.php"; ?>  
         <h2>Survey Results</h2>
     </div>
     
@@ -54,21 +54,15 @@ $auditNumber = $_GET['number'];
     <div class="container">
         <h3>Results:</h3>
         <?php
-        echo "<!DOCTYPE html>
-        <html>
-        <head>
-            <title>Survey Results</title>
-            <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">
-        </head>
-        <body>
-        <div class=\"container\">
-            <h2>Survey Results</h2>
-            <table class=\"table\">
+        echo "<table class=\"table\">
                 <thead>
-                <tr>
-                    <th>Question</th>
-                    <th>Response</th>
-                </tr>
+                    <tr>
+                        <th>Question</th>
+                        <th>Response</th>";
+                        if ($_GET['type'] == "premium") {
+                            echo "<th>Comment</th>";
+                        }
+                echo "</tr>
                 </thead>
                 <tbody>";
                 $data;
@@ -89,13 +83,10 @@ $auditNumber = $_GET['number'];
                 }
         echo "</tbody>
             </table>
-            <a href=\"previousAudits.php\" class=\"btn btn-primary\">View Your Audits</a>
-        </div>
-        </body>
-        </html>";
+            <a href=\"previousAudits.php\" class=\"btn btn-primary\">View Your Audits</a>";
         ?>
     </div>
-</body>
 
     <?php include "../public/footer.php" ?>
+</body>
 </html>

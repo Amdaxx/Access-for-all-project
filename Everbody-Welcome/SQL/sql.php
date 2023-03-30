@@ -373,13 +373,12 @@
         
         foreach($data as $row)
         {
-            $stmt = $conn->prepare("INSERT INTO advancedsurveyresults (venueid, question, answer, comment, proof, auditnumber) 
-            VALUES (:venueid, :question, :answer, :comment, :proof, :auditnumber)");
+            $stmt = $conn->prepare("INSERT INTO advancedsurveyresults (venueid, question, answer, comment, auditnumber) 
+            VALUES (:venueid, :question, :answer, :comment, :auditnumber)");
             $stmt->bindParam(':venueid', $venueid);
             $stmt->bindParam(':question', $row['question']);
             $stmt->bindParam(':answer', $row['response']);
             $stmt->bindParam(':comment', $row['comment']);
-            $stmt->bindParam(':proof', $row['proof']);
             $stmt->bindParam(':auditnumber', $auditnumber);
             $stmt->execute();
         }
@@ -400,7 +399,7 @@
         $stmt2->bindParam(':numberofaudits', $auditnumber);
         $stmt2->execute();
 
-        header('Location: ../business/surveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber . '&type=' . 'general');
+        header('Location: ../business/surveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber . '&type=' . 'premium');
     }
 
     function getGeneralSurveyResult($venueid, $auditnumber)

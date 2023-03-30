@@ -1,7 +1,9 @@
 /* General Styles */
 
 
-
+.option{
+  
+}
 h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
@@ -9,10 +11,10 @@ h2, h3, h4, h5, h6 {
 /* Table Styles */
 /* Table Styles */
 .table-container {
-max-width: 800px;
 margin: 50px auto;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 margin-left: 20px;
+margin-right:20px;
 }
 
 .table {
@@ -30,6 +32,12 @@ vertical-align: middle;
 border-top: 1px solid #e0e0e0;
 border-bottom: 1px solid #e0e0e0;
 }
+
+.table th{
+  color: #111;
+}
+
+
 
 .table thead th {
 font-weight: 700;
@@ -72,8 +80,8 @@ border-right: 1px solid #e0e0e0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-button {
-  background-color: #007bff;
+.btnss {
+  background: linear-gradient(45deg, #f857a8, #ff5858);
   border: none;
   color: white;
   padding: 10px 20px;
@@ -88,7 +96,9 @@ button {
 }
 
 button:hover {
-  background-color: #0062cc;
+  border-width:3px;
+  border-color: linear-gradient(45deg, #f857a8, #ff5858);
+  font-weight: bold;
 }
 
 
@@ -140,4 +150,25 @@ nav li a:hover {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+.btn-group{
+  color: #111;
+
+}
+
+.btn btn-primary btn-md{
+  background-color: linear-gradient(45deg, #f857a8, #ff5858);;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }

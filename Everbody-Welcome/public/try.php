@@ -32,9 +32,8 @@ if (mysqli_query($mysqli, $sql6)) {
 $sql4 = "CREATE TABLE advancedsurveyresults(
   venueid VARCHAR(10) NOT NULL ,
   question VARCHAR(150) NOT NULL ,
-  answer VARCHAR(3) NOT NULL ,
+  answer VARCHAR (3) NOT NULL ,
   comment VARCHAR(40) ,
-  proof VARCHAR(30) ,
   auditnumber INTEGER NOT NULL 
 )";
 
