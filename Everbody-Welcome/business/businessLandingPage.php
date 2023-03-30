@@ -39,7 +39,7 @@ $id = $_SESSION['id'];
   </div>
       
       <?php
-      $res = viewVenues($_SESSION['id']);
+   $res = viewVenues($_SESSION['id']);
    if($res!=NULL){
   ?>
     <table>  
