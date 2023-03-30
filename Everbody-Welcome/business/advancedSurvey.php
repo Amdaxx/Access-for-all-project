@@ -154,7 +154,7 @@ echo "<input class='picture' type='file' name='picture'><br>";
 
 // Display the submit button only at the last question
 if ($index == count($questions) - 1) {
-echo "<input class='button' type='submit' value='Submit'>";
+echo "<input class='button' type='submit' name='submit' value='Submit'>";
 }
 
 // Display a link to the next question if it exists

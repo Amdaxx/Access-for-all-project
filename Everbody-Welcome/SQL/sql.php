@@ -400,7 +400,7 @@
         $stmt2->bindParam(':numberofaudits', $auditnumber);
         $stmt2->execute();
 
-        header('Location:../business/generalSurveyResults.php');      
+        header('Location:../business/pastaudits.php');      
     }
 
     function getGeneralSurveyResult($venueid, $auditnumber)
