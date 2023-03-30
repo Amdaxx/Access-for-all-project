@@ -22,7 +22,7 @@ $id = $_SESSION['id'];
 <meta name="description" content="This page displays the audit number, audit type, date submitted and a button to view the previous audits.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="../css/businessHomepage.css">
-<link rel="stylesheet" href="../css/venueTableStyle.css">
+<link rel="stylesheet" href="../css/table.css">
 <link rel="stylesheet" href="../css/overall-page.css">
 
 <style>
