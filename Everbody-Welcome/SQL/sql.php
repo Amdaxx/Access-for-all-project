@@ -373,7 +373,7 @@
         
         foreach($data as $row)
         {
-            $stmt = $conn->prepare("INSERT INTO audits (venueid, question, answer, comment, proof, auditnumber) 
+            $stmt = $conn->prepare("INSERT INTO advancedsurveyresults (venueid, question, answer, comment, proof, auditnumber) 
             VALUES (:venueid, :question, :answer, :comment, :proof, :auditnumber)");
             $stmt->bindParam(':venueid', $venueid);
             $stmt->bindParam(':question', $row['question']);
