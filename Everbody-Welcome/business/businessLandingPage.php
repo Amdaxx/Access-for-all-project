@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../css/businessHomepage.css">
 <?php
 include_once("../SQL/sql.php");
 $path = "../public/LandingPage.php";
@@ -14,14 +13,17 @@ if (!isset($_SESSION['business'])){
 checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
-
 ?>
 
 <head>
-  <title>Business Landing Page</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="../css/businessHomepage.css">
+<title>Business Landing Page</title>
+<meta name="description" content="This page displays information about the user's account such as company name and email. Also,
+on this page there are links to the venues pages (view venues and create new venue) as well as a link to edit company information.">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="../css/businessHomepage.css">
 </head>
+
+
 
 
 <div class="flex-wrapper">
@@ -60,6 +62,20 @@ $id = $_SESSION['id'];
         <td  width='250'><?php echo $venue['postcode']; ?></td>
         <td  width='250'><?php echo $venue['address']; ?></td>
         <td  width='250'><?php echo $venue['premium']; ?></td>
+
+        <?php if($venue['premium']=="NO"):?>
+        <td width='200'><div class="btn-group">
+        <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Go Premium"></div>
+        </a>
+        <?php endif; ?>
+
+        <?php if($venue['premium']=="YES"):?>
+        <td width='200'><div class="btn-group">
+        <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>">
+        <input type="button" value="Go Premium"></div>
+        </a>
+        <?php endif; ?>
         
         <td width='200'><div class="btn-group">
         <a href="updateVenue.php?id=<?php echo $venue['venueid']; ?>">
@@ -73,23 +89,8 @@ $id = $_SESSION['id'];
 
         <td width='200'><div class="btn-group">
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="Take General Audit"></div>
+        <input type="button" value="New Audit"></div>
         </a>
-    
-
-        <?php if($venue['premium']=="NO"):?>
-        <td width='200'><div class="btn-group">
-        <a href="index.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Go Premium"></div>
-        </a>
-        <?php endif; ?>
-
-        <?php if($venue['premium']=="YES"):?>
-          <td width='200'><div class="btn-group">
-        <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="Take Advanced Audit"></div>
-        </a>
-        <?php endif; ?>
 
         <td width='200'><div class="btn-group">
         <a href="previousAudits.php?venueid=<?php echo $venue['venueid']; ?>">
