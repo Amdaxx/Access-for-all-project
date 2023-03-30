@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(45deg, #f857a8, #ff5858);
+    font-family: 'roboto', sans-serif;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    transform: translateX(-50%) skewX(-15deg);
+    width: 20px;
+    height: 100%;
+    background:linear-gradient(45deg, #f857a8, #ff5858);
+    border-left: 60px solid #fff;
+    border-right: 30px solid #fff;
+    opacity: 0;
+    animation: slide-in 2s 1.5s forwards 1;
+}
+
+@keyframes slide-in{
+    100%{
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+.product-listing{
+    width: 60%;
+    min-height: 500px;
+    height: auto;
+    background: #292929;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fade-in 1s forwards 1;
+}
