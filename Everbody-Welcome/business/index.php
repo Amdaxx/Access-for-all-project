@@ -27,11 +27,17 @@ goPremium($venue);
 <div id="paymentResponse" class="hidden"></div>
 <script src="https://js.stripe.com/v3/"></script>
 
+<div id="header">
+      <?php include "../business/businessHeader.php";
+      $res = displayBusinessDetails($_SESSION['id']);
+      ?>  
+  </div>
+
 
 
 <div class="product">
     <div class="product-img">
-        <img src="img/bag.png" alt="">
+        <img src="../pictures/logo2.png" alt="">
         <span class="tag">new</span>
     </div>
     <div class="product-listing">

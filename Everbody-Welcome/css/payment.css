@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #966e4f;
+    background:linear-gradient(45deg, #f857a8, #ff5858);
     font-family: 'roboto', sans-serif;
 }
 
@@ -24,9 +24,9 @@ body::before{
     transform: translateX(-50%) skewX(-15deg);
     width: 20px;
     height: 100%;
-    background: #966e4f;
-    border-left: 60px solid #eae3d2;
-    border-right: 30px solid #eae3d2;
+    background:linear-gradient(45deg, #f857a8, #ff5858);
+    border-left: 60px solid #fff;
+    border-right: 30px solid #fff;
     opacity: 0;
     animation: slide-in 2s 1.5s forwards 1;
 }
@@ -99,7 +99,7 @@ body::before{
     padding: 40px;
     display: flex;
     justify-content: center;
-    color: #eae3d2;
+    color: #fff;
     opacity: 0;
     transform: translateY(50px);
     animation: fade-in 1s forwards 1;
@@ -132,7 +132,7 @@ body::before{
 }
 
 .btn{
-    background: #eae3d2;
+    background: #fff;
     color: #292929;
     border: none;
     text-transform: capitalize;
