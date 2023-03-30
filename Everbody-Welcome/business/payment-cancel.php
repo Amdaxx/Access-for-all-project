@@ -8,14 +8,7 @@
 
 <!-- Uncomment when added -->
 <!--<link href="css/style.css" rel="stylesheet"> -->
-<header id="nav-wrapper">
-    <nav id="nav">
-      <div class="nav left">
-        <span class="gradient skew"><h1 class="logo un-skew"><img src="../pictures/logo.png"></h1></span>
-        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
-      </div>
-    </nav>
-</header>
+<?php include '../public/publicHeader.php';?>
 
 
 
@@ -30,15 +23,10 @@
 </body>
 
 <style>
-    #nav-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* optional - this determines the stacking order of the element */
-}
-
+    .body {
+        width: 100%;
+    }
 
 </style>
-</html>
 <?php include "../public/footer.php" ?>
+</html>
