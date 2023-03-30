@@ -16,6 +16,11 @@ $id = $_SESSION['id'];
 ?>
 
 <head>
+<style>
+    body {
+    background-color: #ccc;
+}
+  </style>
 <title>Admin Landing Page</title>
 <h1>Admin Page</h1>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
@@ -24,14 +29,14 @@ $id = $_SESSION['id'];
 <link rel="stylesheet" href="../css/overall-page.css">
 <link rel="stylesheet" href="../css/table.css">
 </head>
-
+<?php include "../public/publicHeader.php" ?>
 <div class="flex-wrapper">
   <div id="header">
       
         
   </div>
 
-  <body style = "background-color:cdc7c7">
+  <body>
     
 
 
@@ -64,4 +69,6 @@ $id = $_SESSION['id'];
 
 
   </body>
-  
+  <footer>
+<?php require ("../public/footer.php") ?>
+</footer>
