@@ -73,7 +73,7 @@ on this page there are links to the venues pages (view venues and create new ven
         <?php if($venue['premium']=="YES"):?>
         <td width='200'><div class="btn-group">
         <a href="advancedSurvey.php?venueid=<?php echo $venue['venueid']; ?>">
-        <input type="button" value="Go Premium"></div>
+        <input type="button" value="Take Advanced Audit"></div>
         </a>
         <?php endif; ?>
         
@@ -89,7 +89,7 @@ on this page there are links to the venues pages (view venues and create new ven
 
         <td width='200'><div class="btn-group">
         <a href="generalSurvey.php?venueid=<?php echo $venue['venueid']; ?>&number=<?php echo $venue['numberofaudits']?>">
-        <input type="button" value="New Audit"></div>
+        <input type="button" value="Take General Audit"></div>
         </a>
 
         <td width='200'><div class="btn-group">
