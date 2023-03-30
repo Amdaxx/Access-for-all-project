@@ -25,16 +25,7 @@ if (isset($_POST['category'])) {
 
 
       </div>
-      <div class="main">
-          <h2 class="main__title">Plants (354)</h2>
-            <div class="filters">
-                <div class="input-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here..." />
-                <button class="button">Search</button>
-            </div>
-        </div>
-      </div>
+
 
       <div class="sidebar">
         <h2 class="sidebar__title">Venues (354)</h2>
@@ -131,6 +122,12 @@ if (isset($_POST['category'])) {
       </div>
 
       <div class="main">
+        <div class="filters">
+            <div class="input-box">
+            <i class="uil uil-search"></i>
+            <input type="text" placeholder="Search here..." />
+            <button class="button">Search</button>
+          </div>
         <div class="items">
           <?php foreach ($res as $venue): ?>
             <div class="item">
@@ -138,7 +135,7 @@ if (isset($_POST['category'])) {
                 <img src="../pictures/dummyPictures/venue1.jpg" alt="building" class="item__image item__image--hue"  onclick="window.location.href='../public/venuePage.php';">
               </div>
               <div class="item__detail">
-                <p><?php echo $venue['venuename'] ?></p>
+                <h3<?php echo $venue['venuename'] ?></h3>
               </div>
             </div>
           <?php endforeach;?>
