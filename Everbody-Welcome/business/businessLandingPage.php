@@ -102,7 +102,6 @@ on this page there are links to the venues pages (view venues and create new ven
         <input type="button" value="Past Audits"></div>
         </a>
 
-
         <form method="POST">
         <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
         <button class="delete-btn delete" type="delete" name="delete">Delete</button>
