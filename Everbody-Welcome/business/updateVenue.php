@@ -18,9 +18,7 @@ $id = $_SESSION['id'];
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">  
-    <link rel="stylesheet" href="../css/topNavHome.css">  
-    <link rel="stylesheet" href="../css/overall-page.css">
+    <link rel="stylesheet" href="../css/forms.css">  
     <title>Update Venue</title>
   </head>
   <div class="flex-wrapper">
@@ -46,42 +44,47 @@ $id = $_SESSION['id'];
       ?>    
     </div>
     <body>
-      <form id = "centerform" method="post" onsubmit="return validateForm()" style="margin-top:auto;margin-bottom:auto;">
-        <div class="form-group row">
-            <label for="vName" class="col-sm-2 col-form-label">Venue name</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" name="name" id="vName" value="<?php echo $venueName; ?>"> <br>
+      <div class="login-container" style = "min-height:100%">
+
+        <div id="formz">
+          <form id = "centerform" method="post" onsubmit="return validateForm()" style="margin-top:auto;margin-bottom:auto;">
+            <div class="form-group row">
+                <label for="vName" class="col-sm-5 col-form-label">Venue name</label>
+                <div class="col-sm-8"style="width: 57.66666667%;">
+                <input type="text" class="form-control" name="name" id="vName" value="<?php echo $venueName; ?>"> <br>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <label for="vAddress" class="col-sm-2 col-form-label">Venue address</label>
-            <div class="col-sm-6">
-            <input type="text" class="form-control" name="address" id="vAddress" value="<?php echo $venueAddress; ?>"> <br>
+            <div class="form-group row">
+                <label for="vAddress" class="col-sm-5 col-form-label">Venue address</label>
+                <div class="col-sm-8"style="width: 57.66666667%;">
+                <input type="text" class="form-control" name="address" id="vAddress" value="<?php echo $venueAddress; ?>"> <br>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <label for="vPostcode" class="col-sm-2 col-form-label">Postcode</label>
-            <div class="col-sm-6">
-            <input type="text" name="post" class="form-control" id="vPostcode" value="<?php echo $venuePostcode; ?>"> <br>
+            <div class="form-group row">
+                <label for="vPostcode" class="col-sm-5 col-form-label">Postcode</label>
+                <div class="col-sm-8"style="width: 57.66666667%;">
+                <input type="text" name="post" class="form-control" id="vPostcode" value="<?php echo $venuePostcode; ?>"> <br>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <label for="typeOfVenue" class="col-sm-2 col-form-label">Type of Venue</label>
-            <div class="col-sm-6">
-                <select name="type" id="typeOfVenue">
-                    <option value="Accommodation">Accommodation</option>
-                    <option value="Experience">Experience</option>
-                    <option value="Tours">Tours</option>
-                    <option value="Events">Events</option>
-                </select>
+            <div class="form-group row">
+                <label for="typeOfVenue" class="col-sm-5 col-form-label">Type of Venue</label>
+                <div class="col-sm-8"style="width: 57.66666667%;">
+                    <select name="type" id="typeOfVenue">
+                        <option value="Accommodation">Accommodation</option>
+                        <option value="Experience">Experience</option>
+                        <option value="Tours">Tours</option>
+                        <option value="Events">Events</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-        <div class="col-sm-10">
-          <button type="submit" name ="submit" class="btn btn-primary">Update Venue</button>
-        </div>
-        </div>
-      </form>
+            <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" name ="submit" class="btn btn-primary">Update Venue</button>
+            </div>
+            </div>
+          </form>
+        </div>  
+      </div>  
     </body>
     <?php include "../public/footer.php" ?>
   </div>  

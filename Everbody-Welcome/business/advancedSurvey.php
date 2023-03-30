@@ -30,7 +30,7 @@ if (isset($_POST['submit']) && !isset($_POST['processed'])) {
         $fileNameNew = "";
 
         // Save proof
-        $proof = (isset($_FILES['proof'])) ? $_FILES['proof'] : '';
+        $proof = (isset($_FILES['picture'])) ? $_FILES['picture'] : '';
         if (!empty($proof['tmp_name'])) {
             $target_file = $target_dir . basename($proof['name']);
             if (move_uploaded_file($proof['tmp_name'], $target_file)) {
