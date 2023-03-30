@@ -30,7 +30,7 @@ goPremium($venue);
 
 <link rel="stylesheet" href="../css/topNavHome.css">
 
-<header id="nav-wrapper">
+<header id="nav-wrapper" style="width:50%">
     <nav id="nav">
       <div class="nav left">
         <span class="gradient skew"><h1 class="logo un-skew"><img src="../pictures/logo.png"></h1></span>
