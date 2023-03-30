@@ -20,7 +20,7 @@ $venue = $_GET['venueid'];
 goPremium($venue);
 ?>
 
-<link rel=""
+<link rel="stylesheet" href="../css/payment.css">
 
 
 <!-- Display errors returned by checkout session -->
