@@ -28,16 +28,19 @@ goPremium($venue);
 <div id="paymentResponse" class="hidden"></div>
 <script src="https://js.stripe.com/v3/"></script>
 
-<div class="flex-wrapper">
-  <div id="header">
-      <?php include "../business/businessHeader.php";
-      $res = displayBusinessDetails($_SESSION['id']);
-      ?>  
-  </div>
-</div>
+<link rel="stylesheet" href="../css/topNavHome.css">
 
+<header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+        <span class="gradient skew"><h1 class="logo un-skew"><img src="../pictures/logo.png"></h1></span>
+        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+      </div>
+    </nav>
+</header>
 
-<body>
+</head>
+
 <div class="product">
     <div class="product-img">
         <img src="../pictures/logo2.png" alt="">
@@ -58,7 +61,6 @@ goPremium($venue);
     </div>
     </div>
 </div>
-</body>
 <script>
 // Set Stripe publishable key to initialize Stripe.js
 const stripe = Stripe('<?php echo STRIPE_PUBLISHABLE_KEY; ?>');
