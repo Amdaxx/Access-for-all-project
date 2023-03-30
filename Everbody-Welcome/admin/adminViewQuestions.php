@@ -24,16 +24,16 @@ if (isset($_POST['delete'])){
 <head>
   <style>
     body {
-    background-color: #ccc;
+    background-color: #ddd;
 }
   </style>
 	<title>Questions</title>
 	<link rel="stylesheet" type="text/css" href="../css/questions.css">
 </head>
-<?php include "../public/publicHeader.php" ?>
+<?php include "../admin/adminHeader.php" ?>
 <?php $res = viewQuestions($_GET['type']); ?>
 
-<h1><?php echo $_GET['type'];?> Survey</h1>
+<h1 style="text-alighn:center"><?php echo $_GET['type'];?> Survey</h1>
 
 <body>
 

@@ -8,6 +8,12 @@
   
   .add-question {
     width: 45%;
+    background:linear-gradient(45deg, #f857a8, #ff5858);
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 20px;
   }
   
   .question-list {
@@ -63,11 +69,12 @@
   
   .question-type {
     font-weight: bold;
-    margin-right: 10px;
+    width: 350px;
   }
   
   .question-text {
     margin-right: 10px;
+    text-align: left;
   }
   
   .delete {
