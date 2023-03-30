@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../css/style.css">  
-<link rel="stylesheet" href="../css/topNavhome.css">
 <link rel="stylesheet" href="../css/businessHeader.css">
 <div id="header">
   <ul>
