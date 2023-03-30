@@ -51,3 +51,10 @@ body::before{
     transform: translateY(50px);
     animation: fade-in 1s forwards 1;
 }
+
+@keyframes fade-in{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

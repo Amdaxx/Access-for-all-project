@@ -132,13 +132,11 @@ if(!empty($_GET['session_id'])){
 ?>
 
 <link rel="stylesheet" href="../css/payment-result.css">
-
 <?php if(!empty($payment_id)){ ?>
     <h1 class="<?php echo $status; ?>"><?php echo $statusMsg; ?></h1>
 
     <div class="product-listing">
     <div class="content">
-        
             <h1>Payment Information</h1>
             <p><b>Reference Number:</b> <?php echo $payment_id; ?></p>
             <p><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
