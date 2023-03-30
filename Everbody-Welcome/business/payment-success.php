@@ -115,7 +115,7 @@ if(!empty($_GET['session_id'])){
                     } 
                      
                     $status = 'success'; 
-                    $statusMsg = ''; 
+                    $statusMsg = 'The payment was successful'; 
                 }else{ 
                     $statusMsg = "Transaction has been failed!"; 
                 } 
@@ -144,10 +144,10 @@ if(!empty($_GET['session_id'])){
 </header>
 
 <?php if(!empty($payment_id)){ ?>
-    <h1 class="<?php echo $status; ?>"><?php echo $statusMsg; ?></h1>
 
 <div class="card">
   <div class="card-content">
+  <h1 class="card-title"><?php echo $statusMsg; ?></h1>
     <h2 class="card-title">Payment Information</h2>
     <p class="card-text"><b>Reference Number:</b> <?php echo $payment_id; ?></p>
             <p class="card-text"><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
