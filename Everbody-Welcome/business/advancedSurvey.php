@@ -14,14 +14,14 @@ $questions = array_column($res, "question");
 $venueid = $_GET['venueid'];
 $number = intval(getNumberOfAudits($venueid)) + 1;
 
-if (isset($_POST['answer_0'])) {
+if (isset($_POST['submit'])) {
   $data = array();
 
   foreach ($questions as $index => $question) {
-    $response = isset($_POST['answer_' . $index]) ? $_POST['answer_' . $index] : '';
-    $comment = isset($_POST['comment_' . $index]) ? $_POST['comment_' . $index] : '';
+      $response = isset($_POST['answer_' . $index]) ? $_POST['answer_' . $index] : '';
+      $comment = isset($_POST['comment_' . $index]) ? $_POST['comment_' . $index] : '';
 
-    $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment);
+      $data[] = array('question' => $question, 'response' => $response, 'comment' => $comment);
   }
 
   recordAdvancedSurvey($venueid, $data, $number);
@@ -139,27 +139,27 @@ function submitAnswers() {
 </head>
 <body>
 <?php
-// Display all questions
+echo "<form class='answer' method='post' enctype='multipart/form-data'>";
+
 for ($index = 0; $index < count($questions); $index++) {
   echo "<div class='question'>";
   echo "<h1>Question " . ($index + 1) . "</h1>";
   echo "<p>" . $questions[$index] . "</p>";
 
-  // Radio buttons to choose yes or no
   echo "<p>Answer:</p>";
-  echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes' onclick='storeAnswer(" . $index . ", \"yes\")'>";
+  echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes'>";
   echo "<label for='yes_" . $index . "'>Yes</label><br>";
 
-  echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no' onclick='storeAnswer(" . $index . ", \"no\")'>";
+  echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no'>";
   echo "<label for='no_" . $index . "'>No</label><br>";
 
-  // Textarea to write a comment
   echo "<p>Comment:</p>";
-  echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50' onchange='storeComment(" . $index . ", this.value)'></textarea><br>";
+  echo "<textarea class='comment' name='comment_" . $index . "' rows='4' cols='50'></textarea><br>";
+  echo "</div>";
 }
 
-// Display the submit button
-echo "<button class='button' type='button' onclick='submitAnswers()'>Submit</button>";
+echo "<input class='button' type='submit' name='submit' value='Submit'>";
+echo "</form>";
 ?>
 </body>
 </html>
