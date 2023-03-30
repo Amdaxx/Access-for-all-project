@@ -1,7 +1,6 @@
 #formz{
-    background:linear-gradient(45deg, #f857a8, #ff5858);
-    padding:20px;
-    margin-left: auto;
-    margin-right: auto;
-
+    background: linear-gradient(45deg, #f857a8, #ff5858);
+    padding: 20px;
+    width: 80%;
+    margin: 50 auto;
 }
