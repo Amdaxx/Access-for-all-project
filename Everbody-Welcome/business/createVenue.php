@@ -22,6 +22,7 @@ if (isset($_POST['submit'])){
   <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/forms.css">
     <title>Create Venue</title>
     <meta name="description" content="This page displays the information about a given venue and allows the user to edit and save this
     information.">
@@ -58,6 +59,7 @@ function validateForm() {
 
 </script>
 
+  <div id="formz">
     <div class="row">
       <div class = "onecolumn">
         <aboutUs>
