@@ -1,10 +1,15 @@
-<link rel="stylesheet" href="../css/businessHeader.css">
-<div id="header">
-  <ul>
-    <button3 onclick="window.location.href='../business/businessLandingPage.php';" type= "button" >
-      <li><img src="../pictures/Everybody-Welcome-logo.png" alt="Logo" width="100" height="50"></li>
-      <li style="font-size: 40px;"><?php echo $_SESSION['name']?></li>
-    </button3>
-    <li class="sign-out"><a class="active" href="../public/landingPage.php">Sign Out</a></li>
-  </ul>    
-</div>
+
+
+<link rel="stylesheet" href="../css/topNavHome.css">
+
+<header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+        <span class="gradient skew"><h1 class="logo un-skew"><img src="../pictures/logo.png"></h1></span>
+        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+      </div>
+      <div class="nav right">
+        <a href="../public/landingPage.php#home" class="nav-link active"><span class="nav-link-span"><span class="u-nav"><?php echo $_SESSION['name']?></span></span></a>
+      </div>
+    </nav>
+</header>
