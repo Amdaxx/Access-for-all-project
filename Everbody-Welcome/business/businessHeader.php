@@ -1,5 +1,3 @@
-
-
 <link rel="stylesheet" href="../css/topNavHome.css">
 
 <header id="nav-wrapper">
@@ -9,7 +7,7 @@
         <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
       </div>
       <div class="nav right">
-        <a href="../public/landingPage.php#home" class="nav-link active"><span class="nav-link-span"><span class="u-nav"><?php echo $_SESSION['name']?></span></span></a>
+        <a href="../business/businessLandingPage.php" class="nav-link active"><span class="nav-link-span"><span class="u-nav"><?php echo $_SESSION['name']?> - Business Portal</span></span></a>
       </div>
     </nav>
 </header>
