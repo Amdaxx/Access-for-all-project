@@ -135,25 +135,27 @@ if(!empty($_GET['session_id'])){
 <?php if(!empty($payment_id)){ ?>
     <h1 class="<?php echo $status; ?>"><?php echo $statusMsg; ?></h1>
 
+    <div class="product">
     <div class="product-listing">
     <div class="content">
-            <h1>Payment Information</h1>
-            <p><b>Reference Number:</b> <?php echo $payment_id; ?></p>
-            <p><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
-            <p><b>Paid Amount:</b> <?php echo $paidAmount.' '.$paidCurrency; ?></p>
-            <p><b>Payment Status:</b> <?php echo $payment_status; ?></p>
+            <h1 class="name">Payment Information</h1>
+            <p class="info"><b>Reference Number:</b> <?php echo $payment_id; ?></p>
+            <p class="info"><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
+            <p class="info"><b>Paid Amount:</b> <?php echo $paidAmount.' '.$paidCurrency; ?></p>
+            <p class="info"><b>Payment Status:</b> <?php echo $payment_status; ?></p>
             
             <h4>Customer Information</h4>
-            <p><b>Name:</b> <?php echo $customer_name; ?></p>
-            <p><b>Email:</b> <?php echo $customer_email; ?></p>
+            <p class="info"><b>Name:</b> <?php echo $customer_name; ?></p>
+            <p class="info"><b>Email:</b> <?php echo $customer_email; ?></p>
             
             <h4>Product Information</h4>
-            <p><b>Name:</b> <?php echo $productName; ?></p>
-            <p><b>Price:</b> <?php echo $productPrice.' '.$currency; ?></p>
+            <p class="info"><b>Name:</b> <?php echo $productName; ?></p>
+            <p class="info"><b>Price:</b> <?php echo $productPrice.' '.$currency; ?></p>
         <?php }else{ ?>
             <h1 class="error">Your Payment been failed!</h1>
             <p class="error"><?php echo $statusMsg; ?></p>
         <?php } ?>
+    </div>
     </div>
     </div>
 	
