@@ -22,23 +22,16 @@ $id = $_SESSION['id'];
 <title>Admin Landing Page</title>
 <meta name="description" content="This page displays the options available to the admin - view questions, add question, delete question.">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css%22%3E">
-
-<link rel="stylesheet" href="../css/table.css">
 <style>
-  .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-}
-.table-container {
-max-width: 800px;
-margin: 50px auto;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-align-items: center;
-}
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
   </style>
+  <link rel="stylesheet" href="../css/table.css">
 </head>
 
 <div class="flex-wrapper">
