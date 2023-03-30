@@ -60,6 +60,7 @@ goPremium($venue);
         </div>
     </div>
     </div>
+</div>
 <script>
 // Set Stripe publishable key to initialize Stripe.js
 const stripe = Stripe('<?php echo STRIPE_PUBLISHABLE_KEY; ?>');
