@@ -1,7 +1,7 @@
 <?php
 require_once('../SQL/sql.php');
 
-//$res = displayAllVenues();
+$res = displayAllVenues();
 
 if (isset($_POST['category'])) {
   $selected_category = $_POST['category'];

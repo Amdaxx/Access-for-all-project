@@ -482,33 +482,37 @@
     }
     
     function filterVenues($type, $city)
-{
-    $conn = connectToDatabase();
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    if (isset($type) && isset($city)) {
-        $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type AND city=:city ");
-        $stmt->bindParam(':type', $type);
-        $stmt->bindParam(':city', $city);
-        $stmt->execute();
-        $res = $stmt->fetchAll();
-        return $res;
+    {
+        $conn = connectToDatabase();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        if (isset($type) && isset($city)) {
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type AND city=:city ");
+            $stmt->bindParam(':type', $type);
+            $stmt->bindParam(':city', $city);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
 
-    }  elseif (isset($type)) {
-        $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type");
-        $stmt->bindParam(':type', $type);
-        $stmt->execute();
-        $res = $stmt->fetchAll();
-        return $res;
-    } elseif (isset($city)) {
-        $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city ");
-        $stmt->bindParam(':city', $city);
-        $stmt->execute();
-        $res = $stmt->fetchAll();
-        return $res;
-    } else {
-        return displayAllVenues();
+        }  elseif (isset($type)) {
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE type=:type");
+            $stmt->bindParam(':type', $type);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
+        } elseif (isset($city)) {
+            
+            // Perform your search function with $var2
+            $stmt = $conn->prepare("SELECT * FROM venues WHERE city=:city ");
+            $stmt->bindParam(':city', $city);
+            $stmt->execute();
+            $res = $stmt->fetchAll();
+            return $res;
+        } else {
+            // None of the variables are set
+            // Handle this case as appropriate for your application
+            getAllVenues();
+        }
     }
-}
 
 
     function searchVenueByName($name)
