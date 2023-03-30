@@ -8,13 +8,13 @@
 
 <!-- Uncomment when added -->
 <!--<link href="css/style.css" rel="stylesheet"> -->
-<?php include '../public/publicHeader.php';?>
+<?php include '../business/businessHeader.php';?>
 
 
 
 </head>
 <body>
-<div class="container">
+<div class="container" style = "min-height:90vh>
     <div class="status">
         <h1 class="error">Your transaction was canceled!</h1>
     </div>
