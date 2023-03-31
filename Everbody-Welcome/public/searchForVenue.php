@@ -140,7 +140,7 @@ if (isset($_POST['search'])) {
           <?php foreach ($res as $venue): ?>
             <div class="item">
               <div class="item__position">
-                <img src="../pictures/dummyPictures/venue1.jpg" alt="building" class="item__image item__image--hue"  onclick="window.location.href='../public/venuePage.php';">
+                <img src="../pictures/dummyPictures/venue1.jpg" alt="building" class="item__image item__image--hue"  onclick="window.location.href='../public/venuePage.php?venueid=<?php echo $venue['venueid'];?>';">
               </div>
               <div class="item__detail">
                 <h3 style ="color:black"><?php echo $venue['venuename'] ?></h3>
