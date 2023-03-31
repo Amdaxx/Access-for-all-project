@@ -107,7 +107,7 @@ body::before{
 
 .back-button {
     position: fixed;
-    top: 10px;
+    top: 90px;
     left: 10px;
     display: inline-block;
     padding: 10px;
@@ -116,12 +116,36 @@ body::before{
     text-decoration: none;
     border-radius: 5px;
   }
+  
   .back-button:hover {
     background-color: #555;
   }
+  
   .back-button i {
     margin-right: 5px;
   }
+  
+  @media only screen and (max-width: 767px) {
+    /* Adjust button positioning for smaller screens */
+    .back-button {
+      top: 70px;
+      left: 5px;
+      padding: 8px;
+      border-radius: 4px;
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    /* Adjust button positioning and font size for even smaller screens */
+    .back-button {
+      top: 50px;
+      left: 3px;
+      padding: 6px;
+      font-size: 0.8em;
+      border-radius: 3px;
+    }
+  }
+  
 @keyframes fade-in{
     100%{
         opacity: 1;
