@@ -305,7 +305,7 @@
 
   
 
-    function updateVenue($id, $vname, $post, $address, $type)
+    function updateVenue($id, $vname, $post, $address, $type, $city)
     {
         $conn = connectToDatabase();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

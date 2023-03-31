@@ -25,7 +25,7 @@ $id = $_SESSION['id'];
     <div id="header">
       <?php include "businessHeader.php";
       if (isset($_POST['submit'])){
-        updateVenue($_GET['id'], $_POST['name'], $_POST['post'],  $_POST['address'], $_POST['type']);
+        updateVenue($_GET['id'], $_POST['name'], $_POST['post'],  $_POST['address'], $_POST['type'], $_POST['city']);
       }
       
       $res = viewVenues2($_GET['id']);
@@ -39,6 +39,7 @@ $id = $_SESSION['id'];
       $venueAddress = $venue['address'];
       $venuePostcode = $venue['postcode'];
       $venueType = $venue['type'];
+      $city = $venue['city'];
       
       }
       ?>    
@@ -64,6 +65,12 @@ $id = $_SESSION['id'];
                 <label for="vPostcode" class="col-sm-5 col-form-label">Postcode</label>
                 <div class="col-sm-8"style="width: 57.66666667%;">
                 <input type="text" name="post" class="form-control" id="vPostcode" value="<?php echo $venuePostcode; ?>"> <br>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="vPostcode" class="col-sm-5 col-form-label">City</label>
+                <div class="col-sm-8"style="width: 57.66666667%;">
+                <input type="text" name="city" class="form-control" id="City" value="<?php echo $city; ?>"> <br>
                 </div>
             </div>
             <div class="form-group row">
