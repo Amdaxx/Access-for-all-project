@@ -4,7 +4,7 @@
 include "phpqrcode/qrlib.php";
 
 // The URL you want to encode into the QR code
-$url = "https://afpproject.azurewebsites.net/Everbody-Welcome/public/landingPage.php";
+$url = "https://afpproject.azurewebsites.net/Everbody-Welcome/public/venuePage.php?venueid=".$_GET['venueid'];
 
 
 // Set the size and error correction level of the QR code
