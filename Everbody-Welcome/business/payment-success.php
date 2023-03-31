@@ -133,6 +133,7 @@ if(!empty($_GET['session_id'])){
 
 <link rel="stylesheet" href="../css/payment-result.css">
 <link rel="stylesheet" href="../css/topNavHome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-w7fp+8KZpDb7ZqfJr1r5Rdq+Rxl1MzlOiqpKOUcFdwf+qlw3qZDJ+C1OgbQztgkFnoHSu3yHj/O/wupTgQYzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <header id="nav-wrapper">
     <nav id="nav">
