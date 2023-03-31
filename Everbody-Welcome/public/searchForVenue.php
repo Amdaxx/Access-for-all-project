@@ -25,7 +25,7 @@ if (isset($_POST['search'])) {
 
     <body>
 
-      <div class="page">
+      <div class="page" style = "width: 1450px;">
       <div class="sidebar">
 
 
