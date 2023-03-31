@@ -1,77 +1,16 @@
 <?php
    function connectToDatabase()
    {    
-
-    /*
-       $servername = 'localhost';
-       $username = 'root';
-       $password = '';
-       $dbname = 'LASTDBXX';
-
-       
-
-       try {
-           $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
-        }
-        catch (PDOException $e) {
-    
-               $conn = mysqli_connect($servername, $username, '', $dbname);
-               $sql1 = "CREATE TABLE logs(
-                   logid VARCHAR(10) NOT NULL PRIMARY KEY ,
-                   email VARCHAR(30) NOT NULL,
-                   pwd VARCHAR(300) NOT NULL,
-                   stat VARCHAR(30) NOT NULL 
-               )";
-               $sql2 = "CREATE TABLE businessinfos(
-                   logid VARCHAR(10) NOT NULL PRIMARY KEY ,
-                   companyName VARCHAR(30) NOT NULL,
-                   postcode VARCHAR(10) NOT NULL,
-                   address VARCHAR(30) NOT NULL,
-                   phone VARCHAR(15) NOT NULL
-               )";
-               $sql3 = "CREATE TABLE venues(
-                   venueid VARCHAR(10) NOT NULL PRIMARY KEY ,
-                   logid VARCHAR(10) NOT NULL,
-                   venuename VARCHAR(30) NOT NULL,
-                   address VARCHAR(30) NOT NULL,
-                   postcode VARCHAR(10) NOT NULL,
-                   type VARCHAR(15) NOT NULL ,
-                   numberofaudits NOT NULL
-               )";
-               $sql4 = "CREATE TABLE questions(
-                   question VARCHAR(50) NOT NULL
-                   )";
-               $sql5 = "CREATE TABLE audits(
-                   venueid VARCHAR(10) NOT NULL ,
-                   question VARCHAR(50) NOT NULL ,
-                   answer VARCHAR(3) NOT NULL ,
-                   comment VARCHAR(40) ,
-                   proof VARCHAR(30) ,
-                   auditnumber INTEGER NOT NULL 
-               )";
-               mysqli_query($conn, $sql1);
-               mysqli_query($conn, $sql2);   
-               mysqli_query($conn, $sql3);   
-               mysqli_query($conn, $sql4);   
-               mysqli_query($conn, $sql5);
-                         
-           }
-          */
-
         $servername = 'afpproject-server.mysql.database.azure.com';
         $dbname = 'afadb';
         $username = 'tkgwwyrhag';
         $password = 'Blackdown12345';
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      
-        //return new mysqli('afpproject-server.mysql.database.azure.com', 'tkgwwyrhag', 'Blackdown12345', 'afadb');
-
    }
 
     function createUser($email, $pwd, $name, $phone, $postcode, $address){
         try{
 
-            $verify = false;
             
             $id = rand(1,9999999);
             $stat = "business";
@@ -111,7 +50,6 @@
 
     function verifyLogin($email, $pwd)
     {
-        $verify = 0;
         try{
             $conn = connectToDatabase();
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
