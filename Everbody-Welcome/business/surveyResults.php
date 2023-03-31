@@ -25,36 +25,75 @@ $auditNumber = $_GET['number'];
     <link rel="stylesheet" href="../css/style.css">  
     <link rel="stylesheet" href="../css/topNavHome.css">
     <link rel="stylesheet" href="../css/overall-page.css">
-    <div id="header">
-        <?php include "businessHeader.php"; ?>  
-        <h2>Survey Results</h2>
-    </div>
-    
     <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        #header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h2 {
+            margin: 0;
+        }
         .container {
             max-width: 600px;
             margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .result {
-            margin-top: 30px;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            font-size: 24px;
         }
-        .result span {
-            width: 70%;
-            text-align: left;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #eee;
+        }
+        .btn {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
         }
     </style>
 </head>
 
 <body>
 
+    <div id="header">
+        <?php include "businessHeader.php"; ?>  
+        <h2>Survey Results</h2>
+    </div>
+
     <div class="container">
         <h3>Results:</h3>
         <?php
-        echo "<table class=\"table\">
+        echo "<table>
                 <thead>
                     <tr>
                         <th>Question</th>
@@ -83,10 +122,9 @@ $auditNumber = $_GET['number'];
                 }
         echo "</tbody>
             </table>
-            <a href=\"previousAudits.php?venueid=" . $_GET['venueid'] . "\" class=\"btn btn-primary\">View Your Audits</a>";
-        ?>
-    </div>
-
-    <?php include "../public/footer.php" ?>
-</body>
-</html>
+            <a href=\"previousAudits.php?venueid=" . $_GET['venueid'] . "\" class=\"btn\">View Your Audits</a>";
+            ?>
+        </div>
+        
+        <?php include "../public/footer.php" ?>
+        
