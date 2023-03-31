@@ -6,110 +6,124 @@
 	
     <style>
 * {
-    font-family: "Saira Semi Condensed", sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
+  font-family: "Saira Semi Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .container {
-	display: flex;
-	flex-direction: row;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 .card {
-    width: 100%;
-    height: 100%;
-    padding: 2em 1.5em;
-    background: linear-gradient(#ffffff 50%, #f857a8 50%);
-    background-size: 100% 200%;
-    background-position: 0 2.5%;
-    border-radius: 25px;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
-  }
+  width: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #f857a8 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 25px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+}
+
 .tabs {
-	display: flex;
-	flex-direction: column;
-	width: 200px;
-	background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ccc;
 }
 
 .tab {
-	background-color: #ccc;
-	color: #333;
-	padding: 10px 20px;
-	border-radius: 5px 0 0 5px;
-	cursor: pointer;
-	margin-bottom: 10px;
-	text-align: center;
-	transition: all 0.3s ease-in-out;
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .tab.active {
-	background-color: #333;
-	color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 .tab:hover {
-	background-color: #666;
-	color: #fff;
+  background-color: #666;
+  color: #fff;
 }
 
 .tab-content-container {
-	display: flex;
-	flex-direction: column;
-	width: calc(100% - 200px);
-	padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
 }
 
 .tab-content {
-	background-color: #ccc;
-	color: #333;
-	padding: 20px;
-	display: none;
-	border-radius: 0 5px 5px 0;
+  background-color: #ccc;
+  color: #333;
+  padding: 20px;
+  display: none;
+  border-radius: 0 5px 5px 0;
 }
 
 .tab-content.active {
-	display: block;
+  display: block;
 }
 
 .email-form label {
-	display: block;
-	margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .email-form input[type="email"],
 .email-form input[type="text"],
 .email-form textarea {
-	display: block;
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	border: none;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	font-size: 16px;
-	line-height: 1.5;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .email-form button[type="submit"] {
-	display: block;
-	margin-top: 20px;
-	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-	transition: background-color 0.2s ease-in-out;
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .email-form button[type="submit"]:hover {
-	background-color: #666;
+  background-color: #666;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .tabs {
+    width: 200px;
+  }
+
+  .tab-content-container {
+    width: calc(100% - 200px);
+  }
+}
 </style>
 </head>
 <body>
