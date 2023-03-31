@@ -608,7 +608,7 @@
     function findRecommendation($question)
     {
         $conn = connectToDatabase();
-        $sql = "SELECT * FROM questions WHERE question=:question";
+        $sql = "SELECT * FROM venues WHERE question=:question";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam('question', $question);
         $stmt->execute();

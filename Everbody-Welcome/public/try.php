@@ -12,15 +12,20 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
+$sql0 = "DROP TABLE questions";
+
+if (mysqli_query($mysqli, $sql0)) {
+    echo "Table deleted successfully";
+} else {
+    echo "Error deleting table: " . mysqli_error($mysqli);
+}
 
 
 
-$sql4 = "CREATE TABLE advancedsurveyresults(
-  venueid VARCHAR(10) NOT NULL ,
+$sql4 = "CREATE TABLE questions(
   question VARCHAR(150) NOT NULL ,
-  answer VARCHAR (3) NOT NULL ,
-  comment VARCHAR(40) ,
-  auditnumber INTEGER NOT NULL 
+  surveytype VARCHAR (10) NOT NULL ,
+  recommendation VARCHAR(100) 
 )";
 
 if (mysqli_query($mysqli, $sql4)) {
