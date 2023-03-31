@@ -66,10 +66,10 @@ $auditNumber = $_GET['number'];
                 </thead>
                 <tbody>";
                 $data;
-                if($_GET['type']=="general"){
+                if($_GET['type']=="General Survey"){
                     $data = getGeneralSurveyResult($_GET['venueid'], $_GET['number']);        
                 }
-                if($_GET['type']=="premium"){
+                if($_GET['type']=="Advanced Survey"){
                     $data = getAdvancedSurveyResult($_GET['venueid'], $_GET['number']);        
                 }
                 foreach ($data as $d) {
