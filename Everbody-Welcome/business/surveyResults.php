@@ -22,64 +22,72 @@ $auditNumber = $_GET['number'];
     <title>Survey Results</title>
     <meta name="description" content="This page displays the results from the user's responses to the general survey.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">  
-    <link rel="stylesheet" href="../css/topNavHome.css">
-    <link rel="stylesheet" href="../css/overall-page.css">
     <style>
-        body {
-            background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-        #header {
-            background-color: #fff;
-            padding: 20px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        h2 {
-            margin: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h3 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: bold;
-            font-size: 24px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        th {
-            background-color: #eee;
-        }
-        .btn {
-            background-color: #007bff;
-            border-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            padding: 10px 20px;
-            border-radius: 4px;
-        }
-        .btn:hover {
-            background-color: #0069d9;
-            border-color: #0062cc;
-        }
+       body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+td {
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0069d9;
+}
     </style>
 </head>
 
