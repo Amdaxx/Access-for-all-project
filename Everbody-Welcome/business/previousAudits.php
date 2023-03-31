@@ -56,7 +56,7 @@ $id = $_SESSION['id'];
   <body>
 
   <div class = "homeButtons"> 
-    <a href="qrcode.php?venueid=<?php echo $_GET['venueid']?>"><button class="btn btn-primary btn-md">Add Venues</button></a>
+    <a href="qrcode.php?venueid=<?php echo $_GET['venueid']?>"><button class="btn btn-primary btn-md">Generate Qr Code To Your Latest Audit</button></a>
   </div>
 
 
