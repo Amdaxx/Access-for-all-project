@@ -105,6 +105,21 @@ body::before{
     animation: fade-in 1s forwards 1;
 }
 
+.back-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .back-button:hover {
+    background-color: #555;
+  }
+  .back-button i {
+    margin-right: 5px;
+  }
+  
 @keyframes fade-in{
     100%{
         opacity: 1;
