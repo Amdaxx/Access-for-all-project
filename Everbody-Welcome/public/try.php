@@ -12,34 +12,22 @@ if ($mysqli->connect_errno) {
     echo "Connected successfully!";
 }
 
-$sql0 = "DROP TABLE advancedsurveyresults";
-
-if (mysqli_query($mysqli, $sql0)) {
-    echo "Table deleted successfully";
-} else {
-    echo "Error deleting table: " . mysqli_error($mysqli);
-}
-
-$sql6 = "DROP TABLE questions";
-
-if (mysqli_query($mysqli, $sql6)) {
-    echo "Table deleted successfully";
-} else {
-    echo "Error deleting table: " . mysqli_error($mysqli);
-}
 
 
-$sql4 = "CREATE TABLE questions(
+
+$sql4 = "CREATE TABLE advancedsurveyresults(
+  venueid VARCHAR(10) NOT NULL ,
   question VARCHAR(150) NOT NULL ,
-  type VARCHAR(30) NOT NULL,
-  recommendation VARCHAR(150) NOT NULL 
+  answer VARCHAR (3) NOT NULL ,
+  comment VARCHAR(40) ,
+  auditnumber INTEGER NOT NULL 
 )";
+
 if (mysqli_query($mysqli, $sql4)) {
   echo "Table created successfully";
 } else {
   echo "Error created table: " . mysqli_error($mysqli);
 }
-
 
 
 
@@ -136,7 +124,11 @@ if (mysqli_query($mysqli, $sql25)) {
 
 
 /*
-
+$sql4 = "CREATE TABLE questions(
+  question VARCHAR(50) NOT NULL ,
+  type VARCHAR(30) NOT NULL,
+  surveytype VARCHAR(30) NOT NULL 
+)";
 
 
 
