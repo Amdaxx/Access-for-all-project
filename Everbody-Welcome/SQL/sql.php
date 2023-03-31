@@ -318,7 +318,7 @@
         $stmt->bindParam(':city', $city);
         $stmt->bindParam(':type', $type);
         $stmt->execute();
-        header('Location:../business/viewVenues.php?id='.$id);
+        header('Location:../business/businessLandingPage.php?id='.$id);
     }
 
  

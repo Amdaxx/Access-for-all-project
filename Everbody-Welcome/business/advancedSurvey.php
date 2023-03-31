@@ -38,13 +38,12 @@ if (isset($_POST['submit'])) {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/businessHomepage.css">
   <link rel="stylesheet" href="../css/table.css">
-
   <style>
     :root {
       --main-color: #f64a8a;
       --text-color: #333333;
-      --background-color: #ffffff;
-      --input-bg-color: #f9cdd6;
+      --background-color: #f2f2f2;
+      --input-bg-color: #ffffff;
       --input-border-color: #cccccc;
       --button-hover-color: #e03977;
     }
@@ -61,14 +60,16 @@ if (isset($_POST['submit'])) {
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
       padding: 20px;
+      margin: 0 auto;
+      max-width: 800px;
     }
 
-    .question,
-    .answer {
+    .question {
       background-color: var(--input-bg-color);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--input-border-color);
     }
 
     h1 {
@@ -88,7 +89,7 @@ if (isset($_POST['submit'])) {
     }
 
     label {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--text-color);
       cursor: pointer;
     }
@@ -122,35 +123,75 @@ if (isset($_POST['submit'])) {
     .button:hover {
       background-color: var(--button-hover-color);
     }
-  </style>
+
+    /* Custom styles for radio buttons */
+    .radio-group {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+
+    .radio-group label {
+      margin-right: 10px;
+    }
+
+    .radio-group input[type="radio"] {
+      display: none;
+    }
+
+    .radio-group input[type="radio"] + label {
+      border: 1px solid var(--input-border-color);
+border-radius: 5px;
+padding: 5px 10px;
+background-color: var(--input-bg-color);
+color: var(--text-color);
+transition: background-color 0.3s;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  background-color: var(--main-color);
+  color: #ffffff;
+}
+
+/* Custom styles for the submit button */
+.submit-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.submit-container .button {
+  margin-top: 20px;
+}
+
+</style>
 </head>
-<body>
-  <?php
+
+<?php
     echo "<form class='answer' method='post' enctype='multipart/form-data'>";
     echo "<div class='grid-container'>";
-
     for ($index = 0; $index < count($questions); $index++) {
       echo "<div class='question'>";
       echo "<h1>Question " . ($index + 1) . "</h1>";
       echo "<p>" . $questions[$index] . "</p>";
-      echo "<p>Answer:</p>";
+      echo "<div class='radio-group'>";
       echo "<input type='radio' id='yes_" . $index . "' name='answer_" . $index . "' value='yes'>";
-      echo "<label for='yes_" . $index . "'>Yes</label><br>";
+      echo "<label for='yes_" . $index . "'>Yes</label>";
     
       echo "<input type='radio' id='no_" . $index . "' name='answer_" . $index . "' value='no'>";
-      echo "<label for='no_" . $index . "'>No</label><br>";
+      echo "<label for='no_" . $index . "'>No</label>";
+      echo "</div>";
     
-      echo "<p>Comment:</p>";
-      echo "<textarea class='comment' name='comment_" . $index . "' rows='4'></textarea>";
+      echo "<label for='comment_" . $index . "'>Comment:</label>";
+      echo "<textarea id='comment_" . $index . "' name='comment_" . $index . "' rows='4'></textarea>";
       echo "</div>";
     }
     
     echo "</div>"; // Close the grid container
-    echo "<div style='text-align: center; padding: 20px;'>";
+    echo "<div class='submit-container'>";
     echo "<button type='submit' class='button' name='submit'>Submit</button>";
     echo "</div>";
     echo "</form>";
     ?>
 </body>
 <?php include "../public/footer.php" ?>
-</html>
+</html>    
