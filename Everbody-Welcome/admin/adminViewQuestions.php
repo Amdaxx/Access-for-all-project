@@ -14,7 +14,7 @@ if (!isset($_SESSION['uadmin'])){
 checkSession ($path); //calling the function from session.php
 
 if (isset($_POST['submit'])){
-	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
+	addQuestion($_POST['question'], $_POST['recommendation'], $_GET['type']);
 }
 if (isset($_POST['delete'])){
 	deleteQuestion($_POST['question'], $_GET['type']);
@@ -44,13 +44,8 @@ if (isset($_POST['delete'])){
         <h3><label for="question">Question:</label></h3>
         <input style="margin-bottom:0;" type="text" id="question" name="question" required>
 
-        <h3><label for="question-type">Question Type:</label></h3>
-        <select id="question-type" name="type">
-          <option value="Physical Disability">Physical Disability</option>
-          <option value="Vision Impairment">Vision Impairment</option>
-          <option value="Deaf">Deaf</option>
-          <option value="Other">Other</option>
-        </select>
+        <h3><label for="question-type">Recommendation:</label></h3>
+        <input style="margin-bottom:0;" type="text" id="question" name="recommendation" required>
 
         <button type="submit" name="submit">Add</button>
       </form>
