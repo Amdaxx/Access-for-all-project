@@ -14,6 +14,10 @@ checkSession ($path); //calling the function from session.php
 
 $id = $_SESSION['id']; 
 
+if (isset($_POST['submit'])){
+  updateVenue($_GET['id'], $_POST['name'], $_POST['post'],  $_POST['address'], $_POST['type'], $_POST['city']);
+}
+
 ?>
 <html>
   <head>
@@ -24,9 +28,6 @@ $id = $_SESSION['id'];
   <div class="flex-wrapper">
     <div id="header">
       <?php include "businessHeader.php";
-      if (isset($_POST['submit'])){
-        updateVenue($_GET['id'], $_POST['name'], $_POST['post'],  $_POST['address'], $_POST['type'], $_POST['city']);
-      }
       
       $res = viewVenues2($_GET['id']);
       $venueName;
