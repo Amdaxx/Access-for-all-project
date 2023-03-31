@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../css/userManagementStyle.css">
 <?php include '../public/publicHeader.php';
 include_once("../SQL/sql.php");
 
@@ -6,6 +5,7 @@ if (isset($_POST['submit'])){
     createUser($_POST['email'], $_POST['pwd'], $_POST['name'], $_POST['phone'], $_POST['postcode'], $_POST['address']);
     }
     ?>
+<link rel="stylesheet" href="../css/userManagementStyle.css">
 <body>
     <div class="signup-container">
     <div class="signup-form">
