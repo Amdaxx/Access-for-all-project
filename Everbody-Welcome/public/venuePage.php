@@ -114,6 +114,17 @@
 <body>
 <?php include "publicHeader.php";
 $res = getVenueDetails($_GET['venueid']);
+$numberofaudits = getNumberOfAudits($_GET['venueid']);
+$survey = getSurveys($venueid, $numberofaudits);
+$type = $survey['type'];
+$results;
+if($type=="Advanced Survey"){
+	$results = getAdvancedSurveyResult($venueid, $numberofaudits);
+}
+else
+{
+	$results = getGeneralSurveyResult($venueid, $numberofaudits);
+}
 ?>
 <div style="text-align:center">
 
@@ -122,7 +133,7 @@ $res = getVenueDetails($_GET['venueid']);
 		<div class="tabs">
 			<div class="tab active" data-tab="tab1">Venue Information</div>
 			<div class="tab" data-tab="tab2">Venue Survey</div>
-			<div class="tab" data-tab="tab3">Contact The Venue</div>
+			<div class="ta;b" data-tab="tab3">Contact The Venue</div>
 		</div>
 		<div class="tab-content-container">
 			<div class="tab-content active" data-tab="tab1">
@@ -144,10 +155,12 @@ $res = getVenueDetails($_GET['venueid']);
 			<div class="tab-content" data-tab="tab2">
                 <div class="card">
                     <h2>Last Survey Results</h2>
-                    <p><strong>Question 1:</strong> What is the venue's capacity? </p>
-                    <p><strong>Answer:</strong> venue can hold up to 500 people. </p>
-                    <p><strong>Comment:</strong> </p>
+					<?php foreach($results as $ques):?>
+                    <p><strong>Question:</strong> <?php echo $ques['question']?> </p>
+                    <p><strong>Answer:</strong> <?php echo $ques['answer']?> </p>
+                    <p><strong>Comment:</strong><?php echo $ques['comment']?> </p>
                     <hr>
+					<?php endforeach;?>
                 </div>
 			</div>
 			<div class="tab-content" data-tab="tab3">

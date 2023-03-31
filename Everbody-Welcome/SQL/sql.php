@@ -593,3 +593,15 @@
         $res = $stmt->fetch();
         return $res;
     }
+
+    function getSurveys($venueid, $auditnumber)
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM recordaudits WHERE venueid=:venueid AND auditnumber=:auditnumber";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam('venueid', $venueid);
+        $stmt->bindParam('auditnumber', $auditnumber);
+        $stmt->execute();
+        $res = $stmt->fetch();
+        return $res;
+    }
