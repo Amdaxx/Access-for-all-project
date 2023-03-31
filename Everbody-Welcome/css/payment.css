@@ -106,6 +106,9 @@ body::before{
 }
 
 .back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
     display: inline-block;
     padding: 10px;
     background-color: #333;
@@ -119,7 +122,6 @@ body::before{
   .back-button i {
     margin-right: 5px;
   }
-  
 @keyframes fade-in{
     100%{
         opacity: 1;
