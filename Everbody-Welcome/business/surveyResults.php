@@ -127,11 +127,12 @@ td {
                     if ($_GET['type'] == "premium") {
                         echo "<td>" . $d['comment'] . "</td>";
                     }
-                    echo "</tr>";
+                    echo "</td>";
                     if ($d['answer'] == "no") {
                         $rec = findRecommendation($d['question']);
-                        echo "<td>" . $rec['recommendation'] . "</td>";
+                        echo  $rec['recommendation'];
                     }
+                    echo "</td>";
                     echo "</tr>";
                 }
                 
