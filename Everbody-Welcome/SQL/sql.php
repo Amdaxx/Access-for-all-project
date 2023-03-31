@@ -586,7 +586,7 @@
     function getVenueDetails($venueid)
     {
         $conn = connectToDatabase();
-        $sql = "SELECT FROM venues WHERE venueid=:venueid";
+        $sql = "SELECT * FROM venues WHERE venueid=:venueid";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam('venueid', $venueid);
         $stmt->execute();
