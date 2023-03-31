@@ -148,7 +148,7 @@ else
 		<div class="tabs">
 			<div class="tab active" data-tab="tab1">Venue Information</div>
 			<div class="tab" data-tab="tab2">Venue Survey</div>
-			<div class="ta;b" data-tab="tab3">Contact The Venue</div>
+			<div class="tab" data-tab="tab3">Contact The Venue</div>
 		</div>
 		<div class="tab-content-container">
 			<div class="tab-content active" data-tab="tab1">
