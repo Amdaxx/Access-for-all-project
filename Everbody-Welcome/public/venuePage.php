@@ -111,7 +111,9 @@
 </style>
 </head>
 <body>
-<?php include "publicHeader.php" ?>
+<?php include "publicHeader.php";
+$res = getVenueDetails($_GET['venueid']);
+?>
 <div style="text-align:center">
 
 </div>
@@ -124,16 +126,18 @@
 		<div class="tab-content-container">
 			<div class="tab-content active" data-tab="tab1">
                 <div class="card">
-                    <h2>Business Name</h2>
+                    <h2><?php echo $res['venuename'];?></h2>
                     <hr>
                     <h4 id="h4">Venue Type</h4>
-                    <p>Venue type goes here.</p>
+                    <p><?php echo $res['type'];?></p>
                     <hr>
                     <h4 id="h4">Venue Address</h4>
-                    <p>Venue Address goes here.</p>
+                    <p><?php echo $res['address'];?></p>
                     <hr>
                     <h4 id="h4">Postcode</h4>
-                    <p>Venue postcode goes here.</p>
+                    <p><?php echo $res['postcode'];?></p>
+					<h4 id="h4">City</h4>
+                    <p><?php echo $res['city'];?></p>
                 </div>
 			</div>
 			<div class="tab-content" data-tab="tab2">
