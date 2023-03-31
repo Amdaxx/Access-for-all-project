@@ -129,7 +129,7 @@ td {
                     }
                     echo "</tr>";
                     if ($d['answer'] == "no") {
-                        $rec = findRecommendation($question);
+                        $rec = findRecommendation($d['question']);
                         echo "<td>" . $rec['recommendation'] . "</td>";
                     }
                     echo "</tr>";
