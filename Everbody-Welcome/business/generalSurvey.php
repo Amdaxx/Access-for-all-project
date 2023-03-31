@@ -63,7 +63,7 @@ $ques = array_column($res, "question");
 <body>
     <?php include "businessHeader.php"; ?>  
     <div class="container">
-        <h2 class="mb-4">Modern Survey</h2>
+        <h2 class="mb-4">General Survey</h2>
         <form id="questionnaire-form" method="post">
             <?php
             // Loop through the questions and create the form inputs
