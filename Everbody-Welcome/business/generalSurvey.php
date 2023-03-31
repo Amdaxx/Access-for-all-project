@@ -33,12 +33,12 @@ $ques = array_column($res, "question");
  }
 ?>
 <head>
-    <title>Generic Survey</title>
-    <meta name="description" content="This page displays a short list accessibility questions about the venue and prompts the user
-    to the answer them - yes or no.">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <?php include "businessHeader.php"; ?>  
-        <h2>Generic Survey</h2>
+    <title>Modern Survey</title>
+    <meta name="description" content="This page displays a short list of accessibility questions about the venue and prompts the user to answer them - yes or no.">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .container {
             max-width: 600px;
@@ -46,20 +46,11 @@ $ques = array_column($res, "question");
         }
         .question {
             margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
         .question label {
-            display: inline-block;
-            width: 70%;
             font-weight: bold;
             margin-right: 10px;
             text-align: left;
-        }
-        .question input[type="radio"] {
-            display: inline-block;
-            margin-right: 10px;
         }
         .error {
             color: red;
@@ -70,19 +61,27 @@ $ques = array_column($res, "question");
     </style>
 </head>
 <body>
+    <?php include "businessHeader.php"; ?>  
     <div class="container">
+        <h2 class="mb-4">Modern Survey</h2>
         <form id="questionnaire-form" method="post">
             <?php
             // Loop through the questions and create the form inputs
             foreach ($ques as $index => $que) {
-                echo '<div class="question">';
-                echo '<label for="' . $index . '">' . $que. '</label>';
-                echo '<input type="radio" name="' . $index . '" value="yes">Yes';
-                echo '<input type="radio" name="' . $index . '" value="no">No';
+                echo '<div class="question form-group">';
+                echo '<label for="' . $index . '">' . $que . '</label><br>';
+                echo '<div class="form-check form-check-inline">';
+                echo '<input class="form-check-input" type="radio" name="' . $index . '" id="' . $index . 'yes" value="yes">';
+                echo '<label class="form-check-label" for="' . $index . 'yes">Yes</label>';
+                echo '</div>';
+                echo '<div class="form-check form-check-inline">';
+                echo '<input class="form-check-input" type="radio" name="' . $index . '" id="' . $index . 'no" value="no">';
+                echo '<label class="form-check-label" for="' . $index . 'no">No</label>';
+                echo '</div>';
                 echo '</div>';
             }
             ?>
-            <button type="submit" name="submit" id="submit-btn" onclick="submitValidation()">Submit</button>
+            <button type="submit" name="submit" id="submit-btn" onclick="submitValidation()" class="btn btn-primary">Submit</button>
         </form>
         <div id="error-message" class="error"></div>
     </div>
