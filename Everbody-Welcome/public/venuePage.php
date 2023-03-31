@@ -1,3 +1,4 @@
+<?php require_once('../SQL/sql.php');?>
 <!DOCTYPE html>
 <html>
 <head>
