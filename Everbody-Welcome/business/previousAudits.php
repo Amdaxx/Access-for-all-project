@@ -76,7 +76,11 @@ $id = $_SESSION['id'];
       <td width='250'><?php echo $venue['auditnumber']; ?></td>
       <td width='250'><?php echo $venue['type']; ?></td>
       <td width='250'><?php echo $venue['dates']; ?></td>
-      <td width='250'><?php "View Audit"; ?></td>
+      <td width='250'>
+        <a href="surveyResults.php?venueid=<?php echo $venue['venueid'];?>&type=<?php echo $venue['type'];?>">
+        <?php "View Audit"; ?>
+        </a>
+      </td>
       </tr>
     </tbody>
     <?php endforeach;?>
