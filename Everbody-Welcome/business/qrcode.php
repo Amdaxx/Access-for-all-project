@@ -1,4 +1,12 @@
 <?php
+$path = "../public/LandingPage.php";
+session_start();
+if (!isset($_SESSION['business'])){
+    session_unset();
+    session_destroy();
+    header("Location:".$path);
+}
+checkSession ($path); //calling the function from session.php
 
 // Include the QR code library
 include "phpqrcode/qrlib.php";
