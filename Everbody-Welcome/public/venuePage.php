@@ -115,15 +115,15 @@
 <?php include "publicHeader.php";
 $res = getVenueDetails($_GET['venueid']);
 $numberofaudits = getNumberOfAudits($_GET['venueid']);
-$survey = getSurveys($venueid, $numberofaudits);
+$survey = getSurveys($_GET['venueid'], $numberofaudits);
 $type = $survey['type'];
 $results;
 if($type=="Advanced Survey"){
-	$results = getAdvancedSurveyResult($venueid, $numberofaudits);
+	$results = getAdvancedSurveyResult($_GET['venueid'], $numberofaudits);
 }
 else
 {
-	$results = getGeneralSurveyResult($venueid, $numberofaudits);
+	$results = getGeneralSurveyResult($_GET['venueid'], $numberofaudits);
 }
 ?>
 <div style="text-align:center">
