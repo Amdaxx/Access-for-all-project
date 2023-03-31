@@ -59,7 +59,7 @@ $auditNumber = $_GET['number'];
                     <tr>
                         <th>Question</th>
                         <th>Response</th>";
-                        if ($_GET['type'] == "Advanced Survey") {
+                        if ($_GET['type'] == "premium") {
                             echo "<th>Comment</th>";
                         }
                 echo "</tr>
@@ -76,7 +76,7 @@ $auditNumber = $_GET['number'];
                     echo "<tr>
                             <td>" . $d['question'] . "</td>
                             <td>" . $d['answer'] . "</td>";
-                    if ($_GET['type'] == "Advanced Survey") {
+                    if ($_GET['type'] == "premium") {
                         echo "<td>" . $d['comment'] . "</td>";
                     }
                     echo "</tr>";

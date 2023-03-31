@@ -362,7 +362,7 @@
             $stmt2->bindParam(':numberofaudits', $auditnumber);
             $stmt2->execute();
 
-            header('Location: ../business/surveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber . '&type=' . '	General Survey');
+            header('Location: ../business/surveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber . '&type=' . '	general');
         }
 
     function recordAdvancedSurvey($venueid, $data, $auditnumber) 
@@ -399,7 +399,7 @@
         $stmt2->bindParam(':numberofaudits', $auditnumber);
         $stmt2->execute();
 
-        header('Location: ../business/surveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber . '&type=' . '	Advanced Survey');
+        header('Location: ../business/surveyResults.php?venueid=' . $venueid . '&number=' . $auditnumber . '&type=' . 'premium');
     }
 
     function getGeneralSurveyResult($venueid, $auditnumber)
