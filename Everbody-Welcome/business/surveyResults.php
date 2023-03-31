@@ -128,6 +128,7 @@ td {
                         echo "<td>" . $d['comment'] . "</td>";
                     }
                     echo "</td>";
+                    echo "<td>";
                     if ($d['answer'] == "no") {
                         $rec = findRecommendation($d['question']);
                         echo  $rec['recommendation'];
