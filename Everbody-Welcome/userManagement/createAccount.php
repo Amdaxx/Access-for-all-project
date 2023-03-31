@@ -25,7 +25,7 @@ if (isset($_POST['submit'])){
         <input type="password" name="pwd" id="password" placeholder="Enter your password" required>
         <label for="confirm-password">Confirm Password</label>
         <input type="password" id="confirm-password" placeholder="Confirm your password" required>
-        <button type="submit">Sign Up</button>
+        <button name="submit" type="submit">Sign Up</button>
         </form>
         <p style="color:black">Already have an account? <a style="color:black" href="../userManagement/userlogIn.php">Log in</a></p>
     </div>
