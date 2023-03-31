@@ -17,7 +17,7 @@ if (isset($_POST['submit'])){
 	addQuestion($_POST['question'], $_POST['type'], $_GET['type']);
 }
 if (isset($_POST['delete'])){
-	deleteQuestion($_POST['question'], $_POST['type'], $_GET['type']);
+	deleteQuestion($_POST['question'], $_GET['type']);
 }
 ?>
 
@@ -62,9 +62,7 @@ if (isset($_POST['delete'])){
   <ul id="questions">
     <?php foreach($res as $question): ?>
       <li class="question-card">
-        <span class="question-type"><?php echo $question['type']; ?>:</span>
-        <span class="question-text"><?php echo $question['question']; ?></span>
-        <input type="hidden" name="type" value="<?php echo $question['type']; ?>">
+        <span class="question-type"><?php echo $question['question'] ?>:</span>
         <input type="hidden" name="question" value="<?php echo $question['question']; ?>">
         <button class="delete-btn delete" type="delete" name="delete">Delete</button>
       </li>
