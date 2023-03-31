@@ -106,13 +106,9 @@ on this page there are links to the venues pages (view venues and create new ven
         <td width='200'>
         <div class="btn-group">
         <form method="post">
-        <a> 
-        <input style = "color:black" type="button" value="Delete" name="delete">
         <input type="hidden" name="venueid" value="<?php echo $venue['venueid']; ?>">
-        </a>
+        <button class="delete-btn delete" type="delete" name="delete">Delete</button>
         </div>
-        
-        </form>
         
         </form>
 
