@@ -44,7 +44,7 @@ $id = $_SESSION['id'];
 </style>
 </head>
 
-<div class="flex-wrapper">
+<div class="flex-wrapper" style="min-height:100vh">
 
   <div id="header">
     <?php include "businessHeader.php";?>    
