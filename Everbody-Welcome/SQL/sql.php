@@ -561,24 +561,23 @@
     }
 
 
-    function addQuestion($question, $type, $surveytype)
+    function addQuestion($question, $recommendation, $surveytype)
     {   
         $conn = connectToDatabase();
-        $stmt = $conn->prepare("INSERT INTO questions (question, type, surveytype) 
-        VALUES (:question, :type, :surveytype)");
+        $stmt = $conn->prepare("INSERT INTO questions (question, recommendation, surveytype) 
+        VALUES (:question, :recommendation, :surveytype)");
         $stmt->bindParam(':question', $question);
-        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':recommendation', $recommendation);
         $stmt->bindParam(':surveytype', $surveytype);
         $stmt->execute();
     }
 
-    function deleteQuestion($question, $type, $surveytype)
+    function deleteQuestion($question, $surveytype)
     {
         $conn = connectToDatabase();
-        $sql = "DELETE FROM questions  WHERE question=:question AND type=:type AND surveytype=:surveytype";
+        $sql = "DELETE FROM questions  WHERE question=:question AND surveytype=:surveytype";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':question', $question);
-        $stmt->bindParam(':type', $type);
         $stmt->bindParam(':surveytype', $surveytype);
         $stmt->execute();
     }
@@ -601,6 +600,17 @@
         $stmt = $conn->prepare($sql);
         $stmt->bindParam('venueid', $venueid);
         $stmt->bindParam('auditnumber', $auditnumber);
+        $stmt->execute();
+        $res = $stmt->fetch();
+        return $res;
+    }
+
+    function findRecommendation($question)
+    {
+        $conn = connectToDatabase();
+        $sql = "SELECT * FROM questions WHERE question=:question";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam('question', $question);
         $stmt->execute();
         $res = $stmt->fetch();
         return $res;

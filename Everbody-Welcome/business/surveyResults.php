@@ -109,6 +109,7 @@ td {
                         if ($_GET['type'] == "premium") {
                             echo "<th>Comment</th>";
                         }
+                        echo "<th>Recommendation</th>";
                 echo "</tr>
                 </thead>
                 <tbody>";
@@ -127,7 +128,14 @@ td {
                         echo "<td>" . $d['comment'] . "</td>";
                     }
                     echo "</tr>";
+                    if ($d['answer'] == "no") {
+                        $rec = findRecommendation($question);
+                        echo "<td>" . $rec['recommendation'] . "</td>";
+                    }
+                    echo "</tr>";
                 }
+                
+            
         echo "</tbody>
             </table>
             <a href=\"previousAudits.php?venueid=" . $_GET['venueid'] . "\" class=\"btn\">View Your Audits</a>";
