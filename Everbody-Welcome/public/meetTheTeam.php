@@ -28,26 +28,4 @@
         <p><button class="button">Contact</button></p>
         </div>
     </div>
-
-    <div class="column" style="border-radius: 25px;">
-        <div class="card1"style = "color:white;backgroud:none;">
-        <img src="../pictures/charlie.jpg" alt="Charlie" style="border-radius: 25px;width:300px; height: 400px">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-        </div>
-    </div>
-
-    <div class="column"style="border-radius: 25px;">
-        <div class="card1"style = "color:white;backgroud:none;">
-        <img src="../pictures/mo.jpg" alt="Mo" style="border-radius: 25px;width:300px; height: 400px">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-        </div>
-    </div>
 </div>
