@@ -144,6 +144,8 @@ if(!empty($_GET['session_id'])){
     </nav>
 </header>
 
+<a href="businessLandingPage.php" class="back-button"><i class="fa fa-arrow-left"></i> Back</a>
+
 <?php if(!empty($payment_id)){ ?>
 
 <div class="card">
