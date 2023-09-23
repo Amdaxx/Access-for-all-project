@@ -3,7 +3,7 @@
    {    
         $servername = 'afpproject-server.mysql.database.azure.com';
         $dbname = 'afadb';
-        $username = 'tkgwwyrhag';
+        $username = '******';
         $password = '******';
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
    }
